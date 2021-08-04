@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import {BrowserRouter as Router} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import Portfolio from './components/portfolio-component/portfolio-component';
 import Home from './components/home-component/home-component';
 import NewTransaction from './components/new-transaction-component/new-transaction-component';
