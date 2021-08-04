@@ -1,8 +1,10 @@
 import React from "react";
+import PortfolioCard from "../portfolio-component/portfolio-card-component";
 //TODO: will be importing functions not yet defined
 
 export default function Account(props){
     //props for account: accountId, username, first_name, last_name, email
+    let portfolio = {name:"TestName", value:100}
 
     return (
         <>
@@ -14,6 +16,8 @@ export default function Account(props){
             </h2>
 
             { <h2>Placeholder for the list of portfolios</h2> }
+            
+            <PortfolioCard portfolio={portfolio} /> 
         </div>
         </>
         //TODO: 'portfolio-cards'(accountId)  -  build portfolio list based on accountId (or account obj)
