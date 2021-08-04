@@ -1,0 +1,16 @@
+#account-header {
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    width: 100%;
+    font-size: 32px;
+    font-weight: 600;
+    display:inline-block;
+    margin: 40px 8px 10px 8px; 
+    color: #72A4C2;
+}
+
+#header-span {
+    text-align: center;
+    margin-left: 250px;
+    margin-right: 250px;
+}
