@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
@@ -24,6 +25,25 @@ function App() {
     </Router>
     );
 
+=======
+import React, {useEffect} from 'react';
+import {Route,Switch} from 'react-router-dom';
+import 'bootstrap-icons/font/bootstrap-icons.css';
+import './sass/site.scss';
+import Home from './components/navigation/navigation';
+
+
+
+export default function App() {
+  useEffect(async() => {
+    await import ('@popperjs/core');
+    await import ('bootstrap/dist/js/bootstrap.min');
+  }, []);
+  return (
+    <Switch>
+    <Route exact path='/' component={Home} />
+</Switch>
+  );
+>>>>>>> Stashed changes
 }
 
-export default App;
