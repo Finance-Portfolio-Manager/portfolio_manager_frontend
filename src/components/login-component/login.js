@@ -18,51 +18,24 @@ function Login(props){
 
     const handleSubmit = (e)=>{
         e.preventDefault();
-
         const loginInfo = {
                 username:`${credentials.username}`,
                 password:`${credentials.password}`
             };
         console.log(JSON.stringify(loginInfo));
-
-        fetch("http://localhost:8082/login", {
-        method: 'post',
-        headers: new Headers({
-            'Content-Type':'application/json'
-        }),
-        body: JSON.stringify(loginInfo)
-    }).then((response) => {
-        return response.json();
-    }).then((data) => {
-                console.log("here");
-                console.log(data.jwt)
-                sessionStorage.setItem("Authorization", data.jwt)
-                if(data.jwt==undefined){
-
-                } else if (data.jwt != null && data.jwt != undefined){
-                    console.log("test0");
-                 }  
+        axios.post("http://localhost:8082/login", JSON.stringify(loginInfo), {headers:{'Content-Type': 'application/json'}})
+            .then(response=>{
+                if(sessionStorage.getItem("Authorization")){
+                    sessionStorage.removeItem("Authorization");
+                }
+                console.log(response.data.jwt);
+                sessionStorage.setItem("Authorization", response.data.jwt);
+                // props.history.push("/");
             })
-    .catch((error) => {
-
-    })
-}
-
-
-        // axios.post("localhost:8082/login", JSON.stringify(requestBody), {headers:{"Content-Type": "application/json"}})
-        //     .then(response=>{
-        //         console.log("successful login!!!");
-        //         // sessionStorage.setItem("token", response.headers["authorization"]);
-        //         // props.history.push("/");
-        //     })
-        //     .catch(err=> console.error("there was an issue logging in"))
-    // }
-
-
-
+            .catch(err=> console.error("There was an issue logging in!"))
+    }
     return <LoginForm onChange={handleChange} onSubmit={handleSubmit}></LoginForm>;
 }
-
 export default withRouter(Login);
 
 
@@ -100,3 +73,25 @@ export default withRouter(Login);
 //             networkError.hidden = false;
 //     })
 // });
+
+    //     fetch("http://localhost:8082/login", {
+    //     method: 'post',
+    //     headers: new Headers({
+    //         'Content-Type':'application/json'
+    //     }),
+    //     body: JSON.stringify(loginInfo)
+    // }).then((response) => {
+    //     return response.json();
+    // }).then((data) => {
+    //             console.log("here");
+    //             console.log(data.jwt)
+    //             sessionStorage.setItem("Authorization", data.jwt)
+    //             if(data.jwt==undefined){
+
+    //             } else if (data.jwt != null && data.jwt != undefined){
+    //                 console.log("test0");
+    //              }  
+    //         })
+    // .catch((error) => {
+
+    // })
