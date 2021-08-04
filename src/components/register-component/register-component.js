@@ -34,13 +34,13 @@ function validateInput(firstName, lastName, email, username, password, secondPas
         return false;
     }
     
-    var passCheck = /[\s~`!@#$%\^&*+=\-\[\]\\';,/{}|\\":<>\?()\._]/g;
+    var passCheck = /[\s~`!@#$%^&*+=\-[\]\\';,/{}|\\":<>?()._]/g;
     if(!passCheck.test(password) || password.length<8){
         passwordError.hidden = false;
         return false;
     }
 
-    if(password!=secondPassword){
+    if(password!==secondPassword){
         retypePasswordError.hidden = false;
         return false;
     }
