@@ -6,18 +6,14 @@
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
-<<<<<<< Updated upstream
-    "bootstrap": "^5.1.0",
-    "create-react-app": "^4.0.3",
-    "react": "^17.0.2",
-    "react-bootstrap": "^1.6.1",
-=======
+    
+
     "bootstrap": "^5.0.2",
     "bootstrap-icons": "^1.5.0",
     "node-sass": "^6.0.1",
     "react": "^17.0.2",
     "react-bootstrap": "^2.0.0-beta.4",
->>>>>>> Stashed changes
+
     "react-dom": "^17.0.2",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
