@@ -14,9 +14,9 @@ export default function RegisterForm(props){
                 <Form.Label>Username:</Form.Label>
                 <Form.Control name="username" placeholder="Enter your username" onChange={props.onChange}></Form.Control>
                 <Form.Label>Password:</Form.Label>
-                <Form.Control name="password" placeholder="Enter your password" onChange={props.onChange}></Form.Control>
+                <Form.Control name="password" type="password" placeholder="Enter your password" onChange={props.onChange}></Form.Control>
                 <Form.Label>Confirm Password:</Form.Label>
-                <Form.Control name="confirmpassword" placeholder="Enter your password" onChange={props.onChange}></Form.Control>
+                <Form.Control name="confirmPassword" type="password" placeholder="Enter your password" onChange={props.onChange}></Form.Control>
             </Form.Group>
             <Button variant="primary" type="submit" onClick={props.onSubmit}>Register</Button>
         </Form>
