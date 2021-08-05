@@ -7,7 +7,7 @@ export default function LoginForm(props){
     return(
         <div className="App">
             <Form>
-                <div className="aroundLogo"><img className="logo" src={logo}/></div>
+                <div className="aroundLogo"><img className="logo" alt="" src={logo}/></div>
                 <div className="form-inner">
                 <h4>Portfolio Manager</h4>
                 <Form.Group className="form-group" controlId="formBasicUsername">
