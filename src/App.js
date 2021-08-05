@@ -1,11 +1,7 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
-import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
-import Portfolio from './components/portfolio-component/portfolio-component';
-import Home from './components/home-component/home-component';
-import NewTransaction from './components/new-transaction-component/new-transaction-component';
-import Login from './components/login-component/login-component';
-import Register from './components/register-component/register-component';
+import { BrowserRouter as Router, Route} from "react-router-dom";
+import Login from './components/login-component/login';
 
 //TODO: We either need to add the navbar to this page or add it as a separate component
 
@@ -16,15 +12,13 @@ import Register from './components/register-component/register-component';
 function App() {
   return (
     <Router>
-
-      <Route path="/" exact component={Home}/>
+      {/* <Route path="/" exact component={Home}/>
       <Route path="/new" component={NewTransaction}/>
-      <Route path="/portfolio" component={Portfolio}/>
+      <Route path="/portfolio" component={Portfolio}/> */}
       <Route path="/login" component={Login}/>
-      <Route path="/register" component={Register}/>
+      {/* <Route path="/register" component={Register}/> */}
     </Router>
     );
-
 }
 
 export default App;
