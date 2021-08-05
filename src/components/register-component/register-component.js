@@ -105,6 +105,6 @@ export default function Register(props) {
         console.log("User input valid...");
         return true;
     }
-    return <RegisterForm onChange={handleChange} onSubmit={handleSubmit}></RegisterForm>
+    return <RegisterForm nameError={nameError} emailError={emailError} usernameError={usernameError} passwordError={passwordError} confirmPasswordError={confirmPasswordError} onChange={handleChange} onSubmit={handleSubmit}></RegisterForm>
 }
 
