@@ -3,6 +3,7 @@ import './App.css';
 import { BrowserRouter as Router, Route} from "react-router-dom";
 import Login from './components/login-component/login';
 import ExampleCandle from './components/chart-component/exampleCandle';
+import ExampleContainer from './components/chart-component/exampleContainer';
 
 //TODO: We either need to add the navbar to this page or add it as a separate component
 
@@ -17,7 +18,7 @@ function App() {
       <Route path="/new" component={NewTransaction}/>
       <Route path="/portfolio" component={Portfolio}/> */}
       <Route path="/login" component={Login}/>
-      <Route path="/chart" component={ExampleCandle}/>
+      <Route path="/chart" component={ExampleContainer}/>
       {/* <Route path="/register" component={Register}/> */}
     </Router>
     );
