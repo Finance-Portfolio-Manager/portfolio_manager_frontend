@@ -30,8 +30,8 @@ form {
     display: block;
     position: relative;
     border-style: solid;
-    border-color: #F26925;
-    background-color: var(--medium-light-background);
+    /* border-color: #F26925; */
+    border-color: var(--medium-background);
     border-width: 4px;
 }
 
@@ -55,6 +55,7 @@ form{
     border-bottom-left-radius: 6px;
     border-bottom-right-radius: 6px;
     /* background-image: linear-gradient(white, rgb(67, 67, 67)); */
+    background-image: linear-gradient(white, var(--dark-background));
 }
 
 form .form-inner h4 {
@@ -78,7 +79,8 @@ form .form-inner .form-group{
 form .submitButton {
     padding: 10px 50px;
     border-radius: 8px;
-    background-color: #F26925;
+    /* background-color: #F26925; */
+    background-color: var(--medium-light-background);
     color: #FFF;
     font-weight: 600;
 }
