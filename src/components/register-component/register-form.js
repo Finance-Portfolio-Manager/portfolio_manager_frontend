@@ -41,7 +41,7 @@ export default function RegisterForm(props){
 
                     <Form.Group className = "form-group" controlId="form-confirm-password">
                         <Form.Label>Confirm Password:</Form.Label>
-                        <Form.Control name="confirmpassword" placeholder="Enter your password" onChange={props.onChange}/>  
+                        <Form.Control name="confirmPassword" placeholder="Re-enter your password" onChange={props.onChange}/>  
                     </Form.Group>
 
                     <button className = "submitButton mt-2" type="submit" onClick={props.onSubmit}>Register</button>
