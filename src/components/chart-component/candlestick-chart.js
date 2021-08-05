@@ -1,6 +1,6 @@
 import Chart from "react-apexcharts";
 import React from "react";
-import {convertRawData} from "./util.js";
+import {convertRawData} from "./chart-util.js";
 
 function CandlestickChart(props) {
     return (

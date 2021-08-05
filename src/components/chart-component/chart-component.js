@@ -1,9 +1,9 @@
-import CandlestickChart from "./candlestickChart";
+import CandlestickChart from "./candlestick-chart";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import {initialData} from "./util.js";
+import {initialData} from "./chart-util.js";
 
-function ExampleContainer(props) {
+function ChartComponent(props) {
 
     const [rawData, setRawData] = useState(initialData)
 
@@ -21,4 +21,4 @@ function ExampleContainer(props) {
 
 }
 
-export default ExampleContainer;
+export default ChartComponent;
