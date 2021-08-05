@@ -1,5 +1,5 @@
-import NavDropDown from './navdropdown'
-import { useState } from 'react'
+import NavDropDown from './navdropdown';
+import React, { useState } from 'react';
 
 export default function Navigation() {
     const [dropdownShow, setDropDrownShow] = useState(false);

@@ -5,9 +5,12 @@
 $theme-colors: map-merge(
   $theme-colors,
   (
+    "black-80": rgba($black, 0.8),
+    "white-80": rgba($white, 0.8),
     "black": $black,
   )
 );
+
 
 $enable-negative-margins: true;
 
