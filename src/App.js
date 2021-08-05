@@ -3,6 +3,7 @@ import './App.css';
 import { BrowserRouter as Router, Route} from "react-router-dom";
 import Login from './components/login-component/login';
 import ChartComponent from './components/chart-component/chart-component';
+import ExampleChartComponent from './components/chart-component/example-chart-component';
 
 //TODO: We either need to add the navbar to this page or add it as a separate component
 
@@ -17,7 +18,7 @@ function App() {
       <Route path="/new" component={NewTransaction}/>
       <Route path="/portfolio" component={Portfolio}/> */}
       <Route path="/login" component={Login}/>
-      <Route path="/chart" component={ChartComponent}/>
+      <Route path="/chart" component={ExampleChartComponent}/>
       {/* <Route path="/register" component={Register}/> */}
     </Router>
     );
