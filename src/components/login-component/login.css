@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: montserrat, sans-serif;
+}
+
+input, button {
+    appearance: none;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.App {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #474C55;
+}
+
+form {
+    display: block;
+    position: relative;
+    border-style: solid;
+    border-color: #F26925;
+    border-width: 3px;
+}
+
+form .form-inner{
+    position: relative;
+    background-color: #fff;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 40px;
+    padding-bottom: 70px;
+}
+
+form .form-inner h4 {
+    color: rgb(90, 89, 89);
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+form .form-inner .form-group{
+    width: 300px;
+    margin-bottom: 15px;
+}
+
+.form-inner .form-group label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+form .submitButton {
+    padding: 10px 50px;
+    border-radius: 8px;
+    background-color: #F26925;
+    color: #FFF;
+    font-weight: 600;
+}
+
+.logo {
+    max-width: 50%;
+    height: auto;
+    /* padding-bottom: 0px; */
+}
+
+.aroundLogo {
+    position: relative;
+    background-color: #fff;
+    padding-top: 40px;
+}
+
+.loginInput {
+    text-align: center;
+}

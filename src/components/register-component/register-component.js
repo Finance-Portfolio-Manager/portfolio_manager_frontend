@@ -18,14 +18,14 @@ export default function Register(props) {
 
     const handleSubmit = (e)=>{
         e.preventDefault();
-        if (validateInput(registrationData.firstName, registrationData.lastName, registrationData.email, registrationData.password, registrationData.confirmPassword)) {
+        if (validateInput(registrationData.firstName, registrationData.lastName, registrationData.username, registrationData.email, registrationData.password, registrationData.confirmPassword)) {
             const registrationInfo = {
                 firstName:`${registrationData.firstName}`,
                 lastName:`${registrationData.lastName}`,
                 email:`${registrationData.email}`,
                 username:`${registrationData.username}`,
                 password:`${registrationData.password}`,
-                confirmPassword:`${registrationData.password}`
+                confirmPassword:`${registrationData.confirmPassword}`
                 };
             console.log(JSON.stringify(registrationInfo));
             axios.post(URL + "/register", JSON.stringify(registrationInfo), {headers:{'Content-Type': 'application/json'}})
@@ -37,7 +37,7 @@ export default function Register(props) {
         }
     }
 
-    function validateInput(firstName, lastName, email, password, confirmPassword){
+    function validateInput(firstName, lastName, username, email, password, confirmPassword){
         // var nameError = document.getElementById("name-error");
         // nameError.hidden = true;
         // var emailError = document.getElementById("email-error");
@@ -46,9 +46,16 @@ export default function Register(props) {
         // passwordError.hidden = true;
         // var retypePasswordError = document.getElementById("retype-password-error");
         // retypePasswordError.hidden = true;
+
+        // Forbid any empty values
+        if((firstName||lastName||username||email||password||confirmPassword)==(null||undefined)){
+            console.log("Some registration fields were left empty.");
+            return false;
+        }
     
         var letters = /^[A-Za-z]+$/;
-        if(!firstName.match(letters) || !lastName.match(letters)){
+        if(!firstName.match(letters) || !lastName.match(letters) || !username.match(letters)){
+            console.log("Invalid character detected.");
             // nameError.hidden = false;
             return false;
         }
@@ -56,20 +63,26 @@ export default function Register(props) {
         // just looks for string of the form string@string.string proper validation should be done with a validation link sent to the email address
         var emailCheck = /\S+@\S+\.\S+/; 
         if(!emailCheck.test(email)){
+            console.log("Invalid email.");
             // emailError.hidden = false;
             return false;
         }
         
         var passCheck = /[\s~`!@#$%^&*+=\-[\]\\';,/{}|\\":<>?()._]/g;
         if(!passCheck.test(password) || password.length<8){
+            console.log("invalid password.");
             // passwordError.hidden = false;
             return false;
         }
-    
-        if(password!==confirmPassword){
+
+        if(password!=confirmPassword){
+            console.log(password);
+            console.log(confirmPassword);
+            console.log("Password confirmation mismatch.");
             // retypePasswordError.hidden = false;
             return false;
         }
+        console.log("User input valid...");
         return true;
     }
     return <RegisterForm onChange={handleChange} onSubmit={handleSubmit}></RegisterForm>
