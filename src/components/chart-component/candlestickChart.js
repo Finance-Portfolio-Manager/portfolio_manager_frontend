@@ -3,9 +3,6 @@ import React from "react";
 import {convertRawData} from "./util.js";
 
 function CandlestickChart(props) {
-
-    let stockData = props.rawData;
-
     return (
         <div className="example">
             <div className="row">
@@ -31,11 +28,10 @@ function CandlestickChart(props) {
                         }}
 
                         series={[{
-                            data: convertRawData(JSON.stringify(stockData))
+                            data: convertRawData(props.rawData)
                         }]}
                         type="candlestick"
                         width="500"
-
                     />
                 </div>
             </div>
