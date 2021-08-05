@@ -13,7 +13,6 @@ function App() {
   return (
     <Router>
       {/* <Route path="/" exact component={Home}/>
-      <Route path="/" exact component={Home}/>
       <Route path="/new" component={NewTransaction}/>
       <Route path="/portfolio" component={Portfolio}/> */}
       <Route path="/login" component={Login}/>
