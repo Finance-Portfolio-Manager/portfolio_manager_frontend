@@ -13,7 +13,7 @@ export default function RegisterForm(props){
                 
                 <div className = "form-inner">
                     <h4>Portfolio Manager</h4>
-                    <h7><em>Account Registration</em></h7>
+                    <h6><em>Account Registration</em></h6>
                     <Form.Group controlId="form-fname">
                         <Form.Label>First Name:</Form.Label>
                         <Form.Control name="firstName" placeholder="Enter your first name" onChange={props.onChange}/>
