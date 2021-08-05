@@ -46,6 +46,12 @@ export default function Register(props) {
         // passwordError.hidden = true;
         // var retypePasswordError = document.getElementById("retype-password-error");
         // retypePasswordError.hidden = true;
+
+        // Forbid any empty values
+        if((firstName||lastName||email||password||confirmPassword)==(null||undefined)){
+            console.log("Some registration fields were left empty.");
+            return false;
+        }
     
         var letters = /^[A-Za-z]+$/;
         if(!firstName.match(letters) || !lastName.match(letters)){
