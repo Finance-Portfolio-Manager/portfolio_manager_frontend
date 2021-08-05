@@ -1,5 +1,6 @@
 import { Table } from "react-bootstrap";
 import { useState } from "react";
+import { Button } from "react-bootstrap";
 
 export default function PortfolioView(props){
 
@@ -14,7 +15,7 @@ export default function PortfolioView(props){
     console.log(`TableRows: ${JSON.stringify(tableRows)}`);
 
     return <>
-        <div className="wrapper fadeInDown center">
+        <div className="wrapper fadeInDown">
             <div id="folioContent">
                 <div id="portfolio">
                     <div id="portfolio-values">
@@ -47,6 +48,7 @@ export default function PortfolioView(props){
                                 })}
                             </tbody>
                         </Table>
+                        <Button variant="primary" onClick={props.toggleShowDetails}>Go to card</Button>
                     </div>
                 </div>
             </div>

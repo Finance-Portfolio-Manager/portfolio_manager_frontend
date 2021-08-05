@@ -6,7 +6,10 @@ import Home from './components/home-component/home-component';
 import NewTransaction from './components/new-transaction-component/new-transaction-component';
 import Login from './components/login-component/login-component';
 import Register from './components/register-component/register-component';
+import AccountView from './components/account-component/account-view-component'
 import "./css/portfolio-styles.css"
+import "./css/account.css"
+import 'bootstrap/dist/css/bootstrap.css';
 
 //TODO: We either need to add the navbar to this page or add it as a separate component
 
@@ -22,6 +25,7 @@ function App() {
       <Route path="/portfolio" component={Portfolio}/>
       <Route path="/login" component={Login}/>
       <Route path="/register" component={Register}/>
+      <Route path="/account" component={AccountView}/>
     </Router>
     );
 

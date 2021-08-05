@@ -1,19 +1,35 @@
 import React from "react";
+import { CardGroup } from "react-bootstrap";
+import PortfolioCard from "../portfolio-component/portfolio-card-component";
 //TODO: will be importing functions not yet defined
 
-export default function Account(props){
+//TODO: This will take in a list of portfolios as props and render them
+export default function AccountView(props){
     //props for account: accountId, username, first_name, last_name, email
 
+    let portObj1 = {name:"Portfolio 1", value:1000};
+    let portObj2 = {name:"Portfolio 2", value:145641};
+    let portObj3 = {name:"Portfolio 3", value:1840};
+
+    let portfolioArray = [portObj1, portObj2, portObj3];
+
+    //TODO: Probably remove inline styling of div
     return (
         <>
-        <div>
+        <div style={{backgroundColor:"#B9B9BA"}}>
             <h2 id="account-header">
                 {/* display username and full name to user */}
-                <span id="header-span">{props.username}Username</span>  {/*some margin*/}  <span id="header-span">{props.first_name}Full Name{props.last_name}</span>
+                <span id="header-span">{props.username}Username</span>
                 {/* depending on streatch goals, maybe a dark theme toggle can go up here */}
             </h2>
+            
+            {portfolioArray.map((portfolio) => {
+                return(
+                    <><PortfolioCard portfolio={portfolio}/> <br/></>
+                )
+            })}
+           
 
-            { <h2>Placeholder for the list of portfolios</h2> }
             
         </div>
         </>

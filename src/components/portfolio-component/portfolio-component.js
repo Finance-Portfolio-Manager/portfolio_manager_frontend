@@ -138,6 +138,24 @@ export default function Portfolio(props){
         });
     }
 
+
+    // let portfolio = [
+    //     {stockName: "stockName",
+    //     stockQuantity: "stockQuantity",
+    //     stockAveragePrice: "stockAveragePrice",
+    //     stockCurrentPrice: "stockCurrenTPrice",
+    //     stockChange: "stockChange"},
+    //     {stockName: "stockName",
+    //     stockQuantity: "stockQuantity",
+    //     stockAveragePrice: "stockAveragePrice",
+    //     stockCurrentPrice: "stockCurrenTPrice",
+    //     stockChange: "stockChange"},
+    //     {stockName: "stockName",
+    //     stockQuantity: "stockQuantity",
+    //     stockAveragePrice: "stockAveragePrice",
+    //     stockCurrentPrice: "stockCurrenTPrice",
+    //     stockChange: "stockChange"}
+    // ]
     return (
         <PortfolioView tableRows ={portfolio}></PortfolioView>
     )
