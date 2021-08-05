@@ -1,7 +1,8 @@
+import React from 'react';
 
 export default function Footer() {
     return (
-        <div className="footer bg-dark mvh-45 d-flex flex-column pt-md-5 align-items-center overflow-auto">
+        <div className="footer bg-dark min-vh-45 d-flex flex-column pt-md-5 align-items-center overflow-auto">
             <div className="d-flex flex-column flex-md-row w-100 justify-content-center">
                 {/* Columns */}
                 <div className="card border-0 w-md-15 bg-transparent">
@@ -39,7 +40,7 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
-            <div className="d-flex w-md-75 ps-md-3 flex-column">
+            <div className="d-flex w-md-75 ps-md-3 flex-column align-items-center">
                 <div className="d-flex">
                     <a href="/" className="text-decoration-none text-white-80 text-small text-uppercase">Search</a>
                     <span className="text-decoration-none text-white-80 text-small mx-2">|</span>
