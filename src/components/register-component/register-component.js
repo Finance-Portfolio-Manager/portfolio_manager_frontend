@@ -9,11 +9,22 @@ export default function Register(props) {
 
     const [registrationData, setRegistrationData] = useState("");
 
+    const [nameError, setNameError] =useState(false);
+    const [emailError, setEmailError] =useState(false);
+    const [usernameError, setUsernameError] =useState(false);
+    const [passwordError, setPasswordError] =useState(false);
+    const [confirmPasswordError, setConfirmPasswordError] =useState(false);
+
     const handleChange = (e) =>{
         const {value,name} = e.target;
         
         setRegistrationData({...registrationData, [name]:value});
-        console.log(registrationData);
+        setNameError(false);
+        setEmailError(false);
+        setUsernameError(false);
+        setPasswordError(false);
+        setConfirmPasswordError(false);
+        // validateInput(registrationData.firstName, registrationData.lastName, registrationData.username, registrationData.email, registrationData.password, registrationData.confirmPassword);
     }
 
     const handleSubmit = (e)=>{
@@ -27,13 +38,18 @@ export default function Register(props) {
                 password:`${registrationData.password}`,
                 confirmPassword:`${registrationData.confirmPassword}`
                 };
-            console.log(JSON.stringify(registrationInfo));
             axios.post(URL + "/register", JSON.stringify(registrationInfo), {headers:{'Content-Type': 'application/json'}})
                 .then(response=>{
                     console.log(response.data);
                     // props.history.push("/");
                 })
-                .catch(err=> console.error("There was an issue registering your account!"))
+                .catch( (e) => {
+                    if (e.response.status<200 || e.response.status>299) {
+                        setUsernameError(true);
+                    } else {
+
+                    }
+                })
         }
     }
 
@@ -57,6 +73,7 @@ export default function Register(props) {
         if(!firstName.match(letters) || !lastName.match(letters) || !username.match(letters)){
             console.log("Invalid character detected.");
             // nameError.hidden = false;
+            setNameError(true);
             return false;
         }
         
@@ -65,6 +82,7 @@ export default function Register(props) {
         if(!emailCheck.test(email)){
             console.log("Invalid email.");
             // emailError.hidden = false;
+            setEmailError(true);
             return false;
         }
         
@@ -72,19 +90,21 @@ export default function Register(props) {
         if(!passCheck.test(password) || password.length<8){
             console.log("invalid password.");
             // passwordError.hidden = false;
+            setPasswordError(true);
             return false;
         }
 
-        if(password!=confirmPassword){
+        if(password!==confirmPassword){
             console.log(password);
             console.log(confirmPassword);
             console.log("Password confirmation mismatch.");
             // retypePasswordError.hidden = false;
+            setConfirmPasswordError(true);
             return false;
         }
         console.log("User input valid...");
         return true;
     }
-    return <RegisterForm onChange={handleChange} onSubmit={handleSubmit}></RegisterForm>
+    return <RegisterForm nameError={nameError} emailError={emailError} usernameError={usernameError} passwordError={passwordError} confirmPasswordError={confirmPasswordError} onChange={handleChange} onSubmit={handleSubmit}></RegisterForm>
 }
 

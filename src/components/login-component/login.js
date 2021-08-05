@@ -22,9 +22,9 @@ function Login(props){
     const handleSubmit = (e)=>{
         e.preventDefault();
         const loginInfo = {
-                username:`${credentials.username}`,
-                password:`${credentials.password}`
-            };
+            username:`${credentials.username}`,
+            password:`${credentials.password}`
+        };
         console.log(JSON.stringify(loginInfo));
         axios.post("http://localhost:8082/login", JSON.stringify(loginInfo), {headers:{'Content-Type': 'application/json'}})
             .then(response=>{
