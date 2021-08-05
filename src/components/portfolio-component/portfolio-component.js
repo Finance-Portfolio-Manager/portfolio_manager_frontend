@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { Table } from "react-bootstrap";
+import PortfolioView from "./portfolio-view-component";
 
 export default function Portfolio(props){
 
-    const[portfolio, setPortfolio] = useState("");
+    const[portfolio, setPortfolio] = useState([{}]);
 
     useEffect(()=>{
-        let content = "";
+        let records = [{}];
         getUserFromToken(sessionStorage.getItem('Authorization')).then(data => {
             var userId = data.userId;
             getAllTransactions(userId).then(data => {
@@ -73,87 +73,20 @@ export default function Portfolio(props){
                     portfolioChange = portfolioChange.toFixed(2);
                     dollarChange = dollarChange.toFixed(2);
             
-                    content += "<div class=\"wrapper fadeInDown\">";
-                    content += "<div id=\"folioContent\">";
-                    content += "<div id=\"portfolio\">";
-                    content += "<div id=\"portfolio-values\">";
-                    content += "<h4>Portfolio Balance <br>$" + portfolioValue + "</h4>";
-                    content += portfolioChange >= 0 ?
-                        "<div style=\"color\":\"green\">$" + portfolioChange + "</div>" + 
-                        "<div style=\"color\":\"green\">$" + dollarChange + "</div>" : 
-                        "<div style=\"color\":\"red\">$" + portfolioChange + "</div>" + 
-                        "<div style=\"color\":\"red\">$" + dollarChange + "</div>";
-                    content += "</div>";
-                    // document.getElementById("portfolio-total").innerHTML = "Portfolio Balance <br>$" + portfolioValue;
-                    // let changeValue = document.getElementById("portfolio-change");
-                    // let changeAmount = document.getElementById("dollar-change");
-                    // changeValue.innerHTML = portfolioChange + "%";
-        
-                    // if(portfolioChange>0){
-                    //     changeAmount.innerHTML = "$" + dollarChange;
-                    //     changeValue.style.color = "green";
-                    //     changeAmount.style.color = "green";
-                    // } else if (portfolioChange<0){
-                    //     changeAmount.innerHTML = "$" + dollarChange;
-                    //     changeValue.style.color = "red";
-                    //     changeAmount.style.color = "red";
-                    // }
-
-                    content += "<div class=\"table-responsive\">";
-                    content += "<Table class=\"table borderless table-hover\">";
-                    content += "<thead><tr>";
-                    content += "<th scope=\"col\">Stock</th>";
-                    content += "<th scope=\"col\">Quantity</th>";
-                    content += "<th scope=\"col\">Average Buy Price</th>";
-                    content += "<th scope=\"col\">Current Price</th>";
-                    content += "<th scope=\"col\">P/L</th>";
-                    content += "</tr></thead>";
-                    content += "<tbody>";
-                    
-                    //const stockTableBody = document.getElementById("stocks-body");
                     for(let i = 0; i < stocksList.length; i++){
-                        // let tableRow = document.createElement("tr");
-                        // let stockName = document.createElement("th");
-                        // let stockQuantity = document.createElement("td");
-                        // let stockAveragePrice = document.createElement("td");
-                        // let stockCurrentPrice = document.createElement("td");
-                        // let stockChange = document.createElement("td");
-        
-                        content += "<tr><th scope=\"row\">" + stocksList[i].symbol + "</th>";
-                        content += "<td>" + stocksList[i].quantity + "</td>";
-                        content += "<td>$" + stocksList[i].price.toFixed(2) + "</td>";
-                        content += "<td>$" + currentPrices[i].symbol.toFixed(2) + "</td>";
 
                         let profitAndLoss = (((currentPrices[i] * 100) / stocksList[i].price) - 100).toFixed(2);
-                        content += profitAndLoss >= 0 ? "<td style=\"color\":\"green\">$" + profitAndLoss + "</td></tr>" : 
-                                "<td style=\"color\":\"red\">$" + profitAndLoss + "</td></tr>";
-                        content += "</tbody></Table>";
-                        // content += "<td><th>" + stocksList[i].symbol + "</th></tr>";
 
-                        // //stockName.setAttribute('scope', '"row"');
-                        // let profitAndLoss = (((currentPrices[i] * 100) / stocksList[i].price) - 100).toFixed(2);
-                        // if(profitAndLoss>0){
-                        //     stockChange.style.color = "green";
-                        // } else if(profitAndLoss<0){
-                        //     stockChange.style.color = "red";
-                        // }
-        
-                        // stockName.innerText = stocksList[i].symbol;
-                        // stockQuantity.innerText = stocksList[i].quantity.toFixed(2);
-                        // stockAveragePrice.innerText = "$" + stocksList[i].price.toFixed(2);
-                        // stockCurrentPrice.innerText = "$" + currentPrices[i].toFixed(2);
-                        // stockChange.innerText = profitAndLoss + "%";
-                        // tableRow.appendChild(stockName);
-                        // tableRow.appendChild(stockQuantity);
-                        // tableRow.appendChild(stockAveragePrice);
-                        // tableRow.appendChild(stockCurrentPrice);
-                        // tableRow.appendChild(stockChange);
-                        // stockTableBody.appendChild(tableRow);
+                        let stockRecord = {"stockQuantity":stocksList[i].quantity, "stockName":stocksList[i].symbol,
+                            "stockAveragePrice":stocksList[i].price.toFixed(2), "stockCurrentPrice":currentPrices[i].symbol.toFixed(2),
+                            "stockChange":profitAndLoss }
+                        
+                        records.push(stockRecord);
                     }
                 })
             })
         });
-        setPortfolio(content);    
+        setPortfolio(records);    
     },[]);
 
     function fetchAllStocks(symbols){
@@ -206,7 +139,7 @@ export default function Portfolio(props){
     }
 
     return (
-        <p>{portfolio}</p>    
+        <PortfolioView tableRows ={portfolio}></PortfolioView>
     )
     
 }
