@@ -6,6 +6,7 @@ import Home from './components/home-component/home-component';
 import NewTransaction from './components/new-transaction-component/new-transaction-component';
 import Login from './components/login-component/login-component';
 import Register from './components/register-component/register-component';
+import "./css/portfolio-styles.css"
 
 //TODO: We either need to add the navbar to this page or add it as a separate component
 
