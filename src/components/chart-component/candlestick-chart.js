@@ -31,7 +31,7 @@ function CandlestickChart(props) {
                             data: convertRawData(props.rawData)
                         }]}
                         type="candlestick"
-                        width="500"
+                        width={props.width}
                     />
                 </div>
             </div>
