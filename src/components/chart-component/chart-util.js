@@ -67,8 +67,8 @@ const convertRawData = (rawData) => {
 
 const initialData = {
 	"Meta Data": {
-		"1. Information": "Dummy",
-		"2. Symbol": "Dummy",
+		"1. Information": "Loading...",
+		"2. Symbol": "Loading...",
 		"3. Last Refreshed": "1990-01-01",
 		"4. Output Size": "Compact",
 		"5. Time Zone": "US/Eastern"
