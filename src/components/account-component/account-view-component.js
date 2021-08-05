@@ -14,6 +14,7 @@ export default function Account(props){
             </h2>
 
             { <h2>Placeholder for the list of portfolios</h2> }
+            
         </div>
         </>
         //TODO: 'portfolio-cards'(accountId)  -  build portfolio list based on accountId (or account obj)
