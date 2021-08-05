@@ -65,4 +65,23 @@ const convertRawData = (rawData) => {
     })
 }
 
-export {convertRawData};
+const initialData = {
+	"Meta Data": {
+		"1. Information": "Dummy",
+		"2. Symbol": "Dummy",
+		"3. Last Refreshed": "1990-01-01",
+		"4. Output Size": "Compact",
+		"5. Time Zone": "US/Eastern"
+	},
+	"Time Series (Daily)": {
+		"2021-08-04": {
+			"1. open": "0",
+			"2. high": "0",
+			"3. low": "0",
+			"4. close": "0",
+			"5. volume": "0"
+		}
+	}
+}
+    
+export {convertRawData, initialData};
