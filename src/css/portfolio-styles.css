@@ -1,0 +1,81 @@
+/* div {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+table {
+    border-collapse:collapse;
+    width:50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 30%;
+}
+
+table th {
+   border:1px solid #000;
+}
+
+ table td {
+    border:1px solid #000;
+ }
+  */
+  .center {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+  }
+  
+  .borderless td, .borderless th {
+    border: none;
+    white-space: nowrap;
+    width: 300px;
+  }
+  
+  #portfolio {
+      overflow: hidden;
+      width: auto;
+    padding: 30px 30px 30px 30px;
+  }
+
+  #portfolio-values {
+    text-align: right;
+    align-content: flex-end;
+    float: right;
+    right: 0px;
+    margin-bottom: 20px;
+  }
+
+  /* #portfolio-total {
+      float: right;
+  }
+
+  #portfolio-change {
+    float: right;
+}
+
+#dollar-change {
+    float: right;
+} */
+
+  #folioContent {
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border-radius: 10px 10px 10px 10px;
+    background: #fff;
+    padding: 30px;
+    width: 90%;
+    max-width: 800px;
+    position: relative;
+    padding: 0px;
+    -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+    box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+    text-align: center;
+  }
+
+  .profit {
+      text-decoration-color: #00FF00 !important; 
+  }
+  
+  .loss {
+    text-decoration-color: #FF0000 !important;
+}
