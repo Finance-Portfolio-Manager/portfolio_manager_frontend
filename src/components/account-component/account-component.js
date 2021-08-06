@@ -16,12 +16,15 @@ export default function Account(props){
     let portObj2 = {id: 2, name:"Portfolio 2", value:145641};
     let portObj3 = {id: 3, name:"Portfolio 3", value:1840};
 
-            { <h2>Placeholder for the list of portfolios</h2> }
+    let portfolioArray = [portObj1, portObj2, portObj3]; 
+    return <AccountView portfolioArray={portfolioArray}/>
 
-            <PortfolioCard portfolio={portfolio} />
-        </div>
-        </>
-        //TODO: 'portfolio-cards'(accountId)  -  build portfolio list based on accountId (or account obj)
-    )
+    //         { <h2>Placeholder for the list of portfolios</h2> }
+
+    //         <PortfolioCard portfolio={portfolio} />
+    //     </div>
+    //     </>
+    //     //TODO: 'portfolio-cards'(accountId)  -  build portfolio list based on accountId (or account obj)
+    // )
 
 }

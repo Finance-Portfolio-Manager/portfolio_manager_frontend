@@ -6,6 +6,7 @@ import Footer from './footer-component/footer';
 import Navigation from './navigation/navigation';
 import About from './about-component/about-page.js';
 import ScrollingStripContainer from './scrolling-strip-component/scrolling-strip-container';
+import Account from './account-component/account-component';
 
 
 class Main extends Component {
@@ -21,9 +22,7 @@ class Main extends Component {
                 <ScrollingStripContainer></ScrollingStripContainer>
                 <Switch>
                     <Route exact path="/" component={() => <Home users ={users}/>}/>
-                    
-                    
-                    
+                    <Route exact path="/account" component={Account}/>
                     <Route exact path="/about" component={About}/>
                 </Switch>
                 <Footer/>
