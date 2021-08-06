@@ -17,13 +17,12 @@ const initialSeriesData = (startDate, periods) => {
     return seriesData;
 }
 
-const convertRawData = (rawData) => {
-    const barObjects = rawData["Time Series (Daily)"];
-    return Object.keys(barObjects).reverse().map(e => {
-        const open  = parseFloat(barObjects[e]["1. open"]);
-        const high  = parseFloat(barObjects[e]["2. high"]);
-        const low   = parseFloat(barObjects[e]["3. low"]);
-        const close = parseFloat(barObjects[e]["4. close"]);
+const convertSeriesData = (rawSeriesData) => {
+    return Object.keys(rawSeriesData).reverse().map(e => {
+        const open  = parseFloat(rawSeriesData[e]["1. open"]);
+        const high  = parseFloat(rawSeriesData[e]["2. high"]);
+        const low   = parseFloat(rawSeriesData[e]["3. low"]);
+        const close = parseFloat(rawSeriesData[e]["4. close"]);
         return {
             x: new Date(DateTime.fromRFC2822(convertDateString(e)).valueOf()),
             y: [open, high, low, close]
@@ -82,4 +81,8 @@ function convertDateString(dateString) {
 	return dateString;
 }
 
-export {convertRawData, initialSeriesData};
+export {
+    convertDateString, 
+    convertSeriesData,
+    initialSeriesData
+};

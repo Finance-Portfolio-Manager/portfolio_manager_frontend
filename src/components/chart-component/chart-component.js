@@ -1,7 +1,7 @@
 import CandlestickChart from "./candlestick-chart";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import {convertRawData, initialSeriesData} from "./chart-util.js";
+import {initialSeriesData, convertSeriesData} from "./chart-util.js";
 
 function ChartComponent(props) {
 
@@ -13,10 +13,9 @@ function ChartComponent(props) {
     useEffect(()=>{
         axios.get(`https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${props.symbol}&apikey=JPGYN8LH3C332EGE`)
         .then(response => {
-            // console.log(response.data);
             setState({
                 symbolName: response.data["Meta Data"]["2. Symbol"],
-                seriesData: convertRawData(response.data)
+                seriesData: convertSeriesData(response.data["Time Series (Daily)"])
             });
         })
     },[])
