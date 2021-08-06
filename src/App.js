@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-import logo from './logo.svg';
-import './App.css';
-import {BrowserRouter as Router} from 'react-router-dom';
-import { Route } from 'react-router';
-import Portfolio from './components/portfolio-component/portfolio-component';
-import Home from './components/home-component/home-component';
-import NewTransaction from './components/new-transaction-component/new-transaction-component';
-import Login from './components/login-component/login-component';
-import Register from './components/register-component/register-component';
-=======
->>>>>>> b7a0514811cbdf691464c40277fef17a57baa9a4
-
 //TODO: We either need to add the navbar to this page or add it as a separate component
 
 //IMPORTANT: Each of these pulls the component from the .js file with the hyphen naming scheme.
