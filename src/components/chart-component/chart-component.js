@@ -3,7 +3,19 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import {initialSeriesData, convertSeriesData} from "./chart-util.js";
 
+/**
+ * You should make a file in src/ to keep all your keys called apiKeys.json that 
+ * looks like this:
+ * {
+ *      "alphaVantage00": <key0>,
+ *      "alphaVantage01": <key1>,
+ * }
+ */
+import apiKeys from "../../apiKeys.json"
+
 function ChartComponent(props) {
+
+    console.log(apiKeys.alphaVantage00)
 
     const [state, setState] = useState({
         symbolName: "Loading...",
@@ -11,7 +23,7 @@ function ChartComponent(props) {
     });
 
     useEffect(()=>{
-        axios.get(`https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${props.symbol}&apikey=JPGYN8LH3C332EGE`)
+        axios.get(`https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${props.symbol}&apikey=${apiKeys.alphaVantage00}`)
         .then(response => {
             // put logic for multiple time frames here
             setState({
