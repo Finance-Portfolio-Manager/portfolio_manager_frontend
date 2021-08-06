@@ -11,7 +11,7 @@ import {initialSeriesData, convertSeriesData} from "./chart-util.js";
  *      "alphaVantage01": <key1>,
  * }
  */
-import apiKeys from "../../apiKeys.json"
+// import apiKeys from "../../apiKeys.json"
 
 function ChartComponent(props) {
 
@@ -23,7 +23,7 @@ function ChartComponent(props) {
     });
 
     useEffect(()=>{
-        axios.get(`https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${props.symbol}&apikey=${apiKeys.alphaVantage00}`)
+        axios.get(`https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${props.symbol}&apikey=LW7AFCIUDLGSKMIQ`)
         .then(response => {
             // put logic for multiple time frames here
             setState({
