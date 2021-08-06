@@ -23,7 +23,9 @@ input, button {
     align-items: center;
     justify-content: center;
     /* background-color: #474C55; */
-    background-color: var(--medium-dark-background);
+    background: url("./pic5.jpg");
+    background-size: cover;
+    /* background-color: var(--medium-dark-background); */
 }
 
 form {
