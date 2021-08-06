@@ -1,2 +1,6 @@
 node_modules
+<<<<<<< HEAD
 package-lock.json
+=======
+example-chart
+>>>>>>> scrolling-strip

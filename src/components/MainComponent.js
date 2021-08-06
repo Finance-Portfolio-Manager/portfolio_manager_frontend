@@ -5,6 +5,7 @@ import Footer from './footer-component/footer';
 // import {StyledLayout} from './styled-layout/StyledLayout';
 import Navigation from './navigation/navigation';
 import About from './about-component/about-page.js';
+import ScrollingStripContainer from './scrolling-strip-component/scrolling-strip-container';
 
 
 class Main extends Component {
@@ -17,6 +18,7 @@ class Main extends Component {
         return (
             <React.Fragment>
                 <Navigation/>
+                <ScrollingStripContainer></ScrollingStripContainer>
                 <Switch>
                     <Route exact path="/" component={() => <Home users ={users}/>}/>
                     
