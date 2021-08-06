@@ -1,9 +1,7 @@
 import Chart from "react-apexcharts";
 import React from "react";
-import {convertRawData} from "./chart-util.js";
 
 function CandlestickChart(props) {
-    const symbolName = props.rawData["Meta Data"]["2. Symbol"]
     return (
         <div className="example">
             <div className="row">
@@ -15,7 +13,7 @@ function CandlestickChart(props) {
                                 height: 350
                             },
                             title: {
-                                text: symbolName,
+                                text: props.symbolName,
                                 align: 'left'
                             },
                             xaxis: {
@@ -29,7 +27,7 @@ function CandlestickChart(props) {
                         }}
 
                         series={[{
-                            data: convertRawData(props.rawData)
+                            data: props.seriesData
                         }]}
                         type="candlestick"
                         width={props.width}

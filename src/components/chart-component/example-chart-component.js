@@ -3,7 +3,7 @@ import ChartComponent from "./chart-component";
 
 function ExampleChartComponent(props) {
     return (
-        <ChartComponent symbol="MCD" width="800"></ChartComponent>
+        <ChartComponent symbol="MSFT" width="800"></ChartComponent>
     )
 }
 
