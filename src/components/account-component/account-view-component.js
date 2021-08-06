@@ -7,15 +7,11 @@ import PortfolioCard from "../portfolio-component/portfolio-card-component";
 export default function AccountView(props){
     //props for account: accountId, username, first_name, last_name, email
 
-    let portObj1 = {name:"Portfolio 1", value:1000};
-    let portObj2 = {name:"Portfolio 2", value:145641};
-    let portObj3 = {name:"Portfolio 3", value:1840};
 
-    let portfolioArray = [portObj1, portObj2, portObj3];
 
     //TODO: Probably remove inline styling of div
     return (
-        <>
+  
         <div style={{backgroundColor:"#B9B9BA"}}>
             <h2 id="account-header">
                 {/* display username and full name to user */}
@@ -23,16 +19,14 @@ export default function AccountView(props){
                 {/* depending on streatch goals, maybe a dark theme toggle can go up here */}
             </h2>
             
-            {portfolioArray.map((portfolio) => {
+            {props.portfolioArray.map((portfolio) => {
                 return(
                     <><PortfolioCard portfolio={portfolio}/> <br/></>
                 )
-            })}
-           
-
+            })}      
             
         </div>
-        </>
+      
         //TODO: 'portfolio-cards'(accountId)  -  build portfolio list based on accountId (or account obj)
     )
 

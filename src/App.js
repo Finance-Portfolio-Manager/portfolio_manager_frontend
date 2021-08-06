@@ -6,7 +6,7 @@ import Home from './components/home-component/home-component';
 import NewTransaction from './components/new-transaction-component/new-transaction-component';
 import Login from './components/login-component/login-component';
 import Register from './components/register-component/register-component';
-import AccountView from './components/account-component/account-view-component'
+import Account from './components/account-component/account-component';
 import "./css/portfolio-styles.css"
 import "./css/account.css"
 import 'bootstrap/dist/css/bootstrap.css';
@@ -25,7 +25,7 @@ function App() {
       <Route path="/portfolio" component={Portfolio}/>
       <Route path="/login" component={Login}/>
       <Route path="/register" component={Register}/>
-      <Route path="/account" component={AccountView}/>
+      <Route path="/account" component={Account}/>
     </Router>
     );
 
