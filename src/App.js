@@ -1,3 +1,8 @@
+import logo from './logo.svg';
+import './App.css';
+import { BrowserRouter} from "react-router-dom";
+import Main from './components/MainComponent';
+import { useEffect } from 'react';
 
 //TODO: We either need to add the navbar to this page or add it as a separate component
 
@@ -6,12 +11,8 @@
 
 //TODO: All of these components are just placeholders for different groups now
 
-import React, {useEffect} from 'react';
-import {Route,Switch} from 'react-router-dom';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import './sass/site.scss';
-import Home from './components/home';
-
 
 
 export default function App() {
@@ -19,10 +20,13 @@ export default function App() {
     await import ('@popperjs/core');
     await import ('bootstrap/dist/js/bootstrap.min');
   }, []);
+
   return (
-    <Switch>
-    <Route exact path='/' component={Home} />
-</Switch>
-  );
+    <BrowserRouter>
+      <div className="App">
+        <Main/>
+      </div>
+    </BrowserRouter>
+    );
 }
 
