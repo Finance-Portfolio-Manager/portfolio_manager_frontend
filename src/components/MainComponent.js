@@ -6,6 +6,7 @@ import Login from './login-component/login-component';
 import Register from './register-component/register-component';
 import Footer from './footer-component/footer';
 import {StyledLayout} from './styled-layout/StyledLayout';
+import Navigation from './navigation/navigation';
 
 class Main extends Component {
     render(){
@@ -16,6 +17,7 @@ class Main extends Component {
 
         return (
             <React.Fragment>
+                <Navigation/>
                 <Switch>
                     <Route exact path="/" component={() => <Home users ={users}/>}/>
                     <Route exact path="/portfolio" component={Portfolio}/>
