@@ -11,7 +11,7 @@ import {Route,Switch} from 'react-router-dom';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import './sass/site.scss';
 import Home from './components/home';
-
+import About from './components/about';
 
 
 export default function App() {
@@ -22,6 +22,7 @@ export default function App() {
   return (
     <Switch>
     <Route exact path='/' component={Home} />
+    <Route exact path='/about' component={About} />
 </Switch>
   );
 }
