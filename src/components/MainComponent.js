@@ -5,6 +5,7 @@ import Home from './home-component/home-component';
 import Login from './login-component/login-component';
 import Register from './register-component/register-component';
 import Footer from './footer-component/footer';
+import {StyledLayout} from './styled-layout/StyledLayout';
 
 class Main extends Component {
     render(){
