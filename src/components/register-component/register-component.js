@@ -17,7 +17,7 @@ export default function Register(props) {
 
     const handleChange = (e) =>{
         const {value,name} = e.target;
-        
+
         setRegistrationData({...registrationData, [name]:value});
         setNameError(false);
         setEmailError(false);
@@ -43,13 +43,16 @@ export default function Register(props) {
                     console.log(response.data);
                     // props.history.push("/");
                 })
-                .catch( (e) => {
-                    if (e.response.status<200 || e.response.status>299) {
-                        setUsernameError(true);
-                    } else {
 
+                .catch(function (error) {
+                    if(!error.response) {
+                        console.log("not connected to anything");
+                    }
+                    else if (error.response.status < 200 || error.response.status > 299) {
+                        setUsernameError(true);
                     }
                 })
+
         }
     }
 
@@ -68,7 +71,7 @@ export default function Register(props) {
             console.log("Some registration fields were left empty.");
             return false;
         }
-    
+
         var letters = /^[A-Za-z]+$/;
         if(!firstName.match(letters) || !lastName.match(letters) || !username.match(letters)){
             console.log("Invalid character detected.");
@@ -76,16 +79,16 @@ export default function Register(props) {
             setNameError(true);
             return false;
         }
-        
+
         // just looks for string of the form string@string.string proper validation should be done with a validation link sent to the email address
-        var emailCheck = /\S+@\S+\.\S+/; 
+        var emailCheck = /\S+@\S+\.\S+/;
         if(!emailCheck.test(email)){
             console.log("Invalid email.");
             // emailError.hidden = false;
             setEmailError(true);
             return false;
         }
-        
+
         var passCheck = /[\s~`!@#$%^&*+=\-[\]\\';,/{}|\\":<>?()._]/g;
         if(!passCheck.test(password) || password.length<8){
             console.log("invalid password.");
