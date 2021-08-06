@@ -17,7 +17,7 @@ export default function RegisterForm(props){
                     {/* <Form.Group controlId="form-fname">
                         <Form.Label>First Name:</Form.Label>
                         <Form.Control name="firstName" placeholder="Enter your first name" onChange={props.onChange} required/>
-                    </Form.Group>
+                    </Form.Group>git a
 
                     <Form.Group className = "form-group" controlId="form-lname">
                         <Form.Label>Last Name:</Form.Label>
