@@ -1,4 +1,4 @@
-import CandlestickChart from "./candlestick-chart";
+import CandlestickChart from "./generic-chart";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import {initialSeriesData, convertSeriesData} from "./chart-util.js";

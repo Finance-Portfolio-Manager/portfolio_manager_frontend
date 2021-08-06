@@ -1,7 +1,7 @@
 import Chart from "react-apexcharts";
 import React from "react";
 
-function CandlestickChart(props) {
+function GenericChart(props) {
     return (
         <div className="example">
             <div className="row">
@@ -40,4 +40,4 @@ function CandlestickChart(props) {
 
 }
 
-export default CandlestickChart;
+export default GenericChart;
