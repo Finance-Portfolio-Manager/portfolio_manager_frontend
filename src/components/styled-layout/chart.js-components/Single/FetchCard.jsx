@@ -1,7 +1,8 @@
-/*
+/* WIP
 Fetches data from db and formats it with its children
 This is a container component that will use axios to get the data...
 
+Carlos Galvan Jr \ Team 2
 
 */
 
@@ -41,7 +42,18 @@ const FetchCard = () => {
         token: "AUTH..",
         transactionId: 0,
         userId: 0, //???
-      }
+      },
+      {
+          buy: true,
+          note: "hello world",
+          shareAmount: 111.0,
+          sharePrice: 222.0,
+          ticker: "ABC",
+          token: "AUTH..",
+          transactionId: 0,
+          userId: 0, //???
+        }
+        
   ];
   const labels = ["Share Amount", "Share Price"];//THIS
 
@@ -49,7 +61,7 @@ const FetchCard = () => {
 
   return (
     <>
-      <Row>
+      <Row className="grid-container">
         {mockTransactions.map((transaction) => (
           <Col>
             <PortfolioCard transaction={transaction} labels={labels}></PortfolioCard>
