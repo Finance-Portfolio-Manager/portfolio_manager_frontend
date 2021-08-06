@@ -26,30 +26,10 @@ export default function Navigation() {
                                 </NavDropDown>
                             </li>
                             <li className="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">About Us</a>
-                                {/* <NavDropDown
-                                className="text-white border-0"
-                                show={dropdownShow}
-                                hovered={() => setDropDrownShow(true)}
-                                unhovered={() => setDropDrownShow(false)}
-                                title="Products">
-                                <div className="min-vh-45 bg-secondary">
-
-                                </div>
-                            </NavDropDown> */}
+                                <a className="nav-link active" aria-current="page" href="#">About Us</a>
                             </li>
                             <li className="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Stocks</a>
-                                {/* <NavDropDown
-                                className="text-white border-0"
-                                show={dropdownShow}
-                                hovered={() => setDropDrownShow(true)}
-                                unhovered={() => setDropDrownShow(false)}
-                                title="Products">
-                                <div className="min-vh-45 bg-secondary">
-
-                                </div>
-                            </NavDropDown> */}
+                                <a className="nav-link active" aria-current="page" href="#">Stocks</a>
                             </li>
                         </ul>
                         <div className="d-flex align-self-center me-3">
