@@ -22,10 +22,10 @@ export default function NewTransactionForm(props){
                     <Form.Control name="price" type="number" onChange={props.handleChange}></Form.Control>
 
                     <Form.Label>Date:</Form.Label>
-                    <Form.Control name="date" type="number" onChange={props.handleChange}></Form.Control>
+                    <Form.Control name="date" type="date" onChange={props.handleChange}></Form.Control>
 
                     <Form.Label>Note:</Form.Label>
-                    <Form.Control name="note" type="number" onChange={props.handleChange}></Form.Control>
+                    <Form.Control name="note" onChange={props.handleChange}></Form.Control>
 
                 </Form.Group>
             </div>
