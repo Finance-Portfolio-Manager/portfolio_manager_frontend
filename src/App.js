@@ -1,5 +1,6 @@
 // import logo from './logo.svg';
 import './App.css';
+
 import { BrowserRouter} from "react-router-dom";
 import Main from './components/MainComponent';
 import { useEffect } from 'react';
@@ -8,6 +9,18 @@ import { useEffect } from 'react';
 // import Login from './components/login-component/login';
 // import Register from './components/register-component/register-component';
 // import ExampleChartComponent from './components/chart-component/example-chart-component';
+
+// import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
+// import Portfolio from './components/portfolio-component/portfolio-component';
+// import Home from './components/home-component/home-component';
+// import NewTransaction from './components/new-transaction-component/new-transaction-component';
+// import Login from './components/login-component/login-component';
+// import Register from './components/register-component/register-component';
+// import Account from './components/account-component/account-component';
+// import "./css/portfolio-styles.css"
+// import "./css/account.css"
+// import 'bootstrap/dist/css/bootstrap.css';
+
 
 //TODO: We either need to add the navbar to this page or add it as a separate component
 
@@ -27,11 +40,22 @@ export default function App() {
   }, []);
 
   return (
+
     <BrowserRouter>
       <div className="App">
         <Main/>
       </div>
     </BrowserRouter>
+
+    // <Router>
+    //   <Route path="/" exact component={Home}/>
+    //   <Route path="/new" component={NewTransaction}/>
+    //   <Route path="/portfolio" component={Portfolio}/>
+    //   <Route path="/login" component={Login}/>
+    //   <Route path="/register" component={Register}/>
+    //   <Route path="/account" component={Account}/>
+    // </Router>
+
     );
 }
 

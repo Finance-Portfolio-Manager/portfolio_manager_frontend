@@ -1,35 +1,27 @@
 import React from "react";
 import PortfolioCard from "../portfolio-component/portfolio-card-component";
+import AccountView from "./account-view-component"
+
 //TODO: will be importing functions not yet defined
+//TODO: This component will get a list of portfolios based on the account ID given
+//TODO: This component will send that list of portfolios to AccountView as props
 
 export default function Account(props){
+
     //props for account: accountId, username, first_name, last_name, email
     let portfolio = {name:"TestName", value:100}
 
-    return (
-        <>
-        <div>
-            <h2 id="account-header">
-                {/* display username and full name to user */}
-                <span id="header-span">{props.username}Username</span>  {/*some margin*/}  <span id="header-span">{props.first_name}Full Name{props.last_name}</span>
-                {/* depending on streatch goals, maybe a dark theme toggle can go up here */}
-            </h2>
+    //TODO: Actually get this information from the server instead of using dummy data
+    let portObj1 = {id: 1, name:"Portfolio 1", value:1000};
+    let portObj2 = {id: 2, name:"Portfolio 2", value:145641};
+    let portObj3 = {id: 3, name:"Portfolio 3", value:1840};
 
             { <h2>Placeholder for the list of portfolios</h2> }
-            
-            <PortfolioCard portfolio={portfolio} /> 
+
+            <PortfolioCard portfolio={portfolio} />
         </div>
         </>
         //TODO: 'portfolio-cards'(accountId)  -  build portfolio list based on accountId (or account obj)
     )
 
 }
-
-// example of nested structure
-// account: (account summary?) -> username, full name, *darktheme toggle?(tbd)
-//
-//     portfolio card 1 ( name - total value - average change )
-//         portfolio details:
-//              stocks - amounts - current value - change  ->  transaction history
-//
-//     portfolio card 2 ( name - total value - average change )
