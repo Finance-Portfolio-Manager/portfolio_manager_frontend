@@ -15,7 +15,7 @@ import apiKeys from "../../apiKeys.json"
 
 function ChartComponent(props) {
 
-    console.log(apiKeys.alphaVantage00)
+    console.log(new Date("2021-08-03"));
 
     const [state, setState] = useState({
         symbolName: "Loading...",
