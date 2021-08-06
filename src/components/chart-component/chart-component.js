@@ -1,17 +1,13 @@
 import CandlestickChart from "./candlestick-chart";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import {convertRawData, initialData} from "./chart-util.js";
-
-import exampleData from "../../exampleData/example-DOCN-daily.json"
+import {convertRawData, initialSeriesData} from "./chart-util.js";
 
 function ChartComponent(props) {
 
     const [state, setState] = useState({
         symbolName: "Loading...",
-        seriesData: [
-            [new Date(1538856000000), [0,0,0,0]]
-        ]
+        seriesData: initialSeriesData(new Date(1538856000000), 100)
     })
 
     useEffect(()=>{
@@ -32,10 +28,6 @@ function ChartComponent(props) {
             width={props.width}
         ></CandlestickChart>
     )
-
-    // return (
-    //     <CandlestickChart rawData={rawData} width={props.width}></CandlestickChart>
-    // )
 
 }
 
