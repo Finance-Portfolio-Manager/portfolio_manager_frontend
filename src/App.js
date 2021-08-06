@@ -1,8 +1,13 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter} from "react-router-dom";
 import Main from './components/MainComponent';
 import { useEffect } from 'react';
+
+// import { BrowserRouter as Router, Route} from "react-router-dom";
+// import Login from './components/login-component/login';
+// import Register from './components/register-component/register-component';
+// import ExampleChartComponent from './components/chart-component/example-chart-component';
 
 //TODO: We either need to add the navbar to this page or add it as a separate component
 
