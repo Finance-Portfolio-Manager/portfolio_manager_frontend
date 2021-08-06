@@ -7,11 +7,10 @@ import React from "react";
 import './layout.css'
 import "antd/dist/antd.css";
 // import "./index.css";
-import { Layout, Menu, Breadcrumb, Card, Col, Row } from "antd";
+import { Layout, Breadcrumb} from "antd";
 import { Content, Footer, Header } from "antd/lib/layout/layout";
 // import GrandFetchCard from "./chart.js-components/Total/GrandFetchCard";
 import FetchCard from "./chart.js-components/Single/FetchCard";
-import { ChartVanilla } from "./chart.js-components/vanilla/ChartCanvas";
 // import { Chart } from "react-chartjs-2";
 export const StyledLayout = (props) => {
 

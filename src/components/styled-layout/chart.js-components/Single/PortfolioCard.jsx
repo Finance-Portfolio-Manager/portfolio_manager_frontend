@@ -4,9 +4,8 @@ This component renders a styled card with chart js
 */
 import { Doughnut } from "react-chartjs-2";
 import "../../layout.css";
-import React, { useState, useEffect } from "react";
-import { Card, Typography } from "antd";
-import { Title } from "chart.js";
+import React, { useState } from "react";
+import { Card } from "antd";
 export const PortfolioCard = (trans) => {
   const [state, setstate] = useState({ ...trans.transaction });
 
@@ -205,7 +204,7 @@ export const PortfolioCard = (trans) => {
           // Move the center up depending on line height and number of lines
           centerY -= (lines.length / 2) * lineHeight;
 
-          for (var n = 0; n < lines.length; n++) {
+          for (let n = 0; n < lines.length; n++) {
             ctx.fillText(lines[n], centerX, centerY);
             centerY += lineHeight;
           }
