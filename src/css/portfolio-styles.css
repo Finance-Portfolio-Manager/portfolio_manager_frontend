@@ -35,7 +35,7 @@ table th {
   #portfolio {
       overflow: hidden;
       width: auto;
-    padding: 30px 30px 30px 30px;
+      padding: 30px 30px 30px 30px;
   }
 
   #portfolio-values {
@@ -58,7 +58,7 @@ table th {
     float: right;
 } */
 
-  #folioContent {
+  .folioContent {
     -webkit-border-radius: 10px 10px 10px 10px;
     border-radius: 10px 10px 10px 10px;
     background: #fff;
