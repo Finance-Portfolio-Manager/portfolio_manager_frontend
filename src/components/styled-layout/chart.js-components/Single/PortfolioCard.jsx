@@ -3,7 +3,7 @@ Component by Carlos Galvan Jr.
 This component renders a styled card with chart js
 */
 import { Doughnut } from "react-chartjs-2";
-import "../../layout.css";
+// import "../../layout.css";
 import React, { useState } from "react";
 import { Card } from "antd";
 export const PortfolioCard = (trans) => {

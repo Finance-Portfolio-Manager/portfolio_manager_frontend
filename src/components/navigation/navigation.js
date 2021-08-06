@@ -26,7 +26,7 @@ export default function Navigation() {
                                 </NavDropDown>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="#">About Us</a>
+                                <a className="nav-link active" aria-current="page" href="/about">About Us</a>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link active" aria-current="page" href="#">Stocks</a>
