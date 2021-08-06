@@ -1,13 +1,106 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+.stack {
+  display: grid;
+  grid-template-columns: 100% 1fr;
+  grid-template-rows: 100% 1fr;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.stackitem {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+@media only screen and (min-width: 768px) {
+  .herocontent {
+      width: 496px;
+      height: 300px;
+  }
+  .searchbox {
+      width: 496px;
+      height: 300px;
+      background: rgba(255, 255, 255, 0.8);
+  }
+  .appealcard {
+      width: 18rem;
+  }
+  .stepscontainer {
+      width: 70% !important;
+  }
+  .bulletoutercircle {
+      height: 6.5rem;
+      min-width: 6.5rem;
+      box-shadow: 0 0 4px inset rgba(0, 0, 0, 0.15), 0 0 7px rgb(255, 255, 255);
+  }
+   
+  .tradintext{
+      width: 60%;
+  }
+}
+
+.headlineandsearch {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  z-index: 999;
+}
+
+@media only screen and (max-width: 767px) {
+  .herocontent {
+      width: 80%;
+      height: auto;
+      margin-left: 2rem;
+      margin-right: 2rem;
+  }
+  .searchbox {
+      width: 95%;
+      height: 300px;
+      background: rgba(255, 255, 255, 0.8);
+  }
+  .bulletoutercircle {
+      height: 2.5rem;
+      min-width: 2.5rem;
+      box-shadow: 0 0 5px inset rgba(0, 0, 0, 0.15), 0 0 7px rgb(255, 255, 255);
+  }
+}
+
+.iconriskfree {
+  color: rgb(15, 168, 54);
+}
+
+.iconhistory {
+  color: rgb(33, 82, 175);
+}
+
+.iconmatchgurantee {
+  color: rgb(218, 109, 8);
+}
+
+.stepItem {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1rem;
+  text-align: center;
+}
+
+.bulletinnercircle {
+  height: 80%;
+  min-width: 80%;
+}
+
+.bulletLine {
+  width: 2px;
+}
+
+.stepimagecontainer{
+  height: 225px;
+  width: 225px;
+}
+
+.sellingbanner{
+  background-color: rgba(43, 83, 134, 0.9);
+  color: rgb(250, 250, 250);
+}
+
+.sellingcarpoints{
+  background-color: rgba(232, 235, 239, 0.9);
 }
