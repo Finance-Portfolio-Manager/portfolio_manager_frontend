@@ -1,6 +1,6 @@
 import { Container, Row, Col } from "react-bootstrap";
 import { Card } from "react-bootstrap";
-import Icon from "../images/icon-images/icon1.jpg"
+import Icon from "./images/icon-images/icon1.jpg"
 
 
 export default function IndividualComponent(props){

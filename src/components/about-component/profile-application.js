@@ -4,8 +4,8 @@ import { Card } from "react-bootstrap";
 import { Button } from "react-bootstrap";
 import IndividualComponent from "./individual-profile";
 import { useState } from "react";
-import Icon from "../images/icon-images/icon.png";
-import Women from "../images/women1.jpg";
+import Icon from "./images/icon-images/icon.png";
+import Women from "./images/women1.jpg";
 
 export default function ProfileComponent(){
     const [buttonName, setButtonName] = useState("");
