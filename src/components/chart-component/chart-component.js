@@ -19,7 +19,7 @@ function ChartComponent(props) {
 
     const [state, setState] = useState({
         symbolName: "Loading...",
-        seriesData: initialSeriesData(new Date(1538856000000), 100)
+        seriesData: initialSeriesData(new Date("1990-01-01"), 100)
     });
 
     useEffect(()=>{
@@ -37,6 +37,7 @@ function ChartComponent(props) {
         <CandlestickChart 
             symbolName={state.symbolName}
             seriesData={state.seriesData}
+            type={props.type}
             width={props.width}
         ></CandlestickChart>
     );

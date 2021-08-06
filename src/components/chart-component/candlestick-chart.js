@@ -9,7 +9,7 @@ function CandlestickChart(props) {
                     <Chart
                         options={{
                             chart: {
-                                type: 'candlestick',
+                                // type: 'candlestick',
                                 height: 350
                             },
                             title: {
@@ -29,7 +29,8 @@ function CandlestickChart(props) {
                         series={[{
                             data: props.seriesData
                         }]}
-                        type="candlestick"
+                        
+                        type={props.type}
                         width={props.width}
                     />
                 </div>
