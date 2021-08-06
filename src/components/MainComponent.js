@@ -6,6 +6,7 @@ import Login from './login-component/login-component';
 import Register from './register-component/register-component';
 import Footer from './footer-component/footer';
 import {StyledLayout} from './styled-layout/StyledLayout';
+import {About} from './about-component/about-page';
 
 class Main extends Component {
     render(){
@@ -21,6 +22,7 @@ class Main extends Component {
                     <Route exact path="/portfolio" component={Portfolio}/>
                     <Route exact path="/login" component={Login}/>
                     <Route exact path="/register" component={Register}/>
+                    <Route exact path="/about" component={About}/>
                 </Switch>
                 <Footer/>
             </React.Fragment>
