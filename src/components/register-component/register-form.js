@@ -14,7 +14,7 @@ export default function RegisterForm(props){
                 <div className = "form-inner">
                     <h4>Portfolio Manager</h4>
                     <h6><em>Account Registration</em></h6>
-                    <Form.Group controlId="form-fname">
+                    {/* <Form.Group controlId="form-fname">
                         <Form.Label>First Name:</Form.Label>
                         <Form.Control name="firstName" placeholder="Enter your first name" onChange={props.onChange} required/>
                     </Form.Group>
@@ -23,7 +23,7 @@ export default function RegisterForm(props){
                         <Form.Label>Last Name:</Form.Label>
                         <Form.Control name="lastName" placeholder="Enter your last name" onChange={props.onChange} required/>
                     </Form.Group>
-                    {props.nameError ? (<div id="nameIssue" className="form-group inner-form mt-3 text-danger">First and last names may only contain letters</div>) : null}
+                    {props.nameError ? (<div id="nameIssue" className="form-group inner-form mt-3 text-danger">First and last names may only contain letters</div>) : null} */}
 
                     <Form.Group className = "form-group" controlId="form-email">
                         <Form.Label>Email:</Form.Label>

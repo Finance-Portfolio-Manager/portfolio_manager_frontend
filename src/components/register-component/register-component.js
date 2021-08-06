@@ -9,17 +9,17 @@ export default function Register(props) {
 
     const [registrationData, setRegistrationData] = useState("");
 
-    const [nameError, setNameError] =useState(false);
-    const [emailError, setEmailError] =useState(false);
-    const [usernameError, setUsernameError] =useState(false);
-    const [passwordError, setPasswordError] =useState(false);
-    const [confirmPasswordError, setConfirmPasswordError] =useState(false);
+    // const [nameError, setNameError] = useState(false);
+    const [emailError, setEmailError] = useState(false);
+    const [usernameError, setUsernameError] = useState(false);
+    const [passwordError, setPasswordError] = useState(false);
+    const [confirmPasswordError, setConfirmPasswordError] = useState(false);
 
     const handleChange = (e) =>{
         const {value,name} = e.target;
         
         setRegistrationData({...registrationData, [name]:value});
-        setNameError(false);
+        // setNameError(false);
         setEmailError(false);
         setUsernameError(false);
         setPasswordError(false);
@@ -29,10 +29,8 @@ export default function Register(props) {
 
     const handleSubmit = (e)=>{
         e.preventDefault();
-        if (validateInput(registrationData.firstName, registrationData.lastName, registrationData.username, registrationData.email, registrationData.password, registrationData.confirmPassword)) {
+        if (validateInput(registrationData.username, registrationData.email, registrationData.password, registrationData.confirmPassword)) {
             const registrationInfo = {
-                firstName:`${registrationData.firstName}`,
-                lastName:`${registrationData.lastName}`,
                 email:`${registrationData.email}`,
                 username:`${registrationData.username}`,
                 password:`${registrationData.password}`,
@@ -64,18 +62,18 @@ export default function Register(props) {
         // retypePasswordError.hidden = true;
 
         // Forbid any empty values
-        if((firstName||lastName||username||email||password||confirmPassword)==(null||undefined)){
+        if((username||email||password||confirmPassword)===(null||undefined)){
             console.log("Some registration fields were left empty.");
             return false;
         }
     
-        var letters = /^[A-Za-z]+$/;
-        if(!firstName.match(letters) || !lastName.match(letters) || !username.match(letters)){
-            console.log("Invalid character detected.");
-            // nameError.hidden = false;
-            setNameError(true);
-            return false;
-        }
+        // var letters = /^[A-Za-z]+$/;
+        // if(!firstName.match(letters) || !lastName.match(letters) || !username.match(letters)){
+        //     console.log("Invalid character detected.");
+        //     // nameError.hidden = false;
+        //     setNameError(true);
+        //     return false;
+        // }
         
         // just looks for string of the form string@string.string proper validation should be done with a validation link sent to the email address
         var emailCheck = /\S+@\S+\.\S+/; 
@@ -105,6 +103,6 @@ export default function Register(props) {
         console.log("User input valid...");
         return true;
     }
-    return <RegisterForm nameError={nameError} emailError={emailError} usernameError={usernameError} passwordError={passwordError} confirmPasswordError={confirmPasswordError} onChange={handleChange} onSubmit={handleSubmit}></RegisterForm>
+    return <RegisterForm emailError={emailError} usernameError={usernameError} passwordError={passwordError} confirmPasswordError={confirmPasswordError} onChange={handleChange} onSubmit={handleSubmit}></RegisterForm>
 }
 
