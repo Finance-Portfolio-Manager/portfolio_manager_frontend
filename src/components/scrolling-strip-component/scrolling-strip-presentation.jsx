@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import Marquee from "react-fast-marquee";
 
-export default function PresentScrollingStrip(props){
+export default function ScrollingStripPresentation(props){
    
     const marqueeStyle = {
         backgroundColor: "black",
@@ -23,10 +23,11 @@ export default function PresentScrollingStrip(props){
     const divStyle = {
         margin: 0
     }
-
-    const [json, setJson] = useState({});
+    const [json, setJson] = useState([]);
 
     useEffect(() => { setJson(props.json); } , [] ); 
+    
+    console.log(props.json);
     
     const propVals = Object.values(json);
 
@@ -43,6 +44,19 @@ export default function PresentScrollingStrip(props){
     
         </Marquee> 
     );
+    // const [symbolArray, setSymbolArray] = useState([]);
+
+    // useEffect(() => { setSymbolArray(props.json); } , [] ); 
+
+    // symbolArray.map((value) => console.log(value.stockSymbol));
+    
+
+    // return(
+    //     <Marquee style={marqueeStyle} speed="50" gradient={false}>
+    //         <h6 style={hStyle}>{/*symbolArray*/}</h6>
+    //     </Marquee>
+
+    // );
 }
 
 function colorId(pnl){
