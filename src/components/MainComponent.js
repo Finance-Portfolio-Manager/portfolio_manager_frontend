@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import Portfolio from './portfolio-component/portfolio-component-1';
 import Home from './home-component/home-component';
-import NewTransaction from './new-transaction-component/new-transaction-component';
 import Login from './login-component/login-component';
 import Register from './register-component/register-component';
 import Footer from './footer-component/footer';
@@ -18,7 +17,6 @@ class Main extends Component {
             <React.Fragment>
                 <Switch>
                     <Route exact path="/" component={() => <Home users ={users}/>}/>
-                    <Route exact path="/new" component={NewTransaction}/>
                     <Route exact path="/portfolio" component={Portfolio}/>
                     <Route exact path="/login" component={Login}/>
                     <Route exact path="/register" component={Register}/>
