@@ -10,7 +10,7 @@
 import App from "./App";
 import { shallow, ShallowWrapper } from "enzyme";
 import Login from "./components/login-component/login";
-import Retister from "./components/register-component/register";
+import Register from "./components/register-component/register";
 
 import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
@@ -29,7 +29,7 @@ describe("Testing App Component", ()=>{
   });
 
   test("/register mapped to register Component", () => {
-    expect(wrapper.find({path:"/register"}).containsMatchingElement(<Retister></Retister>)).toBe(true);
+    expect(wrapper.find({path:"/register"}).containsMatchingElement(<Register></Register>)).toBe(true);
   });
 
 })
