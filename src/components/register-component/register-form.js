@@ -41,7 +41,8 @@ export default function RegisterForm(props){
                         <Form.Label>Password:</Form.Label>
                         <Form.Control name="password" type="password" placeholder="Enter your password" onChange={props.onChange} required/>
                     </Form.Group>
-                    {props.passwordError ? (<div id="passwordIssue" className="form-group inner-form mt-3 text-danger">Invalid password. Must be at least 8 characters long and contain at least 1 special character.</div>) : null}
+                    {props.passwordError ? (<div id="passwordIssue" className="form-group inner-form mt-3 text-danger">Invalid password. Must contain at least 1 special character.</div>) : null}
+                    {props.passwordLengthError ? (<div id="passwordLengthIssue" className="form-group inner-form mt-3 text-danger">Invalid password. Must be at least 8 characters long.</div>) : null}
 
                     <Form.Group className = "form-group" controlId="form-confirm-password">
                         <Form.Label>Confirm Password:</Form.Label>

@@ -13,6 +13,7 @@ export default function Register(props) {
     const [emailError, setEmailError] = useState(false);
     const [usernameError, setUsernameError] = useState(false);
     const [passwordError, setPasswordError] = useState(false);
+    const [passwordLengthError, setPasswordLengthError] = useState(false);
     const [confirmPasswordError, setConfirmPasswordError] = useState(false);
 
     const handleChange = (e) =>{
@@ -55,14 +56,6 @@ export default function Register(props) {
     }
 
     function validateInput(firstName, lastName, username, email, password, confirmPassword){
-        // var nameError = document.getElementById("name-error");
-        // nameError.hidden = true;
-        // var emailError = document.getElementById("email-error");
-        // emailError.hidden = true;
-        // var passwordError = document.getElementById("password-error");
-        // passwordError.hidden = true;
-        // var retypePasswordError = document.getElementById("retype-password-error");
-        // retypePasswordError.hidden = true;
         
         console.log(registrationData.username);
         console.log(registrationData.email);
@@ -73,14 +66,7 @@ export default function Register(props) {
             console.log("Some registration fields were left empty.");
             return false;
         }
-    
-        // var letters = /^[A-Za-z]+$/;
-        // if(!firstName.match(letters) || !lastName.match(letters) || !username.match(letters)){
-        //     console.log("Invalid character detected.");
-        //     // nameError.hidden = false;
-        //     setNameError(true);
-        //     return false;
-        // }
+
         
         // just looks for string of the form string@string.string proper validation should be done with a validation link sent to the email address
         // var emailCheck = /\S+@\S+\.\S+/;
@@ -91,13 +77,21 @@ export default function Register(props) {
         //     return false;
         // }
 
-        // var passCheck = /[\s~`!@#$%\^&*+=\-\[\]\\';,/{}|\\":<>\?()\._]/g;
-        // if(!passCheck.test(password) || password.length<8){
-        //     console.log("invalid password.");
-        //     // passwordError.hidden = false;
-        //     setPasswordError(true);
-        //     return false;
-        // }
+        var passCheck = /[ !@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/g;
+        var s = /a-zA-Z/g;
+        console.log(s.test(password));
+        console.log(passCheck.test(password));
+        if(!passCheck.test(password)){
+            console.log("invalid password.");
+            // passwordError.hidden = false;
+            setPasswordError(true);
+            return false;
+        }
+
+        if (password.length<8){
+            setPasswordLengthError(true);
+            return false;
+        }
 
         if(password!==confirmPassword){
             console.log(password);
@@ -110,6 +104,6 @@ export default function Register(props) {
         console.log("User input valid...");
         return true;
     }
-    return <RegisterForm emailError={emailError} usernameError={usernameError} passwordError={passwordError} confirmPasswordError={confirmPasswordError} onChange={handleChange} onSubmit={handleSubmit}></RegisterForm>
+    return <RegisterForm emailError={emailError} usernameError={usernameError} passwordError={passwordError} passwordLengthError={passwordLengthError} confirmPasswordError={confirmPasswordError} onChange={handleChange} onSubmit={handleSubmit}></RegisterForm>
 }
 
