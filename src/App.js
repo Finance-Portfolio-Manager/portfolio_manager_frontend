@@ -3,6 +3,8 @@ import './App.css';
 import { BrowserRouter as Router, Route} from "react-router-dom";
 import Login from './components/login-component/login';
 import Register from './components/register-component/register-component';
+import ChartComponent from './components/chart-component/chart-component';
+import ExampleChartComponent from './components/chart-component/example-chart-component';
 
 //TODO: We either need to add the navbar to this page or add it as a separate component
 
@@ -13,12 +15,13 @@ import Register from './components/register-component/register-component';
 function App() {
   return (
     <Router>
-      {/* <Route path="/" exact component={Home}/>
-      <Route path="/" exact component={Home}/>
-      <Route path="/new" component={NewTransaction}/>
-      <Route path="/portfolio" component={Portfolio}/> */}
+      {/* <Route path="/" exact component={Home}/>  */}
       <Route path="/login" component={Login}/>
       <Route path="/register" component={Register}/>
+      {/* <Route path="/new" component={NewTransaction}/>
+      <Route path="/portfolio" component={Portfolio}/> */}
+      <Route path="/login" component={Login}/>
+      <Route path="/chart" component={ExampleChartComponent}/>
     </Router>
     );
 }
