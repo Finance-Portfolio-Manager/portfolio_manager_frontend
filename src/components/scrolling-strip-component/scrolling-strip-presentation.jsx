@@ -12,10 +12,8 @@ export default function ScrollingStripPresentation(props){
     const propVals = Object.values(json);
 
     useEffect(() => { setStockProp(props.stockJson); }, []);
-    
-    
-    const stockPropArray = Object.entries(stockProp);
-    console.log(stockPropArray);
+
+
     // console.log(stockPropArray);
     // var str = propVals.map((value) => ` ${value.symbol} ${value.PNL}%`);
 //     propVals.map((value) => (
@@ -26,27 +24,29 @@ export default function ScrollingStripPresentation(props){
 
 //          stockPropArray.map((values) => <h6 style={hStyle}>{values.stockSymbol}:</h6>)
 //     ))
+    // const stockPropArray = Object.entries(stockProp);
+    const stockPropJson = Object.keys(stockProp);
+
+    const hStyle = {
+        margin: 0,
+        marginRight: 10,
+        fonstSize: 14,
+        display: "inline"
+    }
 
     return(
         <Marquee style={marqueeStyle} speed="50" gradient={false}> 
-        {stockPropArray.map((x) => <h6>{x}</h6>)}
+        {stockPropJson.map((x,v) => 
+            <div>
+                <h6 style={hStyle}>{x}:</h6>
+                <h6 style={colorId(stockProp[x])}>{stockProp[x]}</h6>
+            </div>
+            )}
         {/* use Object.Keys instead so that I can map and output the keys and the values?
             Regardless, look at the keys and entries functions for Object more in-depth */}
         </Marquee> 
     );
-    // const [symbolArray, setSymbolArray] = useState([]);
 
-    // useEffect(() => { setSymbolArray(props.json); } , [] ); 
-
-    // symbolArray.map((value) => console.log(value.stockSymbol));
-    
-
-    // return(
-    //     <Marquee style={marqueeStyle} speed="50" gradient={false}>
-    //         <h6 style={hStyle}>{/*symbolArray*/}</h6>
-    //     </Marquee>
-
-    // );
 }
 
 function colorId(pnl){
@@ -62,12 +62,7 @@ const marqueeStyle = {
     marginTop: 0,
 };
 
-const hStyle = {
-    margin: 0,
-    marginRight: 10,
-    fonstSize: 14,
-    display: "inline"
-}
+
 
 const divStyle = {
     margin: 0

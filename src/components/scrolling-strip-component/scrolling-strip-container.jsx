@@ -5,7 +5,9 @@ import ScrollingStripPresentation from "./scrolling-strip-presentation";
 import axios from "axios";
 
 // const url = "http://23.22.140.95:8082";
-const url = "http://3.133.113.250:8082/api/get-symbol-prices"
+const url = "http://3.133.113.250:8082/api/get-symbol-pnl"
+
+//TODO: change to ec2 URL when update to backend is merged in
 
 
 export default function ScrollingStripContainer(){
@@ -43,7 +45,7 @@ export default function ScrollingStripContainer(){
     const [stockJson, setStockJson] = useState([]);
 
     useEffect(()=> {
-        getSymbolPriceFromApi(setStockJson);
+        getSymbolPnlFromApi(setStockJson);
         // getStockById(1,setStockJson); 
         // returns an array which looks like:
         // 0: Object {userId: 1, stockId: 1, stockSymbol: "AMZN"}
@@ -68,7 +70,7 @@ export default function ScrollingStripContainer(){
 //     });
 // }
 
-function getSymbolPriceFromApi(setStockJson){
+function getSymbolPnlFromApi(setStockJson){
     console.log("pinging server!");
     axios.post(
         url,
