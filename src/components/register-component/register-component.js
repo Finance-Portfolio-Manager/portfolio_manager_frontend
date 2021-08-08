@@ -54,7 +54,7 @@ export default function Register(props) {
         }
     }
 
-    function validateInput(firstName, lastName, username, email, password, confirmPassword){
+    function validateInput(username, email, password, confirmPassword){
         // var nameError = document.getElementById("name-error");
         // nameError.hidden = true;
         // var emailError = document.getElementById("email-error");
@@ -83,21 +83,21 @@ export default function Register(props) {
         // }
         
         // just looks for string of the form string@string.string proper validation should be done with a validation link sent to the email address
-        // var emailCheck = /\S+@\S+\.\S+/;
-        // if(!emailCheck.test(email)){
-        //     console.log("Invalid email.");
-        //     // emailError.hidden = false;
-        //     setEmailError(true);
-        //     return false;
-        // }
+        var emailCheck = /\S+@\S+\.\S+/;
+        if(!emailCheck.test(email)){
+            console.log("Invalid email.");
+            // emailError.hidden = false;
+            setEmailError(true);
+            return false;
+        }
 
-        // var passCheck = /[\s~`!@#$%\^&*+=\-\[\]\\';,/{}|\\":<>\?()\._]/g;
-        // if(!passCheck.test(password) || password.length<8){
-        //     console.log("invalid password.");
-        //     // passwordError.hidden = false;
-        //     setPasswordError(true);
-        //     return false;
-        // }
+        var passCheck = /[\s~`!@#$%\^&*+=\-\[\]\\';,/{}|\\":<>\?()\._]/g;
+        if(!passCheck.test(password) || password.length<8){
+            console.log("invalid password.");
+            // passwordError.hidden = false;
+            setPasswordError(true);
+            return false;
+        }
 
         if(password!==confirmPassword){
             console.log(password);

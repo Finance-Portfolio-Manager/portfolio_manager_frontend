@@ -27,7 +27,7 @@ export default function RegisterForm(props){
 
                     <Form.Group className = "form-group" controlId="form-email">
                         <Form.Label>Email:</Form.Label>
-                        <Form.Control name="email" placeholder="Enter your email" onChange={props.onChange} required/>
+                        <Form.Control name="email" type="email" placeholder="Enter your email" onChange={props.onChange} required/>
                     </Form.Group>
                     {props.emailError ? (<div id="emailIssue" className="form-group inner-form mt-3 text-danger">Please enter a valid email.</div>) : null}
 
@@ -47,7 +47,7 @@ export default function RegisterForm(props){
                         <Form.Label>Confirm Password:</Form.Label>
                         <Form.Control name="confirmPassword" type="password" placeholder="Re-enter your password" onChange={props.onChange} required/>  
                     </Form.Group>
-                    {props.cPasswordError ? (<div id="cPasswordIssue" className="form-group inner-form mt-3 text-danger">Passwords do not match</div>) : null}
+                    {props.confirmPasswordError ? (<div id="confirmPasswordIssue" className="form-group inner-form mt-3 text-danger">Passwords do not match</div>) : null}
 
                     <button className = "submitButton mt-2" type="submit" onClick={props.onSubmit}>Register</button>
                 </div>
