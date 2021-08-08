@@ -4,7 +4,8 @@ import React, {useState, useEffect} from "react";
 import ScrollingStripPresentation from "./scrolling-strip-presentation";
 import axios from "axios";
 
-const url = "http://23.22.140.95:8082";
+// const url = "http://23.22.140.95:8082";
+const url = "http://3.133.113.250:8082/api/get-symbol-prices"
 
 
 export default function ScrollingStripContainer(){
@@ -42,28 +43,45 @@ export default function ScrollingStripContainer(){
     const [stockJson, setStockJson] = useState([]);
 
     useEffect(()=> {
-        getStockById(1,setStockJson); 
+        getSymbolPriceFromApi(setStockJson);
+        // getStockById(1,setStockJson); 
         // returns an array which looks like:
         // 0: Object {userId: 1, stockId: 1, stockSymbol: "AMZN"}
         // 1: Object {userId: 1, stockId: 2, stockSymbol: "GOOG"}
     },[]);
-
-    // let stockVals = Object.values(stockJson);
     
-
+    // let stockVals = Object.values(stockJson);
     return(
-        <ScrollingStripPresentation json={JSON}></ScrollingStripPresentation>
+        <ScrollingStripPresentation json={JSON} stockJson={stockJson}></ScrollingStripPresentation>
     );
     
 }
 
-function getStockById(userId,setStockJson){
+// function getStockById(userId,setStockJson){
 
-    axios.get((url + `/stocks/all/${userId}`))
-    .then((resp) => {
+//     axios.get((url + `/stocks/all/${userId}`))
+//     .then((resp) => {
+//         setStockJson(resp.data);
+//         // console.log(resp.data);
+//     }, (error) => {
+//         console.log(error);
+//     });
+// }
+
+function getSymbolPriceFromApi(setStockJson){
+    console.log("pinging server!");
+    axios.post(
+        url,
+        '["MSFT","GOOG"]', //this eventually needs to be passed into the function
+        {
+            headers:{
+                'Content-Type' : 'application/json'
+            }
+        }
+    ).then(resp => {
         setStockJson(resp.data);
-        // console.log(resp.data);
+        console.log("data", resp.data);
     }, (error) => {
-        console.log(error);
+        console.log(error)
     });
 }
