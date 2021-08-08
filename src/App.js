@@ -1,7 +1,3 @@
-// import logo from './logo.svg';
-import './App.css';
-
-import { BrowserRouter } from "react-router-dom";
 import Main from './components/MainComponent';
 import { useEffect } from 'react';
 
@@ -40,22 +36,7 @@ export default function App() {
   }, []);
 
   return (
-
-    <BrowserRouter>
-      <div className="App">
-        <Main/>
-      </div>
-    </BrowserRouter>
-
-    // <Router>
-    //   <Route path="/" exact component={Home}/>
-    //   <Route path="/new" component={NewTransaction}/>
-    //   <Route path="/portfolio" component={Portfolio}/>
-    //   <Route path="/login" component={Login}/>
-    //   <Route path="/register" component={Register}/>
-    //   <Route path="/account" component={Account}/>
-    // </Router>
-
+      <Main />
     );
 }
 
