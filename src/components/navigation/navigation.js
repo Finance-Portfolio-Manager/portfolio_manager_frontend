@@ -37,8 +37,8 @@ export default function Navigation() {
                             <div className="navbar-nav dropdown">
                                 <a className="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Account</a>
                                 <ul className="dropdown-menu dropdown-menu-end dropdown-menu-gray" aria-labelledby="navbarDropdown">
-                                    <li><a className="dropdown-item" href="#">Log in</a></li>
-                                    <li><a className="dropdown-item" href="#">Sign up</a></li>
+                                    <li><a className="dropdown-item" href="/login">Log in</a></li>
+                                    <li><a className="dropdown-item" href="/register" >Sign up</a></li>
                                     <li><a className="dropdown-item" href="#">Log Out</a></li>
                                 </ul>
                             </div>
