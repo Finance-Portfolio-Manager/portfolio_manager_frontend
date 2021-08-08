@@ -55,7 +55,15 @@ export default function Register(props) {
         }
     }
 
-    function validateInput(firstName, lastName, username, email, password, confirmPassword){
+    function validateInput(username, email, password, confirmPassword){
+        // var nameError = document.getElementById("name-error");
+        // nameError.hidden = true;
+        // var emailError = document.getElementById("email-error");
+        // emailError.hidden = true;
+        // var passwordError = document.getElementById("password-error");
+        // passwordError.hidden = true;
+        // var retypePasswordError = document.getElementById("retype-password-error");
+        // retypePasswordError.hidden = true;
         
         console.log(registrationData.username);
         console.log(registrationData.email);
@@ -77,11 +85,8 @@ export default function Register(props) {
         //     return false;
         // }
 
-        var passCheck = /[ !@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/g;
-        var s = /a-zA-Z/g;
-        console.log(s.test(password));
-        console.log(passCheck.test(password));
-        if(!passCheck.test(password)){
+        var passCheck = /[\s~`!@#$%\^&*+=\-\[\]\\';,/{}|\\":<>\?()\._]/g;
+        if(!passCheck.test(password) || password.length<8){
             console.log("invalid password.");
             // passwordError.hidden = false;
             setPasswordError(true);
