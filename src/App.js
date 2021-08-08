@@ -40,12 +40,13 @@ export default function App() {
   }, []);
 
   return (
+    <Main/>
 
-    <BrowserRouter>
-      <div className="App">
-        <Main/>
-      </div>
-    </BrowserRouter>
+    // <BrowserRouter>
+    //   <div className="App">
+    //     <Main/>
+    //   </div>
+    // </BrowserRouter>
 
     // <Router>
     //   <Route path="/" exact component={Home}/>
