@@ -1,7 +1,3 @@
-// import logo from './logo.svg';
-import './App.css';
-
-import { BrowserRouter } from "react-router-dom";
 import Main from './components/MainComponent';
 import { useEffect } from 'react';
 
@@ -40,6 +36,7 @@ export default function App() {
   }, []);
 
   return (
+<<<<<<< HEAD
     <Main/>
 
     // <BrowserRouter>
@@ -57,6 +54,9 @@ export default function App() {
     //   <Route path="/account" component={Account}/>
     // </Router>
 
+=======
+      <Main />
+>>>>>>> 08e6b5285607e6c1371748c3974fe759c3c78f4e
     );
 }
 

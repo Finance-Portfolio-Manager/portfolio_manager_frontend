@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 export default function Navigation() {
     const [dropdownShow, setDropDrownShow] = useState(false);
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav className="navbar navbar-expand-lg navbar-dark bg-dark py-0">
             <div className="container-fluid">
                 <a className="navbar-brand" href="#">Portfolio</a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -15,7 +15,7 @@ export default function Navigation() {
                         <ul className="navbar-nav">
                             <li className="nav-item">
                                 <NavDropDown
-                                    className="text-white py-0 border-0"
+                                    className="text-white border-0"
                                     show={dropdownShow}
                                     hovered={() => setDropDrownShow(true)}
                                     unhovered={() => setDropDrownShow(false)}
