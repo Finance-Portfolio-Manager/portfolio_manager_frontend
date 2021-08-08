@@ -36,7 +36,6 @@ export default function App() {
   }, []);
 
   return (
-<<<<<<< HEAD
     <Main/>
 
     // <BrowserRouter>
@@ -54,9 +53,7 @@ export default function App() {
     //   <Route path="/account" component={Account}/>
     // </Router>
 
-=======
-      <Main />
->>>>>>> 08e6b5285607e6c1371748c3974fe759c3c78f4e
-    );
+    
+  );
 }
 

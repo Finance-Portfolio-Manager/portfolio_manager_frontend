@@ -22,9 +22,9 @@ class Main extends Component {
                 <ScrollingStripContainer></ScrollingStripContainer> 
                 <Switch>
                     <Route exact path="/" component={() => <Home users ={users}/>}/> 
-                     <Route exact path="/account" component={Account}/>
+                    <Route exact path="/account" component={Account}/>
                     <Route exact path="/about" component={About}/>
-                     <Route exact path="/login" component={Login}/>
+                    <Route exact path="/login" component={Login}/>
                     <Route exact path="/register" component={Register}/>
                 </Switch>
                 <Footer/>
