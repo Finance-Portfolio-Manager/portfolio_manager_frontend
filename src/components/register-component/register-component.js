@@ -77,13 +77,13 @@ export default function Register(props) {
 
         
         // just looks for string of the form string@string.string proper validation should be done with a validation link sent to the email address
-        // var emailCheck = /\S+@\S+\.\S+/;
-        // if(!emailCheck.test(email)){
-        //     console.log("Invalid email.");
-        //     // emailError.hidden = false;
-        //     setEmailError(true);
-        //     return false;
-        // }
+        var emailCheck = /\S+@\S+\.\S+/;
+        if(!emailCheck.test(email)){
+            console.log("Invalid email.");
+            // emailError.hidden = false;
+            setEmailError(true);
+            return false;
+        }
 
         var passCheck = /[\s~`!@#$%\^&*+=\-\[\]\\';,/{}|\\":<>\?()\._]/g;
         if(!passCheck.test(password) || password.length<8){
