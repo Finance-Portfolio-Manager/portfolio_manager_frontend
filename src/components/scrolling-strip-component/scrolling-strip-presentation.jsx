@@ -36,7 +36,7 @@ export default function ScrollingStripPresentation(props){
 
     return(
         <Marquee style={marqueeStyle} speed="50" gradient={false}> 
-        {stockPropJson.map((x,v) => 
+        {stockPropJson.map((x) => 
             <div>
                 <h6 style={hStyle}>{x}:</h6>
                 <h6 style={colorId(stockProp[x])}>{stockProp[x]}</h6>
