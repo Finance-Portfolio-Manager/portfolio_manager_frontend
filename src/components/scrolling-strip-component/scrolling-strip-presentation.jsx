@@ -4,9 +4,9 @@ import Marquee from "react-fast-marquee";
 
 export default function ScrollingStripPresentation(props){
 
-    const [stockProp, setStockProp] = useState([]);
-    useEffect(() => { setStockProp(props.stockJson); }, []);
-    const stockPropJson = Object.keys(stockProp);
+    // const [stockProp, setStockProp] = useState([]);
+    // useEffect(() => { setStockProp(props.stockJson); }, []);
+    const stockPropJson = Object.keys(props.stockJson);
 
     const hStyle = {
         margin: 0,
@@ -24,7 +24,7 @@ export default function ScrollingStripPresentation(props){
         {stockPropJson.map((x) => 
             <div>
                 <h6 style={hStyle}>{x}:</h6>
-                <h6 style={hStyle, colorId(stockProp[x])}>{stockProp[x]}</h6>
+                <h6 style={hStyle, colorId(props.stockJson[x])}>{props.stockJson[x]}</h6>
             </div>
             
         )}
