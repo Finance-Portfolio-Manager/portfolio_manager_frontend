@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Inter:wght@700&display=swap');
+:root{
+    --darkmode-dark-bg: #151B2C;
+    --darkmode-med-bg: #21293E;
+    color: #000 !important;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Fira Sans', sans-serif;
+
+}
+
+.layout-background{
+    background-color: var(--darkmode-dark-bg) !important;
+    min-height: 100vh !important;
+
+}
+
+.card-body{
+    background-color: var(--darkmode-med-bg) !important;
+    margin: 10px !important;
+    border-radius: 25px !important;
+    text-align: center;
+    box-shadow: -6px 0px 6px rgba(0, 0, 0, 0.11),  6px 0px 6px rgba(0, 0, 0, 0.11) ;
+}
+
+.card-header{
+    color: white;
+    font-family: "Inter", sans-serif;
+    
+}
+
+.chart-container{
+    margin-bottom: 10px;
+}
+
+.styled-text{
+    font-family: 'Fira Sans' !important;
+    color: white !important;
+}
+
+.nav-temp{
+    background-color: var(--darkmode-med-bg) !important;
+    box-shadow: -6px 0px 6px rgba(0, 0, 0, 0.11),  6px 0px 6px rgba(0, 0, 0, 0.11) ;
+}
+.zoom{
+    transition: transform .3s
+}
+
+  
+.zoom:hover {
+    
+    transform: scale(1.05); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+
+.grid-container{
+    justify-content: space-evenly;
+}
