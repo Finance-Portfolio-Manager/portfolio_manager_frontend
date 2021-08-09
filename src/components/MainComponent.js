@@ -7,7 +7,7 @@ import About from './about-component/about-page.js';
 import ScrollingStripContainer from './scrolling-strip-component/scrolling-strip-container';
 import Account from './account-component/account-component';
 import Login from './login-component/login';
-import Register from './register-component/register-component';
+import Register from './register-component/register';
 
 class Main extends Component {
     render(){

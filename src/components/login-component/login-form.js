@@ -5,7 +5,7 @@ import logo from './revlogo.jpg';
 
 export default function LoginForm(props){
     return(
-        <div className="App">
+        <div data-testid="login-form" className="App">
             <Form>
                 <div className="aroundLogo"><img className="logo" src={logo} alt="revature logo"/></div>
                 <div className="form-inner">
