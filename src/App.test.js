@@ -9,8 +9,6 @@
 
 import App from "./App";
 import { shallow, ShallowWrapper } from "enzyme";
-import Login from "./components/login-component/login";
-import Register from "./components/register-component/register";
 
 import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
@@ -21,17 +19,8 @@ describe("Testing App Component", ()=>{
   // const wrapper: ShallowWrapper = shallow(<App></App>);
   const wrapper = shallow(<App></App>);
 
-  test("renders two routes", ()=>{
-    expect(wrapper.find("Route").length).toBe(2);
+  test("renders 0 routes", ()=>{
+    expect(wrapper.find("Route").length).toBe(0);
   });
-
-  test("/login mapped to login Component", () => {
-    expect(wrapper.find({path:"/login"}).containsMatchingElement(<Login></Login>)).toBe(true);
-  });
-
-  test("/register mapped to register Component", () => {
-    expect(wrapper.find({path:"/register"}).containsMatchingElement(<Register></Register>)).toBe(true);
-  });
-
 })
 

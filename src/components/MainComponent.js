@@ -8,6 +8,7 @@ import ScrollingStripContainer from './scrolling-strip-component/scrolling-strip
 import Account from './account-component/account-component';
 import Login from './login-component/login';
 import Register from './register-component/register';
+import ChartComponent from './chart-component/chart-component';
 
 class Main extends Component {
     render(){
@@ -26,6 +27,7 @@ class Main extends Component {
                     <Route exact path="/about" component={About}/>
                     <Route exact path="/login" component={Login}/>
                     <Route exact path="/register" component={Register}/>
+                    <Route exact path="/chart" component={ChartComponent}/>
                 </Switch>
                 <Footer/>
             </React.Fragment>

@@ -66,11 +66,12 @@ form .submitButton {
 .logo {
     max-width: 50%;
     height: auto;
-    /* padding-bottom: 0px; */
+    padding-bottom: 0px;
 }
 
 .aroundLogo {
-    position: relative;
+    /* position: relative; */
+    text-align: center;
     background-color: #fff;
     padding-top: 40px;
 }
