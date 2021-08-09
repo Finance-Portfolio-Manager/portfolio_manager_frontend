@@ -37,7 +37,11 @@ export default function ScrollingStripContainer(){
     // );
 
     const [stockJson, setStockJson] = useState([]);
-    const [tickers, setTickers] = useState(["MSFT","GOOG"]);
+    const [tickers, setTickers] = useState([
+        "MSFT","GOOG","AAPL","FB","TSLA","TSM","BABA","JNJ","JPM","V","WMT","NVDA","MA","HD","PG","BAC",
+        "PYPL","DIS","ADBE","NKE","CMCSA","PFE","LLY","ORCL","TM","KO","CRM","CSCO","NFLX"]);
+
+        //
 
 
     useEffect(()=> {

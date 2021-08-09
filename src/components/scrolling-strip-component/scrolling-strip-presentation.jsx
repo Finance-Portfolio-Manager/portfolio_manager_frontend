@@ -4,8 +4,6 @@ import Marquee from "react-fast-marquee";
 
 export default function ScrollingStripPresentation(props){
 
-    // const [stockProp, setStockProp] = useState([]);
-    // useEffect(() => { setStockProp(props.stockJson); }, []);
     const stockPropJson = Object.keys(props.stockJson);
 
     const hStyle = {
@@ -15,12 +13,8 @@ export default function ScrollingStripPresentation(props){
         display: "inline"
     }
 
-    // <div>
-    // <h6 style={hStyle}>{x}:{stockPropJson[x]}</h6>
-    
-    // </div>
     return(
-        <Marquee style={marqueeStyle} speed="50" gradient={false}> 
+        <Marquee style={marqueeStyle} speed="30" gradient={false}> 
         {stockPropJson.map((x) => 
             <div>
                 <h6 style={hStyle}>{x}:</h6>
@@ -38,7 +32,7 @@ export default function ScrollingStripPresentation(props){
 function colorId(pnl){
     return (pnl < 0) ? 
             {display: "inline", margin: 0, marginRight: 10, color:"red"} : 
-            {display: "inline", marginRight: 10, margin: 0, color: "green"};
+            {display: "inline",  margin: 0, marginRight: 10, color: "green"};
 }
 
 const marqueeStyle = {
