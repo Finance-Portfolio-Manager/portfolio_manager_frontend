@@ -33,8 +33,8 @@ export default function NewTransaction(props){
    }
 
    const handleChangeDynamic = (e)=>{
-       const inputFieldName = e.target.name; 
-       const inputValue = e.target.value; 
+       const inputFieldName = e.target.name;
+       const inputValue = e.target.value;
        const newTransaction = {...transaction};
        newTransaction[inputFieldName] = inputValue;
        console.log(newTransaction);
@@ -42,7 +42,7 @@ export default function NewTransaction(props){
    }
 
    const handleChange = (e)=>{
-        const {name, value} = e.target; 
+        const {name, value} = e.target;
         let newTransaction = {...transaction, [name]:value};
         console.log(newTransaction);
         setTransaction(newTransaction);
@@ -50,7 +50,8 @@ export default function NewTransaction(props){
 
     const createNewTransaction = (e)=>{
         e.preventDefault();
-        axios.post("http://23.22.140.95:8082/transactions/new", transaction, {headers: {'Content-Type': 'application/json'}})
+        // axios.post("http://23.22.140.95:8082/transactions/new", transaction, {headers: {'Content-Type': 'application/json'}})
+        axios.post(process.env.REACT_APP_API_URL + "/transactions/new", transaction, {headers: {'Content-Type': 'application/json'}})
             .then(response=>{
                 console.log(response);
             })
