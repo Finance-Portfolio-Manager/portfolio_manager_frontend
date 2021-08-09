@@ -18,7 +18,7 @@ export default function ScrollingStripPresentation(props){
         {stockPropJson.map((x) => 
             <div>
                 <h6 style={hStyle}>{x}:</h6>
-                <h6 style={hStyle, colorId(props.stockJson[x])}>{props.stockJson[x]}</h6>
+                <h6 style={hStyle, colorId(props.stockJson[x])}>{props.stockJson[x]}%</h6>
             </div>
             
         )}
