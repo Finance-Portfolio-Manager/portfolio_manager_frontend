@@ -38,7 +38,7 @@ function DoughnutData(props){
 function RenderCard(props){
     return(
             <Col sm="4">
-                <Card>
+                <Card className="primary-color">
                     <CardBody>
                         <CardTitle tag="h4">{props.user.username}</CardTitle>
                         <CardText>
@@ -64,7 +64,7 @@ function Home(props){
     });
 
     return (
-        <div className="container" style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+        <div className="container secondary-color" style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
             <div className="row">
                 <h2>Your Favorite Portfolios</h2>
                 <div className="row py-3" style={{borderStyle: "solid"}}>

@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Footer() {
     return (
-        <div className="footer bg-dark min-vh-45 d-flex flex-column pt-md-5 align-items-center overflow-auto">
+        <div className="footer bg-dark min-vh-45 d-flex flex-column pt-md-5 align-items-center overflow-auto primary-color">
             <div className="d-flex flex-column flex-md-row w-100 justify-content-center">
                 {/* Columns */}
                 <div className="card border-0 w-md-15 bg-transparent">
