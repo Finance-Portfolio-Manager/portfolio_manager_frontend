@@ -10,7 +10,6 @@ const url = "http://3.133.113.250:8082/api/get-symbol-pnl"
 //TODO: change to ec2 URL when update to backend is merged in
 //TODO: figure out how to correctly test these elements
 
-
 export default function ScrollingStripContainer(){
 
     // Pass in an array of JSON
