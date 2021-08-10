@@ -11,7 +11,7 @@ function ChartComponent(props) {
     });
 
     useEffect(()=>{
-        axios.get(`https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${props.symbol}&apikey=LW7AFCIUDLGSKMIQ`)
+        axios.get(`https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${props.symbol}&apikey=${process.env.REACT_APP_AV_KEY}`)
         .then(response => {
             // put logic for multiple time frames here
             setState({
