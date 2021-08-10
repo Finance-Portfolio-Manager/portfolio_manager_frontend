@@ -17,23 +17,6 @@ import Container from "react-bootstrap/Container";
 
 //TODO: All of these components are just placeholders for different groups now
 function App() {
-  
-  
-  //THIS STATE IS LOST UPON REFRESH, FORCING USER TO RE-LOGIN :(  
-//   const [loggedIn, setLoggedIn] = useState();
-//   useEffect(()=>{
-//     if(sessionStorage.getItem("Authorization")){ 
-//       console.log("has token");
-//       axios.post("http://localhost:8082/verify", JSON.stringify(sessionStorage.getItem("Authorization")), {headers:{'Content-Type': 'application/json'}})
-//       .then(response=>{          
-//         setLoggedIn(true);
-//       })
-//       .catch(function (error) {
-//         setLoggedIn(false);
-//     })
-//     }     
-//     console.log(loggedIn);
-// },[]);
 
   return (
 
@@ -47,27 +30,23 @@ function App() {
           <Route path="/login">
             <Login></Login>
           </Route>
+          <Route path="/register">
+            <Login></Login>
+          </Route>
           <Route path="/chart">
             <Authorization>
               <ExampleChartComponent></ExampleChartComponent>
             </Authorization>
           </Route>
+          <Route path="/portfolio">
+            <Authorization>
+              <PortfolioComponent></PortfolioComponent>
+            </Authorization>
+          </Route>
         </Switch>
       </Container>
     </Router>
-
-
-
-    // <Router>
-    //   {/* <Route path="/" exact component={Home}/>
-    //   <Route path="/new" component={NewTransaction}/>
-    //   <Route path="/portfolio" component={Portfolio}/> */}
-    //   <Route path="/login" component={Login}/>
-    //   <Route path="/register" component={Register}/>
-    //   <Route path="/chart" component={ExampleChartComponent}/>
-    //   <Route path="/portfolio" component={PortfolioComponent}/>
-   //   {/* <Route path="/register" component={Register}/> */}
-    // </Router>
+    
     );
 }
 
