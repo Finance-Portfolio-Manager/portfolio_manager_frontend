@@ -1,6 +1,6 @@
 #!/bin/sh
 docker stop finportman-app-dev
-npm run dev
+npm run build-dev
 docker build -t dev/finportman-app-dev -f Dockerfile-dev .
 docker run \
     -d \

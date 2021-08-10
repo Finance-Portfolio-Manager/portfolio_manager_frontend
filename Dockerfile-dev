@@ -1,4 +1,4 @@
-FROM httpd:2.4-alpine
+FROM nginx:alpine
 EXPOSE 8080
-COPY ./httpd.conf /usr/local/apache2/conf/httpd.conf
-COPY ./build/ /usr/local/apache2/htdocs
+COPY ./nginx.conf /etc/nginx/default.conf
+COPY ./build/ /usr/share/nginx/html
