@@ -7,10 +7,11 @@ import Navigation from './navigation/navigation';
 import About from './about-component/about-page.js';
 import ScrollingStripContainer from './scrolling-strip-component/scrolling-strip-container';
 import Account from './account-component/account-component';
-
+import ExampleChartComponent from './chart-component/example-chart-component';
 
 class Main extends Component {
     render(){
+        console.log(process.env.REACT_APP_API_URL)
         
          const users = [{"username": "Greg", "labels":["BYSI","BTBT","MRNA","ROKU","MU"], "percentage": [20, 30, 50, 10, 10], "profile": "Profile 1"},
         {"username": "David", "labels":["BYSI","AAPL","F","GM","LUMN"], "percentage": [20, 10, 50, 20, 15], "profile": "Profile 1"},
@@ -24,6 +25,7 @@ class Main extends Component {
                     <Route exact path="/" component={() => <Home users ={users}/>}/>
                     <Route exact path="/account" component={Account}/>
                     <Route exact path="/about" component={About}/>
+                    <Route exact path="/chart" component={ExampleChartComponent}/>
                 </Switch>
                 <Footer/>
             </React.Fragment>
