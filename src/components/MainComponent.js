@@ -7,6 +7,7 @@ import Navigation from './navigation/navigation';
 import About from './about-component/about-page.js';
 import ScrollingStripContainer from './scrolling-strip-component/scrolling-strip-container';
 import Account from './account-component/account-component';
+import NewsContainer from './news-component/news-component-container';
 
 
 class Main extends Component {
@@ -20,6 +21,7 @@ class Main extends Component {
             <React.Fragment>
                 <Navigation/>
                 <ScrollingStripContainer></ScrollingStripContainer>
+                <NewsContainer/>
                 <Switch>
                     <Route exact path="/" component={() => <Home users ={users}/>}/>
                     <Route exact path="/account" component={Account}/>
