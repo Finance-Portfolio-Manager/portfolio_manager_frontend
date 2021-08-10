@@ -3,7 +3,8 @@ import { useState } from "react";
 import { withRouter } from "react-router-dom";
 import RegisterForm from "./register-form";
 
-const URL = "http://localhost:8082";
+// const URL = "http://localhost:8082";
+const URL = process.env.REACT_APP_API_URL;
 
 export default function Register(props) {
 
