@@ -1,25 +1,13 @@
-// import logo from './logo.svg';
 import './App.css';
-
-import { BrowserRouter} from "react-router-dom";
-import Main from './components/MainComponent';
-import { useEffect } from 'react';
-
-// import { BrowserRouter as Router, Route} from "react-router-dom";
-// import Login from './components/login-component/login';
-// import Register from './components/register-component/register-component';
-// import ExampleChartComponent from './components/chart-component/example-chart-component';
-
-// import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
-// import Portfolio from './components/portfolio-component/portfolio-component';
-// import Home from './components/home-component/home-component';
-// import NewTransaction from './components/new-transaction-component/new-transaction-component';
-// import Login from './components/login-component/login-component';
-// import Register from './components/register-component/register-component';
-// import Account from './components/account-component/account-component';
-// import "./css/portfolio-styles.css"
-// import "./css/account.css"
-// import 'bootstrap/dist/css/bootstrap.css';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Login from './components/login-component/login';
+import Register from './components/register-component/register-component';
+import ExampleChartComponent from './components/chart-component/example-chart-component';
+import PortfolioComponent from './components/portfolio-chart-component/portfolio-component';
+import { useState, useEffect } from "react";
+import axios from "axios";
+import Authorization from './components/common/authorization';
+import Container from "react-bootstrap/Container";
 
 
 //TODO: We either need to add the navbar to this page or add it as a separate component
@@ -28,34 +16,59 @@ import { useEffect } from 'react';
 //Everything else in those folders is leftover code from the previous project that should be deleted
 
 //TODO: All of these components are just placeholders for different groups now
-
-import 'bootstrap-icons/font/bootstrap-icons.css';
-import './sass/site.scss';
-
-
-export default function App() {
-  useEffect(async() => {
-    await import ('@popperjs/core');
-    await import ('bootstrap/dist/js/bootstrap.min');
-  }, []);
+function App() {
+  
+  
+  //THIS STATE IS LOST UPON REFRESH, FORCING USER TO RE-LOGIN :(  
+//   const [loggedIn, setLoggedIn] = useState();
+//   useEffect(()=>{
+//     if(sessionStorage.getItem("Authorization")){ 
+//       console.log("has token");
+//       axios.post("http://localhost:8082/verify", JSON.stringify(sessionStorage.getItem("Authorization")), {headers:{'Content-Type': 'application/json'}})
+//       .then(response=>{          
+//         setLoggedIn(true);
+//       })
+//       .catch(function (error) {
+//         setLoggedIn(false);
+//     })
+//     }     
+//     console.log(loggedIn);
+// },[]);
 
   return (
 
-    <BrowserRouter>
-      <div className="App">
-        <Main/>
-      </div>
-    </BrowserRouter>
+    <Router>
+      {/* <NavComponent
+        loggedIn={loggedIn}
+        setLoggedIn={setLoggedIn}
+      ></NavComponent> */}
+      <Container>
+        <Switch>
+          <Route path="/login">
+            <Login></Login>
+          </Route>
+          <Route path="/chart">
+            <Authorization>
+              <ExampleChartComponent></ExampleChartComponent>
+            </Authorization>
+          </Route>
+        </Switch>
+      </Container>
+    </Router>
+
+
 
     // <Router>
-    //   <Route path="/" exact component={Home}/>
+    //   {/* <Route path="/" exact component={Home}/>
     //   <Route path="/new" component={NewTransaction}/>
-    //   <Route path="/portfolio" component={Portfolio}/>
+    //   <Route path="/portfolio" component={Portfolio}/> */}
     //   <Route path="/login" component={Login}/>
     //   <Route path="/register" component={Register}/>
-    //   <Route path="/account" component={Account}/>
+    //   <Route path="/chart" component={ExampleChartComponent}/>
+    //   <Route path="/portfolio" component={PortfolioComponent}/>
+   //   {/* <Route path="/register" component={Register}/> */}
     // </Router>
-
     );
 }
 
+export default App;
