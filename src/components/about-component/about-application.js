@@ -2,7 +2,7 @@ import Card from "react-bootstrap/Card";
 
 export default function AboutCard(){
     return (
-        <Card id="about-card">
+        <Card id="about-card" className="title border-0">
             <Card.Body>
                 <Card.Title>About</Card.Title>
                 <Card.Text>Lorem ipsum dolor sit amet, consectetur 
