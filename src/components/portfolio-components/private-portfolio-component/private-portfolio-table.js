@@ -2,7 +2,7 @@ import { Table } from "react-bootstrap";
 import { useState } from "react";
 import { Button } from "react-bootstrap";
 
-export default function PortfolioView(props){
+export default function PrivatePortfolioTable(props){
 
     //TODO: There's no real point in tableRows being a state object if it never changes. Determine if it will change.
     const [tableRows, setTableRows] = useState(props.tableRows);
@@ -16,12 +16,7 @@ export default function PortfolioView(props){
     console.log(`TableRows: ${JSON.stringify(tableRows)}`);
 
     return <>
-        <div className="wrapper fadeInDown folioContent" id="portfolio">
-            <div id="portfolio-values">
-                <h4 id = "portfolio-total"></h4>
-                <div id = "portfolio-change"></div>
-                <div id = "dollar-change"></div>
-            </div>
+        <div className="wrapper fadeInDown folioContent" id="folioContent">
             <div className="table-responsive">
                 <Table id="stocks-view" className="table borderless table-hover" responsive>
                     <thead>

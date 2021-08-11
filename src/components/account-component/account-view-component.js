@@ -1,6 +1,6 @@
 import React from "react";
 import { CardGroup } from "react-bootstrap";
-import PortfolioCard from "../portfolio-component/portfolio-card-component";
+import PrivatePortfolioView from "../portfolio-components/private-portfolio-component/private-portfolio-view";
 //TODO: will be importing functions not yet defined
 
 //TODO: This will take in a list of portfolios as props and render them
@@ -9,7 +9,7 @@ export default function AccountView(props){
 
 
 
-    //TODO: Probably remove inline styling of div
+    //TODO: The styling gets messed up when you switch from a portfolio card to a portfolio table.
     return (
   
         <div style={{backgroundColor:"#B9B9BA"}}>
@@ -19,15 +19,28 @@ export default function AccountView(props){
                 {/* depending on streatch goals, maybe a dark theme toggle can go up here */}
             </h2>
             
-            {props.portfolioArray.map((portfolio) => {
-                return(
-                    <><PortfolioCard portfolio={portfolio}/> <br/></>
-                )
-            })}      
-            
+            <div className="container" style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+                <div className="row">
+                    <h2>YourPortfolios</h2>
+                    <div className="row py-3" style={{borderStyle: "solid"}}>
+                        {props.portfolioArray.map((portfolio, index) => {
+                            if( index%3 != 0){
+                                return(                 
+                                    <PrivatePortfolioView portfolio={portfolio} user={props.user}/>
+                                )
+                            } else {
+                                return(
+                                    <>
+                                        <PrivatePortfolioView portfolio={portfolio} user={props.user}/>
+                                        <br/>
+                                    </>
+                                )
+                            }
+                        })}
+                    </div>
+                </div>
+            </div>
         </div>
-      
-        //TODO: 'portfolio-cards'(accountId)  -  build portfolio list based on accountId (or account obj)
     )
 
 }

@@ -7,6 +7,7 @@ import Navigation from './navigation/navigation';
 import About from './about-component/about-page.js';
 import ScrollingStripContainer from './scrolling-strip-component/scrolling-strip-container';
 import Account from './account-component/account-component';
+import publicPortfolios from './portfolio-components/all-public-portfolios-component/public-portfolios';
 
 
 class Main extends Component {
@@ -19,11 +20,12 @@ class Main extends Component {
         return (
             <React.Fragment>
                 <Navigation/>
-                <ScrollingStripContainer></ScrollingStripContainer>
+                <ScrollingStripContainer/>
                 <Switch>
                     <Route exact path="/" component={() => <Home users ={users}/>}/>
                     <Route exact path="/account" component={Account}/>
                     <Route exact path="/about" component={About}/>
+                    <Route exat path="/public" component={publicPortfolios}/>
                 </Switch>
                 <Footer/>
             </React.Fragment>
