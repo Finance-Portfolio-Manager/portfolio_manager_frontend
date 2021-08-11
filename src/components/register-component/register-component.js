@@ -1,6 +1,5 @@
 import axios from "axios";
 import { useState } from "react";
-import { withRouter } from "react-router-dom";
 import RegisterForm from "./register-form";
 
 const URL = "http://localhost:8082";
@@ -112,4 +111,3 @@ export default function Register(props) {
     }
     return <RegisterForm emailError={emailError} usernameError={usernameError} passwordError={passwordError} confirmPasswordError={confirmPasswordError} onChange={handleChange} onSubmit={handleSubmit}></RegisterForm>
 }
-
