@@ -12,9 +12,9 @@ function Login(props){
 
     const handleChange = (e) =>{
         const {value,name} = e.target;
-        
+
         setCredentials({...credentials, [name]:value});
-        
+
         setError(false);
         setNetworkError(false);
     }
@@ -37,12 +37,12 @@ function Login(props){
                 // props.history.push("/"); to portfolio?
             })
             .catch(function (error) {
-                if(!error.response) {
+                if(error && !error.response) {
                     setNetworkError(true);
                 }
                 else if (error.response.status === 500) {
                     setError(true);
-                } 
+                }
             })
     }
     return <LoginForm networkError={networkError} error={error} onChange={handleChange} onSubmit={handleSubmit}></LoginForm>;
