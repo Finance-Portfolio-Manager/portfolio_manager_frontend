@@ -1,3 +1,7 @@
+/* 
+Hero Section CSS 
+file created by carlos galvan jr
+*/
 .home__hero-section {
   color: #fff;
   padding: 160px 0;
@@ -33,7 +37,7 @@
 }
 
 .top-line {
-  color: #f00946;
+  /* color: #f00946; */
   font-size: 16px;
   line-height: 16px;
   font-weight: 700;

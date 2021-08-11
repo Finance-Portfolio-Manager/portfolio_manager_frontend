@@ -1,11 +1,7 @@
 /*
-topLine,
-  headline,
-  description,
-  buttonLabel,
-  img,
-  alt,
-  imgStart,
+Carlos Galvan Jr 
+
+Javascript object to populate the home/hero-section
 */
 export const HomeBio = {
   topLine: "Portfolio Manager Project",

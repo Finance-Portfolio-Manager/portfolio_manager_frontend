@@ -5,14 +5,14 @@ export default function Navigation() {
     const [dropdownShow, setDropDrownShow] = useState(false);
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark primary-color">
-            <div className="container-fluid">
-                <a className="navbar-brand" href="#">Portfolio</a>
+            <div className="container-fluid primary-text">
+                <a className="navbar-brand accent-color" href="#">Portfolio</a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <div className=" d-flex flex-column flex-md-row justify-content-between flex-fill">
-                        <ul className="navbar-nav">
+                        <ul className="navbar-nav primary-text">
                             <li className="nav-item">
                                 <NavDropDown
                                     className="text-white py-0 border-0"

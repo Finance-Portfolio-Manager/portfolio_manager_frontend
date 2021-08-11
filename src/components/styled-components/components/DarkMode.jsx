@@ -1,3 +1,4 @@
+/* DELETE ME SOON
 import { useEffect, useState } from 'react';
 export const useDarkMode = () => {
     const [theme, setTheme] = useState('light');
@@ -17,3 +18,4 @@ export const useDarkMode = () => {
     }, []);
     return [theme, themeToggler]
 };
+ */
