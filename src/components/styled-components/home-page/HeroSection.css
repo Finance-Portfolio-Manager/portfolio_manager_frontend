@@ -1,3 +1,11 @@
+* {
+  --dark-background: #051923;
+  --medium-dark-background: #003554;
+  --medium-background: #006494;
+  --medium-light-background: #0582CA;
+  --light-background: #00A6FB;
+}
+
 .home__hero-section {
   color: #fff;
   padding: 160px 0;
@@ -51,11 +59,13 @@
 }
 
 .dark {
-  color: #1c2237;
+  /* color: #1c2237; */
+  color: var(--medium-background);
 }
 
 .darkBg {
-  background-color: #1c2237;
+  /* background-color: #1c2237; */
+  background-color: var(--dark-background);
 }
 
 .home__hero-subtitle {

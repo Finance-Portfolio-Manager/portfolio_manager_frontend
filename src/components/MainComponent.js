@@ -2,12 +2,13 @@ import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import Home from './home-component/home-component';
 import Footer from './footer-component/footer';
-// import {StyledLayout} from './styled-layout/StyledLayout';
 import Navigation from './navigation/navigation';
 import About from './about-component/about-page.js';
 import ScrollingStripContainer from './scrolling-strip-component/scrolling-strip-container';
 import Account from './account-component/account-component';
-
+import Login from './login-component/login';
+import Register from './register-component/register';
+import ChartComponent from './chart-component/chart-component';
 
 class Main extends Component {
     render(){
@@ -19,11 +20,14 @@ class Main extends Component {
         return (
             <React.Fragment>
                 <Navigation/>
-                <ScrollingStripContainer></ScrollingStripContainer>
+                <ScrollingStripContainer></ScrollingStripContainer> 
                 <Switch>
-                    <Route exact path="/" component={() => <Home users ={users}/>}/>
+                    <Route exact path="/" component={() => <Home users ={users}/>}/> 
                     <Route exact path="/account" component={Account}/>
                     <Route exact path="/about" component={About}/>
+                    <Route exact path="/login" component={Login}/>
+                    <Route exact path="/register" component={Register}/>
+                    <Route exact path="/chart" component={ChartComponent}/>
                 </Switch>
                 <Footer/>
             </React.Fragment>

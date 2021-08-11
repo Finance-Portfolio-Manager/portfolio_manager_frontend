@@ -13,6 +13,8 @@ import { ThemeProvider } from "styled-components";
 import { useDarkMode } from "./components/DarkMode";
 import Toggle from "./components/Toggle";
 import { LandingPage } from './home-page/LandingPage';
+import Login from "../login-component/login";
+import Register from "../register-component/register";
 
 function MainAlt() {
   const [theme, themeToggler] = useDarkMode();
@@ -51,6 +53,8 @@ function MainAlt() {
             {/* <Route exact path="/" component={() => <Home users={users} />} /> */}
             <Route exact path="/account" component={Account} />
             <Route exact path="/about" component={About} />
+            <Route exact path="/login" component={Login} />
+            <Route exact path="/register" component={Register} />
           </Switch>
         </div>
         <Footer />

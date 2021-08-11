@@ -1,9 +1,7 @@
-// import logo from './logo.svg';
-import './App.css';
-
-import { BrowserRouter} from "react-router-dom";
 import Main from './components/MainComponent';
 import { useEffect } from 'react';
+
+import { BrowserRouter } from "react-router-dom";
 
 // import { BrowserRouter as Router, Route} from "react-router-dom";
 // import Login from './components/login-component/login';
@@ -41,13 +39,14 @@ export default function App() {
 
 
   return (
+    <MainAlt/>
+    // <BrowserRouter>
+    //   <div className="App">
+    //     {/* <Main/> */}
+    //     <MainAlt/>
+    //   </div>
+    // </BrowserRouter>
 
-    <BrowserRouter>
-      <div className="App">
-        {/* <Main/> */}
-        <MainAlt/>
-      </div>
-    </BrowserRouter>
 
     // <Router>
     //   <Route path="/" exact component={Home}/>
@@ -58,6 +57,7 @@ export default function App() {
     //   <Route path="/account" component={Account}/>
     // </Router>
 
-    );
+    
+  );
 }
 

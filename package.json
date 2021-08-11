@@ -4,7 +4,6 @@
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
-    "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
     "antd": "^4.16.10",
     "apexcharts": "^3.27.3",
@@ -23,6 +22,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "reactstrap": "^8.9.0",
+    "sass": "^1.37.5",
     "save": "^2.4.0",
     "styled-components": "^5.3.0",
     "web-vitals": "^1.1.2"
@@ -50,5 +50,13 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@testing-library/react": "^11.2.7",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.6",
+    "jest-dom": "^4.0.0",
+    "react-test-render": "^1.1.2",
+    "react-test-renderer": "^17.0.2"
   }
 }
