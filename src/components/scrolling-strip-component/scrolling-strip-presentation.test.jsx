@@ -18,11 +18,11 @@ afterEach(() => {
   container = null;
 });
 
-it("renders with stock symbols and pnl as props", () => {
+it("Renders with stock symbols and pnl as props", () => {
   act(() => {
     
     render(<ScrollingStripPresentation stockJson={testArrayJson}/>, container);
   });
   expect(container.textContent).toContain("MSFT");
 
-})
+});
