@@ -33,11 +33,10 @@ function Login(props){
                 }
                 console.log(response.data.jwt);
                 sessionStorage.setItem("Authorization", response.data.jwt);
-                props.setLoggedIn(true);
-                // props.history.push("/"); to portfolio?
+                props.history.push("/chart");
             })
             .catch(function (error) {
-                if(!error.response) {
+                if(error && !error.response) {
                     setNetworkError(true);
                 }
                 else if (error.response.status === 500) {
