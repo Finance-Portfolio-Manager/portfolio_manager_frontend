@@ -1,9 +1,7 @@
 export default function Portfolio(props){
-<<<<<<< Updated upstream
+
     return <p>Portfolio Component placeholder</p>
 }
-=======
-
     const[portfolio, setPortfolio] = useState([{}]);
 
     //TODO: Change this function a bit to fetch the portfolio stock data after getting the portfolio id from props.portfolioId
@@ -153,5 +151,5 @@ export default function Portfolio(props){
         <PortfolioView tableRows ={stockList} toggleShowDetails={props.toggleShowDetails}></PortfolioView>
     )
     
-}
->>>>>>> Stashed changes
+
+

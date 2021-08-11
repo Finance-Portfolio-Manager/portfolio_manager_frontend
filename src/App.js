@@ -1,9 +1,8 @@
-<<<<<<< Updated upstream
-=======
+
 // import logo from './logo.svg';
 import './App.css';
 import Main from './components/MainComponent';
-import { useEffect } from 'react';
+
 
 // import { BrowserRouter as Router, Route} from "react-router-dom";
 // import Login from './components/login-component/login';
@@ -21,7 +20,6 @@ import { useEffect } from 'react';
 // import "./css/account.css"
 // import 'bootstrap/dist/css/bootstrap.css';
 
->>>>>>> Stashed changes
 
 //TODO: We either need to add the navbar to this page or add it as a separate component
 
@@ -34,7 +32,7 @@ import React, {useEffect} from 'react';
 import {Route,Switch} from 'react-router-dom';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import './sass/site.scss';
-import Home from './components/home';
+
 
 
 
@@ -44,15 +42,9 @@ export default function App() {
     await import ('bootstrap/dist/js/bootstrap.min');
   }, []);
   return (
-<<<<<<< Updated upstream
-    <Switch>
-    <Route exact path='/' component={Home} />
-</Switch>
-  );
-=======
          <Main/> 
         // <MainAlt/>
     );
->>>>>>> Stashed changes
+
 }
 

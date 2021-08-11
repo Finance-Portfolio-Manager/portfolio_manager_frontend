@@ -5,15 +5,10 @@ export default function Navigation() {
     const [dropdownShowpPortfolio, setDropDrownShowPortfolio] = useState(false);
     const [dropdownShowStocks, setDropdownShowStocks] = useState(false);
     return (
-<<<<<<< Updated upstream
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div className="container-fluid">
-                <a className="navbar-brand" href="#">Portfolio</a>
-=======
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark primary-color">
             <div className="container-fluid  py-0">
                 <a className="navbar-brand">Team Name</a>
->>>>>>> Stashed changes
+
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
@@ -39,31 +34,6 @@ export default function Navigation() {
                             </li>
                             <li className="nav-item">
                             <a class="nav-link active" aria-current="page" href="#">About Us</a>
-                                {/* <NavDropDown
-                                className="text-white border-0"
-                                show={dropdownShow}
-                                hovered={() => setDropDrownShow(true)}
-                                unhovered={() => setDropDrownShow(false)}
-                                title="Products">
-                                <div className="min-vh-45 bg-secondary">
-
-                                </div>
-                            </NavDropDown> */}
-                            </li>
-                            <li className="nav-item">
-<<<<<<< Updated upstream
-                            <a class="nav-link active" aria-current="page" href="#">Stocks</a>
-                                {/* <NavDropDown
-                                className="text-white border-0"
-                                show={dropdownShow}
-                                hovered={() => setDropDrownShow(true)}
-                                unhovered={() => setDropDrownShow(false)}
-                                title="Products">
-                                <div className="min-vh-45 bg-secondary">
-
-                                </div>
-                            </NavDropDown> */}
-=======
                                 <NavDropDown
                                     className="text-white py-0 border-0"
                                     show={dropdownShowStocks}
@@ -76,7 +46,6 @@ export default function Navigation() {
                                         <a className='text-dark nav-link active align-item-center' aria-current="page" href="/#">Stock Graph</a>
                                     </div>
                                 </NavDropDown>
->>>>>>> Stashed changes
                             </li>
                         </ul>
                         <div className="d-flex align-self-center me-3">

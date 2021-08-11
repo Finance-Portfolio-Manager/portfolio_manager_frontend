@@ -1,8 +1,6 @@
-<<<<<<< Updated upstream
 export default function Home(props) {
     return <p>Home Component placeholder</p>
 }
-=======
 import React from 'react';
 import { Card, CardBody, CardText, CardTitle} from 'reactstrap';
 import { Doughnut } from 'react-chartjs-2';
@@ -74,4 +72,4 @@ function Home(props) {
 }
 
 export default Home;
->>>>>>> Stashed changes
+
