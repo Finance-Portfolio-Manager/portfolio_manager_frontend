@@ -1,114 +1,80 @@
- #logo-card{
-   color: whitesmoke;
-   background: transparent;
-   width: fit-content;
-   margin-left: 8%;
-   margin-right: 5%;
-   float: left;
-   margin-top: 5%;
-   transition: transform .2s;
-   border-color: transparent;
-   border-radius: 10px;
-   
+
+.captainProfile{
+   width: 150px !important;
+   transition: transform .2s !important;
 }
 
+.profile{
+   width: 40px !important;
 
-#logo-card:hover{
-   transform: scale(1.25);
 }
+
+.logoApp{
+   width: 200px !important;
+   height: 200px !important;
+   background-color: transparent !important;
+   color: whitesmoke !important;
+   transition: transform .2s !important;
+}
+
 
 body{
-   background-color: rgb(6, 55, 75);
+   background-color: rgb(6, 55, 75) !important;
 } 
 
-@media only screen and (max-width: 992px){
-   #logo-card{
-      width: fit-content;
-   }
-   #about-card{
-      width: 60%;
-   }
-}
-
-@media only screen and (max-width: 400px){
-   #logo-card{
-      width: 90%;
-      height: max-content;
-   }
-   #about-card{
-      width: 90%;
-      height: max-content;
-   }
-   .teams{
-      width: 100%;
-      display: block;
-      margin-bottom: 20px;
-   }
+.title{
+   background-color: transparent !important;
+   color: whitesmoke !important;
 }
 
 #about-card{
-   color: whitesmoke;
-   width: 60%;
-   background: transparent;
-   height: fit-content;
-   margin-right: 8%;
-   
-   right: 0;
-   margin-top: 5%;
-   transition: transform .2s;
-   border-color: transparent;
-   border-radius: 10px;
+   transition: transform .2s !important;
+}
+
+.logoApp:hover{
+   transform: scale(1.25) !important;
 }
 
 #about-card:hover{
-   transform: scale(1.25);
+   transform: scale(1.25) !important;
 }
 
-#meet{
-   color: whitesmoke;
-   text-align: center;
-   position: relative;
-   margin-top: 40px;
-   font-style:italic;
-}
-
-#line{
-   color: white;
-}
-
-#profile-1-card{
-   width: 20%;
-   margin: 0 auto;
-   float: none; 
-  background-color: rgb(219, 217, 217);
-  transition: transform .2s;
-}
-
-.team-button{
-   background-color: rgb(56, 55, 55);
-   border: rgb(56, 55, 55);
-}
-
-.team-button:hover{
-background-color: rgb(31, 30, 30);
-border: rgb(31, 30, 30);
+.captainProfile:hover{
+   transform: scale(1.25) !important;
 }
 
 #individual{
-   
-   width: 15%;
-   margin-left: 10px; 
-   display: inline-flex;
-   transition: transform .2s;
-   background-color: rgb(17, 82, 82);
-}
-
-#profile-1-card:hover{
-   transform: scale(1.25);
+   transition: transform .2s !important;
+   background-color:rgb(9, 54, 90);
+   color: whitesmoke;
 }
 
 #individual:hover{
-   transform: scale(1.25);
-} 
+   transform: scale(1.25) !important;
+}
 
+#profile-1-card{
+   background-color: transparent !important;
+   color: whitesmoke !important;
+}
 
+.team-button{
+   background-color: rgb(3, 40, 56) !important;
+
+}
+
+.team-button:hover{
+   background-color: rgb(49, 137, 175) !important;
+}
+
+.team-button:visited{
+   background-color: black;
+}
+
+.images{
+   width: 100px !important;
+}
+
+.headImage{
+   width: 150px !important;
+}
