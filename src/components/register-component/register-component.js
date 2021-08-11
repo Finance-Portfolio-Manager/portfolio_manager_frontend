@@ -1,8 +1,8 @@
-<<<<<<< Updated upstream
+
 export default function Register(props){
     return <p>Register Component placeholder</p>
 }
-=======
+
 import axios from "axios";
 import { useState } from "react";
 import RegisterForm from "./register-form";
@@ -116,5 +116,3 @@ export default function Register(props) {
     }
     return <RegisterForm emailError={emailError} usernameError={usernameError} passwordError={passwordError} confirmPasswordError={confirmPasswordError} onChange={handleChange} onSubmit={handleSubmit}></RegisterForm>
 }
-
->>>>>>> Stashed changes
