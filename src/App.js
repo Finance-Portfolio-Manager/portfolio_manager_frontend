@@ -31,7 +31,7 @@ import { useEffect } from 'react';
 
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import './sass/site.scss';
-
+import MainAlt from './components/styled-components/MainAlt';
 
 export default function App() {
   useEffect(async() => {
@@ -39,11 +39,13 @@ export default function App() {
     await import ('bootstrap/dist/js/bootstrap.min');
   }, []);
 
+
   return (
 
     <BrowserRouter>
       <div className="App">
-        <Main/>
+        {/* <Main/> */}
+        <MainAlt/>
       </div>
     </BrowserRouter>
 
