@@ -1,16 +1,16 @@
 pipeline {
     agent any
 
-    #environment {
-    #    REACT_APP_API_URL = credentials('REACT_APP_API_URL')
-    #}
+    /* environment { */
+    /*     REACT_APP_API_URL = credentials('REACT_APP_API_URL') */
+    /* } */
 
     stages {
-        #stage('Build React') {
-        #    steps {
-        #        sh 'REACT_APP_API_URL=${REACT_APP_API_URL} npm run build'
-        #    }
-        #}
+        /* stage('Build React') { */
+        /*     steps { */
+        /*         sh 'REACT_APP_API_URL=${REACT_APP_API_URL} npm run build' */
+        /*     } */
+        /* } */
 
         stage('Build Docker') {
             steps {
