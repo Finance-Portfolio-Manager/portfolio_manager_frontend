@@ -11,8 +11,9 @@ function ChartComponent(props) {
     });
 
     useEffect(()=>{
-        axios.get(`https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${props.symbol}&apikey=${process.env.REACT_APP_AV_KEY}`)
+        axios.get(process.env.REACT_APP_API_URL + "/api/charts")
         .then(response => {
+            console.log(response.data)
             // put logic for multiple time frames here
             setState({
                 symbolName: response.data["Meta Data"]["2. Symbol"],

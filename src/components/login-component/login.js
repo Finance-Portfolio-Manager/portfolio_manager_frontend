@@ -26,13 +26,14 @@ function Login(props){
             password:`${credentials.password}`
         };
         console.log(JSON.stringify(loginInfo));
-        axios.post("http://localhost:8082/login", JSON.stringify(loginInfo), {headers:{'Content-Type': 'application/json'}})
+        axios.post(process.env.REACT_APP_API_URL+"/login", JSON.stringify(loginInfo), {headers:{'Content-Type': 'application/json'}})
             .then(response=>{
                 if(sessionStorage.getItem("Authorization")){
                     sessionStorage.removeItem("Authorization");
                 }
                 console.log(response.data.jwt);
                 sessionStorage.setItem("Authorization", response.data.jwt);
+                props.setLoggedIn(true);
                 // props.history.push("/"); to portfolio?
             })
             .catch(function (error) {
