@@ -1,4 +1,4 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container,Row,Col,Button,Form } from "react-bootstrap";
 import "./register.css";
 import logo from "./revlogo.jpg";
