@@ -14,6 +14,7 @@ function Login(props){
         const {value,name} = e.target;
 
         setCredentials({...credentials, [name]:value});
+        console.log(credentials);
 
         setError(false);
         setNetworkError(false);
@@ -33,12 +34,7 @@ function Login(props){
                 }
                 console.log(response.data.jwt);
                 sessionStorage.setItem("Authorization", response.data.jwt);
-<<<<<<< HEAD
-                props.history.push("/chart");
-=======
-                props.setLoggedIn(true);
                 // props.history.push("/"); to portfolio?
->>>>>>> c222d048b4159f6142373ab97ba96cf52e61d8be
             })
             .catch(function (error) {
                 if(error && !error.response) {

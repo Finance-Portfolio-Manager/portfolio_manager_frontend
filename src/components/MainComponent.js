@@ -8,7 +8,7 @@ import About from './about-component/about-page.js';
 import ScrollingStripContainer from './scrolling-strip-component/scrolling-strip-container';
 import Account from './account-component/account-component';
 import Register from './register-component/register-component';
-import Login from './login-component/login-form';
+import Login from './login-component/login';
 import { ThemeProvider } from "styled-components";
 import { LandingPage } from './styled-components/home-page/LandingPage';
 import GlobalStyle from "./styled-components/styles/GlobalStyles";
