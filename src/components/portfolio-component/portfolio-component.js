@@ -151,5 +151,4 @@ export default function Portfolio(props){
     return (
         <PortfolioView tableRows ={stockList} toggleShowDetails={props.toggleShowDetails}></PortfolioView>
     )
-    
 }

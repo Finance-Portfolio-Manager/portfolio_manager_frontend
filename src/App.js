@@ -2,8 +2,29 @@
 import './App.css';
 
 import { BrowserRouter} from "react-router-dom";
-import Main from './components/MainComponent';
 import { useEffect } from 'react';
+
+// import { BrowserRouter as Router, Route} from "react-router-dom";
+// import Login from './components/login-component/login';
+// import Register from './components/register-component/register-component';
+// import ExampleChartComponent from './components/chart-component/example-chart-component';
+
+// import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
+// import Portfolio from './components/portfolio-component/portfolio-component';
+// import Home from './components/home-component/home-component';
+// import NewTransaction from './components/new-transaction-component/new-transaction-component';
+// import Login from './components/login-component/login-component';
+// import Register from './components/register-component/register-component';
+// import Account from './components/account-component/account-component';
+// import "./css/portfolio-styles.css"
+// import "./css/account.css"
+// import 'bootstrap/dist/css/bootstrap.css';
+
+
+// import logo from './logo.svg';
+import './App.css';
+import Main from './components/MainComponent';
+
 
 // import { BrowserRouter as Router, Route} from "react-router-dom";
 // import Login from './components/login-component/login';
@@ -31,7 +52,7 @@ import { useEffect } from 'react';
 
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import './sass/site.scss';
-
+import MainAlt from './components/styled-components/MainAlt';
 
 export default function App() {
   useEffect(async() => {
@@ -39,23 +60,10 @@ export default function App() {
     await import ('bootstrap/dist/js/bootstrap.min');
   }, []);
 
+
   return (
-
-    <BrowserRouter>
-      <div className="App">
-        <Main/>
-      </div>
-    </BrowserRouter>
-
-    // <Router>
-    //   <Route path="/" exact component={Home}/>
-    //   <Route path="/new" component={NewTransaction}/>
-    //   <Route path="/portfolio" component={Portfolio}/>
-    //   <Route path="/login" component={Login}/>
-    //   <Route path="/register" component={Register}/>
-    //   <Route path="/account" component={Account}/>
-    // </Router>
-
+         <Main/> 
+        // <MainAlt/>
     );
 }
 
