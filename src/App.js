@@ -24,11 +24,6 @@ function App() {
           <Route path="/register">
             <Register></Register>
           </Route>
-          <Route path="/chart">
-            <Authorization>
-              <ExampleChartComponent></ExampleChartComponent>
-            </Authorization>
-          </Route>
           <Route path="/portfolio">
             <Authorization>
               <PortfolioComponent></PortfolioComponent>
