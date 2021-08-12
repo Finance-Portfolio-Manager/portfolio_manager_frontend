@@ -22,7 +22,7 @@ export default function Navigation() {
                                     className="text-white py-0 border-0"
                                     show={dropdownShowpPortfolio}
                                     hovered={() => setDropDrownShowPortfolio(true)}
-                                    // unhovered={() => setDropDrownShowPortfolio(false)}
+                                    unhovered={() => setDropDrownShowPortfolio(false)}
                                     title="Portfolios">
                                     <div className="min-vh-15 bg-gray">
                                         <a className='text-dark  nav-link active align-item-center' aria-current="page" href="#">Your Accounts</a>
@@ -32,16 +32,18 @@ export default function Navigation() {
                                 </NavDropDown>
                             </li>
                             <li className="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">About Us</a>
+                            <a class="nav-link active" aria-current="page" href="/about">About Us</a>
+                            </li>
+                            <li className="nav-item">
                                 <NavDropDown
                                     className="text-white py-0 border-0"
                                     show={dropdownShowStocks}
                                     hovered={() => setDropdownShowStocks(true)}
-                                    // unhovered={() => setDropdownShowStocks(false)}
+                                    unhovered={() => setDropdownShowStocks(false)}
                                     title="Stocks">
                                     <div className="min-vh-15 bg-gray">
                                         <a className='text-dark nav-link active align-item-center' aria-current="page" href="/portfolio">Pie Chart</a>
-                                        <a className='text-dark nav-link active align-item-center' aria-current="page" href="/#">Stock Prices</a>
+                                        <a className='text-dark nav-link active align-item-center' aria-current="page" href="/new-tansaction">Transaction</a>
                                         <a className='text-dark nav-link active align-item-center' aria-current="page" href="/#">Stock Graph</a>
                                     </div>
                                 </NavDropDown>
