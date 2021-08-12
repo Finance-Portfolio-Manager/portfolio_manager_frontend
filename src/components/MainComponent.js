@@ -29,7 +29,7 @@ export default function Main() {
     return (
         <React.Fragment>
             <div className="container-fluid flex-column p-0 secondary-color">
-                
+
                 <ThemeProvider theme={themeMode} >
                     <GlobalStyle />
                     <Navigation />

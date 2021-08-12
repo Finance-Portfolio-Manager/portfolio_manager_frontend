@@ -4,7 +4,7 @@ import ChartComponent from "./chart-component";
 function ExampleChartComponent(props) {
     return (
         <ChartComponent 
-            symbol="MCD" 
+            symbol="GOOGL" 
             type="candlestick" 
             width="800"
         ></ChartComponent>

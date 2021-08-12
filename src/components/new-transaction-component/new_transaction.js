@@ -24,11 +24,11 @@ export default function NewTransaction(props){
     transaction.note = "1";
     transaction.token = "";
     transaction.isBuy = true;
-    
+
     const handleChange = (e)=>{
-        const {name, value} = e.target; 
+        const {name, value} = e.target;
         let newTransaction = {...transaction, [name]:value};
-        
+
         console.log(newTransaction);
         setTransaction(newTransaction);
     }
@@ -37,7 +37,8 @@ export default function NewTransaction(props){
         transaction.token = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0UUwiLCJleHAiOjE2Mjg3MjY3NTYsImlhdCI6MTYyODY5MDc1Nn0.cKtFiY4y4tWmt4buBbsaHXv_OIGiu5vrhqUWCYVyuM8MuP6MdhgWBel-jysBQ0yklL1sBdkxfCRrLv1vk6rA2A";
         transaction.isBuy = true;
         e.preventDefault();
-        axios.post("http://23.22.140.95:8082/transactions/new", transaction, {headers: {'Content-Type': 'application/json'}})
+        // axios.post("http://23.22.140.95:8082/transactions/new", transaction, {headers: {'Content-Type': 'application/json'}})
+        axios.post(process.env.REACT_APP_API_URL + "/transactions/new", transaction, {headers: {'Content-Type': 'application/json'}})
             .then(response=>{
                 console.log(response);
             })
