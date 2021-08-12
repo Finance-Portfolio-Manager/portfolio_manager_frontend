@@ -7,8 +7,8 @@ export default function NewTransactionForm(props){
     return (<div class="wholeform">
         <Form>
             <div class="container">
-                <Button value = "buysell" variant="info" type="button" onClick={props.buyConfirm} >Buy</Button>
-                <Button value = "buysell" variant="info" type="button" onClick={props.buyConfirm} >Sell</Button>
+                <Button name = "buy" value = "buysell" variant="info" type="button" onClick={props.buyConfirm} >Buy</Button>
+                <Button name = "sell" value = "buysell" variant="info" type="button" onClick={props.buyConfirm} >Sell</Button>
             </div>
             <div class="container">
                 <Form.Group>
@@ -16,10 +16,10 @@ export default function NewTransactionForm(props){
                     <Form.Control name="stocksymbol" onChange={props.handleChange}></Form.Control>
 
                     <Form.Label>Quantity:</Form.Label>
-                    <Form.Control name="quantity" type="number" onChange={props.handleChange}></Form.Control>
+                    <Form.Control name="shareAmount" type="number" onChange={props.handleChange}></Form.Control>
 
                     <Form.Label>Price:</Form.Label>
-                    <Form.Control name="price" type="number" onChange={props.handleChange}></Form.Control>
+                    <Form.Control name="sharePrice" type="number" onChange={props.handleChange}></Form.Control>
 
                     <Form.Label>Date:</Form.Label>
                     <Form.Control name="date" type="date" onChange={props.handleChange}></Form.Control>
@@ -31,6 +31,7 @@ export default function NewTransactionForm(props){
             </div>
             <div class="container">
                 <Button variant="info" type="submit" onClick={props.submitConfirm} >Add New Transaction</Button>
+                <Button variant="info" type="submit" onClick={props.getTransaction} >Test Get Transaction</Button>
             </div>
         </Form>
     </div>)
