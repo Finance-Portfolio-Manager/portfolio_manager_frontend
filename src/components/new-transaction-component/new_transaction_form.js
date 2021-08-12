@@ -7,8 +7,8 @@ export default function NewTransactionForm(props){
     return (<div class="wholeform">
         <Form>
             <div class="container">
-                <Button name = "buy" value = "buysell" variant="info" type="button" onClick={props.buyConfirm} >Buy</Button>
-                <Button name = "sell" value = "buysell" variant="info" type="button" onClick={props.buyConfirm} >Sell</Button>
+                <Button className='new-transaction__button' name = "buy" value = "buysell" variant="info" type="button" onClick={props.buyConfirm} >Buy</Button>
+                <Button className='new-transaction__button' name = "sell" value = "buysell" variant="info" type="button" onClick={props.buyConfirm} >Sell</Button>
             </div>
             <div class="container">
                 <Form.Group>
@@ -30,8 +30,8 @@ export default function NewTransactionForm(props){
                 </Form.Group>
             </div>
             <div class="container">
-                <Button variant="info" type="submit" onClick={props.submitConfirm} >Add New Transaction</Button>
-                <Button variant="info" type="submit" onClick={props.getTransaction} >Test Get Transaction</Button>
+                <Button className='new-transaction__button' variant="info" type="submit" onClick={props.submitConfirm} >Add New Transaction</Button>
+                <Button className='new-transaction__button' variant="info" type="submit" onClick={props.getTransaction} >Test Get Transaction</Button>
             </div>
         </Form>
     </div>)

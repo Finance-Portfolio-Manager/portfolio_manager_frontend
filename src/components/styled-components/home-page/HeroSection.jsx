@@ -29,7 +29,7 @@ function HeroSection({
           >
             <div className="col">
               <div className="home__hero-text-wrapper">
-                <div className="top-line accent-color">{topLine}</div>
+                <div className="top-line accent-text">{topLine}</div>
                 <h1 className="heading">
                   {headline}
                 </h1>

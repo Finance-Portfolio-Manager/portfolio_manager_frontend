@@ -22,6 +22,9 @@ export const GlobalStyle = createGlobalStyle`
       background: ${({ theme }) => theme.secondaryColor} !important;
     }
     .accent-color{
+      background: ${({ theme }) => theme.accentColor} !important;
+    }
+    .accent-text{
       color: ${({ theme }) => theme.accentColor} !important;
     }
     .primary-text{
@@ -30,12 +33,19 @@ export const GlobalStyle = createGlobalStyle`
     .secondary-text{
       color: ${({ theme }) => theme.secondaryText} !important;;
     }
+    /*  */
+    .nav__logo{
+      color: ${({ theme }) => theme.secondaryText} !important;;
+    }
     .float{
 	    position:fixed;
 	    bottom:40px;
 	    right:40px;
     }
     
+    .make-transparent{
+      background: transparent !important;
+    }
     :is(h1, h2, h3, h4, h5, h6) {
       font-family: 'Inter', sans-serif;
     }

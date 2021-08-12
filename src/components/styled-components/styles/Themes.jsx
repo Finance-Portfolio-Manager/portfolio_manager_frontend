@@ -2,6 +2,9 @@
 Carlos Galvan Jr 
 
 A collection of themes to be used with style-components module to set the color scheme
+
+NOTE: The only reason it is labeled a jsx file instead of js is because vscode-styled-components plugin
+doesnt work without it. Basically I just want the color picker
 */
 
 export const lightTheme = {
@@ -52,7 +55,7 @@ export const blueGrayTheme = {
     secondaryText: '#ffe1e1',
     primaryColor: '#112A43',
     secondaryColor: '#334E68',
-    accentColor: '#B8EFA5',
+    accentColor: '#070d27',
 }
 
 export const orangeTheme = {
@@ -71,6 +74,14 @@ export const lavenderTheme = {
     accentColor: '#FFB300',
 }
 
+export const uglyRoseTheme = {
+    primaryText: '#000',
+    secondaryText: '#242424',
+    primaryColor: '#ff13b0',
+    secondaryColor: '#ff65d8',
+    accentColor: '#0004ff',
+}
+//add themes here to appear in the toggle list
 export const themeSelection = [ 
     {version: 'light', themePack: lightTheme, type: 'light' },
     {version: 'dark', themePack: darkTheme, type: 'dark'  },
@@ -79,7 +90,8 @@ export const themeSelection = [
     {version: 'blue gray', themePack: blueGrayTheme, type: 'dark' },
     {version: 'orange', themePack: orangeTheme, type: 'light' },
     {version: 'lavender', themePack: lavenderTheme, type: 'light' },
+    // {version: 'ugly rose', themePack: uglyRoseTheme, type: 'light' },
 ];
-
+//returns theme names only
 export const themeVersions = themeSelection.map(function(e) { return e.version; });
 

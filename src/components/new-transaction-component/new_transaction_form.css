@@ -21,7 +21,7 @@ input {
     box-sizing: border-box;
 }
 
-button {
+ new-transaction__button {
     background-color: #F26925;
     color: white;
     padding: 14px 20px;
@@ -31,9 +31,9 @@ button {
     width: 100%;
 }
 
-button:hover {
+new-transaction__button:hover {
     opacity: 0.8;
-}
+} 
 
 .container {
     padding: 16px;
