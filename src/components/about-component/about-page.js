@@ -3,6 +3,7 @@ import React from 'react';
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'compiled/bootstrap/dist/css/bootstrap.min.css';
 import LogoCard from "./logo-application";
 import './about-page.css';
 import AboutCard from "./about-application";

@@ -1,0 +1,88 @@
+import { render, unmountComponentAtNode } from "react-dom";
+import { act } from "react-dom/test-utils";
+import Navigation from "../navigation";
+
+import { shallow, ShallowWrapper, mount } from "enzyme";
+
+import { configure } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+import NavDropDown from "../navdropdown";
+
+import React, { useState } from 'react';
+
+configure({ adapter: new Adapter() });
+const wrapper = shallow(<Navigation></Navigation>);
+
+let container = null;
+
+beforeEach(() => {
+  // setup a DOM element as a render target
+  container = document.createElement("div");
+  document.body.appendChild(container);
+});
+
+afterEach(() => {
+  // cleanup on exiting
+  unmountComponentAtNode(container);
+  container.remove();
+  container = null;
+});
+
+test("has a home nav item", () => {
+  act(() => {
+    render(<Navigation />, container);
+  });
+  expect(container.querySelector('div > span').firstChild.nodeValue).toEqual("Home");
+});
+
+
+describe("Nav bar rendering", ()=>{
+  let component = shallow(<Navigation></Navigation>);
+
+  test("renders a title", ()=>{
+    expect(component.find("a").first().text()).toContain('Portfolio');
+  })
+
+  test("renders a home nav item with a dropdown", ()=>{
+    expect(component.find("NavDropDown").length).toBe(1);
+  })
+
+  test("renders About Us", ()=>{
+    expect(component.find("a").at(1).text()).toContain('About Us');
+  })
+
+  test("renders Stocks", ()=>{
+    expect(component.find("a").at(2).text()).toContain('Stocks');
+  })
+
+  test("renders Account", ()=>{
+    expect(component.find("a").at(3).text()).toContain('Account');
+  })
+
+  test("renders Log in for Account dropdown", ()=>{
+    expect(component.find("a").at(4).text()).toContain('Log in');
+  })
+
+  test("renders Sign up for Account dropdown", ()=>{
+    expect(component.find("a").at(5).text()).toContain('Sign up');
+  })
+
+  test("renders Log Out for Account dropdown", ()=>{
+    expect(component.find("a").at(6).text()).toContain('Log Out');
+  })
+})
+
+describe("nav bar with state", ()=>{
+
+  test("drops down when hovered", ()=>{
+    // component.setProps({ dropDownShow : false });
+    const clickFn = jest.fn();
+    const component = shallow(<Navigation onHover={ clickFn }></Navigation>);
+    const handleHover = jest.spyOn(Navigation, "useState");
+    handleHover.mockImplementation(dropdownShow => [dropdownShow, clickFn]);
+
+    component.find('NavDropDown').simulate('hover');
+    expect(clickFn).toBeTruthy();
+    expect(clickFn).toHaveBeenCalled();
+  })
+})

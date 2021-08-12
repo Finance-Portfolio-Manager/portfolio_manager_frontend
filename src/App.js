@@ -39,7 +39,9 @@ export default function App() {
 
 
   return (
-    <MainAlt/>
+    // <MainAlt/>
+    <Main/>
+
     // <BrowserRouter>
     //   <div className="App">
     //     {/* <Main/> */}
