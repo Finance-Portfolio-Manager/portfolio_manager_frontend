@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import Home from './home-component/home-component';
 import Footer from './footer-component/footer';
@@ -50,5 +50,5 @@ export default function Main() {
                 <Footer />
                 </div>
         </React.Fragment>
-    )};
+    );
 }
