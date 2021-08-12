@@ -7,7 +7,16 @@ import Navigation from './navigation/navigation';
 import About from './about-component/about-page.js';
 import ScrollingStripContainer from './scrolling-strip-component/scrolling-strip-container';
 import Account from './account-component/account-component';
-import NewsCard from './news-component/news-component-presentation';
+import Register from './register-component/register-component';
+import Login from './login-component/login-form';
+import { ThemeProvider } from "styled-components";
+import { LandingPage } from './styled-components/home-page/LandingPage';
+import GlobalStyle from "./styled-components/styles/GlobalStyles";
+import { useAllThemes } from './styled-components/components/AllThemes';
+import { themeMode as themeSwitch } from './styled-components/components/themeMode';
+import ToggleButton from './styled-components/components/ToggleButton';
+import NewTransaction from './new-transaction-component/new_transaction';
+import News from './news-component/news-component-presentation';
 
 
 class Main extends Component {
@@ -21,16 +30,25 @@ class Main extends Component {
             <React.Fragment>
                 <Navigation/>
                 <ScrollingStripContainer></ScrollingStripContainer>
-                
-                <Switch>
-                    <Route exact path="/" component={NewsCard}/>
-                    <Route exact path="/account" component={Account}/>
-                    <Route exact path="/about" component={About}/>
-                </Switch>
-                <Footer/>
-            </React.Fragment>
-        );
-    }
+                <ThemeProvider theme={themeMode} >
+                    <GlobalStyle />
+                    <Navigation />
+                    <ScrollingStripContainer />
+                    <ToggleButton theme={theme} toggleTheme={themeToggler} />
+                    <Switch>
+                        <Route exact path="/portfolio" component={() => <Home users={users} />} />
+                        <Route exact path="/home" component={() => <LandingPage />} />
+                        <Route exact path="/account" component={Account} />
+                        <Route exact path="/about" component={About} />
+                        <Route exact path="/register" component={Register} />
+                        <Route exact path="/login" component={Login} />
+                        <Route exact path="/new-transaction" component={NewTransaction} />
+                        <Route exact path="/news" component={News} />
+                    </Switch>
+                </ThemeProvider>
+                <Footer />
+        </React.Fragment>
+    )};
 }
 
 export default Main;
