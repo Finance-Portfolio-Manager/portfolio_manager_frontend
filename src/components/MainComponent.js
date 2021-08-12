@@ -16,6 +16,7 @@ import { useAllThemes } from './styled-components/components/AllThemes';
 import { themeMode as themeSwitch } from './styled-components/components/themeMode';
 import ToggleButton from './styled-components/components/ToggleButton';
 import NewTransaction from './new-transaction-component/new_transaction';
+import News from './news-component/news-component-presentation';
 
 
 export default function Main() {
@@ -43,10 +44,11 @@ export default function Main() {
                         <Route exact path="/register" component={Register} />
                         <Route exact path="/login" component={Login} />
                         <Route exact path="/new-transaction" component={NewTransaction} />
+                        <Route exact path="/news" component={News} />
                     </Switch>
                 </ThemeProvider>
                 <Footer />
-            </div>
+                </div>
         </React.Fragment>
-    );
+    )};
 }
