@@ -2,21 +2,31 @@ import NavDropDown from './navdropdown';
 import React, { useState } from 'react';
 
 export default function Navigation() {
-    const [dropdownShow, setDropDrownShow] = useState(false);
+    const [dropdownShowpPortfolio, setDropDrownShowPortfolio] = useState(false);
+    const [dropdownShowStocks, setDropdownShowStocks] = useState(false);
     return (
 
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark primary-color">
+<<<<<<< HEAD
 
             <div className="container-fluid">
                 <a className="navbar-brand" href="#">Portfolio</a>
+=======
+            <div className="container-fluid  py-0">
+                <a className="navbar-brand">Team Name</a>
+>>>>>>> team3
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <div className=" d-flex flex-column flex-md-row justify-content-between flex-fill">
-                        <ul className="navbar-nav">
+                        <ul className="navbar-nav primary-text">
+                            <li className="nav-item">
+                                <a className="nav-link active" aria-current="page" href="/home">Home</a>
+                            </li>
                             <li className="nav-item">
                                 <NavDropDown
+<<<<<<< HEAD
                                     className="text-white border-0"
                                     show={dropdownShow}
                                     hovered={() => setDropDrownShow(true)}
@@ -24,14 +34,34 @@ export default function Navigation() {
                                     title="Home">
                                     <div className="min-vh-45 bg-gray">
 
+=======
+                                    className="text-white py-0 border-0"
+                                    show={dropdownShowpPortfolio}
+                                    hovered={() => setDropDrownShowPortfolio(true)}
+                                    // unhovered={() => setDropDrownShowPortfolio(false)}
+                                    title="Portfolios">
+                                    <div className="min-vh-15 bg-gray">
+                                        <a className='text-dark  nav-link active align-item-center' aria-current="page" href="#">Your Accounts</a>
+                                        <a className='text-dark  nav-link active align-item-center' aria-current="page" href="#">Favorite</a>
+                                        <a className='text-dark  nav-link active align-item-center' aria-current="page" href="#">Public portfolio</a>
+>>>>>>> team3
                                     </div>
                                 </NavDropDown>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="/about">About Us</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="#">Stocks</a>
+                            <a class="nav-link active" aria-current="page" href="#">About Us</a>
+                                <NavDropDown
+                                    className="text-white py-0 border-0"
+                                    show={dropdownShowStocks}
+                                    hovered={() => setDropdownShowStocks(true)}
+                                    // unhovered={() => setDropdownShowStocks(false)}
+                                    title="Stocks">
+                                    <div className="min-vh-15 bg-gray">
+                                        <a className='text-dark nav-link active align-item-center' aria-current="page" href="/portfolio">Pie Chart</a>
+                                        <a className='text-dark nav-link active align-item-center' aria-current="page" href="/#">Stock Prices</a>
+                                        <a className='text-dark nav-link active align-item-center' aria-current="page" href="/#">Stock Graph</a>
+                                    </div>
+                                </NavDropDown>
                             </li>
                         </ul>
                         <div className="d-flex align-self-center me-3">
@@ -40,8 +70,13 @@ export default function Navigation() {
                                 <a className="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Account</a>
                                 <ul className="dropdown-menu dropdown-menu-end dropdown-menu-gray" aria-labelledby="navbarDropdown">
                                     <li><a className="dropdown-item" href="/login">Log in</a></li>
+<<<<<<< HEAD
                                     <li><a className="dropdown-item" href="/register" >Sign up</a></li>
                                     <li><a className="dropdown-item" href="#">Log Out</a></li>
+=======
+                                    <li><a className="dropdown-item" href="/register">Sign up</a></li>
+                                    <li><a className="dropdown-item" href="/home">Log Out</a></li>
+>>>>>>> team3
                                 </ul>
                             </div>
                         </div>

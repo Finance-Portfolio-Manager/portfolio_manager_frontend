@@ -1,3 +1,8 @@
+/*
+Carlos Galvan Jr 
+
+Hero section component styles the main page
+*/
 import { Button } from "react-bootstrap";
 import { Link } from 'react-router-dom';
 import './HeroSection.css';
@@ -24,7 +29,7 @@ function HeroSection({
           >
             <div className="col">
               <div className="home__hero-text-wrapper">
-                <div className="top-line">{topLine}</div>
+                <div className="top-line accent-color">{topLine}</div>
                 <h1 className="heading">
                   {headline}
                 </h1>

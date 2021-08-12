@@ -8,10 +8,17 @@ export default function Footer() {
                 <div className="card border-0 w-md-15 bg-transparent">
                     <div className="card-body d-flex flex-column">
                         <span className="card-title text-white text-uppercase mb-3">Service</span>
+<<<<<<< HEAD
                         <a href="/" className="text-decoration-none text-white small">Investment Relations</a>
                         <a href="/" className="text-decoration-none text-white small">Accessiblity</a>
                         <a href="/" className="text-decoration-none text-white small"> Company Over</a>
                         <a href="/" className="text-decoration-none text-white small">Stocks Plans</a>
+=======
+                        <a href="/" className="text-decoration-none text-white small mb-2">Investment Relations</a>
+                        <a href="/" className="text-decoration-none text-white small mb-2">Accessiblity</a>
+                        <a href="/" className="text-decoration-none text-white small mb-2"> Company Over</a>
+                        <a href="/" className="text-decoration-none text-white smallmb-2 ">Stocks Plans</a>
+>>>>>>> team3
                     </div>
                 </div>
                 <div className="card border-0 w-md-15 bg-transparent">

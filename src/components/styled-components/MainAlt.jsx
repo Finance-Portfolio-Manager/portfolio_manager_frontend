@@ -1,3 +1,8 @@
+/*
+Carlos Galvan Jr 
+
+A demo version for the home page; not the final version
+*/
 import React from "react";
 import Navigation from "../navigation/navigation";
 import ScrollingStripContainer from "../scrolling-strip-component/scrolling-strip-container";
@@ -8,17 +13,21 @@ import Home from "../home-component/home-component";
 import Account from "../account-component/account-component";
 import About from "../about-component/about-page";
 import Footer from "../footer-component/footer";
-import { darkTheme, lightTheme } from "./styles/Themes";
 import { ThemeProvider } from "styled-components";
-import { useDarkMode } from "./components/DarkMode";
-import Toggle from "./components/Toggle";
 import { LandingPage } from './home-page/LandingPage';
+<<<<<<< HEAD
 import Login from "../login-component/login";
 import Register from "../register-component/register";
+=======
+import { useAllThemes } from './components/AllThemes';
+import { themeMode as themeSwitch } from './components/themeMode';
+import ToggleButton from './components/ToggleButton';
+>>>>>>> team3
 
 function MainAlt() {
-  const [theme, themeToggler] = useDarkMode();
-  const themeMode = theme === "light" ? lightTheme : darkTheme;
+  const [theme, themeToggler] = useAllThemes();
+  // const themeMode = theme === "light" ? lightTheme : darkTheme;
+  const themeMode = themeSwitch(theme)
   const users = [
     {
       username: "Greg",
@@ -46,7 +55,7 @@ function MainAlt() {
         <GlobalStyle />
         <Navigation />
         <ScrollingStripContainer></ScrollingStripContainer>
-        <Toggle theme={theme} toggleTheme={themeToggler} />
+        <ToggleButton theme={theme} toggleTheme={themeToggler} />
         <div className="secondary-color">
           <Switch>
             <Route exact path="/" component={() => <LandingPage />} />

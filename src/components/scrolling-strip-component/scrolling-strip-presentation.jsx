@@ -3,62 +3,51 @@ import React, { useEffect, useState } from "react";
 import Marquee from "react-fast-marquee";
 
 export default function ScrollingStripPresentation(props){
-   
-    const marqueeStyle = {
-        backgroundColor: "black",
-        color: "white",
-        position: "sticky",
-        top: 0,
-        paddingBottom: 2,
-        marginTop: 0,
-    };
+
+    const stockPropJson = Object.keys(props.stockJson);
 
     const hStyle = {
         margin: 0,
-        marginRight: 0,
+        marginRight: 10,
         fonstSize: 14,
         display: "inline"
     }
-    
-    const divStyle = {
-        margin: 0
-    }
-    const [json, setJson] = useState([]);
-
-    useEffect(() => { setJson(props.json); } , [] ); 
-    
-    console.log(props.json);
-    
-    const propVals = Object.values(json);
-
-    // var str = propVals.map((value) => ` ${value.symbol} ${value.PNL}%`);
 
     return(
-        <Marquee style={marqueeStyle} speed="50" gradient={false}> 
-        {propVals.map((value) => (
+        <Marquee style={marqueeStyle} speed="30" gradient={false}> 
+        {stockPropJson.map((x) => 
             <div style={divStyle}>
-                <h6 style={hStyle}> {value.symbol}: </h6>
-                <h6 style={colorId(value.PNL)}> {value.PNL}% </h6>
+                <h6 style={hStyle}>{x}:</h6>
+                <h6 style={hStyle, colorId(props.stockJson[x])}>{props.stockJson[x]}%</h6>
             </div>
-        ))}
-    
+            
+        )}
+        {/* use Object.Keys instead so that I can map and output the keys and the values?
+            Regardless, look at the keys and entries functions for Object more in-depth */}
         </Marquee> 
     );
-    // const [symbolArray, setSymbolArray] = useState([]);
 
-    // useEffect(() => { setSymbolArray(props.json); } , [] ); 
-
-    // symbolArray.map((value) => console.log(value.stockSymbol));
-    
-
-    // return(
-    //     <Marquee style={marqueeStyle} speed="50" gradient={false}>
-    //         <h6 style={hStyle}>{/*symbolArray*/}</h6>
-    //     </Marquee>
-
-    // );
 }
 
 function colorId(pnl){
-    return (pnl < 0) ? {display: "inline", margin: 0, marginRight: 10, color:"red"} : {display: "inline", marginRight: 10, margin: 0, color: "green"};
+    return (pnl < 0) ? 
+            {display: "inline", margin: 0, marginRight: 10, color:"red"} : 
+            {display: "inline",  margin: 0, marginRight: 10, color: "green"};
+}
+
+const marqueeStyle = {
+    backgroundColor: "black",
+    color: "white",
+    position: "sticky",
+    top: 0,
+    paddingBottom: 2,
+    marginTop: 0,
+    zIndex: 100
+};
+
+
+
+const divStyle = {
+    margin: 0,
+    
 }
