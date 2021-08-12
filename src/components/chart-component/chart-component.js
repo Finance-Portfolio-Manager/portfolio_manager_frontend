@@ -11,7 +11,7 @@ function ChartComponent(props) {
     });
 
     useEffect(()=>{
-        axios.get(process.env.REACT_APP_API_URL + "/api/charts")
+        axios.get(process.env.REACT_APP_API_URL + "/charts/" + props.symbol)
         .then(response => {
             console.log(response.data)
             // put logic for multiple time frames here
