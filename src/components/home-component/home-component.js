@@ -1,8 +1,8 @@
 import React from 'react';
-import { Card, CardBody, CardText, CardTitle, Col, Row } from 'reactstrap';
-import {Doughnut} from 'react-chartjs-2';
+import { Card, CardBody, CardText, CardTitle} from 'reactstrap';
+import { Doughnut } from 'react-chartjs-2';
 
-function DoughnutData(props){
+function DoughnutData(props) {
     const data = {
         labels: props.user.labels,
         datasets: [
@@ -22,8 +22,8 @@ function DoughnutData(props){
                     'rgba(255, 206, 86, 1)',
                     'rgba(75, 192, 192, 1)',
                     'rgba(153, 102, 255, 1)',
-                  ],
-                  borderWidth: 1,
+                ],
+                borderWidth: 1,
             },
         ],
     };
@@ -35,45 +35,37 @@ function DoughnutData(props){
     );
 }
 
-function RenderCard(props){
-    return(
-            <Col sm="4">
-                <Card>
-                    <CardBody>
-                        <CardTitle tag="h4">{props.user.username}</CardTitle>
-                        <CardText>
-                            <div>
-                                <p>{props.user.percentage}</p>
-                                <p>{props.user.profile}</p>
-                                <DoughnutData user={props.user} labels={props.user}/>
-                            </div>
-                        </CardText>
-                    </CardBody>
-                </Card>
-            </Col>
+function RenderCard(props) {
+    return (
+        <Card className="primary-color m-3">
+            <CardBody>
+                <CardTitle tag="h4">{props.user.username}</CardTitle>
+                <CardText>
+                    <span>{props.user.percentage}</span>
+                    <span>{props.user.profile}</span>
+                </CardText>
+                <DoughnutData user={props.user} labels={props.user} />
+            </CardBody>
+        </Card>
     );
 }
 
-function Home(props){
-    const cards = props.users.map(user => {
-        return(
-            // <div className="col-3">
-            <RenderCard user = {user}/>
-            // {/* </div> */}
+function Home(props) {
+    const cards = props.users.map((user,index) => {
+        return (
+            <RenderCard key={"userportfolio"+index} user={user} />
         );
     });
 
     return (
-        <div className="container" style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
-            <div className="row">
-                <h2>Your Favorite Portfolios</h2>
-                <div className="row py-3" style={{borderStyle: "solid"}}>
-                    {cards}
-                </div>
+        <div className="d-flex flex-column align-items-center w-75 mx-auto my-3">
+            <div className="h2">Your Favorite Portfolios</div>
+            <div className="d-flex border border-3">
+                {cards}
             </div>
         </div>
     )
-    
+
 }
 
 export default Home;

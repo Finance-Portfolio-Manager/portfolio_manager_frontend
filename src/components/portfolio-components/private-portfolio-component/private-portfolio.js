@@ -153,5 +153,4 @@ export default function PrivatePortfolio(props){
     return (
         <PrivatePortfolioTable tableRows ={stockList} toggleShowDetails={props.toggleShowDetails}/>
     )
-    
 }
