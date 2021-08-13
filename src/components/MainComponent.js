@@ -17,6 +17,7 @@ import { themeMode as themeSwitch } from './styled-components/components/themeMo
 import ToggleButton from './styled-components/components/ToggleButton';
 import NewTransaction from './new-transaction-component/new_transaction';
 import News from './news-component/news-component-presentation';
+import { NewsPage } from './news-component/layout/NewsPage';
 
 
 export default function Main() {
@@ -44,7 +45,7 @@ export default function Main() {
                         <Route exact path="/register" component={Register} />
                         <Route exact path="/login" component={Login} />
                         <Route exact path="/new-transaction" component={NewTransaction} />
-                        <Route exact path="/news" component={News} />
+                        <Route exact path="/news" component={NewsPage} />
                     </Switch>
                 </ThemeProvider>
                 <Footer />
