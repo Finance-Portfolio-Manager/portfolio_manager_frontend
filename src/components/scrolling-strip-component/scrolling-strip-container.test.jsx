@@ -2,13 +2,12 @@ import React from "react";
 import { render, unmountComponentAtNode } from "react-dom";
 import { act } from "react-dom/test-utils";
 
-import ScrollingStripContainer from "./scrolling-strip-container";
-import ScrollingStripPresentation from "./scrolling-strip-presentation";
-import getSymbolPnlFromApi from "./scrolling-strip-container";
+import getSymbolPnlFromApi from "./axios-request";
 
 const myMock = jest.fn();
 const testArrayJson = [{"MSFT":29,"GOOG":40}];
 const resp = {data: testArrayJson};
+jest.mock('axios');
 
 let container = null;
 beforeEach(() => {
@@ -23,5 +22,7 @@ afterEach(() => {
 });
 
 it("Renders presentation container with injected mock axios function", ()=> {
-    myMock.mockReturnValue(testArrayJson);
+
+
+
 })
