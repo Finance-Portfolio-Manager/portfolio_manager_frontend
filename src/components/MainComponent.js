@@ -16,6 +16,7 @@ import { useAllThemes } from './styled-components/components/AllThemes';
 import { themeMode as themeSwitch } from './styled-components/components/themeMode';
 import ToggleButton from './styled-components/components/ToggleButton';
 import NewTransaction from './new-transaction-component/new_transaction';
+import Chart from './portfolio-chart-component/portfolio-chart';
 
 
 export default function Main() {
@@ -39,6 +40,7 @@ export default function Main() {
                         <Route exact path="/portfolio" component={() => <Home users={users} />} />
                         <Route exact path="/home" component={() => <LandingPage />} />
                         <Route exact path="/account" component={Account} />
+                        <Route exact path="/balances" component={Chart} portfolioId={11}/>
                         <Route exact path="/about" component={About} />
                         <Route exact path="/register" component={Register} />
                         <Route exact path="/login" component={Login} />
