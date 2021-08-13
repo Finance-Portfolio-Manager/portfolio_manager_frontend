@@ -19,22 +19,20 @@ import NewTransaction from './new-transaction-component/new_transaction';
 import News from './news-component/news-component-presentation';
 
 
-class Main extends Component {
-    render(){
-        
-        //  const users = [{"username": "Greg", "labels":["BYSI","BTBT","MRNA","ROKU","MU"], "percentage": [20, 30, 50, 10, 10], "profile": "Profile 1"},
-        // {"username": "David", "labels":["BYSI","AAPL","F","GM","LUMN"], "percentage": [20, 10, 50, 20, 15], "profile": "Profile 1"},
-        // {"username": "Quinton", "labels":["TSLA","SHOP","MRNA","UBER","BNGO"], "percentage": [10, 10, 50, 10, 20], "profile": "Profile 1"},]
-
-        return (
-            <React.Fragment>
-                <Navigation/>
-                <ScrollingStripContainer></ScrollingStripContainer>
+export default function Main() {
+    const [theme, themeToggler] = useAllThemes();
+    const themeMode = themeSwitch(theme)
+    const users = [{ "username": "Greg", "labels": ["BYSI", "BTBT", "MRNA", "ROKU", "MU"], "percentage": [20, 30, 50, 10, 10], "profile": "Profile 1" },
+    { "username": "David", "labels": ["BYSI", "AAPL", "F", "GM", "LUMN"], "percentage": [20, 10, 50, 20, 15], "profile": "Profile 1" },
+    { "username": "Quinton", "labels": ["TSLA", "SHOP", "MRNA", "UBER", "BNGO"], "percentage": [10, 10, 50, 10, 20], "profile": "Profile 1" },]
+    return (
+        <React.Fragment>
+            <div className="container-fluid flex-column p-0 secondary-color">
                 <ThemeProvider theme={themeMode} >
                     <GlobalStyle />
                     <Navigation />
                     <ScrollingStripContainer />
-                    <ToggleButton theme={theme} toggleTheme={themeToggler} />
+                     <ToggleButton theme={theme} toggleTheme={themeToggler} /> 
                     <Switch>
                         <Route exact path="/portfolio" component={() => <Home users={users} />} />
                         <Route exact path="/home" component={() => <LandingPage />} />
@@ -47,8 +45,7 @@ class Main extends Component {
                     </Switch>
                 </ThemeProvider>
                 <Footer />
+            </div>
         </React.Fragment>
-    )};
+    );
 }
-
-export default Main;

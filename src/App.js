@@ -31,7 +31,6 @@ import { useEffect } from 'react';
 
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import './sass/site.scss';
-import MainAlt from './components/styled-components/MainAlt';
 
 export default function App() {
   useEffect(async() => {
@@ -41,23 +40,7 @@ export default function App() {
 
 
   return (
-
-    <BrowserRouter>
-      <div className="App">
-        {/* <Main/> */}
-        <MainAlt/>
-      </div>
-    </BrowserRouter>
-
-    // <Router>
-    //   <Route path="/" exact component={Home}/>
-    //   <Route path="/new" component={NewTransaction}/>
-    //   <Route path="/portfolio" component={Portfolio}/>
-    //   <Route path="/login" component={Login}/>
-    //   <Route path="/register" component={Register}/>
-    //   <Route path="/account" component={Account}/>
-    // </Router>
-
+        <Main/>
     );
 }
 

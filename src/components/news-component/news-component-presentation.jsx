@@ -45,8 +45,10 @@ function News() {
       ];
     const [news, setNews] = useState([]);
 
+    // "http://23.22.140.95:8082/news/get-news"
+    console.log(process.env.REACT_APP_URL);
     useEffect(() => {
-        axios.get("http://localhost:3004/news").then(response => setNews(response.data));
+        axios.get(process.env.REACT_APP_URL).then(response => setNews(response.data));
     },[]);
 
     console.log(news);
@@ -110,6 +112,7 @@ function News() {
                 <CarouselIndicators items={news} activeIndex={activeIndex} onClickHandler={goToIndex} />
                 </Carousel>
             {/* /* </CardBody>       */}
+            <div class="fb-share-button" data-href="http://localhost:3000/home" data-layout="button_count" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A3000%2Fhome&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>         
         </Card>
     );
     }
