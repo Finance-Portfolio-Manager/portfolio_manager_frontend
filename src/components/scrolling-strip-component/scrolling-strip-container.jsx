@@ -2,7 +2,7 @@
 
 import React, {useState, useEffect} from "react";
 import ScrollingStripPresentation from "./scrolling-strip-presentation";
-import getSymbolPnlFromApi from "./axios-request";
+import axios from "axios";
 
 // const url = "http://23.22.140.95:8082";
 // const url = "http://3.133.113.250:8082/api/get-symbol-pnl"
@@ -53,4 +53,22 @@ export default function ScrollingStripContainer(){
         <ScrollingStripPresentation stockJson={stockJson}></ScrollingStripPresentation>
     );
 
+}
+
+function getSymbolPnlFromApi(tickers, setStockJson){
+    console.log("pinging server!");
+    axios.post(
+        url,
+        JSON.stringify(tickers), //this eventually needs to be passed into the function
+        {
+            headers:{
+                'Content-Type' : 'application/json'
+            }
+        }
+    ).then(resp => {
+        setStockJson(resp.data);
+        console.log("data", resp.data);
+    }, (error) => {
+        console.log(error)
+    });
 }
