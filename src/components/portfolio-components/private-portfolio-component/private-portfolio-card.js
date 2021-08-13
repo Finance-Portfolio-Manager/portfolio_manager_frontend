@@ -6,6 +6,7 @@ export default function PrivatePortfolioCard(props){
 
     return(
     <Col sm="4">
+        
         <Card>
             <Card.Body>
                 <Card.Title tag="h4">{props.portfolio.name}</Card.Title>
@@ -15,7 +16,7 @@ export default function PrivatePortfolioCard(props){
                         <DoughnutChart user={props.user} portfolio={props.portfolio}/>
                     </div>
                 </Card.Text>
-                <Button variant="primary" onClick={props.toggleShowDetails}>Details</Button>
+                <Button variant="primary" onClick={props.setDisplayPortfolio}>Details</Button>
             </Card.Body>
         </Card>
     </Col>

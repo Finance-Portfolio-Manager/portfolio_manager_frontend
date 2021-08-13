@@ -16,7 +16,7 @@ export default function PrivatePortfolioTable(props){
     console.log(`TableRows: ${JSON.stringify(tableRows)}`);
 
     return <>
-        <div className="wrapper fadeInDown folioContent" id="folioContent">
+        <div className="wrapper fadeInDown ">
             <div className="table-responsive">
                 <Table id="stocks-view" className="table borderless table-hover" responsive>
                     <thead>
@@ -42,7 +42,7 @@ export default function PrivatePortfolioTable(props){
                         })}
                     </tbody>
                 </Table>
-                <Button variant="primary" onClick={props.toggleShowDetails}>Go to card</Button>
+                <Button variant="primary" onClick={props.unassignDisplayPortfolio}>Go to card</Button>
             </div>
         </div>   
     </>

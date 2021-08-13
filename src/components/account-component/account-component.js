@@ -29,11 +29,16 @@ export default function Account(props){
     let portObj1 = {id: 1, name:"Portfolio 1", value:portfolioValue, stockList: stockList};
     let portObj2 = {id: 2, name:"Portfolio 2", value:portfolioValue, stockList: stockList};
     let portObj3 = {id: 3, name:"Portfolio 3", value:portfolioValue, stockList: stockList};
-    let portObj4 = {id: 3, name:"Portfolio 4", value:portfolioValue, stockList: stockList};
-    let portObj5 = {id: 3, name:"Portfolio 5", value:portfolioValue, stockList: stockList};
-    let portObj6 = {id: 3, name:"Portfolio 6", value:portfolioValue, stockList: stockList};
+    let portObj4 = {id: 4, name:"Portfolio 4", value:portfolioValue, stockList: stockList};
+    let portObj5 = {id: 5, name:"Portfolio 5", value:portfolioValue, stockList: stockList};
+    let portObj6 = {id: 6, name:"Portfolio 6", value:portfolioValue, stockList: stockList};
 
     let portfolioArray = [portObj1, portObj2, portObj3, portObj4, portObj5, portObj6]; 
+
+
+    /*
+        server call functions get written here.
+    */
 
     return <AccountView portfolioArray={portfolioArray} user={user}/>
 
