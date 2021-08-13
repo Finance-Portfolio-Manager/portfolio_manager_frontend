@@ -15,7 +15,10 @@ function PortfolioChart(props){
             {'Authorization':sessionStorage.getItem("Authorization")}
         })
         .then(response=>{      
-            console.log(response);
+            // console.log(response.data);
+            for(let i=0;i<response.data;i++){
+                console.log(response.data[i].balance);
+            }
         })
         .catch(function (error) {
         })
