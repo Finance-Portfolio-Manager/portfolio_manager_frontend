@@ -5,10 +5,10 @@ import logo from './revlogo.jpg';
 
 export default function LoginForm(props){
     return(
-        <div className="App primary-color">
-            <Form className="primary-color">
-                <div className="aroundLogo primary-color mx-5"><img className="logo" src={logo} alt="revature logo"/></div>
-                <div className="form-inner primary-color secondary-text">
+        <div className="App secondary-color">
+            <Form className="secondary-color">
+                <div className="aroundLogo secondary-color mx-5"><img className="logo" src={logo} alt="revature logo"/></div>
+                <div className="form-inner secondary-color secondary-text">
                 <div className="secondary-text h4">Portfolio Manager</div>
                 <Form.Group className="form-group" controlId="formBasicUsername">
                     <Form.Label>Username:</Form.Label>

@@ -5,13 +5,13 @@ import logo from "./revlogo.jpg";
 
 export default function RegisterForm(props) {
     return (
-        <div className="App primary-color">
+        <div className="App secondary-color">
             <Form>
-                <div className="aroundLogo primary-color primary-text">
+                <div className="aroundLogo secondary-color primary-text">
                     <img className="logo mx-5 primary-color" alt="" src={logo} />
                 </div>
 
-                <div className="form-inner primary-color primary-text">
+                <div className="form-inner secondary-color primary-text">
                     <div className="primary-text h4">Portfolio Manager</div>
                     <h6><em>Account Registration</em></h6>
                     <Form.Group className="form-group" controlId="form-email">

@@ -25,14 +25,14 @@ export default function Navigation() {
                                     unhovered={() => setDropDrownShowPortfolio(false)}
                                     title="Portfolios">
                                     <div className="min-vh-15 bg-gray">
-                                        <a className='text-dark  nav-link active align-item-center' aria-current="page" href="#">Your Accounts</a>
+                                        <a className='text-dark  nav-link active align-item-center' aria-current="page" href="/account">Your Accounts</a>
                                         <a className='text-dark  nav-link active align-item-center' aria-current="page" href="#">Favorite</a>
                                         <a className='text-dark  nav-link active align-item-center' aria-current="page" href="#">Public portfolio</a>
                                     </div>
                                 </NavDropDown>
                             </li>
                             <li className="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/about">About Us</a>
+                            <a className="nav-link active" aria-current="page" href="/about">About Us</a>
                             </li>
                             <li className="nav-item">
                                 <NavDropDown
@@ -43,8 +43,8 @@ export default function Navigation() {
                                     title="Stocks">
                                     <div className="min-vh-15 bg-gray">
                                         <a className='text-dark nav-link active align-item-center' aria-current="page" href="/portfolio">Pie Chart</a>
-                                        <a className='text-dark nav-link active align-item-center' aria-current="page" href="/new-tansaction">Transaction</a>
-                                        <a className='text-dark nav-link active align-item-center' aria-current="page" href="/#">Stock Graph</a>
+                                        <a className='text-dark nav-link active align-item-center' aria-current="page" href="/new-transaction">Transaction</a>
+                                        <a className='text-dark nav-link active align-item-center' aria-current="page" href="/generic-chart">Generic Chart</a>
                                     </div>
                                 </NavDropDown>
                             </li>
