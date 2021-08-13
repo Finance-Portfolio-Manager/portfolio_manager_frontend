@@ -1,4 +1,5 @@
 import NavDropDown from './navdropdown';
+import ApexLogo from '../images/apexstocks.jpg';
 import React, { useState } from 'react';
 
 export default function Navigation() {
@@ -7,7 +8,7 @@ export default function Navigation() {
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark primary-color">
             <div className="container-fluid  py-0">
-                <a className="navbar-brand">Team Name</a>
+                <img src={ApexLogo} alt="Logo" />
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
@@ -32,7 +33,7 @@ export default function Navigation() {
                                 </NavDropDown>
                             </li>
                             <li className="nav-item">
-                            <a className="nav-link active" aria-current="page" href="/about">About Us</a>
+                                <a className="nav-link active" aria-current="page" href="/about">About Us</a>
                             </li>
                             <li className="nav-item">
                                 <NavDropDown
