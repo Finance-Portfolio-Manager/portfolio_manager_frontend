@@ -42,7 +42,7 @@ export default function PrivatePortfolioTable(props){
                         })}
                     </tbody>
                 </Table>
-                <Button variant="primary" onClick={props.unassignDisplayPortfolio}>Go to card</Button>
+                <Button variant="primary" onClick={props.unassignDisplayPortfolio}>Hide Details</Button>
             </div>
         </div>   
     </>
