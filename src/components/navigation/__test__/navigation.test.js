@@ -28,11 +28,11 @@ afterEach(() => {
   container = null;
 });
 
-test("has a home nav item", () => {
+test("has Portfolios item", () => {
   act(() => {
     render(<Navigation />, container);
   });
-  expect(container.querySelector('div > span').firstChild.nodeValue).toEqual("Home");
+  expect(container.querySelector('div > span').firstChild.nodeValue).toEqual("Portfolios");
 });
 
 
@@ -40,35 +40,59 @@ describe("Nav bar rendering", ()=>{
   let component = shallow(<Navigation></Navigation>);
 
   test("renders a title", ()=>{
-    expect(component.find("a").first().text()).toContain('Portfolio');
+    expect(component.find("a").first().text()).toContain('Team Name');
   })
 
-  test("renders a home nav item with a dropdown", ()=>{
-    expect(component.find("NavDropDown").length).toBe(1);
+  test("renders two dropdown menus", ()=>{
+    expect(component.find("NavDropDown").length).toBe(2);
+  })
+
+  test("renders Home", ()=>{
+    expect(component.find("a").at(1).text()).toContain('Home');
+  })
+
+  test("renders Your Accounts", ()=>{
+    expect(component.find("a").at(2).text()).toContain('Your Accounts');
+  })
+
+  test("renders Favorite", ()=>{
+    expect(component.find("a").at(3).text()).toContain('Favorite');
+  })
+
+  test("renders Public Portfolio", ()=>{
+    expect(component.find("a").at(4).text()).toContain('Public portfolio');
   })
 
   test("renders About Us", ()=>{
-    expect(component.find("a").at(1).text()).toContain('About Us');
+    expect(component.find("a").at(5).text()).toContain('About Us');
   })
 
-  test("renders Stocks", ()=>{
-    expect(component.find("a").at(2).text()).toContain('Stocks');
+  test("renders Pie Chart", ()=>{
+    expect(component.find("a").at(6).text()).toContain('Pie Chart');
+  })
+
+  test("renders Stock Prices", ()=>{
+    expect(component.find("a").at(7).text()).toContain('Stock Prices');
+  })
+
+  test("renders Stock Graph", ()=>{
+    expect(component.find("a").at(8).text()).toContain('Stock Graph');
   })
 
   test("renders Account", ()=>{
-    expect(component.find("a").at(3).text()).toContain('Account');
+    expect(component.find("a").at(9).text()).toContain('Account');
   })
 
-  test("renders Log in for Account dropdown", ()=>{
-    expect(component.find("a").at(4).text()).toContain('Log in');
+  test("renders Log in", ()=>{
+    expect(component.find("a").at(10).text()).toContain('Log in');
   })
 
-  test("renders Sign up for Account dropdown", ()=>{
-    expect(component.find("a").at(5).text()).toContain('Sign up');
+  test("renders Sign up", ()=>{
+    expect(component.find("a").at(11).text()).toContain('Sign up');
   })
 
-  test("renders Log Out for Account dropdown", ()=>{
-    expect(component.find("a").at(6).text()).toContain('Log Out');
+  test("renders Log Out", ()=>{
+    expect(component.find("a").last().text()).toContain('Log Out');
   })
 })
 
@@ -78,8 +102,8 @@ describe("navigation with props", ()=>{
     const clickFn = jest.fn();
     const component = shallow(<Navigation onClick={ clickFn }></Navigation>).find("NavDropDown");
 
-    expect(component.length).toBe(1);
-    component.simulate('mouseOver');
+    expect(component.length).toBe(2);
+    // component.simulate('mouseOver');
     // expect(clickFn).toHaveBeenCalled();
   })
 })

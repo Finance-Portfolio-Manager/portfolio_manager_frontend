@@ -13,16 +13,13 @@ import Home from "../home-component/home-component";
 import Account from "../account-component/account-component";
 import About from "../about-component/about-page";
 import Footer from "../footer-component/footer";
-import { ThemeProvider } from "styled-components";
-import { LandingPage } from './home-page/LandingPage';
-<<<<<<< HEAD
 import Login from "../login-component/login";
 import Register from "../register-component/register";
-=======
+import { ThemeProvider } from "styled-components";
+import { LandingPage } from './home-page/LandingPage';
 import { useAllThemes } from './components/AllThemes';
 import { themeMode as themeSwitch } from './components/themeMode';
 import ToggleButton from './components/ToggleButton';
->>>>>>> team3
 
 function MainAlt() {
   const [theme, themeToggler] = useAllThemes();

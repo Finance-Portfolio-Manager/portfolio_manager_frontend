@@ -2,9 +2,9 @@ import React from "react";
 import { render, unmountComponentAtNode } from "react-dom";
 import { act } from "react-dom/test-utils";
 
-import ScrollingStripContainer from "./scrolling-strip-container";
-import ScrollingStripPresentation from "./scrolling-strip-presentation";
-import getSymbolPnlFromApi from "./scrolling-strip-container";
+import ScrollingStripContainer from "../scrolling-strip-container";
+import ScrollingStripPresentation from "../scrolling-strip-presentation";
+import getSymbolPnlFromApi from "../scrolling-strip-container";
 
 const myMock = jest.fn();
 const testArrayJson = [{"MSFT":29,"GOOG":40}];

@@ -1,20 +1,13 @@
-<<<<<<< HEAD
-import Main from './components/MainComponent';
-=======
-import './App.css';
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Login from './components/login-component/login';
-import Register from './components/register-component/register-component';
-import ExampleChartComponent from './components/chart-component/example-chart-component';
-import PortfolioComponent from './components/portfolio-chart-component/portfolio-component';
-import Authorization from './components/common/authorization';
-import Container from "react-bootstrap/Container";
+// import './App.css';
+// import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+// import Login from './components/login-component/login';
+// import Register from './components/register-component/register-component';
+// import ExampleChartComponent from './components/chart-component/example-chart-component';
+// import PortfolioComponent from './components/portfolio-chart-component/portfolio-component';
+// import Authorization from './components/common/authorization';
+// import Container from "react-bootstrap/Container";
 
-import { BrowserRouter} from "react-router-dom";
->>>>>>> team3
 import { useEffect } from 'react';
-
-import { BrowserRouter } from "react-router-dom";
 
 // import { BrowserRouter as Router, Route} from "react-router-dom";
 // import Login from './components/login-component/login';
@@ -34,7 +27,7 @@ import { BrowserRouter } from "react-router-dom";
 
 
 // import logo from './logo.svg';
-import './App.css';
+// import './App.css';
 import Main from './components/MainComponent';
 
 
@@ -73,32 +66,7 @@ export default function App() {
   }, []);
 
   return (
-<<<<<<< HEAD
-    // <MainAlt/>
-    <Main/>
-
-    // <BrowserRouter>
-    //   <div className="App">
-    //     {/* <Main/> */}
-    //     <MainAlt/>
-    //   </div>
-    // </BrowserRouter>
-
-
-    // <Router>
-    //   <Route path="/" exact component={Home}/>
-    //   <Route path="/new" component={NewTransaction}/>
-    //   <Route path="/portfolio" component={Portfolio}/>
-    //   <Route path="/login" component={Login}/>
-    //   <Route path="/register" component={Register}/>
-    //   <Route path="/account" component={Account}/>
-    // </Router>
-
-    
-  );
-=======
          <Main/>
         // <MainAlt/>
     );
->>>>>>> team3
 }
