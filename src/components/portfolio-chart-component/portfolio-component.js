@@ -19,12 +19,16 @@ function PortfolioChartComponent(props) {
 
     //need to pass in number of days as chart time frame
     const timeFrame = 7;
-    let dayCount = 0;
-    var chartTime = ["Aug 1", "Aug 2", "Aug 3", "Aug 4", "Aug 5", "Aug 6", "Aug 7"];
-    // for(let i=timeFrame;i>0;i--){
-    //     chartTime[i]=(today.getDay()+(1-dayCount));
-    //     dayCount++;
-    // }
+    // let dayCount = 0;
+    // var chartTime = props.xaxis;
+    // console.log(chartTime)
+    var dates = [];
+    for(let i=timeFrame-1;i>=0;i--){
+        const d = new Date();
+        d.setDate(d.getDate()-i);
+        dates.push(d);
+    }
+    console.log(dates);
 
     // console.log(chartTime.values);
     // console.log(chartTime[timeFrame])
@@ -70,7 +74,11 @@ function PortfolioChartComponent(props) {
             },
             xaxis: {
                 type: 'category',
-                categories: chartTime,
+                categories: dates,
+                labels: {
+                    trim: true,
+                    format: 'dd/MM'
+                }
             },
             tooltip: {
                 y: [
