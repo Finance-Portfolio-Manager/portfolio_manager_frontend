@@ -18,7 +18,7 @@ function HeroSection({
 }) {
   return (
     <>
-      <div className="home__hero-section darkBg secondary-color">
+      <div className="home__hero-section darkBg secondary-color primary-text">
         <div className="container">
           <div
             className="row home__hero-row"
@@ -30,15 +30,12 @@ function HeroSection({
             <div className="col">
               <div className="home__hero-text-wrapper">
                 <div className="top-line accent-text">{topLine}</div>
-                <h1 className="heading">
+                <h1 className="heading primary-text">
                   {headline}
                 </h1>
                 <p className="home__hero-subtitle">{description}</p>
                 <Link to="/">
-                    <Button>{buttonLabel}</Button>
-                  {/* <Button buttonSize="btn--wide" buttonColor="blue">
-                    {buttonLabel}
-                  </Button> */}
+                    <Button className='global__button-effect'>{buttonLabel}</Button>
                 </Link>
               </div>
             </div>

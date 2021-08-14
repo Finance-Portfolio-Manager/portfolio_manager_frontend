@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { axios } from "axios";
 import { NewsPaperCard } from './NewsPaperCard';
-import '../layout/NewsComponentStyle.css'
+// import '../layout/NewsComponentStyle.css'
 export const NewsPaper = (props) => {
   const [story, setStory] = useState(props.story)
 

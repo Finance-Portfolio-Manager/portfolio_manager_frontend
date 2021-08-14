@@ -16,9 +16,12 @@ export const lightTheme = {
     // mediumDark: '#000000',
     primaryText: '#000',
     secondaryText: '#333333',
-    primaryColor: '#A7ABB7',
-    secondaryColor: '#D9DADF',
-    accentColor: '#F00281',
+    primaryColor: '#b3a7bd',
+    secondaryColor: '#e4def3',
+    accentColor: 'rgba(215, 39, 219, 0.7)',
+    gradientPair: 'rgba(0, 56, 255, 0.7)',
+    // gradientStyle: `linear-gradient(109.36deg, rgba(215, 39, 219, 0.7) -4.44%, ${theme.accentColor}, #C4C4C4 !important`
+    type: 'light'
 }
 export const darkTheme = {
     // body: '#363537' ,
@@ -32,6 +35,8 @@ export const darkTheme = {
     primaryColor: '#1d1d1d',
     secondaryColor: '#242424',
     accentColor: '#F00281',
+    gradientPair: '#ff7300',
+    type: 'dark'
 }
 
 export const blueTheme = {
@@ -40,6 +45,9 @@ export const blueTheme = {
     primaryColor: '#151B2C',
     secondaryColor: '#21293E',
     accentColor: '#F00281',
+    gradientPair: '#da5deb',
+    type: 'dark'
+
 }
 
 export const greenTheme = {
@@ -48,6 +56,8 @@ export const greenTheme = {
     primaryColor: '#03444D',
     secondaryColor: '#315D63',
     accentColor: '#FFB300',
+    gradientPair: '#ff7300',
+    type: 'dark'
 }
 
 export const blueGrayTheme = {
@@ -55,32 +65,33 @@ export const blueGrayTheme = {
     secondaryText: '#ffe1e1',
     primaryColor: '#112A43',
     secondaryColor: '#334E68',
-    accentColor: '#070d27',
+    accentColor: '#ece251',
+    gradientPair: '#ff7300',
+    type: 'dark'
+
 }
 
-export const orangeTheme = {
-    primaryText: '#000',
-    secondaryText: '#242424',
-    primaryColor: '#FE6F00',
-    secondaryColor: '#FFA000',
-    accentColor: '#46267F',
-}
+// export const orangeTheme = {
+//     primaryText: '#000',
+//     secondaryText: '#242424',
+//     primaryColor: '#FE6F00',
+//     secondaryColor: '#FFA000',
+//     accentColor: '#46267F',
+//     type: 'light'
+
+// }
 
 export const lavenderTheme = {
-    primaryText: '#000',
-    secondaryText: '#242424',
+    primaryText: '#ffffff',
+    secondaryText: '#efe1ff',
     primaryColor: '#46267F',
     secondaryColor: '#734C9D',
     accentColor: '#FFB300',
+    gradientPair: '#ff7300',
+    type: 'dark'
+
 }
 
-export const uglyRoseTheme = {
-    primaryText: '#000',
-    secondaryText: '#242424',
-    primaryColor: '#ff13b0',
-    secondaryColor: '#ff65d8',
-    accentColor: '#0004ff',
-}
 //add themes here to appear in the toggle list
 export const themeSelection = [ 
     {version: 'light', themePack: lightTheme, type: 'light' },
@@ -88,7 +99,7 @@ export const themeSelection = [
     {version: 'blue', themePack: blueTheme, type: 'dark' },
     {version: 'green', themePack: greenTheme, type: 'dark' },
     {version: 'blue gray', themePack: blueGrayTheme, type: 'dark' },
-    {version: 'orange', themePack: orangeTheme, type: 'light' },
+    // {version: 'orange', themePack: orangeTheme, type: 'light' },
     {version: 'lavender', themePack: lavenderTheme, type: 'light' },
     // {version: 'ugly rose', themePack: uglyRoseTheme, type: 'light' },
 ];

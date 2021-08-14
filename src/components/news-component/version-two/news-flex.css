@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Playfair+Display:wght@800&display=swap");
+/* Root parent for this case */
+.news__body {
+  /* min-height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+/* Parent Container */
+.news__title-container {
+  min-height: 90vh;
+  flex: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding: 0 10vh;
+  
+  /* display: flex; */
+}
+.news__center {
+  margin: auto;
+}
+/* Children of news__title-container */
+.news__title-header {
+  font-family: "Playfair Display", serif;
+  font-size: 7vw;
+  /* padding: 0 10vh; */
+}
+
+.news__source-container {
+  font-family: "Inter", sans-serif;
+  font-size: 2vw;
+}
+
+.news__source-link {
+    
+}
+.news__button {
+  position: fixed;
+  font-size: 2vw;
+  bottom: 50%;
+}
+.news__previous-button {
+  
+  right: 5%;
+}
+
+.news__next-button {
+  left: 5%;
+}
+/* Parent container */
+.news__story-container {
+  font-family: "Inter", sans-serif;
+  flex: 1;
+  /* display: flex; */
+  min-height: 100vh;
+  /* justify-content: space-evenly; */
+  /* margin: auto; */
+}
+
+@media (min-width: 900px) {
+  .news__story-container {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+/* Children of story-container */
+.news__description-card {
+  box-sizing: border-box;
+  flex-basis: 40%;
+  margin: auto;
+  flex-direction: column;
+}
+
+.news__description {
+  font-size: 2vw;
+}
+.news__description-card-footer {
+  text-align: center;
+}
+.news__readmore {
+}
+
+.news__image-wrapper {
+  /* max-width: 555px; */
+  box-sizing: border-box;
+  flex-basis: 40%;
+  margin: auto;
+
+  /* width: 100%;
+  height: auto; */
+}
+
+img > .news__image-wrapper {
+  /* object-fit: cover */
+  /* border: 0;
+  max-width: 100%;
+  vertical-align: middle;
+  display: inline-block; */
+}
+
+.news__img {
+  object-fit: cover;
+  /* max-width: 100%; */
+  /* margin-top: 0;
+  margin-right: 0;
+  margin-left: 10px;
+  padding-right: 0; */
+}
+/* Styling for missing news */
+.news__empty {
+}
+/* Mobile screens */
+@media screen and (max-width: 600px) {
+  .news__story-container {
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+  }
+  .news__title-header {
+    font-size: 15vw;
+    /* padding: 0 10vh 0 10vh; */
+  }
+
+  .news__description,
+  .news__source-container {
+    font-size: 6vw;
+  }
+}
+
+.news__zoom{
+    transition: transform .3s
+}
+
+  
+.news__zoom:hover {
+    
+    transform: scale(1.05); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+
+  .news__empty{
+    min-height: 90vh;
+    display: flex;
+  }
+
+  .news__empty-header{
+    font-size: 2vw;
+    margin: auto;
+
+  }

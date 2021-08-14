@@ -1,5 +1,5 @@
 import React from "react";
-import '../layout/NewsComponentStyle.css'
+// import '../layout/NewsComponentStyle.css'
 export const NewsPaperCard = ({title, url, description}) => {
   return (
     <div className="news__card-body">

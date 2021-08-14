@@ -30,7 +30,7 @@ export default function Main() {
 
     return (
         <React.Fragment>
-            <div className="container-fluid flex-column p-0 secondary-color">
+            <div className="container-fluid flex-column p-0 secondary-color default-container primary-text">
                 
                 <ThemeProvider theme={themeMode} >
                     <GlobalStyle />
@@ -48,8 +48,8 @@ export default function Main() {
                         <Route exact path="/news" component={NewsPage} />
                     </Switch>
                 </ThemeProvider>
-                <Footer />
                 </div>
+                <Footer />
         </React.Fragment>
     );
 }
