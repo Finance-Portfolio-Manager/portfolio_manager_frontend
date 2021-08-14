@@ -1,4 +1,4 @@
-* {
+/* * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -74,11 +74,11 @@ form .submitButton {
     background-color: #F26925;
     color: #FFF;
     font-weight: 600;
-}
+} */
 
-form h6 {
+/* form h6 {
     font-size: 0.75em;
-}
+} */
 
 .logo {
     max-width: 50%;
@@ -86,11 +86,11 @@ form h6 {
     /* padding-bottom: 0px; */
 }
 
-.aroundLogo {
+/* .aroundLogo {
     position: relative;
     background-color: #fff;
     padding-top: 40px;
-}
+} */
 
 .loginInput {
     text-align: center;

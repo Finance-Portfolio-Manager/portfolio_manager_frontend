@@ -17,7 +17,7 @@ import { themeMode as themeSwitch } from './styled-components/components/themeMo
 import ToggleButton from './styled-components/components/ToggleButton';
 import NewTransaction from './new-transaction-component/new_transaction';
 import Chart from './portfolio-chart-component/portfolio-chart';
-
+import GenericChart from './chart-component/generic-chart';
 
 export default function Main() {
     const [theme, themeToggler] = useAllThemes();
@@ -44,6 +44,7 @@ export default function Main() {
                         <Route exact path="/about" component={About} />
                         <Route exact path="/register" component={Register} />
                         <Route exact path="/login" component={Login} />
+                        <Route exact path="/generic-chart" component={GenericChart} />
                         <Route exact path="/new-transaction" component={NewTransaction} />
                     </Switch>
                 </ThemeProvider>

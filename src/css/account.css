@@ -6,7 +6,7 @@
     font-weight: 600;
     display:inline-block;
     margin: 40px 8px 10px 8px; 
-    color: #72A4C2;
+    /* color: #72A4C2; */
 }
 
 #header-span {
@@ -15,6 +15,6 @@
     margin-right: 250px;
 }
 
-#accountPage {
+/* #accountPage {
     background-color:"#B9B9BA";
-}
+/* } */

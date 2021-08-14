@@ -24,12 +24,12 @@ export default function PortfolioCard(props){
         {showDetails ?
         <Row>
             <Col xs={6} md={2}>
-                <Image src={exampleImg} rounded />
+                <Image src={exampleImg} rounded className="mx-5"/>
             </Col>
             <Col>
-                <Card className="center" style={{ width: '50rem', border: '2px solid #F26925'}}>
+                <Card className="center border border-3 secondary-text m-3" style={{ width: '50rem'}}>
                 <Card.Img variant="top" />
-                <Card.Body>
+                <Card.Body className="secondary-color">
                     <Card.Title>{props.portfolio.name}</Card.Title>
                     <Card.Text>
                         Current value: {props.portfolio.value} %change placeholder
@@ -43,7 +43,7 @@ export default function PortfolioCard(props){
         :
         <Row>
             <Col xs={6} md={2}>
-                <Image src={exampleImg} rounded />
+                <Image src={exampleImg} rounded  className="mx-5" />
             </Col>
             <Col>
                 <Portfolio portfolioId={props.portfolio.id} toggleShowDetails={toggleShowDetails}/>
