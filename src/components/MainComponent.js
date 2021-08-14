@@ -40,7 +40,7 @@ export default function Main() {
                         <Route exact path="/portfolio" component={() => <Home users={users} />} />
                         <Route exact path="/home" component={() => <LandingPage />} />
                         <Route exact path="/account" component={Account} />
-                        <Route exact path="/balances" component={Chart} portfolioId={11}/>
+                        <Route exact path="/balances" component={Chart}/>
                         <Route exact path="/about" component={About} />
                         <Route exact path="/register" component={Register} />
                         <Route exact path="/login" component={Login} />

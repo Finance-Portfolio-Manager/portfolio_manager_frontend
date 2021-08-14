@@ -2,23 +2,56 @@ import Chart from "react-apexcharts";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { withRouter } from "react-router-dom";
+import PortfolioChartComponent from "./portfolio-component";
 
 function PortfolioChart(props){    
 
-
-    const [loggedIn, setLoggedIn] = useState();
+    const [totalInvested, setInvested] = useState([]);
+    const [totalValue, setValue] = useState([]);
 
     useEffect(()=>{
 
-        axios.get(process.env.REACT_APP_API_URL+"/balances/11", {
+        // axios.get(process.env.REACT_APP_API_URL+"/balances/11", {
+        //     headers:
+        //     {'Authorization':sessionStorage.getItem("Authorization")}
+        // })
+        // .then(response=>{  
+        //     console.log(response.data);    
+        //     for(let i = 0;i<7;i++){
+        //         console.log(response.data[i].balance);
+        //         day = response.data[i].date;
+        //         if(response.data[i].balanceType == "i"){
+        //             invested.push(response.data[i].balance);
+        //         }
+        //         if(response.data[i].balanceType == "c"){
+        //             value.push(response.data[i].balance);
+        //         }
+        //         // console.log(response.data[i].date.getDay());
+        //     }
+        //     console.log(value);
+        //     console.log(invested);
+        // })
+        // .catch(function (error) {
+        // })
+
+        //THIS IS FOR 7 DAY TIME PERIOD, CONFIG FOR CHART TIME FRAME NEEDS WORK
+        axios.get(process.env.REACT_APP_API_URL+"/balances/daily/11", {
             headers:
             {'Authorization':sessionStorage.getItem("Authorization")}
         })
-        .then(response=>{      
-            // console.log(response.data);
-            for(let i=0;i<response.data;i++){
-                console.log(response.data[i].balance);
+        .then(response=>{  
+            const invested = [];
+            const value = [];
+            for(var i = 0;i<response.data.length;i++){
+                if(response.data[i].balanceType == "i"){
+                    invested.push(response.data[i].balance);
+                }
+                if(response.data[i].balanceType == "c"){
+                    value.push(response.data[i].balance);
+                }
             }
+            setValue(value.reverse());
+            setInvested(invested.reverse());
         })
         .catch(function (error) {
         })
@@ -27,18 +60,6 @@ function PortfolioChart(props){
 
 
 
-    return ( 
-        <div>test</div>
-        // <div className="example">
-        //     <div className="row">
-        //         <div className="mixed-chart">
-        //             <Chart options={props.options}></Chart>
-        //        </div>
-        //     </div>
-        // </div>
-   
-    // var chart = new Chart(document.querySelector("#chart"), options);
-    // chart.render(); 
-    
-)}  
+    return (<PortfolioChartComponent totalValue={totalValue} totalInvested={totalInvested}></PortfolioChartComponent>)}  
+
 export default PortfolioChart;
