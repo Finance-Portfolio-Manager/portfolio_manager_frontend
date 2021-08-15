@@ -127,14 +127,26 @@ export const GlobalStyle = createGlobalStyle`
       /* filter: drop-shadow(0 -6mm 4mm rgb(160, 0, 210)); */
     }
   
+  
 
       @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
         .global__blur-effect {
           background-color: ${({ theme }) =>
             ` ${theme.primaryColor}50 !important`};
-          /* rgba(255, 255, 255, 0.5) !important; */
           -webkit-backdrop-filter: blur(10px) !important;
           backdrop-filter: blur(10px) !important;
+        }
+
+        .global__blur-effect--light {
+          background-color: ${({ theme }) =>
+           theme.type == 'light'  
+          ? ` ${theme.primaryColor}50!important;
+          -webkit-backdrop-filter: blur(10px) !important;
+          backdrop-filter: blur(10px) !important;`
+          : `${theme.primaryColor} !important;`
+          } ;
+
+          
         }
         .warning { display: none; }
       }

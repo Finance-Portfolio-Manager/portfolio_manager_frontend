@@ -1,45 +1,45 @@
 .new-transaction__form {
-    background-color: #c0bdbc;
-    display: block;
-    display: inline-block;
-    position: relative;
-    border-style: solid;
-    border-color:#ccc;
-    border-width: 4px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20px;
-    width: 500px;
+  background-color: #c0bdbc;
+  display: block;
+  display: inline-block;
+  position: relative;
+  border-style: solid;
+  border-color: #ccc;
+  border-width: 4px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  width: 500px;
 }
 
 .new-transaction__form > input {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
 }
 
 .new-transaction__button {
-    background-color: #F26925;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
+  background-color: #f26925;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
 }
 
 .new-transaction__button:hover {
-    opacity: 0.8;
-} 
+  opacity: 0.8;
+}
 
 .new-transaction__container {
-    padding: 16px;
+  padding: 16px;
 }
 
 .new-transaction__wholeform {
-    display: block;
-    text-align: center;
+  /* display: block;
+    text-align: center; */
 }
