@@ -29,17 +29,6 @@ configure({ adapter: new Adapter() });
 
 const wrapper = shallow(<Login></Login>);
 
-// test("/login with props", () => {
-//     const credentials = [
-//         {
-//             username: "Trent",
-//             password: "Password123!"
-//         }
-//     ];
-//     const wrapperWithProps = shallow(<Login credentials={credentials}></Login>);
-// });
-
-// const login = require('./../login');
 test("login returns LoginForm", ()=>{
     // const component = <React.Fragment>renderer.create(<Login />)</React.Fragment>;
     // const component = renderer.create(<Login />).toJSON();

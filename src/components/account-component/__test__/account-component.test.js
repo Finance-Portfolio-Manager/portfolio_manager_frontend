@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import About from './../about-page';
+import Account from './../account-component';
 
 import { render, cleanup } from '@testing-library/react';
 import "@testing-library/jest-dom/extend-expect";
@@ -13,9 +13,9 @@ import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
 configure({ adapter: new Adapter() });
-
-const wrapper = shallow(<About></About>);
+const wrapper = shallow(<Account></Account>);
 
 test("matches snapshot", ()=>{
-    expect(wrapper).toMatchSnapshot();
+    const tree = renderer.create(<Account></Account>).toJSON();
+    expect(tree).toMatchSnapshot();
 })

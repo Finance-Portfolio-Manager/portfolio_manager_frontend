@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  className="container"
+>
+  <p
+    className="d-flex flex-column w-50 captainProfile justify-content-center mx-auto lead fw-bolder text-white"
+    id="meet"
+  >
+    Meet Our Team
+  </p>
+  <hr
+    className="text-white"
+  />
+  <section
+    id="profiles"
+  >
+    <div
+      className="card border-0 d-flex flex-column captainProfile justify-content-center mx-auto my-4"
+      id="individual"
+    >
+      <div>
+        <a
+          className="text-decoration-none text-white"
+          href="https://www.linkedin.com/in/carolynhrehm/"
+          target="_blank"
+        >
+          <img
+            className="headImage"
+            src="https://media-exp1.licdn.com/dms/image/C4E03AQHjrLZPKLi7WQ/profile-displayphoto-shrink_400_400/0/1517480368667?e=1634169600&v=beta&t=l4kjtEM3n4__wF9UOwPbRO9hXXJcdjKxOPQG5IDpVmY"
+          />
+        </a>
+      </div>
+      <hr />
+      <div
+        className="card-body"
+      >
+        <p>
+          Carolyn Rehm
+        </p>
+      </div>
+    </div>
+    <br />
+    <div
+      className="row"
+    >
+      <div
+        className="teams m-3 col"
+      >
+        <button
+          className="team-button border-0 btn btn-primary"
+          disabled={false}
+          id="team1"
+          onClick={[Function]}
+          type="button"
+        >
+          Team1
+        </button>
+      </div>
+      <div
+        className="teams m-3 col"
+      >
+        <button
+          className="team-button border-0 btn btn-primary"
+          disabled={false}
+          id="team2"
+          onClick={[Function]}
+          type="button"
+        >
+          Team2
+        </button>
+      </div>
+      <div
+        className="teams m-3 col"
+      >
+        <button
+          className="team-button border-0 btn btn-primary"
+          disabled={false}
+          id="team3"
+          onClick={[Function]}
+          type="button"
+        >
+          Team3
+        </button>
+      </div>
+    </div>
+    <br />
+    <div
+      className="row"
+    />
+  </section>
+</div>
+`;

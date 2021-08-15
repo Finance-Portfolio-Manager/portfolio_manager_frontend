@@ -1,0 +1,520 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot team1 1`] = `
+<div
+  className="profile d-flex flex-wrap flex-fill justify-content-center"
+>
+  <div
+    className="card m-4 border-0"
+    id="individual"
+  >
+    <a
+      className="text-decoration-none text-white"
+      href="https://www.linkedin.com/in/nicholas-bilotta-092010175/"
+      target="_blank"
+    >
+      <div>
+        <img
+          className="images"
+          src="https://media-exp1.licdn.com/dms/image/C4E03AQGuWSDpmc8DCQ/profile-displayphoto-shrink_800_800/0/1628261567838?e=1634169600&v=beta&t=M1T0DEsxfQr8xhOakasIofs6oVF7R5oJcSct8vx6ExU"
+        />
+      </div>
+    </a>
+    <hr />
+    <div
+      className="card-body"
+    >
+      <p>
+        Nick
+      </p>
+    </div>
+  </div>
+  <div
+    className="card m-4 border-0"
+    id="individual"
+  >
+    <a
+      className="text-decoration-none text-white"
+      href="https://www.linkedin.com/in/marc-hartley/"
+      target="_blank"
+    >
+      <div>
+        <img
+          className="images"
+          src="https://media-exp1.licdn.com/dms/image/C4E03AQESExVRhLbCEg/profile-displayphoto-shrink_400_400/0/1517012035846?e=1634169600&v=beta&t=n2D0BmMceB995cFPq06aiJosfxwzvue0Ln6yRgHTruQ"
+        />
+      </div>
+    </a>
+    <hr />
+    <div
+      className="card-body"
+    >
+      <p>
+        Marc
+      </p>
+    </div>
+  </div>
+  <div
+    className="card m-4 border-0"
+    id="individual"
+  >
+    <a
+      className="text-decoration-none text-white"
+      href="https://www.linkedin.com/in/apurv-patel/"
+      target="_blank"
+    >
+      <div>
+        <img
+          className="images"
+          src="https://media-exp1.licdn.com/dms/image/C5603AQHTUBawJHxj0w/profile-displayphoto-shrink_400_400/0/1611682814302?e=1634169600&v=beta&t=qGauFOPV4864ipwa3hlbfY7QTfrSjHxV3gt6jhE-6nU"
+        />
+      </div>
+    </a>
+    <hr />
+    <div
+      className="card-body"
+    >
+      <p>
+        Apurv
+      </p>
+    </div>
+  </div>
+  <div
+    className="card m-4 border-0"
+    id="individual"
+  >
+    <a
+      className="text-decoration-none text-white"
+      href="https://www.linkedin.com/in/elvis-lee-4012231a2/"
+      target="_blank"
+    >
+      <div>
+        <img
+          className="images"
+          src="https://media-exp1.licdn.com/dms/image/C4E03AQHlHr-J1TZ12g/profile-displayphoto-shrink_400_400/0/1628259830750?e=1634169600&v=beta&t=2EKJVo5v4MsNJvOuSvBLEwbGVEAnFWdnxQ6w0FOt8hc"
+        />
+      </div>
+    </a>
+    <hr />
+    <div
+      className="card-body"
+    >
+      <p>
+        Elvis
+      </p>
+    </div>
+  </div>
+  <div
+    className="card m-4 border-0"
+    id="individual"
+  >
+    <a
+      className="text-decoration-none text-white"
+      href="https://www.linkedin.com/in/kalvin-miller-872139100/"
+      target="_blank"
+    >
+      <div>
+        <svg
+          fill="currentColor"
+          height={100}
+          stroke="currentColor"
+          strokeWidth="0"
+          style={
+            Object {
+              "color": undefined,
+            }
+          }
+          viewBox="0 0 16 16"
+          width={100}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            clipRule="evenodd"
+            d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 100-6 3 3 0 000 6z"
+            fillRule="evenodd"
+          />
+        </svg>
+      </div>
+    </a>
+    <hr />
+    <div
+      className="card-body"
+    >
+      <p>
+        Kalvin
+      </p>
+    </div>
+  </div>
+  <div
+    className="card m-4 border-0"
+    id="individual"
+  >
+    <a
+      className="text-decoration-none text-white"
+      href="https://github.com/CurtisGreene-Morgan"
+      target="_blank"
+    >
+      <div>
+        <svg
+          fill="currentColor"
+          height={100}
+          stroke="currentColor"
+          strokeWidth="0"
+          style={
+            Object {
+              "color": undefined,
+            }
+          }
+          viewBox="0 0 16 16"
+          width={100}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            clipRule="evenodd"
+            d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 100-6 3 3 0 000 6z"
+            fillRule="evenodd"
+          />
+        </svg>
+      </div>
+    </a>
+    <hr />
+    <div
+      className="card-body"
+    >
+      <p>
+        Curtis
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`matches snapshot team1 2`] = `
+<div
+  className="profile d-flex flex-wrap flex-fill justify-content-center"
+>
+  <div
+    className="card m-4 border-0"
+    id="individual"
+  >
+    <a
+      className="text-decoration-none text-white"
+      href="https://www.linkedin.com/in/gregory-m-233bb899/"
+      target="_blank"
+    >
+      <div>
+        <img
+          className="images"
+          src="https://media-exp1.licdn.com/dms/image/C4E03AQEi1pmt-i0trg/profile-displayphoto-shrink_400_400/0/1621218202003?e=1634169600&v=beta&t=N3HuUa5x2PrM3FzAoidyyuB8UXyChzi62cZF7zvMwxc"
+        />
+      </div>
+    </a>
+    <hr />
+    <div
+      className="card-body"
+    >
+      <p>
+        Greg
+      </p>
+    </div>
+  </div>
+  <div
+    className="card m-4 border-0"
+    id="individual"
+  >
+    <a
+      className="text-decoration-none text-white"
+      href="https://www.linkedin.com/in/david-garcia-563543158/"
+      target="_blank"
+    >
+      <div>
+        <img
+          className="images"
+          src="https://media-exp1.licdn.com/dms/image/C4E03AQGcbxKzBQbgow/profile-displayphoto-shrink_400_400/0/1570063805322?e=1634169600&v=beta&t=uGGpjUcnHZQBtdc9D6DbFy8fiSwMAIZvER7KMWF34jg"
+        />
+      </div>
+    </a>
+    <hr />
+    <div
+      className="card-body"
+    >
+      <p>
+        David
+      </p>
+    </div>
+  </div>
+  <div
+    className="card m-4 border-0"
+    id="individual"
+  >
+    <a
+      className="text-decoration-none text-white"
+      href="https://www.linkedin.com/in/quinton-liang-22b016175/"
+      target="_blank"
+    >
+      <div>
+        <img
+          className="images"
+          src="https://media-exp1.licdn.com/dms/image/C5603AQEzqPNulsBU4g/profile-displayphoto-shrink_400_400/0/1617215490433?e=1634169600&v=beta&t=0bSfqfan-dF7ueF3UtDIJaQ2TnCFDosqzQGSHADXsxA"
+        />
+      </div>
+    </a>
+    <hr />
+    <div
+      className="card-body"
+    >
+      <p>
+        Quinton
+      </p>
+    </div>
+  </div>
+  <div
+    className="card m-4 border-0"
+    id="individual"
+  >
+    <a
+      className="text-decoration-none text-white"
+      href="https://www.linkedin.com/in/rensy-a-894463198/"
+      target="_blank"
+    >
+      <div>
+        <img
+          className="images"
+          src="https://media-exp1.licdn.com/dms/image/C4E03AQFhaC936xk-EA/profile-displayphoto-shrink_400_400/0/1628539866918?e=1634169600&v=beta&t=tfZP5L_ZM8MB0RFp69HNW4CE26h4lT78BaOhClANIhE"
+        />
+      </div>
+    </a>
+    <hr />
+    <div
+      className="card-body"
+    >
+      <p>
+        Rensy
+      </p>
+    </div>
+  </div>
+  <div
+    className="card m-4 border-0"
+    id="individual"
+  >
+    <a
+      className="text-decoration-none text-white"
+      href="https://www.linkedin.com/in/carlos-galvan-jr/"
+      target="_blank"
+    >
+      <div>
+        <img
+          className="images"
+          src="https://media-exp1.licdn.com/dms/image/C4D03AQEMy7GIMZsYyQ/profile-displayphoto-shrink_400_400/0/1605472121297?e=1634169600&v=beta&t=67TO32cJJg43p6WNrMPAqAi4i37gvikWzh7GOdPcp9A"
+        />
+      </div>
+    </a>
+    <hr />
+    <div
+      className="card-body"
+    >
+      <p>
+        Carlos
+      </p>
+    </div>
+  </div>
+  <div
+    className="card m-4 border-0"
+    id="individual"
+  >
+    <a
+      className="text-decoration-none text-white"
+      href="https://www.linkedin.com/in/melanieduah/"
+      target="_blank"
+    >
+      <div>
+        <img
+          className="images"
+          src="https://media-exp1.licdn.com/dms/image/C4E03AQHQINiv_ucd0A/profile-displayphoto-shrink_400_400/0/1601331182953?e=1634169600&v=beta&t=M1VgsfLAqVXM93KTXlL35qA-xpP82EzAChdl7h8-8yA"
+        />
+      </div>
+    </a>
+    <hr />
+    <div
+      className="card-body"
+    >
+      <p>
+        Melanie
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`matches snapshot team1 3`] = `
+<div
+  className="profile d-flex flex-wrap flex-fill justify-content-center"
+>
+  <div
+    className="card m-4 border-0"
+    id="individual"
+  >
+    <a
+      className="text-decoration-none text-white"
+      href="https://www.linkedin.com/in/aaron-parker-460518189/"
+      target="_blank"
+    >
+      <div>
+        <img
+          className="images"
+          src="https://media-exp1.licdn.com/dms/image/C4D03AQEcOTxlWrQBdQ/profile-displayphoto-shrink_400_400/0/1560787473615?e=1634169600&v=beta&t=HE298NY7rdk6RGgjLJATidsd8rgfBvXFl0bvGG0KSVg"
+        />
+      </div>
+    </a>
+    <hr />
+    <div
+      className="card-body"
+    >
+      <p>
+        Aaron
+      </p>
+    </div>
+  </div>
+  <div
+    className="card m-4 border-0"
+    id="individual"
+  >
+    <a
+      className="text-decoration-none text-white"
+      href="https://www.linkedin.com/in/wyattgoettsch/"
+      target="_blank"
+    >
+      <div>
+        <img
+          className="images"
+          src="https://media-exp1.licdn.com/dms/image/C4E03AQFHd1DkbezEcQ/profile-displayphoto-shrink_400_400/0/1620795384285?e=1634169600&v=beta&t=U3Clm2u3E0_aNjvENqEYbyLldKhluXAdv_yRbCWcKD4"
+        />
+      </div>
+    </a>
+    <hr />
+    <div
+      className="card-body"
+    >
+      <p>
+        Wyatt
+      </p>
+    </div>
+  </div>
+  <div
+    className="card m-4 border-0"
+    id="individual"
+  >
+    <a
+      className="text-decoration-none text-white"
+      href="https://www.linkedin.com/in/fuming-zhao-57ba41212/"
+      target="_blank"
+    >
+      <div>
+        <img
+          className="images"
+          src="https://media-exp1.licdn.com/dms/image/C4E03AQFKFcKwG_vnnA/profile-displayphoto-shrink_400_400/0/1622086420643?e=1634169600&v=beta&t=Y02CInCM8gChdAg0FghgF0gvJ8j7V_PKCC71o8valvY"
+        />
+      </div>
+    </a>
+    <hr />
+    <div
+      className="card-body"
+    >
+      <p>
+        Fuming
+      </p>
+    </div>
+  </div>
+  <div
+    className="card m-4 border-0"
+    id="individual"
+  >
+    <a
+      className="text-decoration-none text-white"
+      href="https://www.linkedin.com/in/conor-scalf/"
+      target="_blank"
+    >
+      <div>
+        <img
+          className="images"
+          src="https://media-exp1.licdn.com/dms/image/C5603AQGpLCIoYPNRug/profile-displayphoto-shrink_400_400/0/1619650323670?e=1634169600&v=beta&t=p4WL-DTp4uCFzMECEFy-T2Ez6jBcj7MLbPHNC1GbjNo"
+        />
+      </div>
+    </a>
+    <hr />
+    <div
+      className="card-body"
+    >
+      <p>
+        Conor
+      </p>
+    </div>
+  </div>
+  <div
+    className="card m-4 border-0"
+    id="individual"
+  >
+    <a
+      className="text-decoration-none text-white"
+      href="https://www.linkedin.com/in/cody-anderson-b292a4219/"
+      target="_blank"
+    >
+      <div>
+        <svg
+          fill="currentColor"
+          height={100}
+          stroke="currentColor"
+          strokeWidth="0"
+          style={
+            Object {
+              "color": undefined,
+            }
+          }
+          viewBox="0 0 16 16"
+          width={100}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            clipRule="evenodd"
+            d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 100-6 3 3 0 000 6z"
+            fillRule="evenodd"
+          />
+        </svg>
+      </div>
+    </a>
+    <hr />
+    <div
+      className="card-body"
+    >
+      <p>
+        Cody
+      </p>
+    </div>
+  </div>
+  <div
+    className="card m-4 border-0"
+    id="individual"
+  >
+    <a
+      className="text-decoration-none text-white"
+      href="https://www.linkedin.com/in/trent-greenman-277124172/"
+      target="_blank"
+    >
+      <div>
+        <img
+          className="images"
+          src="https://media-exp1.licdn.com/dms/image/C5603AQEjlf0OQF8_Jw/profile-displayphoto-shrink_400_400/0/1618113658529?e=1634169600&v=beta&t=-k04mhNX9dk8UEEbhuuhwdvuwfvK97SFTo1I8B9rq0s"
+        />
+      </div>
+    </a>
+    <hr />
+    <div
+      className="card-body"
+    >
+      <p>
+        Trent
+      </p>
+    </div>
+  </div>
+</div>
+`;

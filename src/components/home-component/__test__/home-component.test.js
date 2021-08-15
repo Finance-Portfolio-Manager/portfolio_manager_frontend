@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import HomeComponent from './../home-component';
+import DoughnutData from './../home-component';
+import RenderCard from './../home-component';
 
 import { render, cleanup } from '@testing-library/react';
 import "@testing-library/jest-dom/extend-expect";
@@ -24,8 +26,14 @@ const wrapper = shallow(<HomeComponent users={ testUsers }></HomeComponent>);
 
 describe("rendering home component", ()=>{
     test("matches snapshot", ()=>{
-        console.log(wrapper.debug());
+        // console.log(wrapper.debug());
         const tree = renderer.create(<HomeComponent users={ testUsers }></HomeComponent>).toJSON();
         expect(tree).toMatchSnapshot();
     })
+
+    test("renders Your Favorite Portfolios title", ()=>{
+        expect(wrapper.find("div.h2").text()).toContain("Your Favorite Portfolios");
+    })
+
+    
 })
