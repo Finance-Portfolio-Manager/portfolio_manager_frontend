@@ -4,14 +4,12 @@
     box-sizing: border-box;
     /* font-family: montserrat, sans-serif; */
 }
-
 .form__input, button {
     appearance: none;
     background: none;
     border: none;
     outline: none;
 }
-
 .App__container {
     height: 100vh;
     display: flex;
@@ -19,11 +17,9 @@
     justify-content: center;
     background-color: #474C55;
 }
-
 .App__container > * {
     background: transparent;
 }
-
 .form__style {
     display: block;
     position: relative;
@@ -31,7 +27,6 @@
     border-color: #F26925;
     /* border-width: 4px; */
 }
-
 .form__style .form-inner{
     position: relative;
     /* background-color: #fff; */
@@ -41,7 +36,6 @@
     padding-top: 40px;
     padding-bottom: 70px;
 }
-
 .form__style{
     border-radius: 15px;
 }
@@ -56,19 +50,16 @@
     flex-direction: column;
     /* background-image: linear-gradient(white, rgb(67, 67, 67)); */
 }
-
 .form__style .form-inner h4 {
     color: rgb(90, 89, 89);
     font-size: 28px;
     font-weight: 500;
     margin-bottom: 0px;
 }
-
 .form__style .form-inner .form-group{
     width: 300px;
     margin-bottom: 10px;
 }
-
 .form-inner .form-group label {
     font-size: 14px;
     margin-bottom: 0px;
@@ -77,7 +68,6 @@
 .form-header{
     margin: auto;
 }
-
 .form__style .submitButton {
     padding: 10px 50px;
     border-radius: 8px;
@@ -85,18 +75,15 @@
     color: #FFF;
     font-weight: 600;
 }
-
 .form__style h6 {
     font-size: 0.75em;
 }
-
 .logo {
     max-width: 50%;
     height: auto;
     margin: auto;
     /* padding-bottom: 0px; */
 }
-
 .aroundLogo {
     position: relative;
     /* background-color: #fff; */
@@ -104,7 +91,6 @@
     padding-top: 40px;
     display: flex;
 }
-
 .loginInput {
     text-align: center;
 }
