@@ -13,6 +13,7 @@
 // });
 
 import Login from "./../login";
+import LoginForm from "./../login-form"
 import { shallow, ShallowWrapper, mount } from "enzyme";
 
 import { configure } from 'enzyme';
@@ -27,14 +28,10 @@ import { Switch, Route } from 'react-router-dom';
 
 configure({ adapter: new Adapter() });
 
-const wrapper = shallow(<Login></Login>);
+const wrapper = shallow(<LoginForm></LoginForm>);
 
-test("login returns LoginForm", ()=>{
-    // const component = <React.Fragment>renderer.create(<Login />)</React.Fragment>;
-    // const component = renderer.create(<Login />).toJSON();
-    const component = shallow(<Login></Login>);
-    // const inst = component.getInstance();
-    expect(component).toMatchSnapshot();
+test("matches snapshot", ()=>{
+    
 })
 
 

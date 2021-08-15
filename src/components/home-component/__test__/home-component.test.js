@@ -34,6 +34,4 @@ describe("rendering home component", ()=>{
     test("renders Your Favorite Portfolios title", ()=>{
         expect(wrapper.find("div.h2").text()).toContain("Your Favorite Portfolios");
     })
-
-    
 })

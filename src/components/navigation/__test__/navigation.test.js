@@ -4,6 +4,8 @@ import Navigation from "../navigation";
 
 import { shallow, ShallowWrapper, mount } from "enzyme";
 
+import renderer from "react-test-renderer";
+
 import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import NavDropDown from "../navdropdown";
@@ -27,6 +29,11 @@ afterEach(() => {
   container.remove();
   container = null;
 });
+
+test("matches snapshot", ()=>{
+  const tree = renderer.create(<Navigation></Navigation>).toJSON();
+  expect(tree).toMatchSnapshot();
+})
 
 test("has Portfolios item", () => {
   act(() => {
@@ -96,14 +103,19 @@ describe("Nav bar rendering", ()=>{
   })
 })
 
-//----------------COME BACK TO THIS------------------------------
-describe("navigation with props", ()=>{
-  test("dropdown menu shows when hovered", ()=>{
-    const clickFn = jest.fn();
-    const component = shallow(<Navigation onClick={ clickFn }></Navigation>).find("NavDropDown");
-
+describe("navigation response to actions", ()=>{
+  test("dropdown menus don't crash when clicked", ()=>{
+    const component = shallow(<Navigation></Navigation>).find("NavDropDown");
     expect(component.length).toBe(2);
-    // component.simulate('mouseOver');
-    // expect(clickFn).toHaveBeenCalled();
+
+    let clickEvent1 = () =>{
+      component.first().simulate('click');
+    }
+    let clickEvent2 = () =>{
+      component.at(1).simulate('click');
+    }
+
+    expect(clickEvent1).not.toThrow();
+    expect(clickEvent2).not.toThrow();
   })
 })

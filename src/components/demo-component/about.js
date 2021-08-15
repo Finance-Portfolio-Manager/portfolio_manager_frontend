@@ -1,6 +1,7 @@
 import React from 'react';
-import Navigation from '../components/navigation/navigation'
-import Footer from '../components/footer';
+// import Navigation from '../components/navigation/navigation'
+import Navigation from '../navigation/navigation'
+import Footer from '../footer-component/footer';
 
 export default function About() {
     return (

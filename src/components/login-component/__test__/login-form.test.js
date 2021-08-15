@@ -14,8 +14,6 @@ import Adapter from 'enzyme-adapter-react-16';
 
 configure({ adapter: new Adapter() });
 const wrapper = shallow(<LoginForm></LoginForm>);
-// console.log(wrapper.debug());
-// console.log(wrapper.props());
 
 afterEach(cleanup);
 
@@ -30,7 +28,7 @@ it("renders without crashing", ()=>{
 //     expect(getByTestId("login-form")).toHaveTextContent("Portfolio ManagerUsername:Password:Login");
 // })
 
-it("matches snapshot", ()=>{
+test("matches snapshot", ()=>{
     const tree = renderer.create(<LoginForm></LoginForm>).toJSON();
     expect(tree).toMatchSnapshot();
 })

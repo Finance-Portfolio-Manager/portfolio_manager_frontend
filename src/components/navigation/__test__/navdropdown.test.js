@@ -4,6 +4,8 @@ import { act } from "react-dom/test-utils";
 
 import { shallow, ShallowWrapper, mount } from "enzyme";
 
+import renderer from "react-test-renderer";
+
 import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import NavDropDown from "../navdropdown";
@@ -11,6 +13,14 @@ import NavDropDown from "../navdropdown";
 import React, { useState } from 'react';
 
 configure({ adapter: new Adapter() });
+
+test("matches snapshot", ()=>{
+    const clickFn = jest.fn();
+    const tree = renderer.create(<NavDropDown></NavDropDown>).toJSON();
+    expect(tree).toMatchSnapshot();
+    const treeProps = renderer.create(<NavDropDown hovered={ clickFn } show={ true } title="Portfolios"></NavDropDown>).toJSON();
+    expect(treeProps).toMatchSnapshot();
+})
 
 describe("dropdown rendering", ()=>{
     let component = shallow(<NavDropDown></NavDropDown>);
@@ -28,17 +38,27 @@ describe("dropdown rendering", ()=>{
     })
 });
 
-// describe("dropdown with props", ()=>{
-//     test("dropdown goes away when unhovered", ()=>{
-//         const clickFn = jest.fn();
-//         const component = shallow(<NavDropDown show={ clickFn } hovered={ clickFn } unhovered={ clickFn }></NavDropDown>);
-
-//         expect(clickFn).not.toHaveBeenCalled();
-//         component.simulate('click');
-//         expect(clickFn).toHaveBeenCalled();
-//     })
+describe("dropdown with props", ()=>{
+    test("dropdown function called when clicked", ()=>{
+        const hoverFn = jest.fn();
+        const clickFn = jest.fn();
+        const component = shallow(<NavDropDown hovered={ clickFn } show={ true } title="Portfolios"></NavDropDown>);
+        const dropToggle = component.find("DropdownToggle");
+        expect(dropToggle.length).toBe(1);
+        dropToggle.simulate('mouseover');
+        dropToggle.simulate('click');
+        // expect(hoverFn).toHaveBeenCalled();
+        expect(clickFn).toHaveBeenCalled();
+    })
     
-// })
+    test("dropdown title renders", ()=>{
+        const clickFn = jest.fn();
+        const component = shallow(<NavDropDown hovered={ clickFn } show={ true } title="Portfolios"></NavDropDown>);
+        const dropToggle = component.find("DropdownToggle");
+        expect(dropToggle.text()).toContain("Portfolios");
+    })
+    
+})
 
 //https://blog.logrocket.com/testing-state-changes-in-react-functional-components/
 /*
