@@ -5,7 +5,7 @@ import "./new_transaction_form.css";
 export default function NewTransactionForm(props){
 
     return (<div className="new-transaction__wholeform">
-        <Form>
+        <Form className='new-transaction__form' >
             <div className="new-transaction__container">
                 <Button className='new-transaction__button' name = "buy" value = "buysell" variant="info" type="button" onClick={props.buyConfirm} >Buy</Button>
                 <Button className='new-transaction__button' name = "sell" value = "buysell" variant="info" type="button" onClick={props.buyConfirm} >Sell</Button>
