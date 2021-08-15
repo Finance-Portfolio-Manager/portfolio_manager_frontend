@@ -10,13 +10,31 @@ export const GlobalStyle = createGlobalStyle`
   
     body {
         /* font-family: Tahoma, Helvetica, Arial, Roboto, sans-serif; */
-        transition: all 0.50s linear;
+        /* transition: all 0.50s ease-out; */
         background-color: none !important;
+        
       }
    
+      .primary-color,
+      .secondary-color,
+      .accent-color,
+      .global__gradient-background,
+      .global__gradient-background--absolute{
+        -webkit-transition: background-color .5s  linear;
+          -moz-transition: background-color .5s linear;
+          -o-transition: background-color .5s linear;
+          transition: background-color .5s linear;
+      }
+
+
+
+
 
     .primary-color{
       background: ${({ theme }) => theme.primaryColor} !important;
+      /* -webkit-transition: background-color 1s ease-out;
+          -moz-transition: background-color 1s ease-out;
+          -o-transition: background-color 1s ease-out; */
     }
     .secondary-color{
       background: ${({ theme }) => theme.secondaryColor} !important;
@@ -33,7 +51,6 @@ export const GlobalStyle = createGlobalStyle`
     .secondary-text{
       color: ${({ theme }) => theme.secondaryText} !important;;
     }
-    /*  */
     .nav__logo{
       color: ${({ theme }) => theme.secondaryText} !important;;
     }
@@ -55,50 +72,83 @@ export const GlobalStyle = createGlobalStyle`
     }
     .global__gradient-background{
       background:  ${({ theme }) =>
-        (theme.type == 'light')
+        theme.type == "light"
           ? ` linear-gradient(109.36deg, ${theme.accentColor} -4.44%, ${theme.gradientPair} 143.69%), #C4C4C4 !important `
-          : theme.primaryColor
-          };;
+          : theme.primaryColor};;
+    
+    }
+
+    .global__gradient-background--absolute{
+      background:  ${({ theme }) =>
+        theme.accentColor && theme.gradientPair
+          ? ` linear-gradient(109.36deg, ${theme.accentColor} -4.44%, ${theme.gradientPair} 143.69%), #C4C4C4 !important `
+          : theme.primaryColor};;
     
     }
     .global__gradient-text{
       background:  ${({ theme }) =>
-        (theme.type == 'dark')
+        theme.type == "dark"
           ? ` linear-gradient(109.36deg, ${theme.accentColor} -4.44%, ${theme.gradientPair} 143.69%), #C4C4C4 !important;
           -webkit-background-clip: text !important;
     -webkit-text-fill-color: transparent !important; 
           `
-          :  `none;
+          : `none;
           color: ${theme.secondaryColor}
             
-          `
-          }
+          `}
 
       
     
     }
 
     .global__button-effect{
-      background:  ${({ theme }) =>
-        (theme)
-          ? ` linear-gradient(109.36deg, ${theme.accentColor} -4.44%, ${theme.gradientPair} 143.69%), #C4C4C4 !important `
-          : theme.accentColor
-          };;
+      /* background:  ${({ theme }) => ` linear-gradient(109.36deg, ${theme.accentColor} -4.44%, ${theme.gradientPair} 143.69%), ${theme.accentColor}50 !important `}; */
+          background:  ${({ theme }) => theme.accentColor} !important;
+          border: none;
+          color: white;
+          -webkit-transition: background-color 1s ease-out;
+          -moz-transition: background-color 1s ease-out;
+          -o-transition: background-color 1s ease-out;
+          transition: background-color 1s ease-out;
+
+    }
+    .global__button-effect:hover{
+          background:  ${({ theme }) => theme.primaryColor} !important;
+          /* background:  ${({ theme }) => ` linear-gradient(109.36deg, ${theme.gradientPair} -4.44%, ${theme.accentColor} 143.69%), #C4C4C4 !important `}; */
           border: none;
           color: white;
 
     }
-    /* .violet__gradient{
-      
 
-  @supports (--css: variables) {
-    background: linear-gradient(109.36deg, rgba(215, 39, 219, 0.7) -4.44%, rgba(0, 56, 255, 0.7) 143.69%), #C4C4C4 !important;
-   
-    -webkit-background-clip: text !important;
-    -webkit-text-fill-color: transparent !important;
-  }
-    
-    } */
+    .global__dropshadow{
+      box-shadow: 0 0 30px #33333350;
+      /* filter: (0 0 0.75rem ${({ theme }) => theme.primaryColor}; */
+      /* filter: (0 0 0.75rem ${({ theme }) => theme.primaryColor}); */
+      /* filter: drop-shadow(0 -6mm 4mm rgb(160, 0, 210)); */
+    }
+  
+
+      @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+        .global__blur-effect {
+          background-color: ${({ theme }) =>
+            ` ${theme.primaryColor}50 !important`};
+          /* rgba(255, 255, 255, 0.5) !important; */
+          -webkit-backdrop-filter: blur(10px) !important;
+          backdrop-filter: blur(10px) !important;
+        }
+        .warning { display: none; }
+      }
+
+      .global__zoom {
+        transition: transform 0.3s;
+      } 
+
+      .global__zoom:hover {
+          transform: scale(
+      1.05
+      ); 
+}
+
     
 `;
 

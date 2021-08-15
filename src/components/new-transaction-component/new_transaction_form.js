@@ -4,13 +4,13 @@ import "./new_transaction_form.css";
 
 export default function NewTransactionForm(props){
 
-    return (<div class="wholeform">
+    return (<div className="new-transaction__wholeform">
         <Form>
-            <div class="container">
+            <div className="new-transaction__container">
                 <Button className='new-transaction__button' name = "buy" value = "buysell" variant="info" type="button" onClick={props.buyConfirm} >Buy</Button>
                 <Button className='new-transaction__button' name = "sell" value = "buysell" variant="info" type="button" onClick={props.buyConfirm} >Sell</Button>
             </div>
-            <div class="container">
+            <div className="new-transaction__container">
                 <Form.Group>
                     <Form.Label>Stock Symbol:</Form.Label>
                     <Form.Control name="stocksymbol" onChange={props.handleChange}></Form.Control>
@@ -29,7 +29,7 @@ export default function NewTransactionForm(props){
 
                 </Form.Group>
             </div>
-            <div class="container">
+            <div className="new-transaction__container">
                 <Button className='new-transaction__button' variant="info" type="submit" onClick={props.submitConfirm} >Add New Transaction</Button>
                 <Button className='new-transaction__button' variant="info" type="submit" onClick={props.getTransaction} >Test Get Transaction</Button>
             </div>

@@ -1,4 +1,4 @@
-form {
+.new-transaction__form {
     background-color: #c0bdbc;
     display: block;
     display: inline-block;
@@ -12,7 +12,7 @@ form {
     width: 500px;
 }
 
-input {
+.new-transaction__input {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -21,7 +21,7 @@ input {
     box-sizing: border-box;
 }
 
- new-transaction__button {
+.new-transaction__button {
     background-color: #F26925;
     color: white;
     padding: 14px 20px;
@@ -31,15 +31,15 @@ input {
     width: 100%;
 }
 
-new-transaction__button:hover {
+.new-transaction__button:hover {
     opacity: 0.8;
 } 
 
-.container {
+.new-transaction__container {
     padding: 16px;
 }
 
-.wholeform {
+.new-transaction__wholeform {
     display: block;
     text-align: center;
 }
