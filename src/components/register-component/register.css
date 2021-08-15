@@ -1,44 +1,43 @@
-/* * {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: montserrat, sans-serif;
+    /* font-family: montserrat, sans-serif; */
 }
-
-input, button {
+.form__input, button {
     appearance: none;
     background: none;
     border: none;
     outline: none;
 }
-
-.App {
+.App__container {
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #474C55;
 }
-
-form {
+.App__container > * {
+    background: transparent;
+}
+.form__style {
     display: block;
     position: relative;
-    border-style: solid;
+    /* border-style: solid; */
     border-color: #F26925;
-    border-width: 4px;
+    /* border-width: 4px; */
 }
-
-form .form-inner{
+.form__style .form-inner{
     position: relative;
-    background-color: #fff;
+    /* background-color: #fff; */
+    background: transparent;
     padding-left: 100px;
     padding-right: 100px;
     padding-top: 40px;
     padding-bottom: 70px;
 }
-
-form{
-    border-radius: 10px;
+.form__style{
+    border-radius: 15px;
 }
 .aroundLogo{
     border-top-left-radius: 6px;
@@ -47,51 +46,51 @@ form{
 .form-inner{
     border-bottom-left-radius: 6px;
     border-bottom-right-radius: 6px;
-    background-image: linear-gradient(white, rgb(67, 67, 67));
+    display: flex;
+    flex-direction: column;
+    /* background-image: linear-gradient(white, rgb(67, 67, 67)); */
 }
-
-form .form-inner h4 {
+.form__style .form-inner h4 {
     color: rgb(90, 89, 89);
     font-size: 28px;
     font-weight: 500;
     margin-bottom: 0px;
 }
-
-form .form-inner .form-group{
+.form__style .form-inner .form-group{
     width: 300px;
     margin-bottom: 10px;
 }
-
 .form-inner .form-group label {
     font-size: 14px;
     margin-bottom: 0px;
     margin-top: 5px;
 }
-
-form .submitButton {
+.form-header{
+    margin: auto;
+}
+.form__style .submitButton {
     padding: 10px 50px;
     border-radius: 8px;
     background-color: #F26925;
     color: #FFF;
     font-weight: 600;
-} */
-
-/* form h6 {
+}
+.form__style h6 {
     font-size: 0.75em;
-} */
-
+}
 .logo {
     max-width: 50%;
     height: auto;
+    margin: auto;
     /* padding-bottom: 0px; */
 }
-
-/* .aroundLogo {
+.aroundLogo {
     position: relative;
-    background-color: #fff;
+    /* background-color: #fff; */
+    background: transparent;
     padding-top: 40px;
-} */
-
+    display: flex;
+}
 .loginInput {
     text-align: center;
 }

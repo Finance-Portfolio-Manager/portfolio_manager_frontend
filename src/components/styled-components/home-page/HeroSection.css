@@ -12,7 +12,7 @@ file created by carlos galvan jr
   align-items: center;
 }
 
-.row {
+.home__hero-row {
   display: flex;
   margin-right: -15px;
   margin-bottom: -15px;
@@ -21,7 +21,7 @@ file created by carlos galvan jr
   align-content: stretch;
 }
 
-.col {
+.home__hero-col {
   margin-bottom: 15px;
   padding-right: 15px;
   padding-left: 15px;
@@ -63,10 +63,7 @@ file created by carlos galvan jr
 }
 
 .home__hero-subtitle {
-  max-width: 440px;
-  margin-bottom: 35px;
-  font-size: 18px;
-  line-height: 24px;
+ 
 }
 
 .home__hero-img-wrapper {
@@ -86,6 +83,20 @@ img {
   max-width: 100%;
   vertical-align: middle;
   display: inline-block;
+}
+
+.hero__button-group{
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.hero__button{
+  margin-right: 10px;
+
+}
+.hero__github-button{
+  margin: auto;
+  scale: 1.5;
 }
 
 @media screen and (max-width: 991px) {

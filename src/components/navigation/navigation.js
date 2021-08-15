@@ -8,7 +8,9 @@ export default function Navigation() {
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark primary-color">
             <div className="container-fluid  py-0">
+                {/* TODO: Change logo to svg file */}
                 <img src={ApexLogo} alt="Logo" />
+
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
