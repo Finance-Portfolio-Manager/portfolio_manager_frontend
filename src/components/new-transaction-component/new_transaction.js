@@ -38,7 +38,7 @@ export default function NewTransaction(props){
         // transaction.isBuy = true;
         e.preventDefault();
         // axios.post("http://23.22.140.95:8082/transactions/new", transaction, {headers: {'Content-Type': 'application/json'}})
-        axios.post(process.env.REACT_APP_API_URL + "/transactions/", transaction, {headers: {'Authorization': {jwtToken}, 'Content-Type': 'application/json'}})
+        axios.post(process.env.REACT_APP_API_URL + "/transactions/", transaction, {headers: {'Authorization': jwtToken, 'Content-Type': 'application/json'}})
             .then(response=>{
                 console.log(response);
             })
