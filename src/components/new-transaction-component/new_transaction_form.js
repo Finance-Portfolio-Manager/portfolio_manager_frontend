@@ -13,25 +13,25 @@ export default function NewTransactionForm(props){
             <div class="container">
                 <Form.Group>
                     <Form.Label className="m-2">Stock Symbol:</Form.Label>
-                    <Form.Control name="stocksymbol" onChange={props.handleChange}></Form.Control>
+                    <Form.Control name="stockSymbol" onChange={props.handleChange}></Form.Control>
 
                     <Form.Label  className="m-2">Quantity:</Form.Label>
-                    <Form.Control name="shareAmount" type="number" onChange={props.handleChange}></Form.Control>
+                    <Form.Control name="transactionQuantity" type="number" onChange={props.handleChange}></Form.Control>
 
                     <Form.Label  className="m-2">Price:</Form.Label>
                     <Form.Control name="sharePrice" type="number" onChange={props.handleChange}></Form.Control>
 
                     <Form.Label  className="m-2">Date:</Form.Label>
-                    <Form.Control name="date" type="date" onChange={props.handleChange}></Form.Control>
+                    <Form.Control name="dateTime" type="date" onChange={props.handleChange}></Form.Control>
 
-                    <Form.Label  className="m-2">Note:</Form.Label>
-                    <Form.Control name="note" onChange={props.handleChange}></Form.Control>
+                    {/* <Form.Label  className="m-2">Note:</Form.Label>
+                    <Form.Control name="note" onChange={props.handleChange}></Form.Control> */}
 
                 </Form.Group>
             </div>
             <div class="container">
                 <Button class="mx-2 secondary-text" variant="info" type="submit" onClick={props.submitConfirm} >Add New Transaction</Button>
-                <Button class="mx-2 secondary-text" variant="info" type="submit" onClick={props.getTransaction} >Test Get Transaction</Button>
+                {/* <Button class="mx-2 secondary-text" variant="info" type="submit" onClick={props.getTransaction} >Test Get Transaction</Button> */}
             </div>
         </Form>
     </div>)
