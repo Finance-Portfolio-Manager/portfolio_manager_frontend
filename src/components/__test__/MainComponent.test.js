@@ -1,21 +1,29 @@
-import Main from "./MainComponent";
+import Main from "../MainComponent";
 import { shallow, ShallowWrapper } from "enzyme";
 
 import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
-import Login from './login-component/login';
-import Home from './home-component/home-component';
-import { LandingPage } from './styled-components/home-page/LandingPage';
-import About from './about-component/about-page.js';
-import Account from './account-component/account-component';
-import Register from './register-component/register';
-import NewTransaction from "./new-transaction-component/new_transaction";
+import Login from '../login-component/login';
+import Home from '../home-component/home-component';
+import { LandingPage } from '../styled-components/home-page/LandingPage';
+import About from '../about-component/about-page.js';
+import Account from '../account-component/account-component';
+import Register from '../register-component/register';
+import NewTransaction from "../new-transaction-component/new_transaction";
 
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
 
+import renderer from "react-test-renderer";
 
 configure({ adapter: new Adapter() });
+
+
+
+test("matches snapshot", ()=>{
+  const tree = renderer.create(<Router><Main></Main></Router>).toJSON();
+  expect(tree).toMatchSnapshot();
+})
 
 describe("Testing MainComponent", ()=>{
   // const wrapper: ShallowWrapper = shallow(<App></App>);
