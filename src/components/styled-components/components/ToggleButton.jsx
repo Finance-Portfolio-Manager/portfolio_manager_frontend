@@ -21,8 +21,8 @@ const ThemeButton = styled.button`
 `; 
 
 const ToggleButton = ({ theme, toggleTheme }) => {
-  const [label, setLabel] = useState(window.localStorage.getItem("theme"));
-
+  // const [label, setLabel] = useState(window.localStorage.getItem("theme"));
+  const [label, setLabel] = useState("Change Theme");
   
   const updateLabel = () => {
     toggleTheme();
