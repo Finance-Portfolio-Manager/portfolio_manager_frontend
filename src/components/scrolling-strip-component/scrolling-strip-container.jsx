@@ -4,12 +4,9 @@ import React, {useState, useEffect} from "react";
 import ScrollingStripPresentation from "./scrolling-strip-presentation";
 import axios from "axios";
 
-// const url = "http://23.22.140.95:8082";
-// const url = "http://3.133.113.250:8082/api/get-symbol-pnl"
+// TODO: This is the area where the ip needs to get switched from env var to hard coded for testing purposes
+// const url = "http://23.22.140.95:8082/api/get-symbol-pnl";
 const url = process.env.REACT_APP_API_URL + "/api/get-symbol-pnl";
-
-//TODO: change to ec2 URL when update to backend is merged in
-//TODO: figure out how to correctly test these elements
 
 export default function ScrollingStripContainer(){
 
