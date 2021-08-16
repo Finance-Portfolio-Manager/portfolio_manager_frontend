@@ -1,22 +1,41 @@
-
 .captainProfile{
    width: 150px !important;
    transition: transform .2s !important;
+   font-family: 'Courier New', Courier, monospace;
+}
+
+.meetTeam{
+   width: 160px !important;
+   transition: transform .2s !important;
+   font-family: 'Courier New', Courier, monospace;
 }
 
 .profile{
-   width: 40px !important;
-
+   font-family: 'Courier New', Courier, monospace;
 }
 
 .logoApp{
-   width: 200px !important;
+   width: 300px !important;
    height: 200px !important;
    background-color: transparent !important;
-   color: whitesmoke !important;
+   color: white !important;
    transition: transform .2s !important;
 }
 
+@media (max-width: 997px){
+   #about-card{
+      margin-top: 60px !important;
+   }
+   #aboutNew{
+      width: 100% !important;
+      margin-left: 5px !important;
+      margin-right: 5px !important;
+   }
+   #logoNew{
+      display: block !important;
+      margin: 0 auto !important;
+   }
+}
 
 body{
    background-color: rgb(6, 55, 75) !important;
@@ -24,7 +43,7 @@ body{
 
 .title{
    background-color: transparent !important;
-   color: whitesmoke !important;
+   color: white !important;
 }
 
 #about-card{
@@ -43,10 +62,14 @@ body{
    transform: scale(1.25) !important;
 }
 
+.meetTeam:hover{
+   transform: scale(1.25) !important;
+}
+
 #individual{
    transition: transform .2s !important;
-   background-color:rgb(9, 54, 90);
-   color: whitesmoke;
+   background-color:transparent !important;
+   color: white;
 }
 
 #individual:hover{
@@ -55,7 +78,7 @@ body{
 
 #profile-1-card{
    background-color: transparent !important;
-   color: whitesmoke !important;
+   color: white !important;
 }
 
 .team-button{
@@ -68,7 +91,7 @@ body{
 }
 
 .team-button:visited{
-   background-color: black;
+   background-color: black !important;
 }
 
 .images{
@@ -77,4 +100,21 @@ body{
 
 .headImage{
    width: 150px !important;
+}
+
+#aboutPart{
+   text-align: justify !important;
+   font-family: 'Courier New', Courier, monospace;
+}
+
+#aboutTitle{
+   font-size: 30px !important;
+   font-weight: bold;
+   font-family: 'Courier New', Courier, monospace;
+}
+
+#appName{
+   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   font-weight: bolder;
+   font-size: 30px !important;
 }
