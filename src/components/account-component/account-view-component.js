@@ -12,13 +12,12 @@ export default function AccountView(props){
     //TODO: Probably remove inline styling of div
     return (
   
-        <div style={{backgroundColor:"#B9B9BA"}}>
-            <h2 id="account-header">
+        <div className="secondary-color">
+            <div className="h2" id="account-header">
                 {/* display username and full name to user */}
-                <span id="header-span">{props.username}Username</span>
+                <span id="header-span" className="m-5 secondary-text">{props.username}Username</span>
                 {/* depending on streatch goals, maybe a dark theme toggle can go up here */}
-            </h2>
-            
+            </div>
             {props.portfolioArray.map((portfolio) => {
                 return(
                     <><PortfolioCard portfolio={portfolio}/> <br/></>

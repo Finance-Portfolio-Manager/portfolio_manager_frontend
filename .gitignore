@@ -1,5 +1,6 @@
+example-chart
+.env
 package-lock.json
-src/apiKeys.json
 # # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # # dependencies
