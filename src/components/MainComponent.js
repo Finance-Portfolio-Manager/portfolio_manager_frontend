@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import Home from './home-component/home-component';
 import Footer from './footer-component/footer';
@@ -8,7 +8,7 @@ import About from './about-component/about-page.js';
 import ScrollingStripContainer from './scrolling-strip-component/scrolling-strip-container';
 import Account from './account-component/account-component';
 import Register from './register-component/register-component';
-import Login from './login-component/login-form';
+import Login from './login-component/login';
 import { ThemeProvider } from "styled-components";
 import { LandingPage } from './styled-components/home-page/LandingPage';
 import GlobalStyle from "./styled-components/styles/GlobalStyles";
@@ -16,7 +16,6 @@ import { useAllThemes } from './styled-components/components/AllThemes';
 import { themeMode as themeSwitch } from './styled-components/components/themeMode';
 import ToggleButton from './styled-components/components/ToggleButton';
 import NewTransaction from './new-transaction-component/new_transaction';
-import News from './news-component/news-component-presentation';
 import { NewsPage } from './news-component/layout/NewsPage';
 import GenericChart from './chart-component/generic-chart';
 
@@ -45,7 +44,6 @@ export default function Main() {
                         <Route exact path="/login" component={Login} />
                         <Route exact path="/generic-chart" component={GenericChart} />
                         <Route exact path="/new-transaction" component={NewTransaction} />
-                        <Route exact path="/news" component={News} />
                         <Route exact path="/news" component={NewsPage} />
                     </Switch>
                 </ThemeProvider>
