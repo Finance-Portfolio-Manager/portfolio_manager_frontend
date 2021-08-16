@@ -16,9 +16,14 @@ export default function PrivatePortfolioTable(props){
     console.log(`TableRows: ${JSON.stringify(tableRows)}`);
 
     return <>
-        <div className="wrapper fadeInDown ">
-            <div className="table-responsive">
-                <Table id="stocks-view" className="table borderless table-hover" responsive>
+        <div className="wrapper fadeInDown folioContent mx-3" id="portfolio">
+            <div id="portfolio-values">
+                <h4 id = "portfolio-total"></h4>
+                <div id = "portfolio-change"></div>
+                <div id = "dollar-change"></div>
+            </div>
+            <div className="table-responsive secondary-text">
+                <Table id="stocks-view" className="table borderless table-hover secondary-text" responsive>
                     <thead>
                         <tr>
                             <th scope="col">Stock</th>
