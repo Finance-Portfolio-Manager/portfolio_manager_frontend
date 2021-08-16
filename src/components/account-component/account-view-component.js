@@ -22,11 +22,11 @@ export default function AccountView(props){
     //TODO: The styling gets messed up when you switch from a portfolio card to a portfolio table.
     return (
   
-        <div style={{backgroundColor:"#B9B9BA"}}>
-            <h2 id="account-header">
-                <span id="header-span">{props.user.username}</span>
+        <div className="secondary-color">
+            <div className="h2" id="account-header">
+                <span id="header-span" className="m-5 secondary-text">{props.user.username}</span>
                 {/* depending on streatch goals, maybe a dark theme toggle can go up here */}
-            </h2>
+            </div>
             
             <div className="container" style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
                 <div className="row">

@@ -37,10 +37,10 @@ export default function Register(props) {
                 password:`${registrationData.password}`,
                 confirmPassword:`${registrationData.confirmPassword}`
                 };
-            axios.post(URL + "/register", JSON.stringify(registrationInfo), {headers:{'Content-Type': 'application/json'}})
+            axios.post(URL + "/users", JSON.stringify(registrationInfo), {headers:{'Content-Type': 'application/json'}})
                 .then(response=>{
                     console.log(response.data);
-                    // props.history.push("/");
+                    props.history.push("/login");
                 })
 
                 .catch(function (error) {
@@ -60,6 +60,7 @@ export default function Register(props) {
         console.log(registrationData.username);
         console.log(registrationData.email);
         console.log(registrationData.password);
+        console.log(`URL: ${URL}`);
 
         // Forbid any empty values
         if((username||email||password||confirmPassword)===(null||undefined)){
