@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Playfair+Display:wght@800&display=swap");
+/* Root parent for this case */
+.news__body {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  
+}
+/* Parent Container */
+.news__title-container {
+  min-height: 90vh;
+  flex: 1;
+  text-align: center;
+  display: flex;
+  
+  /* padding: 0 10vh; */
+}
+.news__center {
+  margin: auto;
+  order: 2;
+  flex-direction: column;
+  flex-grow: 2;
+  flex-basis: 80%;
+}
+/* Children of news__title-container */
+.news__title-header {
+  font-family: "Playfair Display", serif;
+  font-size: 7vw;
+}
+
+.news__source-container {
+  font-family: "Inter", sans-serif;
+  font-size: 2vw;
+}
+
+.news__source-link {
+}
+/* .news__button {
+  position: fixed;
+  font-size: 2vw;
+  bottom: 50%;
+} */
+.news__previous-button {
+ left: 5%;
+}
+
+.news__next-button {
+   right: 5%;
+}
+/* Parent container */
+.news__story-container {
+  font-family: "Inter", sans-serif;
+  flex: 1;
+  /* display: flex; */
+  min-height: 100vh;
+  padding: 160px 0;
+  
+
+}
+.news__next-button-v2{
+  order: 2;
+  margin: auto;
+  flex-basis: 10%;
+}
+.news__previous-button-v2{
+ order: 1;
+ margin: auto;
+flex-basis: 10%;
+}
+
+
+/* Children of story-container */
+.news__row {
+  align-items: center;
+  /* margin: auto; */
+}
+.news__row{
+  display: flex;
+  margin-right: -15px;
+  margin-bottom: -15px;
+  margin-left: -15px;
+  flex-wrap: wrap;
+  align-content: stretch;
+}
+.news__col{
+  margin-bottom: 15px;
+  padding-right: 15px;
+  padding-left: 15px;
+  flex: 1;
+  max-width: 50%;
+  flex-basis: 50%;
+}
+.news__text-wrapper{
+  max-width: 540px;
+  padding-top: 0;
+  padding-bottom: 60px;
+  
+  font-size: 16px;
+  line-height: 32px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  /* hyphens: auto; */
+}
+.news__image-wrapper{
+  /* max-width: 555px; */
+}
+
+@media screen and (max-width: 991px) {
+  .news__story-container {
+    padding-right: 10%;
+    padding-left: 10%;
+  }
+  .news__title-header {
+    font-size: 6vw;
+  }
+  .news__description{
+    font-size: 1.5em;
+    line-height: 1.5em;
+  }
+}
+
+@media screen and (min-width: 991px) {
+  .news__story-container {
+    padding-right: 10%;
+    padding-left: 10%;
+  }
+  .news__description{
+    font-size: 2em;
+    line-height: 2em;
+  }
+  
+}
+
+@media screen and (max-width: 768px) {
+  .news__text-wrapper {
+    padding-bottom: 65px;
+    min-width: 100%;
+  }
+   .news__story-container {
+    padding-right: 10%;
+    padding-left: 10%;
+  }
+  .news__row{
+    flex-direction: row-reverse !important;
+  }
+
+  .news__col {
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+  .news__col{
+    /* margin-bottom: 0; */
+    padding-right: 0;
+    padding-left: 0;
+    /* flex: 1;
+    max-width: 50%;
+    flex-basis: 50%; */
+  }
+  .news__title-header {
+    font-size: 10vw;
+  }
+
+  .news__description {
+    /* max-width: 440px; */
+    /* margin-bottom: 35px; */
+    font-size: 2em;
+    line-height: normal;
+  }
+  .news__image-wrapper{
+    min-width: 100%;
+  }
+  
+}
+
+.news__description-card-footer {
+  text-align: center;
+}
+.news__readmore {
+}
+/* .news__description{
+  flex: 0 0 100%;
+} */
+
+
+
+.news__img {
+  /* object-fit: cover; */
+  /* max-width: 100%; */
+  /* margin-top: 0;
+  margin-right: 0;
+  margin-left: 10px;
+  padding-right: 0; */
+}
+/* Styling for missing news */
+.news__empty {
+}
+/* Mobile screens */
+/* @media screen and (max-width: 600px) {
+  .news__story-container {
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+  }
+  .news__title-header {
+    font-size: 15vw;
+  }
+
+  .news__description,
+  .news__source-container {
+    font-size: 6vw;
+  }
+} */
+
+.news__zoom {
+  transition: transform 0.3s;
+}
+
+.news__zoom:hover {
+  transform: scale(
+    1.05
+  ); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+.news__empty {
+  min-height: 90vh;
+  display: flex;
+}
+
+.news__empty-header {
+  font-size: 2vw;
+  margin: auto;
+}
+

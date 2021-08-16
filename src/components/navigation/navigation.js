@@ -1,4 +1,5 @@
 import NavDropDown from './navdropdown';
+import ApexLogo from '../images/apexstocks.jpg';
 import React, { useState } from 'react';
 
 export default function Navigation() {
@@ -7,7 +8,9 @@ export default function Navigation() {
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark primary-color">
             <div className="container-fluid  py-0">
-                <a className="navbar-brand">Team Name</a>
+                {/* TODO: Change logo to svg file */}
+                <img src={ApexLogo} alt="Logo" />
+
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
@@ -22,27 +25,29 @@ export default function Navigation() {
                                     className="text-white py-0 border-0"
                                     show={dropdownShowpPortfolio}
                                     hovered={() => setDropDrownShowPortfolio(true)}
-                                    // unhovered={() => setDropDrownShowPortfolio(false)}
+                                    unhovered={() => setDropDrownShowPortfolio(false)}
                                     title="Portfolios">
                                     <div className="min-vh-15 bg-gray">
-                                        <a className='text-dark  nav-link active align-item-center' aria-current="page" href="#">Your Accounts</a>
+                                        <a className='text-dark  nav-link active align-item-center' aria-current="page" href="/account">Your Accounts</a>
                                         <a className='text-dark  nav-link active align-item-center' aria-current="page" href="#">Favorite</a>
                                         <a className='text-dark  nav-link active align-item-center' aria-current="page" href="#">Public portfolio</a>
                                     </div>
                                 </NavDropDown>
                             </li>
                             <li className="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">About Us</a>
+                                <a className="nav-link active" aria-current="page" href="/about">About Us</a>
+                            </li>
+                            <li className="nav-item">
                                 <NavDropDown
                                     className="text-white py-0 border-0"
                                     show={dropdownShowStocks}
                                     hovered={() => setDropdownShowStocks(true)}
-                                    // unhovered={() => setDropdownShowStocks(false)}
+                                    unhovered={() => setDropdownShowStocks(false)}
                                     title="Stocks">
                                     <div className="min-vh-15 bg-gray">
                                         <a className='text-dark nav-link active align-item-center' aria-current="page" href="/portfolio">Pie Chart</a>
-                                        <a className='text-dark nav-link active align-item-center' aria-current="page" href="/#">Stock Prices</a>
-                                        <a className='text-dark nav-link active align-item-center' aria-current="page" href="/#">Stock Graph</a>
+                                        <a className='text-dark nav-link active align-item-center' aria-current="page" href="/new-transaction">Transaction</a>
+                                        <a className='text-dark nav-link active align-item-center' aria-current="page" href="/generic-chart">Generic Chart</a>
                                     </div>
                                 </NavDropDown>
                             </li>

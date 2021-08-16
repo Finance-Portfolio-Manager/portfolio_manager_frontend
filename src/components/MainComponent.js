@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import Home from './home-component/home-component';
 import Footer from './footer-component/footer';
@@ -16,7 +16,9 @@ import { useAllThemes } from './styled-components/components/AllThemes';
 import { themeMode as themeSwitch } from './styled-components/components/themeMode';
 import ToggleButton from './styled-components/components/ToggleButton';
 import NewTransaction from './new-transaction-component/new_transaction';
-
+import News from './news-component/news-component-presentation';
+import { NewsPage } from './news-component/layout/NewsPage';
+import GenericChart from './chart-component/generic-chart';
 
 export default function Main() {
     const [theme, themeToggler] = useAllThemes();
@@ -28,7 +30,7 @@ export default function Main() {
 
     return (
         <React.Fragment>
-            <div className="container-fluid flex-column p-0 secondary-color">
+            <div className="container-fluid flex-column p-0 secondary-color default-container primary-text">
                 
                 <ThemeProvider theme={themeMode} >
                     <GlobalStyle />
@@ -42,11 +44,13 @@ export default function Main() {
                         <Route exact path="/about" component={About} />
                         <Route exact path="/register" component={Register} />
                         <Route exact path="/login" component={Login} />
+                        <Route exact path="/generic-chart" component={GenericChart} />
                         <Route exact path="/new-transaction" component={NewTransaction} />
+                        <Route exact path="/news" component={NewsPage} />
                     </Switch>
                 </ThemeProvider>
+                </div>
                 <Footer />
-            </div>
         </React.Fragment>
     );
 }
