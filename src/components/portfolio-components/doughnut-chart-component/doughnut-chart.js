@@ -2,11 +2,11 @@ import { Doughnut } from "react-chartjs-2";
 
 export default function DoughnutChart(props){
     const data = {
-        labels: props.portfolio.stockList.map((stock) => stock.stockName),
+        labels: props.portfolio.stocks.map((stock) => stock.symbol),
         datasets: [
             {
                 label: 'Portfolio values',
-                data: props.portfolio.stockList.map((stock) => stock.stockQuantity * stock.stockCurrentPrice),
+                data: props.portfolio.stocks.map((stock) => stock.quantity * stock.currentPrice),
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)',
                     'rgba(54, 162, 235, 0.2)',

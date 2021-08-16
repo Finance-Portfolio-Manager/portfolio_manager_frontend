@@ -12,7 +12,7 @@ export default function PrivatePortfolioDetails(props){
         <Row >
             <Col md={3} className="folioContent"><DoughnutChart user={props.user} portfolio={props.portfolio}/></Col>
             <Col className="folioContent">
-                <PrivatePortfolioTable tableRows={props.portfolio.stockList} unassignDisplayPortfolio={props.unassignDisplayPortfolio}/>
+                <PrivatePortfolioTable tableRows={props.portfolio.stocks} unassignDisplayPortfolio={props.unassignDisplayPortfolio}/>
             </Col>
         </Row>
         </>

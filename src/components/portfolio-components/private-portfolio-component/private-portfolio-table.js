@@ -38,11 +38,11 @@ export default function PrivatePortfolioTable(props){
                         {tableRows.map((tableRow) => {
                             console.log(`tableRow: ${JSON.stringify(tableRow)}`);
                             return (<tr>
-                                <td>{tableRow.stockName}</td>
-                                <td>{tableRow.stockQuantity}</td>
-                                <td>{tableRow.stockAveragePrice}</td>
-                                <td>{tableRow.stockCurrentPrice}</td>
-                                <td>{tableRow.stockChange}</td>
+                                <td>{tableRow.symbol}</td>
+                                <td>{tableRow.quantity}</td>
+                                <td>{tableRow.avgBuyPrice}</td>
+                                <td>{tableRow.currentPrice}</td>
+                                <td>{tableRow.changePercentage}</td>
                             </tr>)
                         })}
                     </tbody>
