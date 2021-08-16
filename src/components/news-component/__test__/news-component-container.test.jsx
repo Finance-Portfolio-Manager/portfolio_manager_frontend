@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import Portfolio from './../portfolio-component';
+import NewsContainer from './../news-component-container';
 
 import { render, cleanup } from '@testing-library/react';
 import "@testing-library/jest-dom/extend-expect";
@@ -13,10 +13,9 @@ import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
 configure({ adapter: new Adapter() });
-
-const wrapper = shallow(<Portfolio></Portfolio>);
+const wrapper = shallow(<NewsContainer></NewsContainer>);
 
 test("matches snapshot", ()=>{
-    const tree = renderer.create(<Portfolio></Portfolio>).toJSON();
+    const tree = renderer.create(<NewsContainer></NewsContainer>).toJSON();
     expect(tree).toMatchSnapshot();
 })

@@ -7,7 +7,7 @@
 //   // expect(linkElement).toBeInTheDocument();
 // });
 
-import App from "./App";
+import App from "../App";
 import { shallow, ShallowWrapper } from "enzyme";
 
 import { configure } from 'enzyme';

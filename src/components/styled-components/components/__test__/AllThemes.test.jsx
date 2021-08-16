@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import Portfolio from './../portfolio-component';
+import useAllThemes from './../AllThemes';
 
 import { render, cleanup } from '@testing-library/react';
 import "@testing-library/jest-dom/extend-expect";
@@ -12,11 +12,12 @@ import { shallow, ShallowWrapper, mount } from "enzyme";
 import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
-configure({ adapter: new Adapter() });
+import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
 
-const wrapper = shallow(<Portfolio></Portfolio>);
+configure({ adapter: new Adapter() });
+const wrapper = shallow(<useAllThemes></useAllThemes>);
 
 test("matches snapshot", ()=>{
-    const tree = renderer.create(<Portfolio></Portfolio>).toJSON();
+    const tree = renderer.create(<useAllThemes></useAllThemes>).toJSON();
     expect(tree).toMatchSnapshot();
 })

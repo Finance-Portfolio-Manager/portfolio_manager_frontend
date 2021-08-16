@@ -240,3 +240,6 @@ export const PortfolioCard = (trans) => {
     </>
   );
 };
+
+//added
+export default PortfolioCard;

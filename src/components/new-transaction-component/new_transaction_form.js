@@ -8,7 +8,7 @@ export default function NewTransactionForm(props){
         <Form>
             <div class="container">
                 <Button name = "buy" value = "buysell" variant="info" type="button" onClick={props.buyConfirm} >Buy</Button>
-                <Button name = "sell" value = "buysell" variant="info" type="button" onClick={props.buyConfirm} >Sell</Button>
+                <Button name = "Sell" value = "buysell" variant="info" type="button" onClick={props.buyConfirm} >Sell</Button>
             </div>
             <div class="container">
                 <Form.Group>

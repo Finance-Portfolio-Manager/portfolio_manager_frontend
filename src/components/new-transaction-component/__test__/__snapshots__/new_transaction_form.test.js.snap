@@ -22,7 +22,7 @@ exports[`matches snapshot 1`] = `
       <button
         className="btn btn-info"
         disabled={false}
-        name="sell"
+        name="Sell"
         type="button"
         value="buysell"
       >

@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  className="site-card-border-less-wrapper"
+>
+  <div
+    className="ant-card card-body"
+    style={
+      Object {
+        "width": 300,
+      }
+    }
+  >
+    <div
+      className="ant-card-body"
+      style={Object {}}
+    >
+      <h1
+        className="card-header"
+      >
+        @Username
+      </h1>
+      <div
+        className="chart-container"
+      >
+        <canvas
+          className="zoom"
+          data-testid="canvas"
+          height={150}
+          onClick={[Function]}
+          role="img"
+          width={300}
+        />
+      </div>
+      <h2
+        className="card-header"
+      >
+        $118.99
+      </h2>
+    </div>
+  </div>
+</div>
+`;

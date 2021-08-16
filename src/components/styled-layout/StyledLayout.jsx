@@ -12,7 +12,7 @@ import { Content, Footer, Header } from "antd/lib/layout/layout";
 // import GrandFetchCard from "./chart.js-components/Total/GrandFetchCard";
 import FetchCard from "./chart.js-components/Single/FetchCard";
 // import { Chart } from "react-chartjs-2";
-export const StyledLayout = (props) => {
+const StyledLayout = (props) => {
 
   return (
     <React.Fragment>
@@ -49,3 +49,5 @@ export const StyledLayout = (props) => {
     </React.Fragment>
   );
 };
+
+export default StyledLayout;

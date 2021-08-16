@@ -4,6 +4,8 @@ import RegisterForm from './../register-form';
 
 import { render, cleanup } from '@testing-library/react';
 
+import renderer from "react-test-renderer";
+
 import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
@@ -13,6 +15,11 @@ configure({ adapter: new Adapter() });
 const wrapper = shallow(<RegisterForm></RegisterForm>);
 
 afterEach(cleanup);
+
+test("matches snapshot", ()=>{
+    const tree = renderer.create(<RegisterForm></RegisterForm>);
+    expect(tree).toMatchSnapshot();
+})
 
 test("renders without crashing", ()=>{
     const div = document.createElement("div");
