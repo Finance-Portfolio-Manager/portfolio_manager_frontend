@@ -43,16 +43,20 @@ export default function Account(props){
     */
 
     
-    /*
+    
     useEffect(()=>{
-        axios.get()
-        axios.get(process.env.REACT_APP_API_URL+"/portfolio/"+"", {headers: {"Authorization": sessionStorage.getItem("Authorization")}}
-        .then(
-
-        )
-    )
-    }, []);
-    */
+        console.log(`Url from account-component: ${process.env.REACT_APP_API_URL}`);
+        axios.get(process.env.REACT_APP_API_URL+"/login", {headers: {"Authorization": sessionStorage.getItem("Authorization")}})
+        .then(userResponse => {
+            console.log(JSON.stringify(userResponse))
+            axios.get(process.env.REACT_APP_API_URL+"/portfolio/"+userResponse.userId, {headers: {"Authorization": sessionStorage.getItem("Authorization")}})
+            .then(portfoliosResponse => {
+                console.log(JSON.stringify(portfoliosResponse));
+            })
+        })
+        
+        }, []);
+    
     return <AccountView portfolioArray={portfolioArray} user={user}/>
 
 }
