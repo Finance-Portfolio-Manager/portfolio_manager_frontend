@@ -1,22 +1,34 @@
 import userEvent from "@testing-library/user-event";
+import axios;
 import React from "react";
 
 export default function CreatePortfolio() {
 
     return (<>
-
     {
-    /* TODO send JWT to get user object from server */
+        const URL = "apexstocks.xyz";
 
     /* Sends JWT to get user object from server */
-
         function convertJwtToUser() {
             let user = {};
 
             /* TODO get the JWT from session storage */
-            /* TODO make call to server */
-            /* TODO put results in object */
-        }
+
+            axios.get(URL + "/login", JSON.stringify(registrationInfo), {headers:{'Content-Type': 'application/json'}})
+                .then(response=>{
+                    user = response.data;
+                })
+                .catch(function (error) {
+                    if (!error.response) {
+                        console.log("not connected to anything");
+                    }
+                    else if (error.response.status < 200 || error.response.status > 299) {
+                        console.log("Unknown error occurred when resolving JWT to a user object");
+                    }
+                });
+
+            return;
+        };
 
     /* Convert HTML form to JSON */
         function handleSubmit(event) {            
@@ -25,7 +37,7 @@ export default function CreatePortfolio() {
 
             const values = Object.fromEntries(data.entries());
             document.getElementById('submitForm').submit();
-        }
+        };
 
         document.querySelector('form').addEventListener('submit', handleSubmit);
     }
