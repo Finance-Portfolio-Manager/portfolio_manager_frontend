@@ -30,7 +30,11 @@ export default function AccountView(props){
             
             <div className="container" style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
                 <div className="row">
-                    <h2>Your Portfolios</h2>
+                    {props.portfolioArray.length > 0 ?
+                        <h2>Your Portfolios</h2>
+                        :
+                        <></>
+                    }   
 
                     {displayPortfolio ? 
                     <PrivatePortfolioDetails portfolio={displayPortfolio} user={props.user} unassignDisplayPortfolio={unassignDisplayPortfolio}/>
@@ -39,14 +43,18 @@ export default function AccountView(props){
 
                     <div className="row py-3" style={{borderStyle: "solid"}}>
                         
-                        {props.portfolioArray.map((portfolio) => {
+                        {props.portfolioArray.length > 0 ? 
+                            props.portfolioArray.map((portfolio) => {
                                 return(                 
                                     <PrivatePortfolioView 
                                     portfolio={portfolio} 
                                     user={props.user} 
                                     assignDisplayPortfolio={assignDisplayPortfolio}/>
                                 )
-                        })}
+                            })
+                            :
+                            <h2>You don't have any portfolios yet</h2>
+                        }
                     </div>
                 </div>
             </div>

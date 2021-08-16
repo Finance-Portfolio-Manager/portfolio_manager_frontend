@@ -1,7 +1,7 @@
 import React from "react";
 import PortfolioCard from "../portfolio-components/private-portfolio-component/private-portfolio-view";
 import AccountView from "./account-view-component"
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 
 //TODO: will be importing functions not yet defined
@@ -11,7 +11,7 @@ import axios from "axios";
 export default function Account(props){
 
     //TODO: This data is probably going to be sent to the Account component as a prop when a user logs in
-    let user={username: "testUser", email: "testUser@gmail.com"};
+    //let user={username: "testUser", email: "testUser@gmail.com"};
 
     //TODO: This data should already be part of the portfolio when we pull it from the server
     let stock1 = {stockName:"Amazon", stockQuantity:10, stockAveragePrice:3300, stockCurrentPrice:3400, stockChange:8};
@@ -35,23 +35,28 @@ export default function Account(props){
     let portObj5 = {id: 5, name:"Portfolio 5", value:portfolioValue, stockList: stockList};
     let portObj6 = {id: 6, name:"Portfolio 6", value:portfolioValue, stockList: stockList};
 
-    let portfolioArray = [portObj1, portObj2, portObj3, portObj4, portObj5, portObj6]; 
+    let portArray = [portObj1, portObj2, portObj3, portObj4, portObj5, portObj6]; 
 
 
     /*
         server call functions get written here.
     */
 
+    let [portfolioArray, setPortfolioArray] = useState([]);
+    let [user, setUser] = useState({})
     
     
     useEffect(()=>{
-        console.log(`Url from account-component: ${process.env.REACT_APP_API_URL}`);
-        axios.get(process.env.REACT_APP_API_URL+"/login", {headers: {"Authorization": sessionStorage.getItem("Authorization")}})
+        axios.get(process.env.REACT_APP_API_URL+"/login?token="+sessionStorage.getItem("Authorization"), 
+            {headers: {"Authorization": sessionStorage.getItem("Authorization")}})
         .then(userResponse => {
-            console.log(JSON.stringify(userResponse))
-            axios.get(process.env.REACT_APP_API_URL+"/portfolio/"+userResponse.userId, {headers: {"Authorization": sessionStorage.getItem("Authorization")}})
+            setUser(userResponse.data);
+            
+            axios.get(process.env.REACT_APP_API_URL+"/portfolios/"+userResponse.data.userId, 
+            {headers: {"Authorization": sessionStorage.getItem("Authorization"),
+                        "Access-Control-Allow-Origin": sessionStorage.getItem("Authorization")}})
             .then(portfoliosResponse => {
-                console.log(JSON.stringify(portfoliosResponse));
+                setPortfolioArray(portfoliosResponse.data);
             })
         })
         

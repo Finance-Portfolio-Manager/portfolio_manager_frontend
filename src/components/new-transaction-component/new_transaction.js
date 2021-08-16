@@ -34,7 +34,7 @@ export default function NewTransaction(props){
     }
 
     const createNewTransaction = (e)=>{
-        jwtToken = sessionStorage.getItem("Authorization");
+        let jwtToken = sessionStorage.getItem("Authorization");
         // transaction.isBuy = true;
         e.preventDefault();
         // axios.post("http://23.22.140.95:8082/transactions/new", transaction, {headers: {'Content-Type': 'application/json'}})
