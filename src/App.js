@@ -1,5 +1,5 @@
 import './css/portfolio-styles.css'
-import './App.css';
+// import './App.css';
 import { useEffect } from 'react';
 import Main from './components/MainComponent';
 import 'bootstrap-icons/font/bootstrap-icons.css';
