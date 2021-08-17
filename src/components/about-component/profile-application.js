@@ -10,12 +10,12 @@ export default function ProfileComponent(){
     const [id, setId] = useState("");
 
 
-let idValue="";
-const onButtonClick = (e)=>{
-    idValue = e.target.id;
-    setButtonName(e.target.id);
-    setId(e.target.id);
-}
+    let idValue="";
+    const onButtonClick = (e)=>{
+        idValue = e.target.id;
+        setButtonName(e.target.id);
+        setId(e.target.id);
+    }
 
     return (
         <Container>

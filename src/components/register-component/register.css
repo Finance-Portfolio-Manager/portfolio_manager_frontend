@@ -15,7 +15,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #474C55;
+    /* background-color: #474C55; */
+    background: url("./pic5.jpg");
+    background-size: cover;
+    /* background-color: var(--medium-dark-background); */
 }
 .App__container > * {
     background: transparent;
@@ -71,7 +74,8 @@
 .form__style .submitButton {
     padding: 10px 50px;
     border-radius: 8px;
-    background-color: #F26925;
+    /* background-color: #F26925; */
+    background-color: var(--medium-light-background);
     color: #FFF;
     font-weight: 600;
 }

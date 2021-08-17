@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  className="undefined dropdown"
+>
+  <div
+    className="btn rounded-0 "
+    href=""
+    onMouseEnter={[Function]}
+  >
+    <span
+      className="text-white"
+    />
+  </div>
+</div>
+`;
+
+exports[`matches snapshot 2`] = `
+<div
+  className="undefined dropdown"
+>
+  <div
+    className="btn rounded-0 navhighlight"
+    href=""
+    onMouseEnter={[Function]}
+  >
+    <span
+      className="text-white"
+    >
+      Portfolios
+    </span>
+  </div>
+  <div
+    className="undefined p-0 m-0 rounded-0 dropdown-menu show"
+    style={
+      Object {
+        "left": "0",
+        "opacity": "0",
+        "pointerEvents": "none",
+        "position": "absolute",
+        "top": "0",
+      }
+    }
+    x-placement="bottom-start"
+  />
+</div>
+`;

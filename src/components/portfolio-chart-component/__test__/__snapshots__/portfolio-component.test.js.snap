@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  id="chart"
+>
+  <div
+    height={350}
+    options={
+      Object {
+        "chart": Object {
+          "height": 350,
+          "type": "line",
+          "zoom": Object {
+            "enabled": false,
+          },
+        },
+        "grid": Object {
+          "borderColor": "#f1f1f1",
+        },
+        "legend": Object {
+          "tooltipHoverFormatter": [Function],
+        },
+        "markers": Object {
+          "hover": Object {
+            "sizeOffset": 6,
+          },
+          "size": 0,
+        },
+        "stroke": Object {
+          "curve": "straight",
+          "dashArray": Array [
+            0,
+            8,
+          ],
+          "width": Array [
+            5,
+            7,
+          ],
+        },
+        "title": Object {
+          "align": "center",
+          "text": "Portfolio Statistics",
+        },
+        "tooltip": Object {
+          "y": Array [
+            Object {
+              "title": Object {
+                "formatter": [Function],
+              },
+            },
+            Object {
+              "title": Object {
+                "formatter": [Function],
+              },
+            },
+          ],
+        },
+        "xaxis": Object {
+          "categories": Array [
+            "Aug 1",
+            "Aug 2",
+            "Aug 3",
+            "Aug 4",
+            "Aug 5",
+            "Aug 6",
+            "Aug 7",
+          ],
+          "convertedCatToNumeric": true,
+          "type": "category",
+        },
+      }
+    }
+    series={
+      Array [
+        Object {
+          "data": Array [
+            4263.25,
+            4567.25,
+            4583.25,
+            4363.25,
+            3863.15,
+            4343.77,
+            4168.25,
+          ],
+          "name": "Portfolio Value",
+        },
+        Object {
+          "data": Array [
+            3963.25,
+            4162.77,
+            4081.77,
+            4363.25,
+            4663.25,
+            4863.25,
+            4063.25,
+          ],
+          "name": "Amount Invested",
+        },
+      ]
+    }
+    type="line"
+    width={800}
+  />
+</div>
+`;

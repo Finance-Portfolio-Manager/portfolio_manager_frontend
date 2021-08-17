@@ -1,0 +1,552 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+Array [
+  <nav
+    className="navbar navbar-expand-lg navbar-dark bg-dark primary-color"
+  >
+    <div
+      className="container-fluid  py-0"
+    >
+      <a
+        className="navbar-brand"
+      >
+        Team Name
+      </a>
+      <button
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+        className="navbar-toggler"
+        data-bs-target="#navbarNav"
+        data-bs-toggle="collapse"
+        type="button"
+      >
+        <span
+          className="navbar-toggler-icon"
+        />
+      </button>
+      <div
+        className="collapse navbar-collapse"
+        id="navbarNav"
+      >
+        <div
+          className=" d-flex flex-column flex-md-row justify-content-between flex-fill"
+        >
+          <ul
+            className="navbar-nav primary-text"
+          >
+            <li
+              className="nav-item"
+            >
+              <a
+                aria-current="page"
+                className="nav-link active"
+                href="/home"
+              >
+                Home
+              </a>
+            </li>
+            <li
+              className="nav-item"
+            >
+              <div
+                className="text-white py-0 border-0 dropdown"
+              >
+                <div
+                  className="btn rounded-0 "
+                  href=""
+                  onMouseEnter={[Function]}
+                >
+                  <span
+                    className="text-white"
+                  >
+                    Portfolios
+                  </span>
+                </div>
+              </div>
+            </li>
+            <li
+              className="nav-item"
+            >
+              <a
+                aria-current="page"
+                className="nav-link active"
+                href="#"
+              >
+                About Us
+              </a>
+              <div
+                className="text-white py-0 border-0 dropdown"
+              >
+                <div
+                  className="btn rounded-0 "
+                  href=""
+                  onMouseEnter={[Function]}
+                >
+                  <span
+                    className="text-white"
+                  >
+                    Stocks
+                  </span>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <div
+            className="d-flex align-self-center me-3"
+          >
+            <span
+              className="align-self-center p1"
+            >
+              <i
+                className="bi-person-circle text-white"
+              />
+            </span>
+            <div
+              className="navbar-nav dropdown"
+            >
+              <a
+                aria-expanded="false"
+                className="nav-link dropdown-toggle active"
+                data-bs-toggle="dropdown"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+              >
+                Account
+              </a>
+              <ul
+                aria-labelledby="navbarDropdown"
+                className="dropdown-menu dropdown-menu-end dropdown-menu-gray"
+              >
+                <li>
+                  <a
+                    className="dropdown-item"
+                    href="/login"
+                  >
+                    Log in
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="dropdown-item"
+                    href="/register"
+                  >
+                    Sign up
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="dropdown-item"
+                    href="/home"
+                  >
+                    Log Out
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>,
+  <div
+    className=" marquee-container"
+    style={
+      Object {
+        "--pause-on-click": "running",
+        "--pause-on-hover": "running",
+        "backgroundColor": "black",
+        "color": "white",
+        "marginTop": 0,
+        "paddingBottom": 2,
+        "position": "sticky",
+        "top": 0,
+        "zIndex": 100,
+      }
+    }
+  >
+    <div
+      className="marquee"
+      style={
+        Object {
+          "--delay": "0s",
+          "--direction": "normal",
+          "--duration": "0s",
+          "--iteration-count": "infinite",
+          "--play": "running",
+        }
+      }
+    />
+    <div
+      className="marquee"
+      style={
+        Object {
+          "--delay": "0s",
+          "--direction": "normal",
+          "--duration": "0s",
+          "--iteration-count": "infinite",
+          "--play": "running",
+        }
+      }
+    />
+  </div>,
+  <button
+    className="sc-bdnxRM gqeRkV float"
+    onClick={[Function]}
+  >
+    CHANGE THEME
+  </button>,
+  <div
+    className="secondary-color"
+  >
+    <div>
+      <div
+        className="home__hero-section darkBg secondary-color"
+      >
+        <div
+          className="container"
+        >
+          <div
+            className="row home__hero-row"
+            style={
+              Object {
+                "display": "flex",
+                "flexDirection": "row",
+              }
+            }
+          >
+            <div
+              className="col"
+            >
+              <div
+                className="home__hero-text-wrapper"
+              >
+                <div
+                  className="top-line accent-color"
+                >
+                  Portfolio Manager Project
+                </div>
+                <h1
+                  className="heading"
+                >
+                  TBA
+                </h1>
+                <p
+                  className="home__hero-subtitle"
+                >
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel urna id diam tincidunt pretium non et sem. 
+                </p>
+                <a
+                  href="/"
+                  onClick={[Function]}
+                >
+                  <button
+                    className="btn btn-primary"
+                    disabled={false}
+                    type="button"
+                  >
+                    Get Started
+                  </button>
+                </a>
+              </div>
+            </div>
+            <div
+              className="col"
+            >
+              <div
+                className="home__hero-img-wrapper"
+              >
+                <img
+                  alt="Credit Card"
+                  className="home__hero-img"
+                  src="images/banner.svg"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  <div
+    className="footer bg-dark min-vh-45 d-flex flex-column pt-md-5 align-items-center overflow-auto primary-color"
+  >
+    <div
+      className="d-flex flex-column flex-md-row w-100 justify-content-center"
+    >
+      <div
+        className="card border-0 w-md-15 bg-transparent"
+      >
+        <div
+          className="card-body d-flex flex-column"
+        >
+          <span
+            className="card-title text-white text-uppercase mb-3"
+          >
+            Service
+          </span>
+          <a
+            className="text-decoration-none text-white small mb-2"
+            href="/"
+          >
+            Investment Relations
+          </a>
+          <a
+            className="text-decoration-none text-white small mb-2"
+            href="/"
+          >
+            Accessiblity
+          </a>
+          <a
+            className="text-decoration-none text-white small mb-2"
+            href="/"
+          >
+             Company Over
+          </a>
+          <a
+            className="text-decoration-none text-white smallmb-2 "
+            href="/"
+          >
+            Stocks Plans
+          </a>
+        </div>
+      </div>
+      <div
+        className="card border-0 w-md-15 bg-transparent"
+      >
+        <div
+          className="card-body d-flex flex-column"
+        >
+          <span
+            className="card-title text-white text-uppercase mb-3"
+          >
+            Portfolio
+          </span>
+          <a
+            className="text-decoration-none text-white small mb-2"
+            href="/"
+          >
+            Financial and Application
+          </a>
+          <a
+            className="text-decoration-none text-white small mb-2"
+            href="/"
+          >
+            Executive Services
+          </a>
+          <a
+            className="text-decoration-none text-white small mb-2"
+            href="/"
+          >
+            Protections and Guarantees
+          </a>
+        </div>
+      </div>
+      <div
+        className="card border-0 w-md-15 bg-transparent"
+      >
+        <div
+          className="card-body d-flex flex-column"
+        >
+          <span
+            className="card-title text-white text-uppercase mb-3"
+          >
+            About Stock History
+          </span>
+          <a
+            className="text-decoration-none text-white small mb-2"
+            href="/"
+          >
+            About Us
+          </a>
+          <a
+            className="text-decoration-none text-white small mb-2"
+            href="/"
+          >
+            Customer Reviews
+          </a>
+          <a
+            className="text-decoration-none text-white small mb-2"
+            href="/"
+          >
+            Careers
+          </a>
+        </div>
+      </div>
+      <div
+        className="card border-0 w-md-15 bg-transparent"
+      >
+        <div
+          className="card-body d-flex flex-column"
+        >
+          <span
+            className="card-title text-white text-uppercase mb-3"
+          >
+            Support
+          </span>
+          <a
+            className="text-decoration-none text-white small mb-2"
+            href="/"
+          >
+            Contact Us
+          </a>
+          <a
+            className="text-decoration-none text-white small mb-2"
+            href="/"
+          >
+            FAQ
+          </a>
+          <a
+            className="text-decoration-none text-white small mb-2"
+            href="/"
+          >
+            Business Partnerships
+          </a>
+          <a
+            className="text-decoration-none text-white small mb-2"
+            href="/"
+          >
+            Media Relations
+          </a>
+        </div>
+      </div>
+    </div>
+    <div
+      className="d-flex w-md-75 ps-md-3 flex-column align-items-center"
+    >
+      <div
+        className="d-flex"
+      >
+        <a
+          className="text-decoration-none text-white small text-uppercase"
+          href="/"
+        >
+          Search
+        </a>
+        <span
+          className="text-decoration-none text-white small mx-2"
+        >
+          |
+        </span>
+        <a
+          className="text-decoration-none text-white small text-uppercase"
+          href="/"
+        >
+          Stocks
+        </a>
+        <span
+          className="text-decoration-none text-white small mx-2"
+        >
+          |
+        </span>
+        <a
+          className="text-decoration-none text-white small text-uppercase"
+          href="/"
+        >
+          User Protections
+        </a>
+        <span
+          className="text-decoration-none text-white small mx-2"
+        >
+          |
+        </span>
+        <a
+          className="text-decoration-none text-white small text-uppercase"
+          href="/"
+        >
+          Blog
+        </a>
+      </div>
+      <div
+        className="d-flex w-md-25 justify-content-between"
+      >
+        <a
+          href="/"
+        >
+          <i
+            className="bi bi-facebook fs-1 text-white ms-2 ms-md-0"
+          />
+        </a>
+        <a
+          href="/"
+        >
+          <i
+            className="bi bi-twitter fs-1 text-white"
+          />
+        </a>
+        <a
+          href="/"
+        >
+          <i
+            className="bi bi-instagram fs-1 text-white"
+          />
+        </a>
+        <a
+          href="/"
+        >
+          <i
+            className="bi bi-youtube fs-1 text-white me-2 me-md-0"
+          />
+        </a>
+      </div>
+    </div>
+    <hr
+      className="bg-white w-75"
+    />
+    <div
+      className="d-flex flex-column my-3"
+    >
+      <span
+        className="text-white"
+      >
+        Copyright © 2021 Stock Portfolio. All Rights Reserved
+      </span>
+      <div
+        className="d-flex"
+      >
+        <a
+          className="text-decoration-none text-white small text-capitalized"
+          href="/termsandconditions"
+        >
+          Terms and Conditions
+        </a>
+        <span
+          className="text-decoration-none text-white small mx-2"
+        >
+          |
+        </span>
+        <a
+          className="text-decoration-none text-white small text-capitalized"
+          href="/privacyandpolicy"
+        >
+          Privacy Policy
+        </a>
+        <span
+          className="text-decoration-none text-white small mx-2"
+        >
+          |
+        </span>
+        <a
+          className="text-decoration-none text-white small text-capitalized"
+          href="/businesscodeofethics"
+        >
+          Business Code of Ethics
+        </a>
+        <span
+          className="text-decoration-none text-white small mx-2"
+        >
+          |
+        </span>
+        <a
+          className="text-decoration-none text-white small text-capitalized"
+          href="/"
+        >
+          Site Map
+        </a>
+      </div>
+    </div>
+  </div>,
+]
+`;

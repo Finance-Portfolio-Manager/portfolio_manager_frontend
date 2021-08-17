@@ -1,0 +1,126 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  className="wrapper fadeInDown folioContent"
+  id="portfolio"
+>
+  <div
+    id="portfolio-values"
+  >
+    <h4
+      id="portfolio-total"
+    />
+    <div
+      id="portfolio-change"
+    />
+    <div
+      id="dollar-change"
+    />
+  </div>
+  <div
+    className="table-responsive"
+  >
+    <div
+      className="table-responsive"
+    >
+      <table
+        className="table borderless table-hover table"
+        id="stocks-view"
+      >
+        <thead>
+          <tr>
+            <th
+              scope="col"
+            >
+              Stock
+            </th>
+            <th
+              scope="col"
+            >
+              Quantity
+            </th>
+            <th
+              scope="col"
+            >
+              Average Buy Price
+            </th>
+            <th
+              scope="col"
+            >
+              Current Price
+            </th>
+            <th
+              scope="col"
+            >
+              P/L
+            </th>
+          </tr>
+        </thead>
+        <tbody
+          id="stocks-body"
+        >
+          <tr>
+            <td>
+              Amazon
+            </td>
+            <td>
+              10
+            </td>
+            <td>
+              3300
+            </td>
+            <td>
+              3400
+            </td>
+            <td>
+              8
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Tesla
+            </td>
+            <td>
+              15
+            </td>
+            <td>
+              700
+            </td>
+            <td>
+              715
+            </td>
+            <td>
+              2
+            </td>
+          </tr>
+          <tr>
+            <td>
+              AMC
+            </td>
+            <td>
+              20
+            </td>
+            <td>
+              10
+            </td>
+            <td>
+              33
+            </td>
+            <td>
+              230
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <button
+      className="btn btn-primary"
+      disabled={false}
+      type="button"
+    >
+      Go to card
+    </button>
+  </div>
+</div>
+`;

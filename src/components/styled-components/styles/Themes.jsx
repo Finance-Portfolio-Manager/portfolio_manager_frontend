@@ -23,6 +23,19 @@ export const lightTheme = {
     // gradientStyle: `linear-gradient(109.36deg, rgba(215, 39, 219, 0.7) -4.44%, ${theme.accentColor}, #C4C4C4 !important`
     type: 'light'
 }
+
+// export const darkTheme = {
+//     body: '#363537' ,
+//     text: '#FAFAFA',
+//     toggleBorder: '#6B8096',
+//     background: '#999',
+//     darkestDark: '#151B2C',
+//     mediumDark: '#21293E',
+//     primaryColor: '#151B2C',
+//     secondaryColor: '#21293E',
+//     accentColor: '#F00281',
+// }
+
 export const darkTheme = {
     // body: '#363537' ,
     // text: '#FAFAFA',

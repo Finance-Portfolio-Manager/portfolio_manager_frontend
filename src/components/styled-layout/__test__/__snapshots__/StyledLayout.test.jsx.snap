@@ -1,0 +1,278 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<section
+  className="ant-layout layout-background"
+>
+  <header
+    className="ant-layout-header nav-temp"
+    style={
+      Object {
+        "position": "fixed",
+        "width": "100%",
+        "zIndex": 1,
+      }
+    }
+  />
+  <main
+    className="ant-layout-content site-layout"
+    style={
+      Object {
+        "marginTop": 64,
+        "padding": "0 50px",
+      }
+    }
+  >
+    <div
+      className="ant-breadcrumb styled-text"
+      style={
+        Object {
+          "margin": "16px 0",
+        }
+      }
+    >
+      <span>
+        <span
+          className="styled-text"
+        >
+          Home
+        </span>
+        <span
+          className="ant-breadcrumb-separator"
+        >
+          /
+        </span>
+      </span>
+      <span>
+        <span
+          className="styled-text"
+        >
+          List
+        </span>
+        <span
+          className="ant-breadcrumb-separator"
+        >
+          /
+        </span>
+      </span>
+      <span>
+        <span
+          className="styled-text"
+        >
+          App
+        </span>
+        <span
+          className="ant-breadcrumb-separator"
+        >
+          /
+        </span>
+      </span>
+    </div>
+    <div
+      className="site-layout-background"
+      style={
+        Object {
+          "minHeight": 380,
+          "padding": 24,
+        }
+      }
+    >
+      <div
+        className="ant-row grid-container"
+        style={Object {}}
+      >
+        <div
+          className="ant-col"
+          style={Object {}}
+        >
+          <div
+            className="site-card-border-less-wrapper"
+          >
+            <div
+              className="ant-card card-body"
+              style={
+                Object {
+                  "width": 300,
+                }
+              }
+            >
+              <div
+                className="ant-card-body"
+                style={Object {}}
+              >
+                <h1
+                  className="card-header"
+                >
+                  @Username
+                </h1>
+                <div
+                  className="chart-container"
+                >
+                  <canvas
+                    className="zoom"
+                    data-testid="canvas"
+                    height={150}
+                    onClick={[Function]}
+                    role="img"
+                    width={300}
+                  />
+                </div>
+                <h2
+                  className="card-header"
+                >
+                  $118.99
+                </h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="ant-col"
+          style={Object {}}
+        >
+          <div
+            className="site-card-border-less-wrapper"
+          >
+            <div
+              className="ant-card card-body"
+              style={
+                Object {
+                  "width": 300,
+                }
+              }
+            >
+              <div
+                className="ant-card-body"
+                style={Object {}}
+              >
+                <h1
+                  className="card-header"
+                >
+                  @Username
+                </h1>
+                <div
+                  className="chart-container"
+                >
+                  <canvas
+                    className="zoom"
+                    data-testid="canvas"
+                    height={150}
+                    onClick={[Function]}
+                    role="img"
+                    width={300}
+                  />
+                </div>
+                <h2
+                  className="card-header"
+                >
+                  $118.99
+                </h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="ant-col"
+          style={Object {}}
+        >
+          <div
+            className="site-card-border-less-wrapper"
+          >
+            <div
+              className="ant-card card-body"
+              style={
+                Object {
+                  "width": 300,
+                }
+              }
+            >
+              <div
+                className="ant-card-body"
+                style={Object {}}
+              >
+                <h1
+                  className="card-header"
+                >
+                  @Username
+                </h1>
+                <div
+                  className="chart-container"
+                >
+                  <canvas
+                    className="zoom"
+                    data-testid="canvas"
+                    height={150}
+                    onClick={[Function]}
+                    role="img"
+                    width={300}
+                  />
+                </div>
+                <h2
+                  className="card-header"
+                >
+                  $118.99
+                </h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="ant-col"
+          style={Object {}}
+        >
+          <div
+            className="site-card-border-less-wrapper"
+          >
+            <div
+              className="ant-card card-body"
+              style={
+                Object {
+                  "width": 300,
+                }
+              }
+            >
+              <div
+                className="ant-card-body"
+                style={Object {}}
+              >
+                <h1
+                  className="card-header"
+                >
+                  @Username
+                </h1>
+                <div
+                  className="chart-container"
+                >
+                  <canvas
+                    className="zoom"
+                    data-testid="canvas"
+                    height={150}
+                    onClick={[Function]}
+                    role="img"
+                    width={300}
+                  />
+                </div>
+                <h2
+                  className="card-header"
+                >
+                  $118.99
+                </h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer
+    className="ant-layout-footer nav-temp styled-text"
+    style={
+      Object {
+        "textAlign": "center",
+      }
+    }
+  >
+    Team 2 | Component
+  </footer>
+</section>
+`;

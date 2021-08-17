@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  className="example"
+>
+  <div
+    className="row"
+  >
+    <div
+      className="mixed-chart"
+    >
+      <div
+        height="auto"
+        options={
+          Object {
+            "chart": Object {
+              "height": 350,
+            },
+            "title": Object {
+              "align": "left",
+              "text": undefined,
+            },
+            "xaxis": Object {
+              "convertedCatToNumeric": false,
+              "type": "datetime",
+            },
+            "yaxis": Object {
+              "tooltip": Object {
+                "enabled": true,
+              },
+            },
+          }
+        }
+        series={
+          Array [
+            Object {
+              "data": undefined,
+            },
+          ]
+        }
+        type="line"
+        width="100%"
+      />
+    </div>
+  </div>
+</div>
+`;
