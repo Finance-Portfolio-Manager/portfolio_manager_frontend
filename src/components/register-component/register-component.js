@@ -1,9 +1,13 @@
 import axios from "axios";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import RegisterForm from "./register-form";
+import {Route, Redirect} from 'react-router-dom';
+import Login from "../login-component/login";
 
 // const URL = "http://localhost:8082";
 const URL = process.env.REACT_APP_API_URL;
+// const isLoggedIn = sessionStorage.getItem("Authorization");
+
 
 export default function Register(props) {
 
@@ -41,6 +45,8 @@ export default function Register(props) {
                 .then(response=>{
                     console.log(response.data);
                     // props.history.push("/");
+                    // <Route exact path ="/"> {isLoggedIn ? <Redirect to="/login"/> : <Login /> }</Route>
+                    window.location.href="/login";
                 })
 
                 .catch(function (error) {

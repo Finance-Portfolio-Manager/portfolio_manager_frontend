@@ -5,10 +5,10 @@ import React, { useState } from 'react';
 export default function Navigation() {
     const [dropdownShowpPortfolio, setDropDrownShowPortfolio] = useState(false);
     return (
-        <div className="container-fluid  py-0">
+        <div className="container-fluid p-0">
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark primary-color">
                 {/* TODO: Change logo to svg file */}
-                <img src={ApexLogo} alt="Logo" />
+                <img className="m-2" src={ApexLogo} alt="Logo" />
 
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
@@ -37,7 +37,7 @@ export default function Navigation() {
                                 <a className="nav-link active" aria-current="page" href="/about">About Us</a>
                             </li>
                             <li className="nav-item">
-                                <a className='text-dark nav-link active align-item-center' aria-current="page" href="/new-transaction">Transaction</a>
+                                <a className='nav-link active align-item-center' aria-current="page" href="/new-transaction">Transaction</a>
                             </li>
                         </ul>
                         <div className="d-flex align-self-center me-3">

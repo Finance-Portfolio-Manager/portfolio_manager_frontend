@@ -15,7 +15,6 @@ import { useAllThemes } from './styled-components/components/AllThemes';
 import { themeMode as themeSwitch } from './styled-components/components/themeMode';
 import ToggleButton from './styled-components/components/ToggleButton';
 import NewTransaction from './new-transaction-component/new_transaction';
-import Chart from './portfolio-chart-component/portfolio-chart';
 import { NewsPage } from './news-component/layout/NewsPage';
 import Chart from './portfolio-chart-component/portfolio-chart';
 import GenericChart from './chart-component/generic-chart';

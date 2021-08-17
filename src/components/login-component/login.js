@@ -35,6 +35,7 @@ function Login(props){
                 console.log(response.data.jwt);
                 sessionStorage.setItem("Authorization", response.data.jwt);
                 // props.history.push("/"); to portfolio?
+                window.location.href="/";
             })
             .catch(function (error) {
                 if(error && !error.response) {
