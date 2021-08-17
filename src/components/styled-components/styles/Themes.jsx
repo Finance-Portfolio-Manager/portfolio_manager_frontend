@@ -100,7 +100,7 @@ export const themeSelection = [
     {version: 'green', themePack: greenTheme, type: 'dark' },
     {version: 'blue gray', themePack: blueGrayTheme, type: 'dark' },
     // {version: 'orange', themePack: orangeTheme, type: 'light' },
-    {version: 'lavender', themePack: lavenderTheme, type: 'light' },
+    // {version: 'lavender', themePack: lavenderTheme, type: 'light' },
     // {version: 'ugly rose', themePack: uglyRoseTheme, type: 'light' },
 ];
 //returns theme names only
