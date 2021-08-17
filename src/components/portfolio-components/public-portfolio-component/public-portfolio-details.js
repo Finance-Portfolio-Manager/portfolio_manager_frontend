@@ -1,4 +1,4 @@
-import {Row, Col} from "react-bootstrap";
+import {Row, Col, Card} from "react-bootstrap";
 import PublicPortfolioTable from "./public-portfolio-table";
 import PublicDoughnutChart from "../doughnut-chart-component/public-doughnut-chart";
 

@@ -26,7 +26,7 @@ export default function PublicPortfolioTable(props){
                             })}
                         </tbody>
                     </Table>
-                    <Button variant="primary" onClick={props.toggleShowDetails}>Go to card</Button>
+                    <Button variant="primary" onClick={props.toggleShowDetails}>Hide Details</Button>
                 </div>
             </div>   
         </>
