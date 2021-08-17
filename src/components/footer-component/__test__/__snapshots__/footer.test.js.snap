@@ -1,0 +1,282 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`footer rendering matches snapshot 1`] = `
+<div
+  className="footer bg-dark min-vh-45 d-flex flex-column pt-md-5 align-items-center overflow-auto primary-color"
+>
+  <div
+    className="d-flex flex-column flex-md-row w-100 justify-content-center"
+  >
+    <div
+      className="card border-0 w-md-15 bg-transparent"
+    >
+      <div
+        className="card-body d-flex flex-column"
+      >
+        <span
+          className="card-title text-white text-uppercase mb-3"
+        >
+          Service
+        </span>
+        <a
+          className="text-decoration-none text-white small mb-2"
+          href="/"
+        >
+          Investment Relations
+        </a>
+        <a
+          className="text-decoration-none text-white small mb-2"
+          href="/"
+        >
+          Accessiblity
+        </a>
+        <a
+          className="text-decoration-none text-white small mb-2"
+          href="/"
+        >
+           Company Over
+        </a>
+        <a
+          className="text-decoration-none text-white smallmb-2 "
+          href="/"
+        >
+          Stocks Plans
+        </a>
+      </div>
+    </div>
+    <div
+      className="card border-0 w-md-15 bg-transparent"
+    >
+      <div
+        className="card-body d-flex flex-column"
+      >
+        <span
+          className="card-title text-white text-uppercase mb-3"
+        >
+          Portfolio
+        </span>
+        <a
+          className="text-decoration-none text-white small mb-2"
+          href="/"
+        >
+          Financial and Application
+        </a>
+        <a
+          className="text-decoration-none text-white small mb-2"
+          href="/"
+        >
+          Executive Services
+        </a>
+        <a
+          className="text-decoration-none text-white small mb-2"
+          href="/"
+        >
+          Protections and Guarantees
+        </a>
+      </div>
+    </div>
+    <div
+      className="card border-0 w-md-15 bg-transparent"
+    >
+      <div
+        className="card-body d-flex flex-column"
+      >
+        <span
+          className="card-title text-white text-uppercase mb-3"
+        >
+          About Stock History
+        </span>
+        <a
+          className="text-decoration-none text-white small mb-2"
+          href="/"
+        >
+          About Us
+        </a>
+        <a
+          className="text-decoration-none text-white small mb-2"
+          href="/"
+        >
+          Customer Reviews
+        </a>
+        <a
+          className="text-decoration-none text-white small mb-2"
+          href="/"
+        >
+          Careers
+        </a>
+      </div>
+    </div>
+    <div
+      className="card border-0 w-md-15 bg-transparent"
+    >
+      <div
+        className="card-body d-flex flex-column"
+      >
+        <span
+          className="card-title text-white text-uppercase mb-3"
+        >
+          Support
+        </span>
+        <a
+          className="text-decoration-none text-white small mb-2"
+          href="/"
+        >
+          Contact Us
+        </a>
+        <a
+          className="text-decoration-none text-white small mb-2"
+          href="/"
+        >
+          FAQ
+        </a>
+        <a
+          className="text-decoration-none text-white small mb-2"
+          href="/"
+        >
+          Business Partnerships
+        </a>
+        <a
+          className="text-decoration-none text-white small mb-2"
+          href="/"
+        >
+          Media Relations
+        </a>
+      </div>
+    </div>
+  </div>
+  <div
+    className="d-flex w-md-75 ps-md-3 flex-column align-items-center"
+  >
+    <div
+      className="d-flex"
+    >
+      <a
+        className="text-decoration-none text-white small text-uppercase"
+        href="/"
+      >
+        Search
+      </a>
+      <span
+        className="text-decoration-none text-white small mx-2"
+      >
+        |
+      </span>
+      <a
+        className="text-decoration-none text-white small text-uppercase"
+        href="/"
+      >
+        Stocks
+      </a>
+      <span
+        className="text-decoration-none text-white small mx-2"
+      >
+        |
+      </span>
+      <a
+        className="text-decoration-none text-white small text-uppercase"
+        href="/"
+      >
+        User Protections
+      </a>
+      <span
+        className="text-decoration-none text-white small mx-2"
+      >
+        |
+      </span>
+      <a
+        className="text-decoration-none text-white small text-uppercase"
+        href="/"
+      >
+        Blog
+      </a>
+    </div>
+    <div
+      className="d-flex w-md-25 justify-content-between"
+    >
+      <a
+        href="/"
+      >
+        <i
+          className="bi bi-facebook fs-1 text-white ms-2 ms-md-0"
+        />
+      </a>
+      <a
+        href="/"
+      >
+        <i
+          className="bi bi-twitter fs-1 text-white"
+        />
+      </a>
+      <a
+        href="/"
+      >
+        <i
+          className="bi bi-instagram fs-1 text-white"
+        />
+      </a>
+      <a
+        href="/"
+      >
+        <i
+          className="bi bi-youtube fs-1 text-white me-2 me-md-0"
+        />
+      </a>
+    </div>
+  </div>
+  <hr
+    className="bg-white w-75"
+  />
+  <div
+    className="d-flex flex-column my-3"
+  >
+    <span
+      className="text-white"
+    >
+      Copyright © 2021 Stock Portfolio. All Rights Reserved
+    </span>
+    <div
+      className="d-flex"
+    >
+      <a
+        className="text-decoration-none text-white small text-capitalized"
+        href="/termsandconditions"
+      >
+        Terms and Conditions
+      </a>
+      <span
+        className="text-decoration-none text-white small mx-2"
+      >
+        |
+      </span>
+      <a
+        className="text-decoration-none text-white small text-capitalized"
+        href="/privacyandpolicy"
+      >
+        Privacy Policy
+      </a>
+      <span
+        className="text-decoration-none text-white small mx-2"
+      >
+        |
+      </span>
+      <a
+        className="text-decoration-none text-white small text-capitalized"
+        href="/businesscodeofethics"
+      >
+        Business Code of Ethics
+      </a>
+      <span
+        className="text-decoration-none text-white small mx-2"
+      >
+        |
+      </span>
+      <a
+        className="text-decoration-none text-white small text-capitalized"
+        href="/"
+      >
+        Site Map
+      </a>
+    </div>
+  </div>
+</div>
+`;

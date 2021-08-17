@@ -1,0 +1,114 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  className="App"
+>
+  <form
+    className=""
+  >
+    <div
+      className="aroundLogo"
+    >
+      <img
+        alt=""
+        className="logo"
+        src="revlogo.jpg"
+      />
+    </div>
+    <div
+      className="form-inner"
+    >
+      <h4>
+        Portfolio Manager
+      </h4>
+      <h6>
+        <em>
+          Account Registration
+        </em>
+      </h6>
+      <div
+        className="form-group"
+      >
+        <label
+          className="form-label"
+          htmlFor="form-email"
+        >
+          Email:
+        </label>
+        <input
+          className="form-control"
+          id="form-email"
+          name="email"
+          onChange={[Function]}
+          placeholder="Enter your email"
+          required={true}
+        />
+      </div>
+      <div
+        className="form-group"
+      >
+        <label
+          className="form-label"
+          htmlFor="form-username"
+        >
+          Username:
+        </label>
+        <input
+          className="form-control"
+          id="form-username"
+          name="username"
+          onChange={[Function]}
+          placeholder="Enter your username"
+          required={true}
+        />
+      </div>
+      <div
+        className="form-group"
+      >
+        <label
+          className="form-label"
+          htmlFor="form-password"
+        >
+          Password:
+        </label>
+        <input
+          className="form-control"
+          id="form-password"
+          name="password"
+          onChange={[Function]}
+          placeholder="Enter your password"
+          required={true}
+          type="password"
+        />
+      </div>
+      <div
+        className="form-group"
+      >
+        <label
+          className="form-label"
+          htmlFor="form-confirm-password"
+        >
+          Confirm Password:
+        </label>
+        <input
+          className="form-control"
+          id="form-confirm-password"
+          name="confirmPassword"
+          onChange={[Function]}
+          placeholder="Re-enter your password"
+          required={true}
+          type="password"
+        />
+      </div>
+      <button
+        className="submitButton mt-2"
+        onClick={[Function]}
+        type="submit"
+      >
+        Register
+      </button>
+    </div>
+  </form>
+</div>
+`;

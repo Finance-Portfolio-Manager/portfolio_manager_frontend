@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  class="wholeform"
+>
+  <form
+    className=""
+  >
+    <div
+      class="container"
+    >
+      <button
+        className="btn btn-info"
+        disabled={false}
+        name="buy"
+        type="button"
+        value="buysell"
+      >
+        Buy
+      </button>
+      <button
+        className="btn btn-info"
+        disabled={false}
+        name="Sell"
+        type="button"
+        value="buysell"
+      >
+        Sell
+      </button>
+    </div>
+    <div
+      class="container"
+    >
+      <div>
+        <label
+          className="form-label"
+        >
+          Stock Symbol:
+        </label>
+        <input
+          className="form-control"
+          name="stocksymbol"
+        />
+        <label
+          className="form-label"
+        >
+          Quantity:
+        </label>
+        <input
+          className="form-control"
+          name="shareAmount"
+          type="number"
+        />
+        <label
+          className="form-label"
+        >
+          Price:
+        </label>
+        <input
+          className="form-control"
+          name="sharePrice"
+          type="number"
+        />
+        <label
+          className="form-label"
+        >
+          Date:
+        </label>
+        <input
+          className="form-control"
+          name="date"
+          type="date"
+        />
+        <label
+          className="form-label"
+        >
+          Note:
+        </label>
+        <input
+          className="form-control"
+          name="note"
+        />
+      </div>
+    </div>
+    <div
+      class="container"
+    >
+      <button
+        className="btn btn-info"
+        disabled={false}
+        type="submit"
+      >
+        Add New Transaction
+      </button>
+      <button
+        className="btn btn-info"
+        disabled={false}
+        type="submit"
+      >
+        Test Get Transaction
+      </button>
+    </div>
+  </form>
+</div>
+`;

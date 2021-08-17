@@ -12,7 +12,7 @@ export const LandingPage = () => {
     return (
         <div>
             <HeroSection {...HomeBio}></HeroSection>
-            {/* <NewsPage /> */}
+            <NewsPage />
         </div>
     )
 }

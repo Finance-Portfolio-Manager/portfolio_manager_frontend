@@ -2,18 +2,19 @@ import { Card } from "react-bootstrap";
 import { BsPersonFill } from "react-icons/bs";
 import team from "./teams.json";
 
+
 export default function IndividualComponent(props){
 
     const createCard = (team)=>{
         return(
-        <div id="individual" className="card m-4 border-0">
-                <a href={team.profileLink} target="_blank" className="text-decoration-none text-white">{team.profileImage
+        <div id="individual" className="card my-2 border-0 mx-auto">
+                <a href={team.profileLink} target="_blank" className="text-white d-flex flex-fill justify-content-center">{team.profileImage
                     ? <div><img src={team.profileImage} className="images"></img></div>
                     : <div><BsPersonFill size={100}/></div>
                 }</a>
                 <hr></hr>
                 <Card.Body>
-                <p>{team.name}</p>
+                <p className='primary-text'>{team.name}</p>
                 </Card.Body>
         </div>
         )

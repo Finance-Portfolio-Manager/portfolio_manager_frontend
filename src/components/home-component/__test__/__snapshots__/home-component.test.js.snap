@@ -1,0 +1,125 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`rendering home component matches snapshot 1`] = `
+<div
+  className="d-flex flex-column align-items-center w-75 mx-auto my-3"
+>
+  <div
+    className="h2"
+  >
+    Your Favorite Portfolios
+  </div>
+  <div
+    className="d-flex border border-3"
+  >
+    <div
+      className="primary-color m-3 card"
+    >
+      <div
+        className="card-body"
+      >
+        <h4
+          className="card-title"
+        >
+          Greg
+        </h4>
+        <p
+          className="card-text"
+        >
+          <span>
+            20
+            30
+            50
+            10
+            10
+          </span>
+          <span>
+            Profile 1
+          </span>
+        </p>
+        <div>
+          <canvas
+            data-testid="canvas"
+            height={150}
+            onClick={[Function]}
+            role="img"
+            width={300}
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      className="primary-color m-3 card"
+    >
+      <div
+        className="card-body"
+      >
+        <h4
+          className="card-title"
+        >
+          David
+        </h4>
+        <p
+          className="card-text"
+        >
+          <span>
+            20
+            10
+            50
+            20
+            15
+          </span>
+          <span>
+            Profile 1
+          </span>
+        </p>
+        <div>
+          <canvas
+            data-testid="canvas"
+            height={150}
+            onClick={[Function]}
+            role="img"
+            width={300}
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      className="primary-color m-3 card"
+    >
+      <div
+        className="card-body"
+      >
+        <h4
+          className="card-title"
+        >
+          Quinton
+        </h4>
+        <p
+          className="card-text"
+        >
+          <span>
+            10
+            10
+            50
+            10
+            20
+          </span>
+          <span>
+            Profile 1
+          </span>
+        </p>
+        <div>
+          <canvas
+            data-testid="canvas"
+            height={150}
+            onClick={[Function]}
+            role="img"
+            width={300}
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

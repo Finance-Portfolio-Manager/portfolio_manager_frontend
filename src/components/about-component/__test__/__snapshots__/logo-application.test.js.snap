@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  className="border border-4 logoApp m-3 card"
+  id="logo-card"
+>
+  <div
+    className="card-body"
+  >
+    <img
+      alt="logo"
+      className="card-img"
+    />
+    <p
+      className="card-text"
+    >
+      Application Name
+    </p>
+  </div>
+</div>
+`;

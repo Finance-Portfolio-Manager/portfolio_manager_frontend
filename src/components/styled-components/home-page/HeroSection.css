@@ -5,6 +5,7 @@ file created by carlos galvan jr
 .home__hero-section {
   color: #fff;
   padding: 160px 0;
+  min-height: 100vh;
   
 }
 
@@ -40,7 +41,7 @@ file created by carlos galvan jr
   /* color: #f00946; */
   font-size: 16px;
   line-height: 16px;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 1.4px;
   text-transform: uppercase;
   margin-bottom: 16px;
@@ -55,15 +56,13 @@ file created by carlos galvan jr
 }
 
 .dark {
-  color: #1c2237;
+  /* color: #1c2237; */
+  color: var(--medium-background);
 }
 
 .darkBg {
-  background-color: #1c2237;
-}
-
-.home__hero-subtitle {
- 
+  /* background-color: #1c2237; */
+  background-color: var(--dark-background);
 }
 
 .home__hero-img-wrapper {

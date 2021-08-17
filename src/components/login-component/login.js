@@ -34,7 +34,7 @@ function Login(props){
                 }
                 console.log(response.jwt);
                 sessionStorage.setItem("Authorization", response.jwt);
-                window.location.href = "/home";
+                window.location.href = "/account";
             })
             .catch(function (error) {
                 if(error && !error.response) {

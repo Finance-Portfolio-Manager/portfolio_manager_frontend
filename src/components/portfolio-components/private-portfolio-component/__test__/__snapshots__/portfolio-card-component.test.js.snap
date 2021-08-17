@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  className="row"
+>
+  <div
+    className="col-md-2 col-6"
+  >
+    <img
+      className="rounded"
+      src="exampleimg.svg"
+    />
+  </div>
+  <div
+    className="col"
+  >
+    <div
+      className="center card"
+      style={
+        Object {
+          "border": "2px solid #F26925",
+          "width": "50rem",
+        }
+      }
+    >
+      <img
+        className="card-img-top"
+      />
+      <div
+        className="card-body"
+      >
+        <div
+          className="card-title h5"
+        >
+          Trent
+        </div>
+        <p
+          className="card-text"
+        >
+          Current value: 
+          100
+           %change placeholder
+        </p>
+        <button
+          className="btn btn-primary"
+          disabled={false}
+          onClick={[Function]}
+          type="button"
+        >
+          Details
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    className="col-md-2"
+  />
+</div>
+`;

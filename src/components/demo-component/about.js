@@ -1,11 +1,11 @@
 import React from 'react';
-import Navigation from '../components/navigation/navigation'
-import Footer from '../components/footer';
+// import Navigation from '../components/navigation/navigation'
+import Navigation from '../navigation/navigation'
+import Footer from '../footer-component/footer';
 
 export default function About() {
     return (
         <div className="container-fluid p-0 h-100">
-            <Navigation />
             <div className="h-100 overflow-auto">
                 {/* Top with box, divider and text */}
                 <div className="d-flex justify-content-center w-60 mx-auto h-60 align-items-center">

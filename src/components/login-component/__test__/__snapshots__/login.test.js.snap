@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  className="App"
+  data-testid="login-form"
+>
+  <form
+    className=""
+  >
+    <div
+      className="aroundLogo"
+    >
+      <img
+        alt="revature logo"
+        className="logo"
+        src="revlogo.jpg"
+      />
+    </div>
+    <div
+      className="form-inner"
+    >
+      <h4>
+        Portfolio Manager
+      </h4>
+      <div
+        className="form-group"
+      >
+        <label
+          className="form-label"
+          htmlFor="formBasicUsername"
+        >
+          Username:
+        </label>
+        <input
+          className="loginInput form-control"
+          id="formBasicUsername"
+          name="username"
+          onChange={[Function]}
+          placeholder="Enter your username"
+        />
+      </div>
+      <div
+        className="form-group"
+      >
+        <label
+          className="form-label"
+          htmlFor="formBasicPassword"
+        >
+          Password:
+        </label>
+        <input
+          className="loginInput form-control"
+          id="formBasicPassword"
+          name="password"
+          onChange={[Function]}
+          placeholder="Enter your password"
+          type="password"
+        />
+      </div>
+      <button
+        className="submitButton mt-2"
+        onClick={[Function]}
+        type="submit"
+      >
+        Login
+      </button>
+    </div>
+  </form>
+</div>
+`;

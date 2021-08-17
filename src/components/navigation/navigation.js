@@ -1,16 +1,18 @@
 import NavDropDown from './navdropdown';
 import ApexLogo from '../images/apexstocks.jpg';
 import React, { useState } from 'react';
+import { Logo } from '../styled-components/logo/Logo';
+import ToggleButton from '../styled-components/components/ToggleButton';
 
-export default function Navigation() {
+export default function Navigation({ theme, toggleTheme }) {
     const [dropdownShowpPortfolio, setDropDrownShowPortfolio] = useState(false);
-    const [dropdownShowStocks, setDropdownShowStocks] = useState(false);
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark primary-color">
-            <div className="container-fluid  py-0">
+        <div className="container-fluid p-0">
+            <nav className="navbar navbar-expand-lg navbar-dark bg-dark primary-color">
                 {/* TODO: Change logo to svg file */}
-                <img src={ApexLogo} alt="Logo" />
-
+                <div className="global__logo">
+                    <Logo className='m-2' />
+                </div>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
@@ -18,7 +20,7 @@ export default function Navigation() {
                     <div className=" d-flex flex-column flex-md-row justify-content-between flex-fill">
                         <ul className="navbar-nav primary-text">
                             <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="/home">Home</a>
+                                <a className="nav-link active" aria-current="page" href="/">Home</a>
                             </li>
                             <li className="nav-item">
                                 <NavDropDown
@@ -28,28 +30,17 @@ export default function Navigation() {
                                     unhovered={() => setDropDrownShowPortfolio(false)}
                                     title="Portfolios">
                                     <div className="min-vh-15 bg-gray">
-                                        <a className='text-dark  nav-link active align-item-center' aria-current="page" href="/account">Your Accounts</a>
-                                        <a className='text-dark  nav-link active align-item-center' aria-current="page" href="#">Favorite</a>
+                                        <a className='text-dark  nav-link active align-item-center' aria-current="page" href="/account">My Portfolio</a>
                                         <a className='text-dark  nav-link active align-item-center' aria-current="page" href="#">Public portfolio</a>
+                                        <a className='text-dark  nav-link active align-item-center' aria-current="page" href="#">Favorite portfolio</a>
                                     </div>
                                 </NavDropDown>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link active" aria-current="page" href="/about">About Us</a>
-                            </li>
+                           </li>
                             <li className="nav-item">
-                                <NavDropDown
-                                    className="text-white py-0 border-0"
-                                    show={dropdownShowStocks}
-                                    hovered={() => setDropdownShowStocks(true)}
-                                    unhovered={() => setDropdownShowStocks(false)}
-                                    title="Stocks">
-                                    <div className="min-vh-15 bg-gray">
-                                        <a className='text-dark nav-link active align-item-center' aria-current="page" href="/portfolio">Pie Chart</a>
-                                        <a className='text-dark nav-link active align-item-center' aria-current="page" href="/new-transaction">Transaction</a>
-                                        <a className='text-dark nav-link active align-item-center' aria-current="page" href="/generic-chart">Generic Chart</a>
-                                    </div>
-                                </NavDropDown>
+                                <a className='nav-link active align-item-center' aria-current="page" href="/new-transaction">Transaction</a>
                             </li>
                         </ul>
                         <div className="d-flex align-self-center me-3">
@@ -60,13 +51,15 @@ export default function Navigation() {
                                     <li><a className="dropdown-item" href="/login">Log in</a></li>
                                     <li><a className="dropdown-item" href="/register">Sign up</a></li>
                                     <li><a className="dropdown-item" href="/home">Log Out</a></li>
+                                    <li><ToggleButton theme={theme} toggleTheme={toggleTheme} /></li>
+
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
+        </div>
     );
 }
 
