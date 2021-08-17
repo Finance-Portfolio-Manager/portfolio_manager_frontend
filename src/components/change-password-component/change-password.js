@@ -5,9 +5,9 @@ import ChangePasswordForm from "./change-password-form";
 
 function ChangePassword(props){
 
-    //let URL = process.env.REACT_APP_API_URL;
+    let URL = process.env.REACT_APP_API_URL;
 
-    let URL = "http://localhost:8080";
+    //let URL = "http://localhost:8080";
 
     const [email, setEmail] = useState("");
     const [credentials, setCredentials] = useState("");
