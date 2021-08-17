@@ -25,7 +25,7 @@ import ChangePassword from './change-password-component/change-password';
 
 export default function Main() {
     const [theme, themeToggler] = useAllThemes();
-    const [loggedIn, setLoggedIn] = useState(false);
+    const [loggedIn, setLoggedIn] = useState();
     const themeMode = themeSwitch(theme)
 
     
@@ -33,14 +33,17 @@ export default function Main() {
     { "username": "David", "labels": ["BYSI", "AAPL", "F", "GM", "LUMN"], "percentage": [20, 10, 50, 20, 15], "profile": "Profile 1" },
     { "username": "Quinton", "labels": ["TSLA", "SHOP", "MRNA", "UBER", "BNGO"], "percentage": [10, 10, 50, 10, 20], "profile": "Profile 1" },]
 
-    const isLoggedIn = sessionStorage.getItem("Authorization");
+    useEffect(() => {
+        const isLoggedIn = sessionStorage.getItem("Authorization");
+        setLoggedIn(isLoggedIn);
+    },[])
 
     return (
         <React.Fragment>
             <div className="container-fluid flex-column p-0 secondary-color default-container primary-text">
                 <ThemeProvider theme={themeMode} >
                     <GlobalStyle />
-                    {isLoggedIn && <Navigation theme={theme} toggleTheme={themeToggler}/>}
+                    <Navigation loggedIn={loggedIn} theme={theme} toggleTheme={themeToggler}/>
                     <ScrollingStripContainer />
                     {/* <ToggleButton theme={theme} toggleTheme={themeToggler} /> */}
                     <Switch>
@@ -51,7 +54,7 @@ export default function Main() {
                         <Route exact path="/balances" component={Chart}/>
                         <Route exact path="/about" component={About} />
                         <Route exact path="/register" component={Register} />
-                        <Route exact path="/login" component={() => <Login loggingIn={loggingIn}/>} />
+                        <Route exact path="/login" component={ Login } />
                         <Route exact path="/generic-chart" component={GenericChart} />
                         <Route exact path="/new-transaction" component={NewTransaction} />
                         <Route exact path="/news" component={NewsPage} />

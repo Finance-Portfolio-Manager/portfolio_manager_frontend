@@ -1,4 +1,4 @@
-import './App.css';
+// import './App.css';
 import { useEffect } from 'react';
 import './css/portfolio-styles.css'
 import Main from './components/MainComponent';
