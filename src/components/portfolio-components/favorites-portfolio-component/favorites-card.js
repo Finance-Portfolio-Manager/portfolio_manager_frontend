@@ -1,4 +1,5 @@
-import { Card } from 'reactstrap';
+import {Col, Card, Button} from "react-bootstrap";
+import DoughnutChart from "../doughnut-chart-component/doughnut-chart";
 
 export default function FavoritesCard(props) {
     return(
