@@ -19,6 +19,7 @@ function Login(props){
         const {value,name} = e.target;
 
         setCredentials({...credentials, [name]:value});
+        console.log(credentials);
 
         setError(false);
         setNetworkError(false);
@@ -41,7 +42,6 @@ function Login(props){
                 sessionStorage.setItem("Authorization", response.jwt);
                 sessionStorage.setItem("loggedIn", true);
                 window.location.href = "/home";
-
             })
             .catch(function (error) {
                 if(error && !error.response) {

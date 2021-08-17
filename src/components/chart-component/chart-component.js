@@ -1,4 +1,4 @@
-import CandlestickChart from "./generic-chart";
+import GenericChart from "./generic-chart";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import {initialSeriesData, convertSeriesData} from "./chart-util.js";
@@ -23,12 +23,12 @@ function ChartComponent(props) {
     },[]);
 
     return (
-        <CandlestickChart
+        <GenericChart
             symbolName={state.symbolName}
             seriesData={state.seriesData}
             type={props.type}
             width={props.width}
-        ></CandlestickChart>
+        ></GenericChart>
     );
 
 }
