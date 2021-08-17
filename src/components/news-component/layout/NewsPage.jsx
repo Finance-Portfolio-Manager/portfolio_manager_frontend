@@ -18,7 +18,7 @@ export const NewsPage = () => {
   const [news, setNews] = useState([]);
   const [index, setIndex] = useState(0);
  
-  useEffect(() => {
+  React.useEffect(() => {
     PingNews().then((data) => {
       setNews(data);
     })

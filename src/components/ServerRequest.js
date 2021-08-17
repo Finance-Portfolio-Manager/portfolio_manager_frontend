@@ -19,12 +19,4 @@ export function PingStockApiSymbols(tickers){
 export function PingApiLogin(json) {
     return axios.post(process.env.REACT_APP_API_URL+"/login", json, {headers:{'Content-Type': 'application/json'}})
         .then((response)=>response.data);
-        // .catch(function (error) {
-        //     if(error && !error.response) {
-        //         setNetworkError(true);
-        //     }
-        //     else if (error.response.status === 500) {
-        //         setError(true);
-        //     }
-        // });
 }

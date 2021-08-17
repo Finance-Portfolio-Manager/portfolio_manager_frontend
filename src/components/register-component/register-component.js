@@ -37,7 +37,7 @@ export default function Register(props) {
                 password:`${registrationData.password}`,
                 confirmPassword:`${registrationData.confirmPassword}`
                 };
-            axios.post(URL + "/register", JSON.stringify(registrationInfo), {headers:{'Content-Type': 'application/json'}})
+            axios.post("http://apexstocks.xyz/services/register", JSON.stringify(registrationInfo), {headers:{'Content-Type': 'application/json'}})
                 .then(response=>{
                     console.log(response.data);
                     // props.history.push("/");
