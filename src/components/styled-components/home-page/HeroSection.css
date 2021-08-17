@@ -5,6 +5,7 @@ file created by carlos galvan jr
 .home__hero-section {
   color: #fff;
   padding: 160px 0;
+  min-height: 100vh;
   
 }
 

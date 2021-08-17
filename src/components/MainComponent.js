@@ -36,9 +36,9 @@ export default function Main() {
             <div className="container-fluid flex-column p-0 secondary-color default-container primary-text">
                 <ThemeProvider theme={themeMode} >
                     <GlobalStyle />
-                    {isLoggedIn && <Navigation />}
+                    {isLoggedIn && <Navigation theme={theme} toggleTheme={themeToggler}/>}
                     <ScrollingStripContainer />
-                    <ToggleButton theme={theme} toggleTheme={themeToggler} />
+                    {/* <ToggleButton theme={theme} toggleTheme={themeToggler} /> */}
                     <Switch>
                         <Route exact path="/portfolios" component={() => <Home users={users} />} />
                         <Route exact path="/" component={() => <LandingPage />} />
