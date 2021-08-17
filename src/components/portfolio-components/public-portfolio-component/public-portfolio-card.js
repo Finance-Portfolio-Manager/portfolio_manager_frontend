@@ -1,5 +1,5 @@
 import {Col, Card, Button} from "react-bootstrap";
-import DoughnutChart from "../doughnut-chart-component/doughnut-chart";
+import PublicDoughnutChart from "../doughnut-chart-component/public-doughnut-chart";
 
 
 export default function PublicPortfolioCard(props){
@@ -12,8 +12,8 @@ export default function PublicPortfolioCard(props){
                     <Card.Title tag="h4">{props.portfolio.name}</Card.Title>
                     <Card.Text>
                         <div>
-                            <p>{`$${props.portfolio.value}`}</p>
-                            <DoughnutChart user={props.user} portfolio={props.portfolio}/>
+                            <p>Owned by {props.user}</p>
+                            <PublicDoughnutChart user={props.user} portfolio={props.portfolio}/>
                         </div>
                     </Card.Text>
                     <Button variant="primary" onClick={props.toggleShowDetails}>Details</Button>

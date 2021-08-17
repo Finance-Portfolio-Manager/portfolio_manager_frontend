@@ -1,6 +1,6 @@
 import {Row, Col} from "react-bootstrap";
 import PublicPortfolioTable from "./public-portfolio-table";
-import DoughnutChart from "../doughnut-chart-component/doughnut-chart";
+import PublicDoughnutChart from "../doughnut-chart-component/public-doughnut-chart";
 
 export default function PublicPortfolioDetails(props){
     return (
@@ -15,7 +15,7 @@ export default function PublicPortfolioDetails(props){
         <Row>
             <Col/>
             <Col>
-                <DoughnutChart user={props.username} portfolio={props.portfolio}/>
+                <PublicDoughnutChart user={props.username} portfolio={props.portfolio}/>
             </Col>
             <Col/>
         </Row>
