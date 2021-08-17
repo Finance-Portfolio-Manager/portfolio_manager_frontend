@@ -21,6 +21,7 @@ import Chart from './portfolio-chart-component/portfolio-chart';
 import GenericChart from './chart-component/generic-chart';
 import PublicPortfolios from './portfolio-components/all-public-portfolios-component/public-portfolios-component';
 import Favorites from './portfolio-components/favorites-portfolio-component/favorites-view'
+import CreatePortfolio from './portfolio-components/create-new-portfolio/create-portfolio-form';
 
 export default function Main() {
     const [theme, themeToggler] = useAllThemes();
@@ -50,7 +51,8 @@ export default function Main() {
                         <Route exact path="/login" component={Login} />
                         <Route exact path="/generic-chart" component={GenericChart} />
                         <Route exact path="/new-transaction" component={NewTransaction} />
-                        {/* <Route exact path="/favorites" component={Favorites} /> */}
+                        <Route exact path="/create-portfolio" component={CreatePortfolio} />
+
                     </Switch>
                 </ThemeProvider>
                 <Footer />

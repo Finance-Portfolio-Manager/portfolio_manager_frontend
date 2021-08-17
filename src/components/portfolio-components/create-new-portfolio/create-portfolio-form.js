@@ -10,7 +10,7 @@ export default function CreatePortfolio(props){
                         Portfolio Name
                     </Form.Label>
                     <Form.Control
-                        name={"name"}
+                        name="name"
                         value={props.name}
                         onChange={props.onChange}/>
                     <Form.Check type="checkbox" label="Public" name="isPublic" checked={props.isPublic} onChange={props.onChange}/>
