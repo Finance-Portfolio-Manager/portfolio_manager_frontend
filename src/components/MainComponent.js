@@ -2,7 +2,6 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import Home from './home-component/home-component';
 import Footer from './footer-component/footer';
-// import {StyledLayout} from './styled-layout/StyledLayout';
 import Navigation from './navigation/navigation';
 import About from './about-component/about-page.js';
 import ScrollingStripContainer from './scrolling-strip-component/scrolling-strip-container';
@@ -17,8 +16,8 @@ import { themeMode as themeSwitch } from './styled-components/components/themeMo
 import ToggleButton from './styled-components/components/ToggleButton';
 import NewTransaction from './new-transaction-component/new_transaction';
 import Chart from './portfolio-chart-component/portfolio-chart';
-import News from './demo-component/new';
 import { NewsPage } from './news-component/layout/NewsPage';
+import Chart from './portfolio-chart-component/portfolio-chart';
 import GenericChart from './chart-component/generic-chart';
 
 export default function Main() {

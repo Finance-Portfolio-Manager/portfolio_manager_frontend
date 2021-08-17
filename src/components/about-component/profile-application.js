@@ -19,7 +19,7 @@ const onButtonClick = (e)=>{
 
     return (
         <Container>
-            <p className="d-flex flex-column w-50 captainProfile justify-content-center mx-auto lead fw-bolder text-white" id="meet">Meet Our Team</p>
+            <p className="d-flex flex-column w-50 meetTeam justify-content-center mx-auto lead fw-bolder text-white" id="meet">Meet Our Team</p>
             <hr className="text-white"></hr>
             <section id="profiles">
                         <div id="individual" className="card border-0 d-flex flex-column captainProfile justify-content-center mx-auto my-4">

@@ -14,7 +14,7 @@ export default function About(){
                     <LogoCard></LogoCard>
             </div>
             <br></br>
-            <div className="d-flex flex-column flex-fill justify-content-end mx-auto align-self-end w-50 me-5">
+            <div className="d-flex flex-column flex-fill justify-content-end mx-auto align-self-end w-50 me-5" id="aboutNew">
                     <AboutCard></AboutCard>
             </div>
             <br></br>
