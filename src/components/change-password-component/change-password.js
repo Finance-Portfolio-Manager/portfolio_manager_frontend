@@ -85,9 +85,9 @@ function ChangePassword(props){
             return false;
         }
 
-        if(password.length < 5){
-            console.log("password length should have at least 6 characters");
-            setConfirmMessage("password length should have at least 6 characters");
+        if(password.length < 8){
+            console.log("password length should have at least 8 characters");
+            setConfirmMessage("password length should have at least 8 characters");
             return false;
         }
     
