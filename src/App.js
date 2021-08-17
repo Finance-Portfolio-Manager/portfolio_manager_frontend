@@ -8,7 +8,6 @@ import PortfolioComponent from './components/portfolio-chart-component/portfolio
 import Authorization from './components/common/authorization';
 import Container from "react-bootstrap/Container";
 
-import { BrowserRouter} from "react-router-dom";
 import { useEffect } from 'react';
 
 // import { BrowserRouter as Router, Route} from "react-router-dom";
@@ -29,7 +28,7 @@ import { useEffect } from 'react';
 
 
 // import logo from './logo.svg';
-import './App.css';
+// import './App.css';
 import Main from './components/MainComponent';
 
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'compiled/bootstrap/dist/css/bootstrap.min.css';
 import LogoCard from "./logo-application";
 import './about-page.css';
 import AboutCard from "./about-application";

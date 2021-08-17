@@ -73,7 +73,8 @@ form .submitButton {
 }
 
 .aroundLogo {
-    position: relative;
+    /* position: relative; 
+    text-align: center;
     background-color: #fff;
     padding-top: 40px;
 }

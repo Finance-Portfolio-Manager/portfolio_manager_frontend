@@ -24,6 +24,7 @@ export default function Register(props) {
         const {value,name} = e.target;
 
         setRegistrationData({...registrationData, [name]:value});
+    
         // setNameError(false);
         setEmailError(false);
         setUsernameError(false);
@@ -93,10 +94,11 @@ export default function Register(props) {
             return false;
         }
 
-        if (password.length<8){
-            setPasswordLengthError(true);
-            return false;
-        }
+        //Redundant
+        // if (password.length<8){
+        //     setPasswordLengthError(true);
+        //     return false;
+        // }
 
         if(password!==confirmPassword){
             console.log(password);

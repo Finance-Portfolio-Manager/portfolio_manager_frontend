@@ -56,11 +56,13 @@ file created by carlos galvan jr
 }
 
 .dark {
-  color: #1c2237;
+  /* color: #1c2237; */
+  color: var(--medium-background);
 }
 
 .darkBg {
-  background-color: #1c2237;
+  /* background-color: #1c2237; */
+  background-color: var(--dark-background);
 }
 
 .home__hero-img-wrapper {

@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  className="title border-0 card"
+  id="about-card"
+>
+  <div
+    className="card-body"
+  >
+    <div
+      className="card-title h5"
+    >
+      About
+    </div>
+    <p
+      className="card-text"
+    >
+      Portfolio Manager was designed to be a central location for users to track their stock positions. Allows users to enter their stock purchases and sales, which will be reflected in our portfolio, showing stock specific and overall gains and losses. Leverages Yahoo Finance API to produce real-time stock details. Ensured application security by leveraging JSON Web Tokens and partial integration of Spring Security.
+    </p>
+  </div>
+</div>
+`;

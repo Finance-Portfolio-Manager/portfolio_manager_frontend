@@ -38,7 +38,7 @@ export default function Navigation({ theme, toggleTheme }) {
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link active" aria-current="page" href="/about">About Us</a>
-                            </li>
+                           </li>
                             <li className="nav-item">
                                 <a className='nav-link active align-item-center' aria-current="page" href="/new-transaction">Transaction</a>
                             </li>
