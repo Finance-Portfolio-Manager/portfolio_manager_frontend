@@ -1,5 +1,6 @@
 import React from "react";
-import PortfolioCard from "../portfolio-components/private-portfolio-component/private-portfolio-view";
+// import PortfolioCard from "../portfolio-components/private-portfolio-component/private-portfolio-view";
+// import PrivatePortfolioCard from "../portfolio-components/private-portfolio-component/private-portfolio-card";
 import AccountView from "./account-view-component"
 import { useEffect, useState } from "react";
 import axios from "axios";

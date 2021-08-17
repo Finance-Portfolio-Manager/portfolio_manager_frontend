@@ -3,7 +3,7 @@ import { CardGroup } from "react-bootstrap";
 import PrivatePortfolioDetails from "../portfolio-components/private-portfolio-component/private-portfolio-details";
 import PrivatePortfolioView from "../portfolio-components/private-portfolio-component/private-portfolio-view";
 import { useState } from "react";
-import PortfolioCard from "../portfolio-component/portfolio-card-component";
+// import PortfolioCard from "../portfolio-component/portfolio-card-component";
 import Navigation from "../navigation/navigation";
 //TODO: will be importing functions not yet defined
 
