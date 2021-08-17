@@ -1,6 +1,7 @@
 import { Table } from "react-bootstrap";
 import { useState } from "react";
 import { Button } from "react-bootstrap";
+import PortfolioChart from "../../portfolio-chart-component/portfolio-chart";
 
 export default function PrivatePortfolioTable(props){
 
@@ -21,6 +22,9 @@ export default function PrivatePortfolioTable(props){
                 <h4 id = "portfolio-total"></h4>
                 <div id = "portfolio-change"></div>
                 <div id = "dollar-change"></div>
+            </div>
+            <div>
+                <PortfolioChart portfolioId={props.portfolioId}></PortfolioChart>
             </div>
             <div className="table-responsive secondary-text">
                 <Table id="stocks-view" className="table borderless table-hover secondary-text" responsive>

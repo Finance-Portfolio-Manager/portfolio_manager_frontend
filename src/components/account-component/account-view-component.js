@@ -3,6 +3,7 @@ import { CardGroup } from "react-bootstrap";
 import PrivatePortfolioDetails from "../portfolio-components/private-portfolio-component/private-portfolio-details";
 import PrivatePortfolioView from "../portfolio-components/private-portfolio-component/private-portfolio-view";
 import { useState } from "react";
+import PortfolioChart from "../portfolio-chart-component/portfolio-chart";
 //TODO: will be importing functions not yet defined
 
 //TODO: This will take in a list of portfolios as props and render them
@@ -37,7 +38,9 @@ export default function AccountView(props){
                     }   
 
                     {displayPortfolio ? 
+                    <>
                     <PrivatePortfolioDetails portfolio={displayPortfolio} user={props.user} unassignDisplayPortfolio={unassignDisplayPortfolio}/>
+                    </>
                     :
                     <></>}
 
