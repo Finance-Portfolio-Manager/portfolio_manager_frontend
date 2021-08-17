@@ -1,5 +1,4 @@
 import Chart from "react-apexcharts";
-import React from "react";
 
 function GenericChart(props) {
     return (

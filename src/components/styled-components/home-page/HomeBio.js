@@ -10,8 +10,8 @@ export const HomeBio = {
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel urna id diam tincidunt pretium non et sem. ",
   // buttonLabel: "Get Started",
   buttons: [
-    {buttonLabel: "Sign Up", link: '/login', ariaLabel: 'Sign Up Link'},
-    {buttonLabel: "Sign In", link: '/register', ariaLabel: 'Sign In Link'}
+    {buttonLabel: "Sign Up", link: '/register', ariaLabel: 'Sign Up Link'},
+    {buttonLabel: "Sign In", link: '/login', ariaLabel: 'Sign In Link'}
   ],
   imgStart: "",
   img: "images/banner.svg",
