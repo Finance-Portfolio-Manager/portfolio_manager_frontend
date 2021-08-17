@@ -9,7 +9,6 @@ import ScrollingStripContainer from './scrolling-strip-component/scrolling-strip
 import Account from './account-component/account-component';
 import Register from './register-component/register-component';
 import Login from './login-component/login';
-import Favorites from './portfolio-components/favorites-portfolio-component'
 import { ThemeProvider } from "styled-components";
 import { LandingPage } from './styled-components/home-page/LandingPage';
 import GlobalStyle from "./styled-components/styles/GlobalStyles";
@@ -20,6 +19,7 @@ import NewTransaction from './new-transaction-component/new_transaction';
 import Chart from './portfolio-chart-component/portfolio-chart';
 import GenericChart from './chart-component/generic-chart';
 import PublicPortfolios from './portfolio-components/all-public-portfolios-component/public-portfolios-component';
+import Favorites from './portfolio-components/favorites-portfolio-component/favorites-view'
 
 export default function Main() {
     const [theme, themeToggler] = useAllThemes();
