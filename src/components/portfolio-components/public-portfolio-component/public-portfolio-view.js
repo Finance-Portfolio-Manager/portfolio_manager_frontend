@@ -17,10 +17,10 @@ export default function PublicPortfolioView(props){
     return (
         <>
         {showDetails ?
-            <PublicPortfolioDetails user={props.user} portfolio={props.portfolio} toggleShowDetails={toggleShowDetails} />
+            <PublicPortfolioDetails user={props.username} portfolio={props.portfolio} toggleShowDetails={toggleShowDetails} />
 
         :
-            <PublicPortfolioCard user={props.user} portfolio={props.portfolio} toggleShowDetails={toggleShowDetails} />
+            <PublicPortfolioCard user={props.username} portfolio={props.portfolio} toggleShowDetails={toggleShowDetails} />
         }
         </>
     )

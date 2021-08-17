@@ -18,6 +18,7 @@ import ToggleButton from './styled-components/components/ToggleButton';
 import NewTransaction from './new-transaction-component/new_transaction';
 import Chart from './portfolio-chart-component/portfolio-chart';
 import GenericChart from './chart-component/generic-chart';
+import PublicPortfolios from './portfolio-components/all-public-portfolios-component/public-portfolios-component';
 
 export default function Main() {
     const [theme, themeToggler] = useAllThemes();
@@ -37,9 +38,10 @@ export default function Main() {
                     <ScrollingStripContainer />
                     <ToggleButton theme={theme} toggleTheme={themeToggler} />
                     <Switch>
-                        <Route exact path="/portfolio" component={() => <Home users={users} />} />
+                        <Route exact path="/portfolios" component={() => <Home users={users} />} />
                         <Route exact path="/home" component={() => <LandingPage />} />
                         <Route exact path="/account" component={Account} />
+                        <Route exact path="/portfolios/public" component={() => <PublicPortfolios />} />
                         <Route exact path="/balances" component={Chart}/>
                         <Route exact path="/about" component={About} />
                         <Route exact path="/register" component={Register} />

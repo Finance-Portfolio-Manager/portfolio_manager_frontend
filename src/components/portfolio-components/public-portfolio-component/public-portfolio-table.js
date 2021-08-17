@@ -1,6 +1,10 @@
 import { Table, Button } from "react-bootstrap";
+import { useState } from "react";
 
 export default function PublicPortfolioTable(props){
+
+    const [tableRows, setTableRows] = useState(props.tableRows);
+
     return (
         <>
             <div className="wrapper fadeInDown folioContent" id="folioContent">
@@ -16,8 +20,8 @@ export default function PublicPortfolioTable(props){
                             
                             {tableRows.map((tableRow) => {
                                 return (<tr>
-                                    <td>{tableRow.stockName}</td>
-                                    <td>{tableRow.stockCurrentPrice}</td>
+                                    <td>{tableRow.symbol}</td>
+                                    <td>{tableRow.currentPrice}</td>
                                 </tr>)
                             })}
                         </tbody>

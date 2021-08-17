@@ -1,6 +1,7 @@
 import {Col, Card, Button} from "react-bootstrap";
 import DoughnutChart from "../doughnut-chart-component/doughnut-chart";
 
+
 export default function PublicPortfolioCard(props){
     
     //TODO: Have Doughnut chart show percentages instead of total values?

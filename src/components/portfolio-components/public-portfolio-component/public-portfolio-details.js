@@ -8,14 +8,14 @@ export default function PublicPortfolioDetails(props){
         <Row>
             <Col md={2}/>
             <Col>
-                <PublicPortfolioTable tableRows={props.portfolio.stockList} toggleShowDetails={props.toggleShowDetails}/>
+                <PublicPortfolioTable tableRows={props.portfolio.stocks} toggleShowDetails={props.toggleShowDetails}/>
             </Col>
             <Col md={2}/>
         </Row>
         <Row>
             <Col/>
             <Col>
-                <DoughnutChart user={props.user} portfolio={props.portfolio}/>
+                <DoughnutChart user={props.username} portfolio={props.portfolio}/>
             </Col>
             <Col/>
         </Row>
