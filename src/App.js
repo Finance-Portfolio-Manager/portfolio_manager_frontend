@@ -1,4 +1,5 @@
 import './App.css';
+import './css/portfolio-styles.css'
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Login from './components/login-component/login';
 import Register from './components/register-component/register-component';

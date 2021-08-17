@@ -9,6 +9,7 @@ import ScrollingStripContainer from './scrolling-strip-component/scrolling-strip
 import Account from './account-component/account-component';
 import Register from './register-component/register-component';
 import Login from './login-component/login';
+// import Favorites from './portfolio-components/favorites-portfolio-component'
 import { ThemeProvider } from "styled-components";
 import { LandingPage } from './styled-components/home-page/LandingPage';
 import GlobalStyle from "./styled-components/styles/GlobalStyles";
@@ -20,6 +21,8 @@ import Chart from './portfolio-chart-component/portfolio-chart';
 import News from './news-component/news-component-presentation';
 import { NewsPage } from './news-component/layout/NewsPage';
 import GenericChart from './chart-component/generic-chart';
+import PublicPortfolios from './portfolio-components/all-public-portfolios-component/public-portfolios-component';
+import Favorites from './portfolio-components/favorites-portfolio-component/favorites-view'
 
 export default function Main() {
     const [theme, themeToggler] = useAllThemes();
@@ -39,9 +42,10 @@ export default function Main() {
                     <ScrollingStripContainer />
                     <ToggleButton theme={theme} toggleTheme={themeToggler} />
                     <Switch>
-                        <Route exact path="/portfolio" component={() => <Home users={users} />} />
+                        <Route exact path="/portfolios" component={() => <Home users={users} />} />
                         <Route exact path="/home" component={() => <LandingPage />} />
                         <Route exact path="/account" component={Account} />
+                        <Route exact path="/portfolios/public" component={() => <PublicPortfolios />} />
                         <Route exact path="/balances" component={Chart}/>
                         <Route exact path="/about" component={About} />
                         <Route exact path="/register" component={Register} />
@@ -49,6 +53,7 @@ export default function Main() {
                         <Route exact path="/generic-chart" component={GenericChart} />
                         <Route exact path="/new-transaction" component={NewTransaction} />
                         <Route exact path="/news" component={NewsPage} />
+                        {/* <Route exact path="/favorites" component={Favorites} /> */}
                     </Switch>
                 </ThemeProvider>
                 </div>

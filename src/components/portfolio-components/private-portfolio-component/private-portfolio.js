@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
-import PortfolioView from "./portfolio-view-component";
+import PrivatePortfolioTable from "./private-portfolio-table";
 
-export default function Portfolio(props){
+
+//TODO: We might delete this component entirely because the data is now being pulled when accounts get made
+export default function PrivatePortfolio(props){
 
     const[portfolio, setPortfolio] = useState([{}]);
 
@@ -149,6 +151,6 @@ export default function Portfolio(props){
     let stockList = [stock1, stock2, stock3];
 
     return (
-        <PortfolioView tableRows ={stockList} toggleShowDetails={props.toggleShowDetails}></PortfolioView>
+        <PrivatePortfolioTable tableRows ={stockList} toggleShowDetails={props.toggleShowDetails}/>
     )
 }

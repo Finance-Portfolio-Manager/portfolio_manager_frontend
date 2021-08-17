@@ -1,32 +1,64 @@
 import React from "react";
 import { CardGroup } from "react-bootstrap";
-import PortfolioCard from "../portfolio-component/portfolio-card-component";
+import PrivatePortfolioDetails from "../portfolio-components/private-portfolio-component/private-portfolio-details";
+import PrivatePortfolioView from "../portfolio-components/private-portfolio-component/private-portfolio-view";
+import { useState } from "react";
 //TODO: will be importing functions not yet defined
 
 //TODO: This will take in a list of portfolios as props and render them
 export default function AccountView(props){
-    //props for account: accountId, username, first_name, last_name, email
 
+    let [displayPortfolio, setDisplayPortfolio] = useState(null);
 
+    let assignDisplayPortfolio = (portfolio) => {
+        setDisplayPortfolio(portfolio);
+    }
 
-    //TODO: Probably remove inline styling of div
+    let unassignDisplayPortfolio = () => {
+        setDisplayPortfolio(null);
+    }
+ 
+
+    //TODO: The styling gets messed up when you switch from a portfolio card to a portfolio table.
     return (
   
         <div className="secondary-color">
             <div className="h2" id="account-header">
-                {/* display username and full name to user */}
-                <span id="header-span" className="m-5 secondary-text">{props.username}Username</span>
+                <span id="header-span" className="m-5 secondary-text">{props.user.username}</span>
                 {/* depending on streatch goals, maybe a dark theme toggle can go up here */}
             </div>
-            {props.portfolioArray.map((portfolio) => {
-                return(
-                    <><PortfolioCard portfolio={portfolio}/> <br/></>
-                )
-            })}      
             
+            <div className="container" style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+                <div className="row">
+                    {props.portfolioArray.length > 0 ?
+                        <h2>Your Portfolios</h2>
+                        :
+                        <></>
+                    }   
+
+                    {displayPortfolio ? 
+                    <PrivatePortfolioDetails portfolio={displayPortfolio} user={props.user} unassignDisplayPortfolio={unassignDisplayPortfolio}/>
+                    :
+                    <></>}
+
+                    <div className="row py-3" style={{borderStyle: "solid"}}>
+                        
+                        {props.portfolioArray.length > 0 ? 
+                            props.portfolioArray.map((portfolio) => {
+                                return(                 
+                                    <PrivatePortfolioView 
+                                    portfolio={portfolio} 
+                                    user={props.user} 
+                                    assignDisplayPortfolio={assignDisplayPortfolio}/>
+                                )
+                            })
+                            :
+                            <h2>You don't have any portfolios yet</h2>
+                        }
+                    </div>
+                </div>
+            </div>
         </div>
-      
-        //TODO: 'portfolio-cards'(accountId)  -  build portfolio list based on accountId (or account obj)
     )
 
 }
