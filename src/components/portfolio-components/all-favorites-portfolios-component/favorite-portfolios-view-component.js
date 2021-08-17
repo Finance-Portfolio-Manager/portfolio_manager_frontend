@@ -1,26 +1,25 @@
-import FavoritesPortfolioView from "../favorites-portfolio-component/favorites-view";
+import PublicPortfoliosView from "../all-public-portfolios-component/public-portfolios-view-component";
 
-export default function PublicPortfoliosView(props){
 
+export default function FavoritePortfoliosView(props){
     return (
   
         <div style={{backgroundColor:"#B9B9BA"}}>
             
             <div className="container" style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
                 <div className="row">
-                    <h2>Public Portfolios</h2>
+                    <h2>Favourite Portfolios</h2>
 
                     <div className="row py-3" style={{width: "80rem", borderStyle: "solid"}}>
                         
-                            {props.portfolioList ?
-                            props.portfolioList.map((portfolio) => {
+                            {props.favoriteList ?
+                            props.favoriteList.map((portfolio) => {
                                     return(                 
-                                        <FavoritesPortfolioView
+                                        <PublicPortfoliosView
                                         portfolio={portfolio} 
                                         username={portfolio.username}/>
                                     )
                             }):<></>}
-
                     </div>
                 </div>
             </div>
