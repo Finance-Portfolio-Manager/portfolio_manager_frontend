@@ -14,7 +14,7 @@ export default function PublicPortfoliosView(props){
                 <div className="row">
                     <h2>Public Portfolios</h2>
 
-                    <div className="row py-3" style={{width: "80rem", borderStyle: "solid"}}>
+                    <div className="row py-3" style={{width: "70rem", borderStyle: "solid"}}>
                         
                             {props.portfolioList ?
                             props.portfolioList.map((portfolio) => {
