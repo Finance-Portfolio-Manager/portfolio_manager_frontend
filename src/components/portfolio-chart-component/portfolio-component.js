@@ -20,8 +20,8 @@ function PortfolioChartComponent(props) {
     //need to pass in number of days as chart time frame
     const timeFrame = 7;
     // let dayCount = 0;
-    // var chartTime = props.xaxis;
-    // console.log(chartTime)
+    // var chartTime = props.xaxis; // for some reason this isn't working.. null dates perhaps?
+    // console.log(chartTime) 
     var dates = [];
     for(let i=timeFrame-1;i>=0;i--){
         const d = new Date();
