@@ -49,6 +49,6 @@ export default function PrivatePortfolioTable(props){
                 </Table>
                 <Button variant="primary" onClick={props.unassignDisplayPortfolio}>Hide Details</Button>
             </div>
-        </div>   
+        </div>
     </>
 }

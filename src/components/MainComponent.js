@@ -2,7 +2,6 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import Home from './home-component/home-component';
 import Footer from './footer-component/footer';
-// import {StyledLayout} from './styled-layout/StyledLayout';
 import Navigation from './navigation/navigation';
 import About from './about-component/about-page.js';
 import ScrollingStripContainer from './scrolling-strip-component/scrolling-strip-container';
@@ -17,9 +16,8 @@ import { useAllThemes } from './styled-components/components/AllThemes';
 import { themeMode as themeSwitch } from './styled-components/components/themeMode';
 import ToggleButton from './styled-components/components/ToggleButton';
 import NewTransaction from './new-transaction-component/new_transaction';
-import Chart from './portfolio-chart-component/portfolio-chart';
-import News from './news-component/news-component-presentation';
 import { NewsPage } from './news-component/layout/NewsPage';
+import Chart from './portfolio-chart-component/portfolio-chart';
 import GenericChart from './chart-component/generic-chart';
 import PublicPortfolios from './portfolio-components/all-public-portfolios-component/public-portfolios-component';
 import Favorites from './portfolio-components/favorites-portfolio-component/favorites-view'
@@ -31,19 +29,19 @@ export default function Main() {
     const users = [{ "username": "Greg", "labels": ["BYSI", "BTBT", "MRNA", "ROKU", "MU"], "percentage": [20, 30, 50, 10, 10], "profile": "Profile 1" },
     { "username": "David", "labels": ["BYSI", "AAPL", "F", "GM", "LUMN"], "percentage": [20, 10, 50, 20, 15], "profile": "Profile 1" },
     { "username": "Quinton", "labels": ["TSLA", "SHOP", "MRNA", "UBER", "BNGO"], "percentage": [10, 10, 50, 10, 20], "profile": "Profile 1" },]
-
+    
+    const isLoggedIn = sessionStorage.getItem("Authorization");
     return (
         <React.Fragment>
             <div className="container-fluid flex-column p-0 secondary-color default-container primary-text">
-                
                 <ThemeProvider theme={themeMode} >
                     <GlobalStyle />
-                    <Navigation />
+                    {isLoggedIn && <Navigation />}
                     <ScrollingStripContainer />
                     <ToggleButton theme={theme} toggleTheme={themeToggler} />
                     <Switch>
                         <Route exact path="/portfolios" component={() => <Home users={users} />} />
-                        <Route exact path="/home" component={() => <LandingPage />} />
+                        <Route exact path="/" component={() => <LandingPage />} />
                         <Route exact path="/account" component={Account} />
                         <Route exact path="/portfolios/public" component={() => <PublicPortfolios />} />
                         <Route exact path="/balances" component={Chart}/>

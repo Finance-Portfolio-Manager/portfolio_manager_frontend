@@ -3,6 +3,8 @@ import { CardGroup } from "react-bootstrap";
 import PrivatePortfolioDetails from "../portfolio-components/private-portfolio-component/private-portfolio-details";
 import PrivatePortfolioView from "../portfolio-components/private-portfolio-component/private-portfolio-view";
 import { useState } from "react";
+import PortfolioCard from "../portfolio-component/portfolio-card-component";
+import Navigation from "../navigation/navigation";
 //TODO: will be importing functions not yet defined
 
 //TODO: This will take in a list of portfolios as props and render them
@@ -21,7 +23,6 @@ export default function AccountView(props){
 
     //TODO: The styling gets messed up when you switch from a portfolio card to a portfolio table.
     return (
-  
         <div className="secondary-color">
             <div className="h2" id="account-header">
                 <span id="header-span" className="m-5 secondary-text">{props.user.username}</span>

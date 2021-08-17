@@ -40,7 +40,7 @@ file created by carlos galvan jr
   /* color: #f00946; */
   font-size: 16px;
   line-height: 16px;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 1.4px;
   text-transform: uppercase;
   margin-bottom: 16px;
@@ -60,10 +60,6 @@ file created by carlos galvan jr
 
 .darkBg {
   background-color: #1c2237;
-}
-
-.home__hero-subtitle {
- 
 }
 
 .home__hero-img-wrapper {
