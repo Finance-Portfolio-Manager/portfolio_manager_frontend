@@ -20,3 +20,8 @@ export function PingApiLogin(json) {
     return axios.post(process.env.REACT_APP_API_URL+"/login", json, {headers:{'Content-Type': 'application/json'}})
         .then((response)=>response.data);
 }
+
+export function PingApiRegister(json) {
+    return axios.post(process.env.REACT_APP_API_URL+"/users", json, {headers:{'Content-Type': 'application/json'}})
+    .then((response)=> response.data);
+}

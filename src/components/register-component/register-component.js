@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
+import { PingApiRegister } from "../ServerRequest";
 import RegisterForm from "./register-form";
 
 // const URL = "http://localhost:8082";
@@ -36,11 +37,11 @@ export default function Register(props) {
                 username:`${registrationData.username}`,
                 password:`${registrationData.password}`,
                 confirmPassword:`${registrationData.confirmPassword}`
-                };
-            axios.post("http://apexstocks.xyz/services/register", JSON.stringify(registrationInfo), {headers:{'Content-Type': 'application/json'}})
-                .then(response=>{
-                    console.log(response.data);
-                    // props.history.push("/");
+            };
+            // axios.post(`${process.env.REACT_APP_API_URL}/register`, JSON.stringify(registrationInfo), {headers:{'Content-Type': 'application/json'}})
+                PingApiRegister(JSON.stringify(registrationInfo)).then(response=>{
+                    console.log(response);
+                    window.location.href = "/login";
                 })
 
                 .catch(function (error) {
