@@ -5,8 +5,8 @@ import CreatePortfolio from "./create-portfolio-form";
 
 export default function NewPortfolio(props){
     const [portfolio,setPortfolio] = useState({
-        "user":props.user,
-        "name":""});
+        user:props.user,
+        name:""});
 
     // const handleChange = (e)=>{
     //     const target = e.target;
