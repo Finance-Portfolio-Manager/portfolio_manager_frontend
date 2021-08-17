@@ -9,7 +9,7 @@ export const Logo = () => {
   const [theme, setTheme] = useState(themeSelection[0]);
   const updateColor = () => {
     let name = localStorage.getItem("theme") || "light";
-    let themePack = themeSelection.find(element => element.version === name)
+    let themePack = themeSelection.find(element => element.version === name) || themeSelection[0]
     console.log("theme>>>" + themePack)
     setTheme(themePack);
   };
