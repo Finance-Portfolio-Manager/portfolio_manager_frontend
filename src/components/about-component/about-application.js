@@ -2,7 +2,7 @@ import Card from "react-bootstrap/Card";
 
 export default function AboutCard(){
     return (
-        <Card id="about-card" className="title border-0" data-testid="todo-1">
+        <Card id="about-card" className="title border-0" data-testid="todo-1" className='primary-text'>
             <Card.Body>
                 <Card.Title id="aboutTitle">About</Card.Title>
                 <Card.Text id="aboutPart">Apex Stocks was designed to be a central location for users to track their stock positions. 

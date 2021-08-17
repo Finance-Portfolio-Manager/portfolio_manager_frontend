@@ -13,8 +13,8 @@ export const NewsPaperV2 = (props) => {
               {props.story.title}
             </div>
             <div className="news__source-container ">
-              <a href={props.story.url} className="news__source-link ">
-                Source
+              <a href='#news__story-page' className="news__source-link ">
+                Read Story
               </a>
             </div>
           </div>
@@ -36,7 +36,7 @@ export const NewsPaperV2 = (props) => {
             </button>
           </div>
         </div>
-        <div className="news__story-container">
+        <div className="news__story-container" id='news__story-page'>
           <div className="news__row">
             <div className="news__col news__zoom">
               <div className="news__text-wrapper">

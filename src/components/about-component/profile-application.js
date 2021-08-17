@@ -19,14 +19,14 @@ const onButtonClick = (e)=>{
 
     return (
         <Container>
-            <p className="d-flex flex-column w-50 meetTeam justify-content-center mx-auto lead fw-bolder text-white" id="meet">Meet Our Team</p>
+            <p className="d-flex flex-column w-50 meetTeam justify-content-center mx-auto lead fw-bolder text-white primary-text" id="meet">Meet Our Team</p>
             <hr className="text-white"></hr>
-            <section id="profiles">
+            <section id="profiles ">
                         <div id="individual" className="card border-0 d-flex flex-column captainProfile justify-content-center mx-auto my-4">
-                            <div><a href={captain.head.profileLink} target="_blank" className="text-decoration-none text-white"><img src={captain.head.profileImage} className="headImage"></img></a></div>
+                            <div><a href={captain.head.profileLink} target="_blank" className="text-decoration-none text-white "><img src={captain.head.profileImage} className="headImage"></img></a></div>
                                     <hr></hr>
                                 <Card.Body>
-                                    <p>Carolyn Rehm</p>
+                                    <p className='primary-text'>Carolyn Rehm</p>
                                 </Card.Body>
                         </div>
                 <br></br>

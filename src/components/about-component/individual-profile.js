@@ -14,7 +14,7 @@ export default function IndividualComponent(props){
                 }</a>
                 <hr></hr>
                 <Card.Body>
-                <p>{team.name}</p>
+                <p className='primary-text'>{team.name}</p>
                 </Card.Body>
         </div>
         )

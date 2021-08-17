@@ -8,7 +8,7 @@ export default function Navigation({ theme, toggleTheme }) {
     const [dropdownShowpPortfolio, setDropDrownShowPortfolio] = useState(false);
     const [dropdownShowStocks, setDropdownShowStocks] = useState(false);
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark primary-color global__link">
+        <nav className="navbar navbar-expand-lg navbar-dark bg-dark primary-color ">
             <div className="container-fluid  py-0">
                 {/* TODO: Change logo to svg file */}
                 {/* <img src={ApexLogo} alt="Logo" /> */}

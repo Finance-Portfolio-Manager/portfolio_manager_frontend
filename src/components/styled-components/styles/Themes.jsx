@@ -16,9 +16,9 @@ export const lightTheme = {
     // mediumDark: '#000000',
     primaryText: '#1f1f1f',
     secondaryText: '#333333',
-    primaryColor: '#A6ABB7',
+    primaryColor: '#3f434b',
     secondaryColor: '#D9DADF',
-    accentColor: 'rgba(0, 56, 255, 0.7)',
+    accentColor: 'rgb(59, 101, 255)',
     gradientPair: 'rgba(215, 39, 219, 0.7)',
     // gradientStyle: `linear-gradient(109.36deg, rgba(215, 39, 219, 0.7) -4.44%, ${theme.accentColor}, #C4C4C4 !important`
     type: 'light'
@@ -34,7 +34,7 @@ export const darkTheme = {
     secondaryText: '#ffe1e1',
     primaryColor: '#1d1d1d',
     secondaryColor: '#242424',
-    accentColor: '#F00281',
+    accentColor: '#d60047',
     gradientPair: '#ff7300',
     type: 'dark'
 }
@@ -44,7 +44,7 @@ export const blueTheme = {
     secondaryText: '#ffe1e1',
     primaryColor: '#151B2C',
     secondaryColor: '#21293E',
-    accentColor: '#F00281',
+    accentColor: '#f00249',
     gradientPair: '#da5deb',
     type: 'dark'
 
@@ -63,9 +63,9 @@ export const greenTheme = {
 export const blueGrayTheme = {
     primaryText: '#FFF',
     secondaryText: '#ffe1e1',
-    primaryColor: '#112A43',
+    primaryColor: '#0d1e2f',
     secondaryColor: '#334E68',
-    accentColor: '#1b9288',
+    accentColor: '#46a19a',
     gradientPair: '#0400ff',
     type: 'dark'
 

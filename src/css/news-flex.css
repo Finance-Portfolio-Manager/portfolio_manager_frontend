@@ -8,7 +8,7 @@
 }
 /* Parent Container */
 .news__title-container {
-  min-height: 90vh;
+  min-height: 100vh;
   flex: 1;
   text-align: center;
   display: flex;
