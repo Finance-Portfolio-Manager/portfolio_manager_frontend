@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import PublicPortfolioDetails from "./public-portfolio-details";
 import PublicPortfolioCard from "./public-portfolio-card";
+import NewTransaction from "../../new-transaction-component/new_transaction";
 
 export default function PublicPortfolioView(props){
 
