@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
+import FavoritesComponentsView from "./favorites-portfolios-view-component"
 
 
 export default function FavoritesPortfolios(props) {
@@ -11,4 +12,6 @@ export default function FavoritesPortfolios(props) {
         .then(portfoliosResponse=>{setFavoritesList(portfoliosResponse.data)
                                     console.log("promise: "+JSON.stringify(portfoliosResponse.data))})
     },[]);
+
+    return <FavoritesComponentsView favoritesList={favoritesList}/>
 }
