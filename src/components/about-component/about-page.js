@@ -6,10 +6,11 @@ import AboutCard from "./about-application";
 import ProfileComponent from "./profile-application";
 
 
+
 export default function About(){
     return (
-        <div className="container">
-            <div className="d-flex flex-column justify-content-start" id="logoNew">
+        <div className="container-fluid p-0">
+            <div className="d-flex flex-column justify-content-start">
                     <LogoCard></LogoCard>
             </div>
             <br></br>

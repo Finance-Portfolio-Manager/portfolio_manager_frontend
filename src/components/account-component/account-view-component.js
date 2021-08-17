@@ -1,6 +1,7 @@
 import React from "react";
 import { CardGroup } from "react-bootstrap";
 import PortfolioCard from "../portfolio-component/portfolio-card-component";
+import Navigation from "../navigation/navigation";
 //TODO: will be importing functions not yet defined
 
 //TODO: This will take in a list of portfolios as props and render them
@@ -11,7 +12,6 @@ export default function AccountView(props){
 
     //TODO: Probably remove inline styling of div
     return (
-  
         <div className="secondary-color">
             <div className="h2" id="account-header">
                 {/* display username and full name to user */}
@@ -23,8 +23,8 @@ export default function AccountView(props){
                     <><PortfolioCard portfolio={portfolio}/> <br/></>
                 )
             })}      
-            
-        </div>
+          </div>  
+    
       
         //TODO: 'portfolio-cards'(accountId)  -  build portfolio list based on accountId (or account obj)
     )

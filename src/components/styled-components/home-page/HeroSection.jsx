@@ -19,8 +19,8 @@ function HeroSection({
 }) {
   return (
     <>
-      <div className="home__hero-section darkBg secondary-color primary-text">
-        <div className="container">
+      <div className="container">
+        <div className="home__hero-section darkBg secondary-color primary-text">
           <div
             className="home__hero-row"
             style={{
@@ -47,16 +47,16 @@ function HeroSection({
                     );
                   })}</div>
                 <GitHubButton
-                    href="https://github.com/Finance-Portfolio-Manager/portfolio_manager_frontend"
-                    data-size="large"
-                    data-show-count="true"
-                    aria-label="Star Finance-Portfolio-Manager/portfolio_manager_frontend on GitHub"
-                    className='hero__github-button'
-                  >
-                    Star
-                  </GitHubButton>
+                  href="https://github.com/Finance-Portfolio-Manager/portfolio_manager_frontend"
+                  data-size="large"
+                  data-show-count="true"
+                  aria-label="Star Finance-Portfolio-Manager/portfolio_manager_frontend on GitHub"
+                  className='hero__github-button'
+                >
+                  Star
+                </GitHubButton>
 
-                
+
                 {/* <Link to="/">
                     <Button className='global__button-effect'>{buttonLabel}</Button>
                 </Link> */}
