@@ -4,7 +4,9 @@ import { useState } from "react";
 import CreatePortfolio from "./create-portfolio-form";
 
 export default function NewPortfolio(props){
-    const [portfolio,setPortfolio] = useState({"user": props.user});
+    const [portfolio,setPortfolio] = useState({
+        "user":props.user,
+        "name":""});
 
     // const handleChange = (e)=>{
     //     const target = e.target;
@@ -28,7 +30,7 @@ export default function NewPortfolio(props){
 
     const handleSubmit = (e)=>{
         e.preventDefault(); 
-        console.log(portfolio);       
+        console.log(JSON.stringify(portfolio));   
         let jwtToken = sessionStorage.getItem("Authorization");
         axios.post(process.env.REACT_APP_API_URL + "/portfolios", JSON.stringify(portfolio), {headers: {'Authorization': jwtToken, 'Content-Type': 'application/json'}})
             .then(response=>{
