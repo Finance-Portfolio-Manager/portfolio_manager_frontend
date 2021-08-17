@@ -1,8 +1,10 @@
 import React from "react";
-import { CardGroup } from "react-bootstrap";
+import { Button, CardGroup } from "react-bootstrap";
 import PrivatePortfolioDetails from "../portfolio-components/private-portfolio-component/private-portfolio-details";
 import PrivatePortfolioView from "../portfolio-components/private-portfolio-component/private-portfolio-view";
 import { useState } from "react";
+import NewPortfolio from "../portfolio-components/create-new-portfolio/create-portfolio";
+import { OmitProps } from "antd/lib/transfer/ListBody";
 //TODO: will be importing functions not yet defined
 
 //TODO: This will take in a list of portfolios as props and render them
@@ -30,6 +32,7 @@ export default function AccountView(props){
             
             <div className="container" style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
                 <div className="row">
+                    <NewPortfolio user={props.user}></NewPortfolio>
                     {props.portfolioArray.length > 0 ?
                         <h2>Your Portfolios</h2>
                         :
