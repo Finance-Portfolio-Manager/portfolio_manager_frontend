@@ -32,8 +32,23 @@ export default function NewTransaction(props){
         axios.post(process.env.REACT_APP_API_URL + "/transactions", transaction, {headers: {'Authorization': jwtToken, 'Content-Type': 'application/json'}})
             .then(response=>{
                 console.log(response);
+                props.onCloseTransactionForm();
             })
             .catch(err=>console.error(err));
+    }
+
+    const submitSellTransaction = (e) =>{
+        let jwtToken = sessionStorage.getItem("Authorization");
+        e.preventDefault();
+
+       if(transaction.transactionQuantity > 
+        props
+        .portfolio.stocks
+        .filter(stock=>stock.symbol == transaction.stockSymbol)[0]
+        .quantity)
+        {
+
+        }
     }
 
 
