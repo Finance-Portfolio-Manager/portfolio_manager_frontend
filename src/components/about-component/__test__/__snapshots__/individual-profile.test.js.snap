@@ -5,11 +5,11 @@ exports[`matches snapshot team1 1`] = `
   className="profile d-flex flex-wrap flex-fill justify-content-center"
 >
   <div
-    className="card m-4 border-0"
+    className="card my-2 border-0 mx-auto"
     id="individual"
   >
     <a
-      className="text-decoration-none text-white"
+      className="text-white d-flex flex-fill justify-content-center"
       href="https://www.linkedin.com/in/nicholas-bilotta-092010175/"
       target="_blank"
     >
@@ -25,16 +25,16 @@ exports[`matches snapshot team1 1`] = `
       className="card-body"
     >
       <p>
-        Nick
+        Nick Bilotta
       </p>
     </div>
   </div>
   <div
-    className="card m-4 border-0"
+    className="card my-2 border-0 mx-auto"
     id="individual"
   >
     <a
-      className="text-decoration-none text-white"
+      className="text-white d-flex flex-fill justify-content-center"
       href="https://www.linkedin.com/in/marc-hartley/"
       target="_blank"
     >
@@ -50,16 +50,16 @@ exports[`matches snapshot team1 1`] = `
       className="card-body"
     >
       <p>
-        Marc
+        Marc Hartley
       </p>
     </div>
   </div>
   <div
-    className="card m-4 border-0"
+    className="card my-2 border-0 mx-auto"
     id="individual"
   >
     <a
-      className="text-decoration-none text-white"
+      className="text-white d-flex flex-fill justify-content-center"
       href="https://www.linkedin.com/in/apurv-patel/"
       target="_blank"
     >
@@ -75,16 +75,16 @@ exports[`matches snapshot team1 1`] = `
       className="card-body"
     >
       <p>
-        Apurv
+        Apurv Patel
       </p>
     </div>
   </div>
   <div
-    className="card m-4 border-0"
+    className="card my-2 border-0 mx-auto"
     id="individual"
   >
     <a
-      className="text-decoration-none text-white"
+      className="text-white d-flex flex-fill justify-content-center"
       href="https://www.linkedin.com/in/elvis-lee-4012231a2/"
       target="_blank"
     >
@@ -100,16 +100,16 @@ exports[`matches snapshot team1 1`] = `
       className="card-body"
     >
       <p>
-        Elvis
+        Elvis Lee
       </p>
     </div>
   </div>
   <div
-    className="card m-4 border-0"
+    className="card my-2 border-0 mx-auto"
     id="individual"
   >
     <a
-      className="text-decoration-none text-white"
+      className="text-white d-flex flex-fill justify-content-center"
       href="https://www.linkedin.com/in/kalvin-miller-872139100/"
       target="_blank"
     >
@@ -141,16 +141,16 @@ exports[`matches snapshot team1 1`] = `
       className="card-body"
     >
       <p>
-        Kalvin
+        Kalvin Miller
       </p>
     </div>
   </div>
   <div
-    className="card m-4 border-0"
+    className="card my-2 border-0 mx-auto"
     id="individual"
   >
     <a
-      className="text-decoration-none text-white"
+      className="text-white d-flex flex-fill justify-content-center"
       href="https://github.com/CurtisGreene-Morgan"
       target="_blank"
     >
@@ -182,7 +182,7 @@ exports[`matches snapshot team1 1`] = `
       className="card-body"
     >
       <p>
-        Curtis
+        Curtis Morgan
       </p>
     </div>
   </div>
@@ -194,11 +194,11 @@ exports[`matches snapshot team1 2`] = `
   className="profile d-flex flex-wrap flex-fill justify-content-center"
 >
   <div
-    className="card m-4 border-0"
+    className="card my-2 border-0 mx-auto"
     id="individual"
   >
     <a
-      className="text-decoration-none text-white"
+      className="text-white d-flex flex-fill justify-content-center"
       href="https://www.linkedin.com/in/gregory-m-233bb899/"
       target="_blank"
     >
@@ -214,16 +214,16 @@ exports[`matches snapshot team1 2`] = `
       className="card-body"
     >
       <p>
-        Greg
+        Greg Mccoy
       </p>
     </div>
   </div>
   <div
-    className="card m-4 border-0"
+    className="card my-2 border-0 mx-auto"
     id="individual"
   >
     <a
-      className="text-decoration-none text-white"
+      className="text-white d-flex flex-fill justify-content-center"
       href="https://www.linkedin.com/in/david-garcia-563543158/"
       target="_blank"
     >
@@ -239,16 +239,16 @@ exports[`matches snapshot team1 2`] = `
       className="card-body"
     >
       <p>
-        David
+        David Garcia
       </p>
     </div>
   </div>
   <div
-    className="card m-4 border-0"
+    className="card my-2 border-0 mx-auto"
     id="individual"
   >
     <a
-      className="text-decoration-none text-white"
+      className="text-white d-flex flex-fill justify-content-center"
       href="https://www.linkedin.com/in/quinton-liang-22b016175/"
       target="_blank"
     >
@@ -264,16 +264,16 @@ exports[`matches snapshot team1 2`] = `
       className="card-body"
     >
       <p>
-        Quinton
+        Quinton Liang
       </p>
     </div>
   </div>
   <div
-    className="card m-4 border-0"
+    className="card my-2 border-0 mx-auto"
     id="individual"
   >
     <a
-      className="text-decoration-none text-white"
+      className="text-white d-flex flex-fill justify-content-center"
       href="https://www.linkedin.com/in/rensy-a-894463198/"
       target="_blank"
     >
@@ -289,16 +289,16 @@ exports[`matches snapshot team1 2`] = `
       className="card-body"
     >
       <p>
-        Rensy
+        Rensy Aikara
       </p>
     </div>
   </div>
   <div
-    className="card m-4 border-0"
+    className="card my-2 border-0 mx-auto"
     id="individual"
   >
     <a
-      className="text-decoration-none text-white"
+      className="text-white d-flex flex-fill justify-content-center"
       href="https://www.linkedin.com/in/carlos-galvan-jr/"
       target="_blank"
     >
@@ -314,16 +314,16 @@ exports[`matches snapshot team1 2`] = `
       className="card-body"
     >
       <p>
-        Carlos
+        Carlos Galvan
       </p>
     </div>
   </div>
   <div
-    className="card m-4 border-0"
+    className="card my-2 border-0 mx-auto"
     id="individual"
   >
     <a
-      className="text-decoration-none text-white"
+      className="text-white d-flex flex-fill justify-content-center"
       href="https://www.linkedin.com/in/melanieduah/"
       target="_blank"
     >
@@ -339,7 +339,7 @@ exports[`matches snapshot team1 2`] = `
       className="card-body"
     >
       <p>
-        Melanie
+        Melanie Duah
       </p>
     </div>
   </div>
@@ -351,11 +351,11 @@ exports[`matches snapshot team1 3`] = `
   className="profile d-flex flex-wrap flex-fill justify-content-center"
 >
   <div
-    className="card m-4 border-0"
+    className="card my-2 border-0 mx-auto"
     id="individual"
   >
     <a
-      className="text-decoration-none text-white"
+      className="text-white d-flex flex-fill justify-content-center"
       href="https://www.linkedin.com/in/aaron-parker-460518189/"
       target="_blank"
     >
@@ -371,16 +371,16 @@ exports[`matches snapshot team1 3`] = `
       className="card-body"
     >
       <p>
-        Aaron
+        Aaron Parker
       </p>
     </div>
   </div>
   <div
-    className="card m-4 border-0"
+    className="card my-2 border-0 mx-auto"
     id="individual"
   >
     <a
-      className="text-decoration-none text-white"
+      className="text-white d-flex flex-fill justify-content-center"
       href="https://www.linkedin.com/in/wyattgoettsch/"
       target="_blank"
     >
@@ -396,16 +396,16 @@ exports[`matches snapshot team1 3`] = `
       className="card-body"
     >
       <p>
-        Wyatt
+        Wyatt Goettsch
       </p>
     </div>
   </div>
   <div
-    className="card m-4 border-0"
+    className="card my-2 border-0 mx-auto"
     id="individual"
   >
     <a
-      className="text-decoration-none text-white"
+      className="text-white d-flex flex-fill justify-content-center"
       href="https://www.linkedin.com/in/fuming-zhao-57ba41212/"
       target="_blank"
     >
@@ -421,16 +421,16 @@ exports[`matches snapshot team1 3`] = `
       className="card-body"
     >
       <p>
-        Fuming
+        Fuming Zhao
       </p>
     </div>
   </div>
   <div
-    className="card m-4 border-0"
+    className="card my-2 border-0 mx-auto"
     id="individual"
   >
     <a
-      className="text-decoration-none text-white"
+      className="text-white d-flex flex-fill justify-content-center"
       href="https://www.linkedin.com/in/conor-scalf/"
       target="_blank"
     >
@@ -446,16 +446,16 @@ exports[`matches snapshot team1 3`] = `
       className="card-body"
     >
       <p>
-        Conor
+        Conor Scalf
       </p>
     </div>
   </div>
   <div
-    className="card m-4 border-0"
+    className="card my-2 border-0 mx-auto"
     id="individual"
   >
     <a
-      className="text-decoration-none text-white"
+      className="text-white d-flex flex-fill justify-content-center"
       href="https://www.linkedin.com/in/cody-anderson-b292a4219/"
       target="_blank"
     >
@@ -487,16 +487,16 @@ exports[`matches snapshot team1 3`] = `
       className="card-body"
     >
       <p>
-        Cody
+        Cody Anderson
       </p>
     </div>
   </div>
   <div
-    className="card m-4 border-0"
+    className="card my-2 border-0 mx-auto"
     id="individual"
   >
     <a
-      className="text-decoration-none text-white"
+      className="text-white d-flex flex-fill justify-content-center"
       href="https://www.linkedin.com/in/trent-greenman-277124172/"
       target="_blank"
     >
@@ -512,7 +512,7 @@ exports[`matches snapshot team1 3`] = `
       className="card-body"
     >
       <p>
-        Trent
+        Trent Greenman
       </p>
     </div>
   </div>

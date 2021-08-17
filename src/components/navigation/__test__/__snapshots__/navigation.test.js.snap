@@ -1,17 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`matches snapshot 1`] = `
-<nav
-  className="navbar navbar-expand-lg navbar-dark bg-dark primary-color"
+<div
+  className="container-fluid p-0"
 >
-  <div
-    className="container-fluid  py-0"
+  <nav
+    className="navbar navbar-expand-lg navbar-dark bg-dark primary-color"
   >
-    <a
-      className="navbar-brand"
-    >
-      Team Name
-    </a>
+    <img
+      alt="Logo"
+      className="m-2"
+      src="apexstocks.jpg"
+    />
     <button
       aria-controls="navbarNav"
       aria-expanded="false"
@@ -41,7 +41,7 @@ exports[`matches snapshot 1`] = `
             <a
               aria-current="page"
               className="nav-link active"
-              href="/home"
+              href="/"
             >
               Home
             </a>
@@ -51,6 +51,7 @@ exports[`matches snapshot 1`] = `
           >
             <div
               className="text-white py-0 border-0 dropdown"
+              onMouseLeave={[Function]}
             >
               <div
                 className="btn rounded-0 "
@@ -71,25 +72,21 @@ exports[`matches snapshot 1`] = `
             <a
               aria-current="page"
               className="nav-link active"
-              href="#"
+              href="/about"
             >
               About Us
             </a>
-            <div
-              className="text-white py-0 border-0 dropdown"
+          </li>
+          <li
+            className="nav-item"
+          >
+            <a
+              aria-current="page"
+              className="nav-link active align-item-center"
+              href="/new-transaction"
             >
-              <div
-                className="btn rounded-0 "
-                href=""
-                onMouseEnter={[Function]}
-              >
-                <span
-                  className="text-white"
-                >
-                  Stocks
-                </span>
-              </div>
-            </div>
+              Transaction
+            </a>
           </li>
         </ul>
         <div
@@ -148,6 +145,6 @@ exports[`matches snapshot 1`] = `
         </div>
       </div>
     </div>
-  </div>
-</nav>
+  </nav>
+</div>
 `;

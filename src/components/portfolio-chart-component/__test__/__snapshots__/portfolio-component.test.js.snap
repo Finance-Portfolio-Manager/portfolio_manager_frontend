@@ -58,15 +58,19 @@ exports[`matches snapshot 1`] = `
         },
         "xaxis": Object {
           "categories": Array [
-            "Aug 1",
-            "Aug 2",
-            "Aug 3",
-            "Aug 4",
-            "Aug 5",
-            "Aug 6",
-            "Aug 7",
+            2021-08-11T20:42:21.345Z,
+            2021-08-12T20:42:21.345Z,
+            2021-08-13T20:42:21.345Z,
+            2021-08-14T20:42:21.345Z,
+            2021-08-15T20:42:21.345Z,
+            2021-08-16T20:42:21.345Z,
+            2021-08-17T20:42:21.345Z,
           ],
           "convertedCatToNumeric": true,
+          "labels": Object {
+            "format": "dd/MM",
+            "trim": true,
+          },
           "type": "category",
         },
       }
@@ -74,27 +78,11 @@ exports[`matches snapshot 1`] = `
     series={
       Array [
         Object {
-          "data": Array [
-            4263.25,
-            4567.25,
-            4583.25,
-            4363.25,
-            3863.15,
-            4343.77,
-            4168.25,
-          ],
+          "data": undefined,
           "name": "Portfolio Value",
         },
         Object {
-          "data": Array [
-            3963.25,
-            4162.77,
-            4081.77,
-            4363.25,
-            4663.25,
-            4863.25,
-            4063.25,
-          ],
+          "data": undefined,
           "name": "Amount Invested",
         },
       ]

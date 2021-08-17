@@ -2,7 +2,7 @@
 
 exports[`matches snapshot 1`] = `
 <button
-  className="sc-bdnxRM ceAwFl float"
+  className="sc-bdnxRM iUNEJc float global__blur-effect global__dropshadow"
   onClick={[Function]}
 >
   CHANGE THEME

@@ -2,105 +2,255 @@
 
 exports[`matches snapshot 1`] = `
 <div
-  class="wholeform"
+  className="container-fluid p-0"
 >
-  <form
-    className=""
+  <div
+    className="container-fluid p-0"
   >
-    <div
-      class="container"
+    <nav
+      className="navbar navbar-expand-lg navbar-dark bg-dark primary-color"
     >
+      <img
+        alt="Logo"
+        className="m-2"
+        src="apexstocks.jpg"
+      />
       <button
-        className="btn btn-info"
-        disabled={false}
-        name="buy"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+        className="navbar-toggler"
+        data-bs-target="#navbarNav"
+        data-bs-toggle="collapse"
         type="button"
-        value="buysell"
       >
-        Buy
+        <span
+          className="navbar-toggler-icon"
+        />
       </button>
-      <button
-        className="btn btn-info"
-        disabled={false}
-        name="Sell"
-        type="button"
-        value="buysell"
+      <div
+        className="collapse navbar-collapse"
+        id="navbarNav"
       >
-        Sell
-      </button>
-    </div>
-    <div
-      class="container"
-    >
-      <div>
-        <label
-          className="form-label"
+        <div
+          className=" d-flex flex-column flex-md-row justify-content-between flex-fill"
         >
-          Stock Symbol:
-        </label>
-        <input
-          className="form-control"
-          name="stocksymbol"
-        />
-        <label
-          className="form-label"
-        >
-          Quantity:
-        </label>
-        <input
-          className="form-control"
-          name="shareAmount"
-          type="number"
-        />
-        <label
-          className="form-label"
-        >
-          Price:
-        </label>
-        <input
-          className="form-control"
-          name="sharePrice"
-          type="number"
-        />
-        <label
-          className="form-label"
-        >
-          Date:
-        </label>
-        <input
-          className="form-control"
-          name="date"
-          type="date"
-        />
-        <label
-          className="form-label"
-        >
-          Note:
-        </label>
-        <input
-          className="form-control"
-          name="note"
-        />
+          <ul
+            className="navbar-nav primary-text"
+          >
+            <li
+              className="nav-item"
+            >
+              <a
+                aria-current="page"
+                className="nav-link active"
+                href="/"
+              >
+                Home
+              </a>
+            </li>
+            <li
+              className="nav-item"
+            >
+              <div
+                className="text-white py-0 border-0 dropdown"
+                onMouseLeave={[Function]}
+              >
+                <div
+                  className="btn rounded-0 "
+                  href=""
+                  onMouseEnter={[Function]}
+                >
+                  <span
+                    className="text-white"
+                  >
+                    Portfolios
+                  </span>
+                </div>
+              </div>
+            </li>
+            <li
+              className="nav-item"
+            >
+              <a
+                aria-current="page"
+                className="nav-link active"
+                href="/about"
+              >
+                About Us
+              </a>
+            </li>
+            <li
+              className="nav-item"
+            >
+              <a
+                aria-current="page"
+                className="nav-link active align-item-center"
+                href="/new-transaction"
+              >
+                Transaction
+              </a>
+            </li>
+          </ul>
+          <div
+            className="d-flex align-self-center me-3"
+          >
+            <span
+              className="align-self-center p1"
+            >
+              <i
+                className="bi-person-circle text-white"
+              />
+            </span>
+            <div
+              className="navbar-nav dropdown"
+            >
+              <a
+                aria-expanded="false"
+                className="nav-link dropdown-toggle active"
+                data-bs-toggle="dropdown"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+              >
+                Account
+              </a>
+              <ul
+                aria-labelledby="navbarDropdown"
+                className="dropdown-menu dropdown-menu-end dropdown-menu-gray"
+              >
+                <li>
+                  <a
+                    className="dropdown-item"
+                    href="/login"
+                  >
+                    Log in
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="dropdown-item"
+                    href="/register"
+                  >
+                    Sign up
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="dropdown-item"
+                    href="/home"
+                  >
+                    Log Out
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-    <div
-      class="container"
+    </nav>
+  </div>
+  <div
+    className="App__container secondary-color"
+  >
+    <form
+      className="form__style global__blur-effect--light global__dropshadow global__zoom"
     >
-      <button
-        className="btn btn-info"
-        disabled={false}
-        type="submit"
+      <div
+        className="new-transaction__container"
       >
-        Add New Transaction
-      </button>
-      <button
-        className="btn btn-info"
-        disabled={false}
-        type="submit"
+        <button
+          className="new-transaction__button global__button-effect btn btn-info"
+          disabled={false}
+          name="buy"
+          type="button"
+          value="buysell"
+        >
+          Buy
+        </button>
+        <button
+          className="new-transaction__button global__button-effect btn btn-info"
+          disabled={false}
+          name="sell"
+          type="button"
+          value="buysell"
+        >
+          Sell
+        </button>
+      </div>
+      <div
+        className="new-transaction__container"
       >
-        Test Get Transaction
-      </button>
-    </div>
-  </form>
+        <div>
+          <label
+            className="form-label"
+          >
+            Stock Symbol:
+          </label>
+          <input
+            className="form-control"
+            name="stocksymbol"
+          />
+          <label
+            className="form-label"
+          >
+            Quantity:
+          </label>
+          <input
+            className="form-control"
+            name="shareAmount"
+            type="number"
+          />
+          <label
+            className="form-label"
+          >
+            Price:
+          </label>
+          <input
+            className="form-control"
+            name="sharePrice"
+            type="number"
+          />
+          <label
+            className="form-label"
+          >
+            Date:
+          </label>
+          <input
+            className="form-control"
+            name="date"
+            type="date"
+          />
+          <label
+            className="form-label"
+          >
+            Note:
+          </label>
+          <input
+            className="form-control"
+            name="note"
+          />
+        </div>
+      </div>
+      <div
+        className="new-transaction__container "
+      >
+        <button
+          className="new-transaction__button global__button-effect btn btn-info"
+          disabled={false}
+          type="submit"
+        >
+          Add New Transaction
+        </button>
+        <button
+          className="new-transaction__button global__button-effect btn btn-info"
+          disabled={false}
+          type="submit"
+        >
+          Test Get Transaction
+        </button>
+      </div>
+    </form>
+  </div>
 </div>
 `;

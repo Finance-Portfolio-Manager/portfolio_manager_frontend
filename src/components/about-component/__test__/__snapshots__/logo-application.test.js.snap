@@ -2,20 +2,23 @@
 
 exports[`matches snapshot 1`] = `
 <div
-  className="border border-4 logoApp m-3 card"
+  className="border border-0 logoApp m-3 card"
   id="logo-card"
 >
   <div
     className="card-body"
+    id="logo"
   >
     <img
       alt="logo"
       className="card-img"
+      src="logo-white.svg"
     />
     <p
-      className="card-text"
+      className="d-flex justify-content-center card-text"
+      id="appName"
     >
-      Application Name
+      APEX STOCKS
     </p>
   </div>
 </div>
