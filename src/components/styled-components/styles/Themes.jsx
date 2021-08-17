@@ -14,12 +14,12 @@ export const lightTheme = {
     // background: '#363537',
     // darkestDark: '#FFF',
     // mediumDark: '#000000',
-    primaryText: '#000',
+    primaryText: '#1f1f1f',
     secondaryText: '#333333',
     primaryColor: '#A6ABB7',
     secondaryColor: '#D9DADF',
-    accentColor: 'rgba(215, 39, 219, 0.7)',
-    gradientPair: 'rgba(0, 56, 255, 0.7)',
+    accentColor: 'rgba(0, 56, 255, 0.7)',
+    gradientPair: 'rgba(215, 39, 219, 0.7)',
     // gradientStyle: `linear-gradient(109.36deg, rgba(215, 39, 219, 0.7) -4.44%, ${theme.accentColor}, #C4C4C4 !important`
     type: 'light'
 }

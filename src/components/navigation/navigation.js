@@ -1,15 +1,20 @@
 import NavDropDown from './navdropdown';
 import ApexLogo from '../images/apexstocks.jpg';
 import React, { useState } from 'react';
+import { Logo } from '../styled-components/logo/Logo';
+import ToggleButton from '../styled-components/components/ToggleButton';
 
-export default function Navigation() {
+export default function Navigation({ theme, toggleTheme }) {
     const [dropdownShowpPortfolio, setDropDrownShowPortfolio] = useState(false);
     const [dropdownShowStocks, setDropdownShowStocks] = useState(false);
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark primary-color">
+        <nav className="navbar navbar-expand-lg navbar-dark bg-dark primary-color global__link">
             <div className="container-fluid  py-0">
                 {/* TODO: Change logo to svg file */}
-                <img src={ApexLogo} alt="Logo" />
+                {/* <img src={ApexLogo} alt="Logo" /> */}
+                <div className="global__logo">
+                    <Logo className='m-2' />
+                </div>
 
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
@@ -60,6 +65,8 @@ export default function Navigation() {
                                     <li><a className="dropdown-item" href="/login">Log in</a></li>
                                     <li><a className="dropdown-item" href="/register">Sign up</a></li>
                                     <li><a className="dropdown-item" href="/home">Log Out</a></li>
+                                    <li><ToggleButton theme={theme} toggleTheme={toggleTheme} /></li>
+
                                 </ul>
                             </div>
                         </div>

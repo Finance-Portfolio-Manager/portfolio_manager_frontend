@@ -5,15 +5,15 @@ import { GrNext, GrPrevious } from "react-icons/gr";
 export const NewsPaperV2 = (props) => {
   //   const [story, setStory] = useState(props.story);
   return (
-    <div className="news__body primary-text">
+    <div className="news__body primary-text global__link">
       <div className="news__container ">
         <div className="news__title-container global__gradient-background">
           <div className="news__center">
             <div className="news__title-header news__zoom global__gradient-text">
               {props.story.title}
             </div>
-            <div className="news__source-container">
-              <a href={props.story.url} className="news__source-link">
+            <div className="news__source-container ">
+              <a href={props.story.url} className="news__source-link ">
                 Source
               </a>
             </div>

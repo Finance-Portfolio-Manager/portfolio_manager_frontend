@@ -34,9 +34,9 @@ export default function Main() {
                 
                 <ThemeProvider theme={themeMode} >
                     <GlobalStyle />
-                    <Navigation />
+                    <Navigation theme={theme} toggleTheme={themeToggler} />
                     <ScrollingStripContainer />
-                    <ToggleButton theme={theme} toggleTheme={themeToggler} />
+                    {/* <ToggleButton theme={theme} toggleTheme={themeToggler} /> */}
                     <Switch>
                         <Route exact path="/portfolio" component={() => <Home users={users} />} />
                         <Route exact path="/home" component={() => <LandingPage />} />

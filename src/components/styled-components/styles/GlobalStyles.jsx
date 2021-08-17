@@ -12,10 +12,9 @@ export const GlobalStyle = createGlobalStyle`
         /* font-family: Tahoma, Helvetica, Arial, Roboto, sans-serif; */
         /* transition: all 0.50s ease-out; */
         background-color: none !important;
-        
-      }
+    }
    
-      .primary-color,
+      /* .primary-color,
       .secondary-color,
       .accent-color,
       .global__gradient-background,
@@ -24,7 +23,7 @@ export const GlobalStyle = createGlobalStyle`
           -moz-transition: background-color .5s linear;
           -o-transition: background-color .5s linear;
           transition: background-color .5s linear;
-      }
+      } */
 
 
 
@@ -102,7 +101,8 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     .global__button-effect{
-      /* background:  ${({ theme }) => ` linear-gradient(109.36deg, ${theme.accentColor} -4.44%, ${theme.gradientPair} 143.69%), ${theme.accentColor}50 !important `}; */
+      /* background:  ${({ theme }) =>
+        ` linear-gradient(109.36deg, ${theme.accentColor} -4.44%, ${theme.gradientPair} 143.69%), ${theme.accentColor}50 !important `}; */
           background:  ${({ theme }) => theme.accentColor} !important;
           border: none;
           color: white;
@@ -114,7 +114,8 @@ export const GlobalStyle = createGlobalStyle`
     }
     .global__button-effect:hover{
           background:  ${({ theme }) => theme.primaryColor} !important;
-          /* background:  ${({ theme }) => ` linear-gradient(109.36deg, ${theme.gradientPair} -4.44%, ${theme.accentColor} 143.69%), #C4C4C4 !important `}; */
+          /* background:  ${({ theme }) =>
+            ` linear-gradient(109.36deg, ${theme.gradientPair} -4.44%, ${theme.accentColor} 143.69%), #C4C4C4 !important `}; */
           border: none;
           color: white;
 
@@ -139,12 +140,11 @@ export const GlobalStyle = createGlobalStyle`
 
         .global__blur-effect--light {
           background-color: ${({ theme }) =>
-           theme.type == 'light'  
-          ? ` ${theme.primaryColor}50!important;
+            theme.type == "light"
+              ? ` ${theme.primaryColor}50!important;
           -webkit-backdrop-filter: blur(10px) !important;
           backdrop-filter: blur(10px) !important;`
-          : `${theme.primaryColor} !important;`
-          } ;
+              : `${theme.primaryColor} !important;`} ;
 
           
         }
@@ -152,14 +152,37 @@ export const GlobalStyle = createGlobalStyle`
       }
 
       .global__zoom {
-        transition: transform 0.3s;
+        /* transition: transform 0.3s; */
       } 
 
       .global__zoom:hover {
-          transform: scale(
-      1.05
-      ); 
-}
+          /* transform: scale(1.05);  */
+      }
+
+      
+      .global__logo{
+          width: 30px;
+        }
+
+        /* unvisited link */
+        .global__link a:link {
+          color: ${({ theme }) => theme.primaryText} !important;
+        }
+
+        /* visited link */
+        .global__link a:visited {
+          color: ${({ theme }) => theme.primaryText} !important;
+        }
+
+        /* mouse over link */
+        .global__link a:hover {
+          color: ${({ theme }) => theme.primaryText} !important;
+        }
+
+        /* selected link */
+        .global__link a:active {
+          color: ${({ theme }) => theme.primaryText} !important;
+        }
 
     
 `;
