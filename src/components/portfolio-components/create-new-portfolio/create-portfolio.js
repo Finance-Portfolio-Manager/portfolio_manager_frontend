@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
+import { PingApiCreatePortfolio } from "../../ServerRequest";
 
 import CreatePortfolioForm from "./create-portfolio-form";
 
@@ -21,8 +22,7 @@ export default function CreatePortfolio(props){
         e.preventDefault(); 
         console.log(JSON.stringify(portfolio));   
         let jwtToken = sessionStorage.getItem("Authorization");
-        axios.post(process.env.REACT_APP_API_URL + "/portfolios", JSON.stringify(portfolio), {headers: {'Authorization': jwtToken, 'Content-Type': 'application/json'}})
-            .then(response=>{
+            PingApiCreatePortfolio(JSON.stringify(portfolio), jwtToken).then(response=>{
                 console.log(response);
                 props.refreshAccountPage();
                 props.onClosePortfolioForm();

@@ -30,8 +30,7 @@ export default function NewTransaction(props){
     const createNewTransaction = (e)=>{
         let jwtToken = sessionStorage.getItem("Authorization");
         e.preventDefault();
-        axios.post(process.env.REACT_APP_API_URL + "/transactions", transaction, {headers: {'Authorization': jwtToken, 'Content-Type': 'application/json'}})
-            .then(response=>{
+            PingApiTransactions(transaction, jwtToken).then(response=>{
                 console.log(response);
                 props.refreshAccountPage();
                 props.onCloseTransactionForm();
@@ -53,8 +52,6 @@ export default function NewTransaction(props){
        if(transaction.transactionQuantity <= quantityOwned){
             let submitTransaction = transaction;
             submitTransaction = {...submitTransaction, transactionQuantity:(submitTransaction.transactionQuantity * -1)};
-            //setTransaction({...transaction, transactionQuantity:(transaction.transactionQuantity * -1)});
-            // axios.post(process.env.REACT_APP_API_URL + "/transactions", submitTransaction, {headers: {'Authorization': jwtToken, 'Content-Type': 'application/json'}})
             PingApiTransactions(submitTransaction, jwtToken).then(response=>{
                 console.log(response);
                 props.refreshAccountPage();

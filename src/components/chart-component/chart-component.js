@@ -12,7 +12,6 @@ function ChartComponent(props) {
     });
 
     useEffect(()=>{
-        // axios.get(process.env.REACT_APP_API_URL + "/charts/" + props.symbol)
         PingApiChart(props.symbol).then(response => {
             console.log(response)
             // put logic for multiple time frames here

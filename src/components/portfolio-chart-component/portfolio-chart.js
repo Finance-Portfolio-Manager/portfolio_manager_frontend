@@ -14,10 +14,6 @@ function PortfolioChart(props){
     useEffect(()=>{
 
         //THIS IS FOR 7 DAY TIME PERIOD, CONFIG FOR CHART TIME FRAME NEEDS WORK
-        // axios.get(process.env.REACT_APP_API_URL+`/balances/daily/${props.portfolioID}`, {
-        //     headers:
-        //     {'Authorization':sessionStorage.getItem("Authorization")}
-        // })
         PingApiBalancesChart(props.portfolioId).then(response=>{  
             const invested = [];
             const value = [];

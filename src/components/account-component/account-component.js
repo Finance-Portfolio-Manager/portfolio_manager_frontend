@@ -12,29 +12,17 @@ export default function Account(props){
     let [user, setUser] = useState({});
 
     let refreshAccountPage = () => {
-        axios.get(process.env.REACT_APP_API_URL+"/login?token="+sessionStorage.getItem("Authorization"), 
-            {headers: {"Authorization": sessionStorage.getItem("Authorization")}})
-        .then(userResponse => {
-            setUser(userResponse.data);
-            
-            axios.get(process.env.REACT_APP_API_URL+"/portfolios/"+userResponse.data.userId, 
-            {headers: {"Authorization": sessionStorage.getItem("Authorization"),
-                        "Access-Control-Allow-Origin": sessionStorage.getItem("Authorization")}})
-            .then(portfoliosResponse => {
-                setPortfolioArray(portfoliosResponse.data);
+        PingApiLoginFavorites().then(userResponse => {
+            setUser(userResponse);
+            PingApiPortfoliosUserId(userResponse.userId).then(portfoliosResponse => {
+                setPortfolioArray(portfoliosResponse);
             })
         })
     }
 
     useEffect(()=>{
-        // axios.get(process.env.REACT_APP_API_URL+"/login?token="+sessionStorage.getItem("Authorization"), 
-        //     {headers: {"Authorization": sessionStorage.getItem("Authorization")}})
         PingApiLoginFavorites().then(userResponse => {
             setUser(userResponse);
-            
-            // axios.get(process.env.REACT_APP_API_URL+"/portfolios/"+userResponse.userId, 
-            // {headers: {"Authorization": sessionStorage.getItem("Authorization"),
-            //             "Access-Control-Allow-Origin": sessionStorage.getItem("Authorization")}})
             PingApiPortfoliosUserId(userResponse.userId).then(portfoliosResponse => {
                 setPortfolioArray(portfoliosResponse);
             })

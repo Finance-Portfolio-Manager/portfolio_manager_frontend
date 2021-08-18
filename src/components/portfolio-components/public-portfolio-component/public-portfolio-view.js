@@ -19,15 +19,12 @@ export default function PublicPortfolioView(props){
         {
         e.preventDefault();
 
-        // axios.get(process.env.REACT_APP_API_URL+"/login?token="+sessionStorage.getItem("Authorization"), 
-        // {headers: {"Authorization": sessionStorage.getItem("Authorization")}})
         PingApiLoginFavorites().then(userResponse => {
             let favoriteObj = {
                 userId: userResponse.userId,
                 portfolioId: props.portfolio.portfolioId
             }
             console.log(`favoriteObj: ${JSON.stringify(favoriteObj)}`);
-            // axios.post(`${process.env.REACT_APP_API_URL}/favorites`, JSON.stringify(favoriteObj), {headers: {"Authorization": sessionStorage.getItem("Authorization"), 'Content-Type': 'application/json'}})
             PingApiPostFavorite(JSON.stringify(favoriteObj)).then(favoriteResponse =>{
                 console.log(favoriteResponse);
             })

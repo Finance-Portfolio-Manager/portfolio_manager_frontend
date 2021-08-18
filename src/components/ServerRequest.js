@@ -55,7 +55,7 @@ export function PingApiPostFavorite(json){
 }
 
 export function PingApiPortfoliosUserId(id){
-    return axios.get(process.env.REACT_APP_API_URL+"/portfolios/"+id, 
+    return axios.get(`${process.env.REACT_APP_API_URL}/portfolios/${id}`, 
     {headers: {"Authorization": sessionStorage.getItem("Authorization"),
                 "Access-Control-Allow-Origin": sessionStorage.getItem("Authorization")}}).then((response) => response.data);
 }
@@ -68,4 +68,9 @@ export function PingApiChart(symbol){
 export function PingApiTransactions(json, jwt){
     return axios.post(process.env.REACT_APP_API_URL + "/transactions", json, {headers: {'Authorization': jwt, 'Content-Type': 'application/json'}})
     .then((response)=> response.data);
+}
+
+export function PingApiCreatePortfolio(json, jwt){
+    return axios.post(process.env.REACT_APP_API_URL + "/portfolios", json, {headers: {'Authorization': jwt, 'Content-Type': 'application/json'}})
+    .then((response) => response.data);
 }

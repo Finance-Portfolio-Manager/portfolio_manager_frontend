@@ -38,7 +38,6 @@ export default function Register(props) {
                 password:`${registrationData.password}`,
                 confirmPassword:`${registrationData.confirmPassword}`
                 };
-            // axios.post(URL + "/users", JSON.stringify(registrationInfo), {headers:{'Content-Type': 'application/json'}})
                 PingApiRegister(JSON.stringify(registrationInfo)).then(response=>{
                     console.log(response);
                     props.history.push("/login");

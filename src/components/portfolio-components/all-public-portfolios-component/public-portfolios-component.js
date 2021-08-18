@@ -8,7 +8,6 @@ export default function PublicPortfolios(props){
     let [portfolioList, setPortfolioList] = useState(null);
 
     useEffect(()=>{
-        // axios.get("http://apexstocks.xyz/services/portfolios/public", {headers: {"Authorization": sessionStorage.getItem("Authorization")}})
         PingApiPortfoliosPublic().then(portfoliosResponse=>{setPortfolioList(portfoliosResponse)
             console.log("promise: "+JSON.stringify(portfoliosResponse))})
         }, []);
