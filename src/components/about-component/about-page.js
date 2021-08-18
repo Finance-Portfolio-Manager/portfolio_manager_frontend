@@ -11,14 +11,16 @@ import ProfileComponent from "./profile-application";
 export default function About(){
     return (
         <div className="container-fluid p-0">
-            <div className="d-flex flex-column justify-content-start">
-                    <LogoCard></LogoCard>
-            </div>
-            <br></br>
-            <div className="d-flex flex-column flex-fill justify-content-end mx-auto align-self-end w-50 me-5" id="aboutNew">
-                    <AboutCard></AboutCard>
-            </div>
-            <br></br>
+            <div className="d-flex justify-content-between w-60 mx-auto h-60 m-5 p-5 align-items-center">
+                    <div className="team d-flex justify-content-center align-items-center">
+                        <span><LogoCard></LogoCard></span>
+                    </div>
+                    <div className="border-0 border-start border-5 ms-5 h-60 my-auto"></div>
+                    <div className="ms-5">
+                        <AboutCard></AboutCard>
+                    </div>
+                </div>
+            
             <div className="d-flex flex-column">
                    <ProfileComponent></ProfileComponent>
             </div>

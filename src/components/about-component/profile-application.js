@@ -19,7 +19,7 @@ export default function ProfileComponent(){
 
     return (
         <Container>
-            <p className="d-flex flex-column w-50 meetTeam justify-content-center mx-auto lead fw-bolder text-white primary-text" id="meet">Meet Our Team</p>
+            <p className="d-flex flex-column meetTeam justify-content-center mx-auto lead fw-bolder text-white primary-text" id="meet">Meet Our Team</p>
             <hr className="text-white"></hr>
             <section id="profiles ">
                         <div id="individual" className="card border-0 d-flex flex-column captainProfile justify-content-center mx-auto my-4">
@@ -32,13 +32,13 @@ export default function ProfileComponent(){
                 <br></br>
                 <Row>
                     <Col className="teams m-3">
-                    <Button className="team-button border-0" id="team1" onClick={onButtonClick}>Team1</Button>
+                    <Button className="team-button border-0 accent-color" id="team1" onClick={onButtonClick}>Team-1</Button>
                     </Col>
                     <Col className="teams m-3">
-                    <Button className="team-button border-0" id="team2" onClick={onButtonClick}>Team2</Button>
+                    <Button className="team-button border-0 accent-color" id="team2" onClick={onButtonClick}>Team-2</Button>
                     </Col>
                     <Col className="teams m-3">
-                    <Button className="team-button border-0" id="team3" onClick={onButtonClick}>Team3</Button>
+                    <Button className="team-button border-0 accent-color" id="team3" onClick={onButtonClick}>Team-3</Button>
                     </Col>
                 </Row>
                 <br></br>
