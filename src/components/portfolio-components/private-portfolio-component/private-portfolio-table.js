@@ -1,23 +1,19 @@
 import { Table } from "react-bootstrap";
 import { useState } from "react";
-import { Button } from "react-bootstrap";
+import { Button, Card } from "react-bootstrap";
 import PortfolioChart from "../../portfolio-chart-component/portfolio-chart";
 
 export default function PrivatePortfolioTable(props){
 
-    //TODO: There's no real point in tableRows being a state object if it never changes. Determine if it will change.
-    const [tableRows, setTableRows] = useState(props.tableRows);
-    const [portfolioTotal, setPortfolioTotal] = useState("");
-    const [changeValue, setChangeValue] = useState("");
-    const [changeAmount, setChangeAmount] = useState("");
-
     //const displayRows = tableRows.map((tableRow) => tableRow);
     // console.log(`display Rows: ${displayRows}`);
 
-    console.log(`TableRows: ${JSON.stringify(tableRows)}`);
+    console.log(`TableRows: ${JSON.stringify(props.tableRows)}`);
 
     return <>
-        <div className="wrapper fadeInDown folioContent mx-3" id="portfolio">
+    {/* REMOVED className="wrapper fadeInDown folioContent mx-3" id="portfolio" */}
+        <Card className='global__card fadeInDown primary-text'>
+            <Card.Body>
             <div id="portfolio-values">
                 <h4 id = "portfolio-total"></h4>
                 <div id = "portfolio-change"></div>
@@ -26,8 +22,9 @@ export default function PrivatePortfolioTable(props){
             <div>
                 <PortfolioChart portfolioId={props.portfolioId}></PortfolioChart>
             </div>
-            <div className="table-responsive secondary-text">
-                <Table id="stocks-view" className="table borderless table-hover secondary-text" responsive>
+            <div className="table-responsive primary-text">
+                <Table id="stocks-view" className="table borderless table-hover primary-text" responsive>
+    
                     <thead>
                         <tr>
                             <th scope="col">Stock</th>
@@ -39,9 +36,13 @@ export default function PrivatePortfolioTable(props){
                     </thead>
                     <tbody id="stocks-body">
                         
-                        {tableRows.map((tableRow) => {
+                        {props.tableRows.map((tableRow) => {
                             console.log(`tableRow: ${JSON.stringify(tableRow)}`);
-                            return (<tr>
+                            return (
+                            <tr onClick={() => {
+                                props.onOpenChart();
+                                props.setChartSymbol(tableRow.symbol);
+                            }}>
                                 <td>{tableRow.symbol}</td>
                                 <td>{tableRow.quantity}</td>
                                 <td>{tableRow.avgBuyPrice}</td>
@@ -51,8 +52,9 @@ export default function PrivatePortfolioTable(props){
                         })}
                     </tbody>
                 </Table>
-                <Button variant="primary" onClick={props.unassignDisplayPortfolio}>Hide Details</Button>
+                <Button variant="primary" className='global__button-effect' onClick={props.unassignDisplayPortfolio}>Hide Details</Button>
             </div>
-        </div>
+            </Card.Body>
+        </Card>
     </>
 }

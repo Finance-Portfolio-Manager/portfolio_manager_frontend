@@ -8,7 +8,6 @@ import ScrollingStripContainer from './scrolling-strip-component/scrolling-strip
 import Account from './account-component/account-component';
 import Register from './register-component/register';
 import Login from './login-component/login';
-// import Favorites from './portfolio-components/favorites-portfolio-component'
 import { ThemeProvider } from "styled-components";
 import { LandingPage } from './styled-components/home-page/LandingPage';
 import GlobalStyle from "./styled-components/styles/GlobalStyles";
@@ -20,24 +19,33 @@ import { NewsPage } from './news-component/layout/NewsPage';
 import Chart from './portfolio-chart-component/portfolio-chart';
 import GenericChart from './chart-component/generic-chart';
 import PublicPortfolios from './portfolio-components/all-public-portfolios-component/public-portfolios-component';
-import Favorites from './portfolio-components/favorites-portfolio-component/favorites-view';
+// import Favorites from './portfolio-components/favorites-portfolio-component/favorites-view';
 import ChangePassword from './change-password-component/change-password';
+import CreatePortfolio from './portfolio-components/create-new-portfolio/create-portfolio-form';
+import FavoritePortfolios from './portfolio-components/all-favorites-portfolios-component/favorite-porftolios-component';
 
 export default function Main() {
     const [theme, themeToggler] = useAllThemes();
     const themeMode = themeSwitch(theme)
 
+    
     const users = [{ "username": "Greg", "labels": ["BYSI", "BTBT", "MRNA", "ROKU", "MU"], "percentage": [20, 30, 50, 10, 10], "profile": "Profile 1" },
     { "username": "David", "labels": ["BYSI", "AAPL", "F", "GM", "LUMN"], "percentage": [20, 10, 50, 20, 15], "profile": "Profile 1" },
     { "username": "Quinton", "labels": ["TSLA", "SHOP", "MRNA", "UBER", "BNGO"], "percentage": [10, 10, 50, 10, 20], "profile": "Profile 1" },]
 
-    const isLoggedIn = sessionStorage.getItem("Authorization");
+    const [loggedIn, setLoggedIn] = useState();
+    useEffect(()=>{
+        if(sessionStorage.getItem("Authorization")){
+            setLoggedIn(true);
+        }
+    },[loggedIn]);
+
     return (
         <React.Fragment>
             <div className="container-fluid flex-column p-0 secondary-color default-container primary-text">
                 <ThemeProvider theme={themeMode} >
                     <GlobalStyle />
-                    {isLoggedIn && <Navigation theme={theme} toggleTheme={themeToggler}/>}
+                    <Navigation loggedIn={loggedIn} setLoggedIn={setLoggedIn} theme={theme} toggleTheme={themeToggler}/>
                     <ScrollingStripContainer />
                     {/* <ToggleButton theme={theme} toggleTheme={themeToggler} /> */}
                     <Switch>
@@ -48,12 +56,14 @@ export default function Main() {
                         <Route exact path="/balances" component={Chart}/>
                         <Route exact path="/about" component={About} />
                         <Route exact path="/register" component={Register} />
-                        <Route exact path="/login" component={Login} />
+                        <Route exact path="/login" component={() => <Login setLoggedIn={setLoggedIn} />} />
                         <Route exact path="/generic-chart" component={GenericChart} />
                         <Route exact path="/new-transaction" component={NewTransaction} />
                         <Route exact path="/news" component={NewsPage} />
                         <Route exact path="/password" component={ChangePassword} />
                         {/* <Route exact path="/favorites" component={Favorites} /> */}
+                        <Route exact path="/create-portfolio" component={CreatePortfolio} />
+                        <Route exact path="/favorites" component={FavoritePortfolios} />
                     </Switch>
                 </ThemeProvider>
             </div>

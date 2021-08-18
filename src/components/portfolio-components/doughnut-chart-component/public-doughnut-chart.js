@@ -1,6 +1,21 @@
 import { Doughnut } from "react-chartjs-2";
-
+import  { useState, useEffect } from "react";
+import {
+  themeSelection
+} from "../../styled-components/styles/Themes";
 export default function PublicDoughnutChart(props){
+    const [theme, setTheme] = useState(themeSelection[0]);
+    const updateColor = () => {
+        let name = localStorage.getItem("theme") || "light";
+        let themePack =
+        themeSelection.find((element) => element.version === name) ||
+        themeSelection[0];
+    // console.log("theme>>>" + themePack);
+        setTheme(themePack);
+  };
+  useEffect(() => {
+    updateColor();
+  }, [ updateColor]);
     const data = {
         labels: props.portfolio.stocks.map((stock) => stock.symbol),
         datasets: [
@@ -26,10 +41,20 @@ export default function PublicDoughnutChart(props){
         ],
     };
     
+    const options = {
+        plugins: {
+          legend: {
+            labels: {
+              // This more specific font property overrides the global property
+              color: theme.themePack.primaryText,
+            },
+          },
+        },
+      };
 
     return (
         <div>
-            <Doughnut data={data} />
+            <Doughnut data={data} options={options} />
         </div>
     );
 }

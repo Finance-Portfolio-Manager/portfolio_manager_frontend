@@ -6,7 +6,9 @@ Hero section component styles the main page
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./HeroSection.css";
-// import GitHubButton from "react-github-btn";
+import GitHubButton from "react-github-btn";
+import { useState } from "react";
+import { useEffect } from "react";
 
 function HeroSection({
   topLine,
@@ -16,7 +18,15 @@ function HeroSection({
   img,
   alt,
   imgStart,
-}) {
+}) 
+{
+  const [loggedIn, setLoggedIn] = useState();
+
+  useEffect(() => {
+    const value = sessionStorage.getItem("Authorization");
+    setLoggedIn(value);
+  },[])
+  
   return (
     <>
       <div className="container">
@@ -37,16 +47,17 @@ function HeroSection({
                   {buttons.map((button) => {
                     return (
                       <Link to={button.link}>
-                        <Button
+                        {!loggedIn &&<Button
                           className="global__button-effect hero__button"
                           aria-label={button.ariaLabel}
                         >
-                          {button.buttonLabel}
-                        </Button>
+                          {button?.buttonLabel}
+                        </Button>}
                       </Link>
                     );
                   })}</div>
-                {/* <GitHubButton
+
+                <GitHubButton
                   href="https://github.com/Finance-Portfolio-Manager/portfolio_manager_frontend"
                   data-size="large"
                   data-show-count="true"
@@ -54,12 +65,10 @@ function HeroSection({
                   className='hero__github-button'
                 >
                   Star
-                </GitHubButton> */}
+                </GitHubButton>
 
 
-                {/* <Link to="/">
-                    <Button className='global__button-effect'>{buttonLabel}</Button>
-                </Link> */}
+          
               </div>
             </div>
             <div className="col">

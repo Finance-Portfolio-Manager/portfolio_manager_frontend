@@ -1,6 +1,6 @@
-import axios from "axios";
 import { useState } from "react";
 import { withRouter } from "react-router-dom";
+import { PingApiLogin } from "../ServerRequest";
 import LoginForm from "./login-form";
 
 function Login(props){
@@ -14,7 +14,7 @@ function Login(props){
         const {value,name} = e.target;
 
         setCredentials({...credentials, [name]:value});
-        console.log(credentials);
+        // console.log(credentials);
 
         setError(false);
         setNetworkError(false);
@@ -27,16 +27,14 @@ function Login(props){
             password:`${credentials.password}`
         };
         console.log(JSON.stringify(loginInfo));
-        axios.post("http://apexstocks.xyz/services/login", JSON.stringify(loginInfo), {headers:{'Content-Type': 'application/json'}})
+        PingApiLogin(JSON.stringify(loginInfo))
             .then(response=>{
                 if(sessionStorage.getItem("Authorization")){
                     sessionStorage.removeItem("Authorization");
                 }
-                console.log(response.data.jwt);
-                sessionStorage.setItem("Authorization", response.data.jwt);
-                props.history.push("/account"); //to account
-                // props.history.push("/"); to portfolio?
-                // window.location.href="/";
+                sessionStorage.setItem("Authorization", response.jwt);
+                props.history.push("/account"); 
+                props.setLoggedIn(true);
             })
             .catch(function (error) {
                 if(error && !error.response) {

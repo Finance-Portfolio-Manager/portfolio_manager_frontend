@@ -122,7 +122,7 @@ export const GlobalStyle = createGlobalStyle`
           color: white;
 
     }
-
+    .global__card,
     .global__dropshadow{
       box-shadow: 0 0 30px #33333350;
       /* filter: (0 0 0.75rem ${({ theme }) => theme.primaryColor}; */
@@ -133,20 +133,24 @@ export const GlobalStyle = createGlobalStyle`
   
 
       @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+        .global__card,
         .global__blur-effect {
           background-color: ${({ theme }) =>
             ` ${theme.primaryColor}50 !important`};
           -webkit-backdrop-filter: blur(10px) !important;
           backdrop-filter: blur(10px) !important;
         }
-
+        
         .global__blur-effect--light {
           background-color: ${({ theme }) =>
             theme.type === "light"
-              ? ` ${theme.primaryColor}50!important;
+              ? ` ${theme.primaryColor}10 !important;
           -webkit-backdrop-filter: blur(10px) !important;
           backdrop-filter: blur(10px) !important;`
-              : `${theme.primaryColor} !important;`} ;
+              : `${theme.primaryColor} !important;
+              -webkit-backdrop-filter: blur(10px) !important;
+          backdrop-filter: blur(10px) !important;
+              `} ;
 
           
         }
@@ -191,6 +195,13 @@ export const GlobalStyle = createGlobalStyle`
           text-decoration: none;
         }
 
+        .global__card{
+          border-radius: 15px;
+        }
+        .table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+          color: ${({ theme }) => theme.accentColor} !important;
+  
+        }
     
 `;
 

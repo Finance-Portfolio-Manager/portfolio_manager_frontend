@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing News Component Matching snapshot.. 1`] = `
+<div
+  className="news__empty"
+>
+  <div
+    className="news__empty-header"
+  >
+    No news yet... Try again later
+  </div>
+</div>
+`;

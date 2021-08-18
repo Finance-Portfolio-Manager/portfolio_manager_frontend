@@ -1,20 +1,48 @@
 #account-header {
-    font-family: "Poppins", sans-serif;
-    text-align: center;
-    width: 100%;
-    font-size: 32px;
-    font-weight: 600;
-    display:inline-block;
-    margin: 40px 8px 10px 8px; 
-    /* color: #72A4C2; */
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  width: 100%;
+  font-size: 32px;
+  font-weight: 600;
+  display: inline-block;
+  margin: 40px 8px 10px 8px;
+  /* color: #72A4C2; */
 }
 
 #header-span {
-    text-align: center;
-    margin-left: 250px;
-    margin-right: 250px;
+  text-align: center;
+  margin-left: 250px;
+  margin-right: 250px;
 }
 
 /* #accountPage {
     background-color:"#B9B9BA";
 /* } */
+
+.account__body-container {
+  margin: 20px auto 0 auto;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+}
+.account__container {
+  /* display: flex; */
+  /* justify-content: center; */
+
+  /* flex-direction: column; */
+}
+
+.account__row {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: stretch;
+}
+
+.account__headers {
+  margin: auto;
+  text-align: center;
+  width: 100%;
+  /* flex-basis: 100%; */
+}
+.account__column {
+}

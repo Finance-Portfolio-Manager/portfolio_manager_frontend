@@ -17,7 +17,7 @@ export const lightTheme = {
     primaryText: '#1f1f1f',
     secondaryText: '#333333',
     primaryColor: '#3f434b',
-    secondaryColor: '#D9DADF',
+    secondaryColor: '#f1f1f1',
     accentColor: 'rgb(59, 101, 255)',
     gradientPair: 'rgba(215, 39, 219, 0.7)',
     // gradientStyle: `linear-gradient(109.36deg, rgba(215, 39, 219, 0.7) -4.44%, ${theme.accentColor}, #C4C4C4 !important`
@@ -45,7 +45,7 @@ export const darkTheme = {
     // mediumDark: '#21293E',
     primaryText: '#FFF',
     secondaryText: '#ffe1e1',
-    primaryColor: '#1d1d1d',
+    primaryColor: '#131313',
     secondaryColor: '#242424',
     accentColor: '#d60047',
     gradientPair: '#ff7300',

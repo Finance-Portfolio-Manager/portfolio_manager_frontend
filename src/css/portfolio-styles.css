@@ -79,3 +79,34 @@ table th {
   .loss {
     text-decoration-color: #FF0000 !important;
 }
+
+  .portfolio__container {
+    /* display: flex;
+    /* flex-direction: row; */
+    /* align-items: stretch; */
+  }
+
+  .portfolio__container--detail{
+    /* display: flex;
+    justify-content: center;
+    box-sizing: border-box !important;
+    flex-direction: row; */
+    /* flex-direction: column; */
+  }
+
+.portfolio__table{
+  order: 1;
+  /* box-sizing: border-box !important;
+  flex-basis: 40% !important;
+  flex-grow: 2 !important; */
+}
+
+.portfolio__pie-card{
+  order: 2;
+  /* flex-basis: 20%; */
+  /* box-sizing: border-box !important;
+  flex-basis: 40% !important; */
+  /* flex-grow: 1 !important; */
+  /* min-width: 300px; */
+  
+}
