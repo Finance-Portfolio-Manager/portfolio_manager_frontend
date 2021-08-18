@@ -31,7 +31,7 @@ export default function PrivatePortfolioTable(props){
                             <th scope="col">Quantity</th>
                             <th scope="col">Average Buy Price</th>
                             <th scope="col">Current Price</th>
-                            <th scope="col">P/L</th>
+                            <th scope="col">Daily Change</th>
                         </tr>
                     </thead>
                     <tbody id="stocks-body">
@@ -47,7 +47,7 @@ export default function PrivatePortfolioTable(props){
                                 <td>{tableRow.quantity}</td>
                                 <td>{tableRow.avgBuyPrice}</td>
                                 <td>{tableRow.currentPrice}</td>
-                                <td>{tableRow.changePercentage}</td>
+                                <td>{`${tableRow.changePercentage}%`}</td>
                             </tr>)
                         })}
                     </tbody>
