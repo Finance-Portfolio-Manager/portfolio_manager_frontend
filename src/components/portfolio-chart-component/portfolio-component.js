@@ -1,10 +1,22 @@
 import ChartComponent from './portfolio-chart';
-import React, { Component } from "react";
+import React, { useState, useEffect, Component } from "react";
 import Chart from "react-apexcharts";
-
+import { lightTheme, themeSelection } from "../styled-components/styles/Themes"
 
 function PortfolioChartComponent(props) {
 
+    const [theme, setTheme] = useState(themeSelection[0]);
+    const updateColor = () => {
+        let name = localStorage.getItem("theme") || "light";
+        let themePack =
+        themeSelection.find((element) => element.version === name) ||
+        themeSelection[0];
+    // console.log("theme>>>" + themePack);
+        setTheme(themePack);
+  };
+  useEffect(() => {
+    updateColor();
+  }, [ updateColor]);
     let invArray = props.totalInvested;
     let valArray = props.totalValue;
     // invArray.reverse();
@@ -59,14 +71,21 @@ function PortfolioChartComponent(props) {
             },
             title: {
                 text: 'Portfolio Statistics',
-                align: 'center'
+                align: 'center',
+                style: {
+                    color: theme.themePack.primaryText
+                }
             },
             legend: {
                 tooltipHoverFormatter: function(val, opts) {
                 return val + ' - ' + opts.w.globals.series[opts.seriesIndex][opts.dataPointIndex] + ''
+                },
+                labels: {
+                    colors: theme.themePack.primaryText
                 }
             },
             markers: {
+                colors: [],
                 size: 0,
                 hover: {
                 sizeOffset: 6
@@ -77,10 +96,21 @@ function PortfolioChartComponent(props) {
                 categories: dates,
                 labels: {
                     trim: true,
-                    format: 'dd/MM'
+                    format: 'dd/MM',
+                    style: {
+                        colors: theme.themePack.primaryText
+                    }
+                }
+            },
+            yaxis: {
+                labels: {
+                    style: {
+                        colors: theme.themePack.primaryText
+                    }
                 }
             },
             tooltip: {
+                // theme: lightTheme,
                 y: [
                 {
                     title: {
