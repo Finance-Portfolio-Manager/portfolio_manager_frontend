@@ -1,6 +1,5 @@
 import NavDropDown from './navdropdown';
-import ApexLogo from '../images/apexstocks.jpg';
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { Logo } from '../styled-components/logo/Logo';
 import ToggleButton from '../styled-components/components/ToggleButton';
 
@@ -11,17 +10,15 @@ export default function Navigation({ theme, toggleTheme, loggedIn, setLoggedIn }
         sessionStorage.removeItem("Authorization");
     }
     
-    const [dropdownShowpPortfolio, setDropDrownShowPortfolio] = useState(false);
+    const [dropdownShowp, setDropDrownShow] = useState({ services: false });
 
     function logOut(){
         sessionStorage.clear();
-        // window.location.href="/";
     }
 
     return (
         <div className="container-fluid p-0">
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark primary-color">
-                {/* TODO: Change logo to svg file */}
                 <div className="global__logo">
                     <Logo className='m-2' />
                 </div>
@@ -37,9 +34,9 @@ export default function Navigation({ theme, toggleTheme, loggedIn, setLoggedIn }
                             {loggedIn && <li className="nav-item">
                                 <NavDropDown
                                     className="text-white py-0 border-0"
-                                    show={dropdownShowpPortfolio}
-                                    hovered={() => setDropDrownShowPortfolio(true)}
-                                    unhovered={() => setDropDrownShowPortfolio(false)}
+                                    show={dropdownShowp}
+                                    hovered={() => setDropDrownShow('services', dropdownShow, setDropDrownShow)}
+                                    unhovered={() => setDropDrownShow('services', dropdownShow, setDropDrownShow)}
                                     title="Portfolios">
                                     <div className="min-vh-15 bg-gray">
                                         <a className='text-dark  nav-link active align-item-center' aria-current="page" href="/account">My Portfolio</a>
