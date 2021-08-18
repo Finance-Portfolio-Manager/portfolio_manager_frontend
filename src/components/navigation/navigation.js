@@ -13,11 +13,6 @@ export default function Navigation({ theme, toggleTheme, loggedIn, setLoggedIn }
     
     const [dropdownShowpPortfolio, setDropDrownShowPortfolio] = useState(false);
 
-    function logOut(){
-        sessionStorage.clear();
-        // window.location.href="/";
-    }
-
     return (
         <div className="container-fluid p-0">
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark primary-color">
@@ -62,7 +57,7 @@ export default function Navigation({ theme, toggleTheme, loggedIn, setLoggedIn }
                                 <ul className="dropdown-menu dropdown-menu-end dropdown-menu-gray" aria-labelledby="navbarDropdown">
                                     {loggedIn ? null : (<li><a className="dropdown-item" href="/login">Log in</a></li>)}    
                                     {loggedIn ? null : (<li><a className="dropdown-item" href="/register">Sign up</a></li>)}
-                                    {loggedIn ? (<li><a className="dropdown-item" href="/home" onClick={logOut}>Log Out</a></li>) : null}
+                                    {loggedIn ? (<li><a className="dropdown-item" href="/" onClick={logOut}>Log Out</a></li>) : null}
                                     <li><ToggleButton theme={theme} toggleTheme={toggleTheme} /></li>
                                 </ul>
                             </div>

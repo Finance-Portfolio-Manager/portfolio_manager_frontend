@@ -56,11 +56,10 @@ export default function AccountView(props) {
               <Modal.Title>New Portfolio</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-              <CreatePortfolio
-                user={props.user}
-                onClosePortfolioForm={handleClosePortfolioForm}
-                portfolioArray={props.portfolioArray}
-              />
+            <CreatePortfolio 
+              user={props.user} 
+              onClosePortfolioForm={handleClosePortfolioForm}
+              refreshAccountPage={props.refreshAccountPage}/>
             </Modal.Body>
           </Modal>
           <Col className='col-md-auto'>
@@ -91,12 +90,11 @@ export default function AccountView(props) {
         {props.portfolioArray.length > 0 ? (
           props.portfolioArray.map((portfolio) => {
             return (
-              <PrivatePortfolioView
-                portfolio={portfolio}
-                user={props.user}
-                assignDisplayPortfolio={assignDisplayPortfolio}
-                
-              />
+              <PrivatePortfolioView 
+                                    portfolio={portfolio} 
+                                    user={props.user} 
+                                    assignDisplayPortfolio={assignDisplayPortfolio}
+                                    refreshAccountPage={props.refreshAccountPage}/>
             );
           })
         ) : (
@@ -117,3 +115,7 @@ export default function AccountView(props) {
 //              stocks - amounts - current value - change  ->  transaction history
 //
 //     portfolio card 2 ( name - total value - average change )
+
+
+
+                               

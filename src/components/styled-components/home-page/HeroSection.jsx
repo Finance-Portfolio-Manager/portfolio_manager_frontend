@@ -51,11 +51,12 @@ function HeroSection({
                           className="global__button-effect hero__button"
                           aria-label={button.ariaLabel}
                         >
-                          {button.buttonLabel}
+                          {button?.buttonLabel}
                         </Button>}
                       </Link>
                     );
                   })}</div>
+
                 <GitHubButton
                   href="https://github.com/Finance-Portfolio-Manager/portfolio_manager_frontend"
                   data-size="large"
