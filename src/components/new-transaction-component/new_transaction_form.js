@@ -7,7 +7,6 @@ import Navigation from "../navigation/navigation";
 export default function NewTransactionForm(props) {
   return (
     <div className="container-fluid p-0">
-      <Navigation />
       <div className="App__container secondary-color">
         <Form className="form__style global__blur-effect--light global__dropshadow global__zoom">
           <div className="new-transaction__container">
