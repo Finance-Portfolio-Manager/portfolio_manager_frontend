@@ -14,7 +14,7 @@ function Login(props){
         const {value,name} = e.target;
 
         setCredentials({...credentials, [name]:value});
-        console.log(credentials);
+        // console.log(credentials);
 
         setError(false);
         setNetworkError(false);
@@ -26,13 +26,13 @@ function Login(props){
             username:`${credentials.username}`,
             password:`${credentials.password}`
         };
-        console.log(JSON.stringify(loginInfo));
+        // console.log(JSON.stringify(loginInfo));
         axios.post(process.env.REACT_APP_API_URL+"/login", JSON.stringify(loginInfo), {headers:{'Content-Type': 'application/json'}})
             .then(response=>{
                 if(sessionStorage.getItem("Authorization")){
                     sessionStorage.removeItem("Authorization");
                 }
-                console.log(response.data.jwt);
+                // console.log(response.data.jwt);
                 sessionStorage.setItem("Authorization", response.data.jwt);
                 props.history.push("/account"); //to account
                 // props.history.push("/"); to portfolio?

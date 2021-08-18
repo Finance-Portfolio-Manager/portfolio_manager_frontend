@@ -31,7 +31,7 @@ export default function LoginForm(props) {
               onChange={props.onChange}
             ></Form.Control>
           </Form.Group>
-          <a className="dropdown-item" href="/password">Forgot your password?</a>
+          <a className="dropdown-item make-transparent" href="/password">Forgot your password?</a>
           <button
             className="submitButton mt-2 global__button-effect"
             type="submit"
