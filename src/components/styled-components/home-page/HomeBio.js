@@ -7,7 +7,7 @@ export const HomeBio = {
   topLine: "A Revature Project",
   headline: "APEX Stocks",
   description:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel urna id diam tincidunt pretium non et sem. ",
+    "Portfolio tracking made easy. All of the tools you need to track and fine tune your stock performance. Sign up today!",
   // buttonLabel: "Get Started",
   buttons: [
     {buttonLabel: "Sign Up", link: '/register', ariaLabel: 'Sign Up Link'},

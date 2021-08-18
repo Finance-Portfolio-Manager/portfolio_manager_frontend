@@ -1,15 +1,24 @@
 import NavDropDown from './navdropdown';
-import ApexLogo from '../images/apexstocks.jpg';
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { Logo } from '../styled-components/logo/Logo';
 import ToggleButton from '../styled-components/components/ToggleButton';
 
-export default function Navigation({ theme, toggleTheme }) {
-    const [dropdownShowpPortfolio, setDropDrownShowPortfolio] = useState(false);
+export default function Navigation({ theme, toggleTheme, loggedIn, setLoggedIn }) {
+
+    function logOut(){
+        setLoggedIn(false);
+        sessionStorage.removeItem("Authorization");
+    }
+    
+    const [dropdownShowp, setDropDrownShow] = useState({ services: false });
+
+    function logOut(){
+        sessionStorage.clear();
+    }
+
     return (
         <div className="container-fluid p-0">
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark primary-color">
-                {/* TODO: Change logo to svg file */}
                 <div className="global__logo">
                     <Logo className='m-2' />
                 </div>
@@ -22,12 +31,12 @@ export default function Navigation({ theme, toggleTheme }) {
                             <li className="nav-item">
                                 <a className="nav-link active" aria-current="page" href="/">Home</a>
                             </li>
-                            <li className="nav-item">
+                            {loggedIn && <li className="nav-item">
                                 <NavDropDown
                                     className="text-white py-0 border-0"
-                                    show={dropdownShowpPortfolio}
-                                    hovered={() => setDropDrownShowPortfolio(true)}
-                                    unhovered={() => setDropDrownShowPortfolio(false)}
+                                    show={dropdownShowp}
+                                    hovered={() => setDropDrownShow('services', dropdownShow, setDropDrownShow)}
+                                    unhovered={() => setDropDrownShow('services', dropdownShow, setDropDrownShow)}
                                     title="Portfolios">
                                     <div className="min-vh-15 bg-gray">
                                         <a className='text-dark  nav-link active align-item-center' aria-current="page" href="/account">My Portfolio</a>
@@ -35,24 +44,23 @@ export default function Navigation({ theme, toggleTheme }) {
                                         <a className='text-dark  nav-link active align-item-center' aria-current="page" href="#">Favorite portfolio</a>
                                     </div>
                                 </NavDropDown>
-                            </li>
+                            </li>}
                             <li className="nav-item">
                                 <a className="nav-link active" aria-current="page" href="/about">About Us</a>
                            </li>
-                            <li className="nav-item">
+                           { loggedIn && <li className="nav-item">
                                 <a className='nav-link active align-item-center' aria-current="page" href="/new-transaction">Transaction</a>
-                            </li>
+                            </li>}
                         </ul>
                         <div className="d-flex align-self-center me-3">
                             <span className="align-self-center p1"><i className="bi-person-circle text-white"></i></span>
                             <div className="navbar-nav dropdown">
                                 <a className="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Account</a>
                                 <ul className="dropdown-menu dropdown-menu-end dropdown-menu-gray" aria-labelledby="navbarDropdown">
-                                    <li><a className="dropdown-item" href="/login">Log in</a></li>
-                                    <li><a className="dropdown-item" href="/register">Sign up</a></li>
-                                    <li><a className="dropdown-item" href="/home">Log Out</a></li>
+                                    {loggedIn ? null : (<li><a className="dropdown-item" href="/login">Log in</a></li>)}    
+                                    {loggedIn ? null : (<li><a className="dropdown-item" href="/register">Sign up</a></li>)}
+                                    {loggedIn ? (<li><a className="dropdown-item" href="/home" onClick={logOut}>Log Out</a></li>) : null}
                                     <li><ToggleButton theme={theme} toggleTheme={toggleTheme} /></li>
-
                                 </ul>
                             </div>
                         </div>
