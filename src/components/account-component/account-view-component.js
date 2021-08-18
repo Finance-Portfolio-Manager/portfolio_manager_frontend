@@ -44,7 +44,7 @@ export default function AccountView(props){
                     :
                     <></>}
                     </Row>
-            <Row>
+            <Row className='pb-5'>
 
                         
                         {props.portfolioArray.length > 0 ? 

@@ -49,7 +49,7 @@ export default function PrivatePortfolioTable(props){
                         })}
                     </tbody>
                 </Table>
-                <Button variant="primary" onClick={props.unassignDisplayPortfolio}>Hide Details</Button>
+                <Button variant="primary" className='global__button-effect' onClick={props.unassignDisplayPortfolio}>Hide Details</Button>
             </div>
             </Card.Body>
         </Card>
