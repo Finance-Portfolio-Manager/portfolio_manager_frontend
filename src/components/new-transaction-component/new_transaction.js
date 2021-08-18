@@ -33,6 +33,7 @@ export default function NewTransaction(props){
         axios.post(process.env.REACT_APP_API_URL + "/transactions", transaction, {headers: {'Authorization': jwtToken, 'Content-Type': 'application/json'}})
             .then(response=>{
                 console.log(response);
+                props.refreshAccountPage();
                 props.onCloseTransactionForm();
             })
             .catch(err=>console.error(err));
@@ -49,17 +50,19 @@ export default function NewTransaction(props){
             quantityOwned = stockOwned.quantity;
         }
 
-       if(transaction.transactionQuantity < quantityOwned){
+       if(transaction.transactionQuantity <= quantityOwned){
             let submitTransaction = transaction;
             submitTransaction = {...submitTransaction, transactionQuantity:(submitTransaction.transactionQuantity * -1)};
             //setTransaction({...transaction, transactionQuantity:(transaction.transactionQuantity * -1)});
             // axios.post(process.env.REACT_APP_API_URL + "/transactions", submitTransaction, {headers: {'Authorization': jwtToken, 'Content-Type': 'application/json'}})
             PingApiTransactions(submitTransaction, jwtToken).then(response=>{
                 console.log(response);
-                props.onCloseTransactionForm();
+                props.refreshAccountPage();
+                props.onCloseTransactionForm();        
             })
             .catch(err=>console.error(err));
        } else{
+           console.log("You tried to sell stocks you didn't have")
            props.onCloseTransactionForm();
        }
     }
