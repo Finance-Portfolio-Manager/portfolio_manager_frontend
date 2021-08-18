@@ -44,6 +44,9 @@ export default function PrivatePortfolioDetails(props) {
           <PrivatePortfolioTable
             tableRows={props.portfolio.stocks}
             unassignDisplayPortfolio={props.unassignDisplayPortfolio}
+            onOpenChart={handleOpenChart}
+                  setChartSymbol={setChartSymbol}
+
           />
         </Col>
       </Row>

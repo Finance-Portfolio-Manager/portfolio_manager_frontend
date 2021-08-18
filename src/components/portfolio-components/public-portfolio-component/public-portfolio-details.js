@@ -5,19 +5,23 @@ import PublicDoughnutChart from "../doughnut-chart-component/public-doughnut-cha
 export default function PublicPortfolioDetails(props){
     return (
         <>
-        <Row>
-            <Col md={2}/>
-            <Col>
+        <Row className='flex-row-reverse justify-content-between mb-5'>
+            {/* <Col md={2}/> */}
+            <Col  md={6} md={8} className='mb-5' >
                 <PublicPortfolioTable tableRows={props.portfolio.stocks} toggleShowDetails={props.toggleShowDetails}/>
             </Col>
-            <Col md={2}/>
-        </Row>
-        <Row>
-            <Col/>
-            <Col>
+            {/* <Col md={2}/> */}
+        {/* </Row>
+        <Row> */}
+            {/* <Col/> */}
+            <Col   md={6} md={4} className='mb-5'>
+            <Card className='global__card text-center primary-text'>
+                <Card.Body>
                 <PublicDoughnutChart user={props.username} portfolio={props.portfolio}/>
-            </Col>
-            <Col/>
+                </Card.Body>
+           </Card> 
+           </Col>
+            {/* <Col/> */}
         </Row>
         </>
     )

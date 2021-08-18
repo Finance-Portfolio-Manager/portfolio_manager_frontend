@@ -25,7 +25,7 @@ export default function PrivatePortfolioTable(props){
                 <div id = "dollar-change"></div>
             </div>
             <div className="table-responsive primary-text">
-                <Table id="stocks-view" className="table borderless table-hover secondary-text" responsive>
+                <Table id="stocks-view" className="table borderless table-hover primary-text" responsive>
                     <thead>
                         <tr>
                             <th scope="col">Stock</th>

@@ -6,7 +6,7 @@ export default function PublicPortfolioCard(props){
     
     //TODO: Have Doughnut chart show percentages instead of total values?
     return(
-        <Col sm="4">
+        <Col sm={6} lg={4} >
             <Card className='global__card text-center primary-text mb-3'>
                 <Card.Body>
                     <Card.Title tag="h4" className='primary-text'>{props.portfolio.name}</Card.Title>
