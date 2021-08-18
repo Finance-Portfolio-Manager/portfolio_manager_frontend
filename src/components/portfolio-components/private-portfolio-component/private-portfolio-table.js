@@ -4,16 +4,10 @@ import { Button } from "react-bootstrap";
 
 export default function PrivatePortfolioTable(props){
 
-    //TODO: There's no real point in tableRows being a state object if it never changes. Determine if it will change.
-    const [tableRows, setTableRows] = useState(props.tableRows);
-    const [portfolioTotal, setPortfolioTotal] = useState("");
-    const [changeValue, setChangeValue] = useState("");
-    const [changeAmount, setChangeAmount] = useState("");
-
     //const displayRows = tableRows.map((tableRow) => tableRow);
     // console.log(`display Rows: ${displayRows}`);
 
-    console.log(`TableRows: ${JSON.stringify(tableRows)}`);
+    console.log(`TableRows: ${JSON.stringify(props.tableRows)}`);
 
     return <>
         <div className="wrapper fadeInDown folioContent mx-3" id="portfolio">
@@ -35,7 +29,7 @@ export default function PrivatePortfolioTable(props){
                     </thead>
                     <tbody id="stocks-body">
                         
-                        {tableRows.map((tableRow) => {
+                        {props.tableRows.map((tableRow) => {
                             console.log(`tableRow: ${JSON.stringify(tableRow)}`);
                             return (
                             <tr onClick={() => {
