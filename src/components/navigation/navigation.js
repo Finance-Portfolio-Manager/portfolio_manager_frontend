@@ -1,11 +1,21 @@
 import NavDropDown from './navdropdown';
-import ApexLogo from '../images/apexstocks.jpg';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Logo } from '../styled-components/logo/Logo';
 import ToggleButton from '../styled-components/components/ToggleButton';
+import { useDispatch } from 'react-redux';
+import {setLoggedOut} from '../login-component/loginslice';
 
 export default function Navigation({ theme, toggleTheme }) {
     const [dropdownShowpPortfolio, setDropDrownShowPortfolio] = useState(false);
+    const dispatch = useDispatch();
+
+    function logOut(e) {
+        e.preventDefault();
+        sessionStorage.removeItem("Authorization");
+        window.location.href = "/";
+        dispatch(setLoggedOut());
+    }
+
     return (
         <div className="container-fluid p-0">
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark primary-color">
@@ -31,14 +41,14 @@ export default function Navigation({ theme, toggleTheme }) {
                                     title="Portfolios">
                                     <div className="min-vh-15 bg-gray">
                                         <a className='text-dark  nav-link active align-item-center' aria-current="page" href="/account">My Portfolio</a>
-                                        <a className='text-dark  nav-link active align-item-center' aria-current="page" href="#">Public portfolio</a>
-                                        <a className='text-dark  nav-link active align-item-center' aria-current="page" href="#">Favorite portfolio</a>
+                                        <a className='text-dark  nav-link active align-item-center' aria-current="page" href="/portfolios/public">Public portfolio</a>
+                                        <a className='text-dark  nav-link active align-item-center' aria-current="page" href="/favorites">Favorite portfolio</a>
                                     </div>
                                 </NavDropDown>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link active" aria-current="page" href="/about">About Us</a>
-                           </li>
+                            </li>
                             <li className="nav-item">
                                 <a className='nav-link active align-item-center' aria-current="page" href="/new-transaction">Transaction</a>
                             </li>
@@ -50,7 +60,8 @@ export default function Navigation({ theme, toggleTheme }) {
                                 <ul className="dropdown-menu dropdown-menu-end dropdown-menu-gray" aria-labelledby="navbarDropdown">
                                     <li><a className="dropdown-item" href="/login">Log in</a></li>
                                     <li><a className="dropdown-item" href="/register">Sign up</a></li>
-                                    <li><a className="dropdown-item" href="/home">Log Out</a></li>
+                                    <li><a className="dropdown-item" onClick={logOut}>Log Out</a></li>
+                                    <li><a className="dropdown-item" href="/password">Change Password</a></li>
                                     <li><ToggleButton theme={theme} toggleTheme={toggleTheme} /></li>
 
                                 </ul>

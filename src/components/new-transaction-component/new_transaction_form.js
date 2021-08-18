@@ -1,13 +1,10 @@
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import "./new_transaction_form.css";
-import Navigation from "../navigation/navigation";
 // new-transaction__wholeform
 //new-transaction__form'
 export default function NewTransactionForm(props) {
   return (
-    <div className="container-fluid p-0">
-      <Navigation />
       <div className="App__container secondary-color">
         <Form className="form__style global__blur-effect--light global__dropshadow global__zoom">
           <div className="new-transaction__container">
@@ -88,6 +85,5 @@ export default function NewTransactionForm(props) {
           </div>
         </Form>
       </div>
-    </div>
   );
 }
