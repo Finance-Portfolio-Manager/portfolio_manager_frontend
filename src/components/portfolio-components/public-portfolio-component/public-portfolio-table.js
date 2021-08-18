@@ -7,7 +7,7 @@ export default function PublicPortfolioTable(props){
 
     return (
         <>
-        <Card className='global__card fadeInDown primary-text text-center'>
+        <Card className=' fadeInDown primary-text text-center'>
             <Card.Body>
             {/* <div className="wrapper fadeInDown folioContent" id="folioContent"> */}
                 <div className="table-responsive primary-text">
