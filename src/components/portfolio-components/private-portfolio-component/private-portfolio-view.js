@@ -40,7 +40,8 @@ export default function PrivatePortfolioView(props){
                 <Modal.Body>
                     <NewTransaction 
                         portfolio={props.portfolio} 
-                        onCloseTransactionForm={handleCloseTransactionForm}/>
+                        onCloseTransactionForm={handleCloseTransactionForm}
+                        refreshAccountPage={props.refreshAccountPage}/>
                 </Modal.Body>
             </Modal>
 

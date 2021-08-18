@@ -32,6 +32,7 @@ export default function NewTransaction(props){
         axios.post(process.env.REACT_APP_API_URL + "/transactions", transaction, {headers: {'Authorization': jwtToken, 'Content-Type': 'application/json'}})
             .then(response=>{
                 console.log(response);
+                props.refreshAccountPage();
                 props.onCloseTransactionForm();
             })
             .catch(err=>console.error(err));
@@ -55,7 +56,8 @@ export default function NewTransaction(props){
             axios.post(process.env.REACT_APP_API_URL + "/transactions", submitTransaction, {headers: {'Authorization': jwtToken, 'Content-Type': 'application/json'}})
             .then(response=>{
                 console.log(response);
-                props.onCloseTransactionForm();
+                props.refreshAccountPage();
+                props.onCloseTransactionForm();        
             })
             .catch(err=>console.error(err));
        } else{

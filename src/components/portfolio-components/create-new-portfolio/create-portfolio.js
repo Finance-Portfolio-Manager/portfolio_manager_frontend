@@ -24,7 +24,7 @@ export default function CreatePortfolio(props){
         axios.post(process.env.REACT_APP_API_URL + "/portfolios", JSON.stringify(portfolio), {headers: {'Authorization': jwtToken, 'Content-Type': 'application/json'}})
             .then(response=>{
                 console.log(response);
-                //props.setPortfolioArray({...props.portfolioArray, portfolio});
+                props.refreshAccountPage();
                 props.onClosePortfolioForm();
             })
             .catch(err=>console.error(err));

@@ -46,7 +46,7 @@ export default function AccountView(props){
                             <CreatePortfolio 
                                 user={props.user} 
                                 onClosePortfolioForm={handleClosePortfolioForm}
-                                portfolioArray={props.portfolioArray}/>
+                                refreshAccountPage={props.refreshAccountPage}/>
                         </Modal.Body>
                     </Modal>
                     <Col>
@@ -71,7 +71,8 @@ export default function AccountView(props){
                                     <PrivatePortfolioView 
                                     portfolio={portfolio} 
                                     user={props.user} 
-                                    assignDisplayPortfolio={assignDisplayPortfolio}/>
+                                    assignDisplayPortfolio={assignDisplayPortfolio}
+                                    refreshAccountPage={props.refreshAccountPage}/>
                                 )
                             })
                             :
