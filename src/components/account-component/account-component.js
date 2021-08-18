@@ -9,6 +9,7 @@ export default function Account(props){
 
     let [portfolioArray, setPortfolioArray] = useState([]);
     let [user, setUser] = useState({});
+    const [loading, setLoading] = useState(true);
 
     let refreshAccountPage = () => {
         axios.get(process.env.REACT_APP_API_URL+"/login?token="+sessionStorage.getItem("Authorization"), 
@@ -36,6 +37,7 @@ export default function Account(props){
                         "Access-Control-Allow-Origin": sessionStorage.getItem("Authorization")}})
             .then(portfoliosResponse => {
                 setPortfolioArray(portfoliosResponse.data);
+                setLoading(false);
             })
         })
         
@@ -45,6 +47,7 @@ export default function Account(props){
         portfolioArray={portfolioArray} 
         user={user} 
         setPortfolioArray={setPortfolioArray}
-        refreshAccountPage={refreshAccountPage}/>
+        refreshAccountPage={refreshAccountPage}
+        loading={loading}/>
 
 }

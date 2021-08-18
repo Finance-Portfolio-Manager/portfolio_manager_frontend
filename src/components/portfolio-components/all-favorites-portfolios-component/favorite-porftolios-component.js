@@ -4,6 +4,8 @@ import FavoritePortfoliosView from "./favorite-porftolios-component";
 import PublicPortfoliosView from "../all-public-portfolios-component/public-portfolios-view-component";
 
 export default function FavoritePortfolios(props) {
+    const [loading, setLoading] = useState(true);
+
     console.log(`favorites list before useEffect, props: ${props}`);
     const [favoriteList, setFavoriteList] = useState(null);
     useEffect(()=> {
@@ -16,10 +18,11 @@ export default function FavoritePortfolios(props) {
             .then(portfoliosResponse=>{
                 setFavoriteList(portfoliosResponse.data);
                 console.log("favorites list: "+JSON.stringify(portfoliosResponse.data));
+                setLoading(false);
             })
         }
         )
     },[]);
 
-    return <PublicPortfoliosView isFavorites={true} portfolioList={favoriteList}/>
+    return <PublicPortfoliosView isFavorites={true} portfolioList={favoriteList} loading={loading}/>
 }
