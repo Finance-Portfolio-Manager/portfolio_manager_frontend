@@ -10,7 +10,7 @@ export default function Navigation({ theme, toggleTheme, loggedIn, setLoggedIn }
         sessionStorage.removeItem("Authorization");
     }
     
-    const [dropdownShowp, setDropDrownShow] = useState({ services: false });
+    const [dropdownShow, setDropDrownShow] = useState({ services: false });
 
     function logOut(){
         sessionStorage.clear();
@@ -34,7 +34,7 @@ export default function Navigation({ theme, toggleTheme, loggedIn, setLoggedIn }
                             {loggedIn && <li className="nav-item">
                                 <NavDropDown
                                     className="text-white py-0 border-0"
-                                    show={dropdownShowp}
+                                    show={dropdownShow}
                                     hovered={() => setDropDrownShow('services', dropdownShow, setDropDrownShow)}
                                     unhovered={() => setDropDrownShow('services', dropdownShow, setDropDrownShow)}
                                     title="Portfolios">
