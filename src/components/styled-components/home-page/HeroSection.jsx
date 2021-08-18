@@ -9,7 +9,6 @@ import "./HeroSection.css";
 import GitHubButton from "react-github-btn";
 import { useState } from "react";
 import { useEffect } from "react";
-import GitHubButton from "react-github-btn";
 
 function HeroSection({
   topLine,
@@ -52,13 +51,13 @@ function HeroSection({
                           className="global__button-effect hero__button"
                           aria-label={button.ariaLabel}
                         >
-                          {button.buttonLabel}
+                          {button?.buttonLabel}
                         </Button>}
                       </Link>
                     );
                   })}</div>
 
-                <GitHubButton
+                {/* <GitHubButton
                   href="https://github.com/Finance-Portfolio-Manager/portfolio_manager_frontend"
                   data-size="large"
                   data-show-count="true"
@@ -66,12 +65,12 @@ function HeroSection({
                   className='hero__github-button'
                 >
                   Star
-                </GitHubButton>
+                </GitHubButton> */}
 
 
-                <Link to="/">
+                {/* <Link to="/">
                     <Button className='global__button-effect'>{buttonLabel}</Button>
-                </Link>
+                </Link> */}
 
               </div>
             </div>
