@@ -1,14 +1,14 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Form } from "react-bootstrap";
 // import './login.css';
-import logo from "./revlogo.png";
+import logo from '../images/logo-white.svg';
 
 export default function LoginForm(props) {
   return (
     <div className="App__container global__gradient-background--absolute">
       <Form className="form__style global__blur-effect global__dropshadow global__zoom">
         <div className="aroundLogo">
-          <img className="logo" src='images/logo-white.svg' alt="revature logo" />
+          <img className="logo" src={logo} alt="revature logo" />
         </div>
         <div className="form-inner">
           <h4 className='form-header primary-text'>APEX Stocks</h4>
