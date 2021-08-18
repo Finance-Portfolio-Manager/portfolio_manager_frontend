@@ -19,7 +19,7 @@ import { NewsPage } from './news-component/layout/NewsPage';
 import Chart from './portfolio-chart-component/portfolio-chart';
 import GenericChart from './chart-component/generic-chart';
 import PublicPortfolios from './portfolio-components/all-public-portfolios-component/public-portfolios-component';
-import Favorites from './portfolio-components/favorites-portfolio-component/favorites-view';
+// import Favorites from './portfolio-components/favorites-portfolio-component/favorites-view';
 import ChangePassword from './change-password-component/change-password';
 import CreatePortfolio from './portfolio-components/create-new-portfolio/create-portfolio-form';
 import FavoritePortfolios from './portfolio-components/all-favorites-portfolios-component/favorite-porftolios-component';

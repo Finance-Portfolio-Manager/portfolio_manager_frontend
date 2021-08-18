@@ -37,11 +37,11 @@ export default function PrivatePortfolioView(props){
                 <Modal.Header closeButton>
                 <Modal.Title>New Transaction</Modal.Title>
                 </Modal.Header>
-                <Modal.Body>
+                {/* <Modal.Body className='global__card'> */}
                     <NewTransaction 
                         portfolio={props.portfolio} 
                         onCloseTransactionForm={handleCloseTransactionForm}/>
-                </Modal.Body>
+                {/* </Modal.Body> */}
             </Modal>
 
             <PrivatePortfolioCard 
@@ -49,6 +49,7 @@ export default function PrivatePortfolioView(props){
             portfolio={props.portfolio} 
             setDisplayPortfolio={setDisplayPortfolio}
             onOpenTransactionForm={handleOpenTransactionForm}
+            
             />
         </>
     )

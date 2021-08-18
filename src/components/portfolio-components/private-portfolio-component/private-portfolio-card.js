@@ -15,7 +15,7 @@ export default function PrivatePortfolioCard(props){
     return(
     <Col sm="4">
         
-        <Card className='global__card  primary-text '>
+        <Card className='global__card text-center primary-text mb-3'>
             <Card.Body>
                 <Card.Title tag="h4" className='primary-text'>{props.portfolio.name}</Card.Title>
                 <Card.Text>

@@ -1,4 +1,4 @@
-import { Table, Button } from "react-bootstrap";
+import { Table, Button, Card  } from "react-bootstrap";
 import { useState } from "react";
 
 export default function PublicPortfolioTable(props){
@@ -7,7 +7,9 @@ export default function PublicPortfolioTable(props){
 
     return (
         <>
-            <div className="wrapper fadeInDown folioContent" id="folioContent">
+        <Card className='global__card fadeInDown primary-text'>
+            <Card.Body>
+            {/* <div className="wrapper fadeInDown folioContent" id="folioContent"> */}
                 <div className="table-responsive">
                     <Table id="stocks-view" className="table borderless table-hover" responsive>
                         <thead>
@@ -28,7 +30,8 @@ export default function PublicPortfolioTable(props){
                     </Table>
                     <Button variant="primary" onClick={props.toggleShowDetails}>Hide Details</Button>
                 </div>
-            </div>   
+                </Card.Body>
+                </Card>
         </>
     );
 }
