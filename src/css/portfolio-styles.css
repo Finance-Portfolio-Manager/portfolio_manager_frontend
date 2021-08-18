@@ -110,3 +110,8 @@ table th {
   /* min-width: 300px; */
   
 }
+
+.portfolio__public-card{
+  /* bord */
+  border: none !important;
+}

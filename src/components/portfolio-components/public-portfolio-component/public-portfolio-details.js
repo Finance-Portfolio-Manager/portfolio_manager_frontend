@@ -19,20 +19,18 @@ export default function PublicPortfolioDetails(props){
            </Col>
         </Row> */}
         <Col sm="4">
-            <Card>
+            <Card className='secondary-color portfolio__public-card mb-5 global__card py-2'>
                 <Row>
-                    <Col md={2}/>
-                    <Col>
-                        <PublicPortfolioTable tableRows={props.portfolio.stocks} toggleShowDetails={props.toggleShowDetails}/>
-                    </Col>
-                    <Col md={2}/>
-                </Row>
-                <Row>
-                    <Col/>
-                    <Col>
+                    <Col xs={12}>
                         <PublicDoughnutChart user={props.username} portfolio={props.portfolio}/>
                     </Col>
-                    <Col/>
+                </Row>
+                <Row >
+                    {/* <Col md={2}/> */}
+                    <Col xs={12}>
+                        <PublicPortfolioTable tableRows={props.portfolio.stocks} toggleShowDetails={props.toggleShowDetails}/>
+                    </Col>
+                    {/* <Col md={2}/> */}
                 </Row>
             </Card>
         </Col>
