@@ -48,7 +48,7 @@ export default function Main() {
                     {/* <ToggleButton theme={theme} toggleTheme={themeToggler} /> */}
                     <Switch>
                         <Route exact path="/portfolios" component={() => <Home users={users} />} />
-                        <Route exact path="/" component={() => <LandingPage />} />
+                        <Route exact path="/" component={() => <LandingPage loggedIn={loggedIn}/>} />
                         <Route exact path="/account" component={Account} />
                         <Route exact path="/portfolios/public" component={() => <PublicPortfolios />} />
                         <Route exact path="/balances" component={Chart}/>
