@@ -41,16 +41,32 @@ export default function NewTransaction(props){
         let jwtToken = sessionStorage.getItem("Authorization");
         e.preventDefault();
 
-       if(transaction.transactionQuantity > 
-        props
-        .portfolio.stocks
-        .filter(stock=>stock.symbol == transaction.stockSymbol)[0]
-        .quantity)
-        {
+        let stockOwned = props.portfolio.stocks.filter(stock=>stock.symbol == transaction.stockSymbol).pop();
 
+        let quantityOwned = 0;
+        if(stockOwned){
+            quantityOwned = stockOwned.quantity;
         }
+
+       if(transaction.transactionQuantity < quantityOwned){
+            let submitTransaction = transaction;
+            submitTransaction = {...submitTransaction, transactionQuantity:(submitTransaction.transactionQuantity * -1)};
+            //setTransaction({...transaction, transactionQuantity:(transaction.transactionQuantity * -1)});
+            axios.post(process.env.REACT_APP_API_URL + "/transactions", submitTransaction, {headers: {'Authorization': jwtToken, 'Content-Type': 'application/json'}})
+            .then(response=>{
+                console.log(response);
+                props.onCloseTransactionForm();
+            })
+            .catch(err=>console.error(err));
+       } else{
+           props.onCloseTransactionForm();
+       }
     }
 
 
-    return <NewTransactionForm handleChange={handleChange} submitConfirm={createNewTransaction}></NewTransactionForm>;
+    return <NewTransactionForm 
+        handleChange={handleChange} 
+        submitBuy={createNewTransaction}
+        submitSell={submitSellTransaction}
+        />;
 }
