@@ -19,11 +19,11 @@ export default function PrivatePortfolioTable(props){
                 <div id = "portfolio-change"></div>
                 <div id = "dollar-change"></div>
             </div>
-            <div className="table-responsive primary-text">
-                <Table id="stocks-view" className="table borderless table-hover primary-text" responsive>
             <div>
                 <PortfolioChart portfolioId={props.portfolioId}></PortfolioChart>
             </div>
+            <div className="table-responsive primary-text">
+                <Table id="stocks-view" className="table borderless table-hover primary-text" responsive>
     
                     <thead>
                         <tr>

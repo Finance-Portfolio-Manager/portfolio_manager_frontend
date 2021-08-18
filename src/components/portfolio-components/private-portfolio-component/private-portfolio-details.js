@@ -31,7 +31,7 @@ export default function PrivatePortfolioDetails(props) {
         </Modal.Footer>
       </Modal>
       <Row className="portfolio__container">
-        <Col md="6" className="global__pie-card ">
+        <Col md="4" className="global__pie-card ">
           {/* Removed className="folioContent" */}
           <Card className="global__card text-center primary-text px-3 py-1 mr-5">
             <Card.Body>
