@@ -4,16 +4,13 @@ import RegisterForm from "./register-form";
 import {Route, Redirect} from 'react-router-dom';
 import Login from "../login-component/login";
 
-// const URL = "http://localhost:8082";
 const URL = process.env.REACT_APP_API_URL;
-// const isLoggedIn = sessionStorage.getItem("Authorization");
-
 
 export default function Register(props) {
 
     const [registrationData, setRegistrationData] = useState("");
 
-    // const [nameError, setNameError] = useState(false);
+
     const [emailError, setEmailError] = useState(false);
     const [usernameError, setUsernameError] = useState(false);
     const [passwordError, setPasswordError] = useState(false);
@@ -25,12 +22,10 @@ export default function Register(props) {
 
         setRegistrationData({...registrationData, [name]:value});
     
-        // setNameError(false);
         setEmailError(false);
         setUsernameError(false);
         setPasswordError(false);
         setConfirmPasswordError(false);
-        // validateInput(registrationData.firstName, registrationData.lastName, registrationData.username, registrationData.email, registrationData.password, registrationData.confirmPassword);
     }
 
     const handleSubmit = (e)=>{
@@ -46,9 +41,6 @@ export default function Register(props) {
                 .then(response=>{
                     console.log(response.data);
                     props.history.push("/login");
-                    // props.history.push("/");
-                    // <Route exact path ="/"> {isLoggedIn ? <Redirect to="/login"/> : <Login /> }</Route>
-                    // window.location.href="/login";
                 })
 
                 .catch(function (error) {
@@ -64,11 +56,7 @@ export default function Register(props) {
     }
 
     function validateInput(username, email, password, confirmPassword){
-        
-        console.log(registrationData.username);
-        console.log(registrationData.email);
-        console.log(registrationData.password);
-        console.log(`URL: ${URL}`);
+    
 
         // Forbid any empty values
         if((username||email||password||confirmPassword)===(null||undefined)){
@@ -89,20 +77,12 @@ export default function Register(props) {
         var passCheck = /[\s~`!@#$%\^&*+=\-\[\]\\';,/{}|\\":<>\?()\._]/g;
         if(!passCheck.test(password) || password.length<8){
             console.log("invalid password.");
-            // passwordError.hidden = false;
             setPasswordError(true);
             return false;
         }
 
-        //Redundant
-        // if (password.length<8){
-        //     setPasswordLengthError(true);
-        //     return false;
-        // }
 
         if(password!==confirmPassword){
-            console.log(password);
-            console.log(confirmPassword);
             console.log("Password confirmation mismatch.");
             // retypePasswordError.hidden = false;
             setConfirmPasswordError(true);

@@ -55,7 +55,6 @@ export default function Main() {
                         <Route exact path="/about" component={About} />
                         <Route exact path="/register" component={Register} />
                         <Route exact path="/login" component={() => <Login setLoggedIn={setLoggedIn} />} />
-                        
                         <Route exact path="/generic-chart" component={GenericChart} />
                         <Route exact path="/new-transaction" component={NewTransaction} />
                         <Route exact path="/news" component={NewsPage} />
