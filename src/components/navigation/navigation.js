@@ -33,8 +33,8 @@ export default function Navigation({ theme, toggleTheme, loggedIn, setLoggedIn }
                                 <a className="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Portfolios</a>
                                 <ul className="dropdown-menu dropdown-menu-end dropdown-menu-gray" aria-labelledby="navbarDropdown">
                                     <a className='text-dark  nav-link active align-item-center' aria-current="page" href="/account">My Portfolio</a>
-                                    <a className='text-dark  nav-link active align-item-center' aria-current="page" href="#">Public portfolio</a>
-                                    <a className='text-dark  nav-link active align-item-center' aria-current="page" href="#">Favorite portfolio</a>
+                                    <a className='text-dark  nav-link active align-item-center' aria-current="page" href="/portfolios/public">Public portfolio</a>
+                                    <a className='text-dark  nav-link active align-item-center' aria-current="page" href="/favorites">Favorite portfolio</a>
                                 </ul>
                             </div> : null}
                             <li className="nav-item">
