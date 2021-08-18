@@ -35,7 +35,7 @@ function PortfolioChart(props){
             }
             setValue(value.reverse());
             setInvested(invested.reverse());
-            setXAxis(time.reverse());
+            // setXAxis(time.reverse());
         })
         .catch(function (error) {
         })
