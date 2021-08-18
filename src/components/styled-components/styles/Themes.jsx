@@ -45,7 +45,7 @@ export const darkTheme = {
     // mediumDark: '#21293E',
     primaryText: '#FFF',
     secondaryText: '#ffe1e1',
-    primaryColor: '#1d1d1d',
+    primaryColor: '#131313',
     secondaryColor: '#242424',
     accentColor: '#d60047',
     gradientPair: '#ff7300',

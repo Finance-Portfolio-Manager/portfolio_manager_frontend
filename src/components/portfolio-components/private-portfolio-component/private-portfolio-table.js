@@ -1,6 +1,6 @@
 import { Table } from "react-bootstrap";
 import { useState } from "react";
-import { Button } from "react-bootstrap";
+import { Button, Card } from "react-bootstrap";
 
 export default function PrivatePortfolioTable(props){
 
@@ -16,13 +16,15 @@ export default function PrivatePortfolioTable(props){
     console.log(`TableRows: ${JSON.stringify(tableRows)}`);
 
     return <>
-        <div className="wrapper fadeInDown folioContent mx-3" id="portfolio">
+    {/* REMOVED className="wrapper fadeInDown folioContent mx-3" id="portfolio" */}
+        <Card className='global__card fadeInDown primary-text'>
+            <Card.Body>
             <div id="portfolio-values">
                 <h4 id = "portfolio-total"></h4>
                 <div id = "portfolio-change"></div>
                 <div id = "dollar-change"></div>
             </div>
-            <div className="table-responsive secondary-text">
+            <div className="table-responsive primary-text">
                 <Table id="stocks-view" className="table borderless table-hover secondary-text" responsive>
                     <thead>
                         <tr>
@@ -49,6 +51,7 @@ export default function PrivatePortfolioTable(props){
                 </Table>
                 <Button variant="primary" onClick={props.unassignDisplayPortfolio}>Hide Details</Button>
             </div>
-        </div>
+            </Card.Body>
+        </Card>
     </>
 }
