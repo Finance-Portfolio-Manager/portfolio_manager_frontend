@@ -15,8 +15,8 @@
 }
 
 .logoApp{
-   width: 300px !important;
-   height: 200px !important;
+   width: 250px !important;
+   height: 250px !important;
    background-color: transparent !important;
    color: white !important;
    transition: transform .2s !important;
