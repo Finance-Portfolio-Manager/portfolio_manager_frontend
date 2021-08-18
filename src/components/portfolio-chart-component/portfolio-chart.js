@@ -3,6 +3,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { withRouter } from "react-router-dom";
 import PortfolioChartComponent from "./portfolio-component";
+import { unstable_concurrentAct } from "react-dom/cjs/react-dom-test-utils.production.min";
 
 function PortfolioChart(props){    
 
@@ -22,14 +23,15 @@ function PortfolioChart(props){
             const value = [];
             const time = [];
             for(var i = 0;i<response.data.length;i++){
-                if(response.data[i].balanceType === "i"){
+                if(response.data[i].balanceType === "i" && invested.length<7){
                     invested.push(response.data[i].balance);
                     time.push(response.data[i].date);
                     console.log(time);
                 }
-                if(response.data[i].balanceType === "c"){
+                if(response.data[i].balanceType === "c" && value.length<7){
                     value.push(response.data[i].balance);
                 }
+                console.log(response.data);
             }
             setValue(value.reverse());
             setInvested(invested.reverse());
