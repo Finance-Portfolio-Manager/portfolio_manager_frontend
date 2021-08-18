@@ -21,18 +21,14 @@ export default function Navigation() {
                                 <a className="nav-link active" aria-current="page" href="/home">Home</a>
                             </li>
                             <li className="nav-item">
-                                <NavDropDown
-                                    className="text-white py-0 border-0"
-                                    show={dropdownShowpPortfolio}
-                                    hovered={() => setDropDrownShowPortfolio(true)}
-                                    unhovered={() => setDropDrownShowPortfolio(false)}
-                                    title="Portfolios">
-                                    <div className="min-vh-15 bg-gray">
-                                        <a className='text-dark  nav-link active align-item-center' aria-current="page" href="/account">Your Accounts</a>
-                                        <a className='text-dark  nav-link active align-item-center' aria-current="page" href="#">Favorite</a>
-                                        <a className='text-dark  nav-link active align-item-center' aria-current="page" href="#">Public portfolio</a>
-                                    </div>
-                                </NavDropDown>
+                            <div className="navbar-nav dropdown">
+                                <a className="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Portfolios</a>
+                                <ul className="dropdown-menu dropdown-menu-end dropdown-menu-gray" aria-labelledby="navbarDropdown">
+                                    <a className='text-dark  nav-link active align-item-center' aria-current="page" href="/account">My Portfolio</a>
+                                    <a className='text-dark  nav-link active align-item-center' aria-current="page" href="#">Public portfolio</a>
+                                    <a className='text-dark  nav-link active align-item-center' aria-current="page" href="#">Favorite portfolio</a>
+                                </ul>
+                            </div>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link active" aria-current="page" href="/about">About Us</a>
