@@ -34,6 +34,7 @@ export default function PublicPortfoliosView(props) {
                   <PublicPortfolioView
                     portfolio={portfolio}
                     username={portfolio.username}
+                    isFavorites={props.isFavorites}
                   />
                 );
               })
