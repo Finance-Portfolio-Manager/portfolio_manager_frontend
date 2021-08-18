@@ -43,17 +43,14 @@ export default function Navigation({ theme, toggleTheme, loggedIn, setLoggedIn }
                                     title="Portfolios">
                                     <div className="min-vh-15 bg-gray">
                                         <a className='text-dark  nav-link active align-item-center' aria-current="page" href="/account">My Portfolio</a>
-                                        <a className='text-dark  nav-link active align-item-center' aria-current="page" href="#">Public portfolio</a>
-                                        <a className='text-dark  nav-link active align-item-center' aria-current="page" href="#">Favorite portfolio</a>
+                                        <a className='text-dark  nav-link active align-item-center' aria-current="page" href="/portfolios/public">Public portfolio</a>
+                                        <a className='text-dark  nav-link active align-item-center' aria-current="page" href="/favorites">Favorite portfolio</a>
                                     </div>
                                 </NavDropDown>
                             </li>}
                             <li className="nav-item">
                                 <a className="nav-link active" aria-current="page" href="/about">About Us</a>
                            </li>
-                           { loggedIn && <li className="nav-item">
-                                <a className='nav-link active align-item-center' aria-current="page" href="/new-transaction">Transaction</a>
-                            </li>}
                         </ul>
                         <div className="d-flex align-self-center me-3">
                             <span className="align-self-center p1"><i className="bi-person-circle text-white"></i></span>
