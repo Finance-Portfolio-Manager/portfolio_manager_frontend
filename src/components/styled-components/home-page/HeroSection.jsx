@@ -7,6 +7,8 @@ import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./HeroSection.css";
 import GitHubButton from "react-github-btn";
+import { useState } from "react";
+import { useEffect } from "react";
 
 function HeroSection({
   topLine,
@@ -16,7 +18,15 @@ function HeroSection({
   img,
   alt,
   imgStart,
-}) {
+}) 
+{
+  const [loggedIn, setLoggedIn] = useState();
+
+  useEffect(() => {
+    const value = sessionStorage.getItem("Authorization");
+    setLoggedIn(value);
+  },[])
+  
   return (
     <>
       <div className="container">
@@ -37,12 +47,12 @@ function HeroSection({
                   {buttons.map((button) => {
                     return (
                       <Link to={button.link}>
-                        <Button
+                        {!loggedIn &&<Button
                           className="global__button-effect hero__button"
                           aria-label={button.ariaLabel}
                         >
                           {button.buttonLabel}
-                        </Button>
+                        </Button>}
                       </Link>
                     );
                   })}</div>

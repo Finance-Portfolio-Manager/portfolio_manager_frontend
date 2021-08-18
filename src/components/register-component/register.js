@@ -1,5 +1,6 @@
 import axios from "axios";
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import { PingApiRegister } from "../ServerRequest";
 import RegisterForm from "./register-form";
 import {Route, Redirect} from 'react-router-dom';
 import Login from "../login-component/login";
@@ -41,14 +42,11 @@ export default function Register(props) {
                 username:`${registrationData.username}`,
                 password:`${registrationData.password}`,
                 confirmPassword:`${registrationData.confirmPassword}`
-                };
-            axios.post(URL + "/users", JSON.stringify(registrationInfo), {headers:{'Content-Type': 'application/json'}})
-                .then(response=>{
-                    console.log(response.data);
-                    props.history.push("/login");
-                    // props.history.push("/");
-                    // <Route exact path ="/"> {isLoggedIn ? <Redirect to="/login"/> : <Login /> }</Route>
-                    // window.location.href="/login";
+            };
+            // axios.post(`${process.env.REACT_APP_API_URL}/register`, JSON.stringify(registrationInfo), {headers:{'Content-Type': 'application/json'}})
+                PingApiRegister(JSON.stringify(registrationInfo)).then(response=>{
+                    console.log(response);
+                    window.location.href = "/login";
                 })
 
                 .catch(function (error) {

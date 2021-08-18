@@ -27,6 +27,7 @@ export default function Main() {
     const [theme, themeToggler] = useAllThemes();
     const themeMode = themeSwitch(theme)
 
+    
     const users = [{ "username": "Greg", "labels": ["BYSI", "BTBT", "MRNA", "ROKU", "MU"], "percentage": [20, 30, 50, 10, 10], "profile": "Profile 1" },
     { "username": "David", "labels": ["BYSI", "AAPL", "F", "GM", "LUMN"], "percentage": [20, 10, 50, 20, 15], "profile": "Profile 1" },
     { "username": "Quinton", "labels": ["TSLA", "SHOP", "MRNA", "UBER", "BNGO"], "percentage": [10, 10, 50, 10, 20], "profile": "Profile 1" },]
@@ -54,8 +55,7 @@ export default function Main() {
                         <Route exact path="/balances" component={Chart}/>
                         <Route exact path="/about" component={About} />
                         <Route exact path="/register" component={Register} />
-                        <Route exact path="/login" component={() => <Login setLoggedIn={setLoggedIn} />} />
-                        
+                        <Route exact path="/login" component={ Login } />
                         <Route exact path="/generic-chart" component={GenericChart} />
                         <Route exact path="/new-transaction" component={NewTransaction} />
                         <Route exact path="/news" component={NewsPage} />

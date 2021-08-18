@@ -12,6 +12,12 @@ export default function Navigation({ theme, toggleTheme, loggedIn, setLoggedIn }
     }
     
     const [dropdownShowpPortfolio, setDropDrownShowPortfolio] = useState(false);
+
+    function logOut(){
+        sessionStorage.clear();
+        // window.location.href="/";
+    }
+
     return (
         <div className="container-fluid p-0">
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark primary-color">
@@ -28,7 +34,7 @@ export default function Navigation({ theme, toggleTheme, loggedIn, setLoggedIn }
                             <li className="nav-item">
                                 <a className="nav-link active" aria-current="page" href="/">Home</a>
                             </li>
-                            <li className="nav-item">
+                            {loggedIn && <li className="nav-item">
                                 <NavDropDown
                                     className="text-white py-0 border-0"
                                     show={dropdownShowpPortfolio}
@@ -41,13 +47,13 @@ export default function Navigation({ theme, toggleTheme, loggedIn, setLoggedIn }
                                         <a className='text-dark  nav-link active align-item-center' aria-current="page" href="#">Favorite portfolio</a>
                                     </div>
                                 </NavDropDown>
-                            </li>
+                            </li>}
                             <li className="nav-item">
                                 <a className="nav-link active" aria-current="page" href="/about">About Us</a>
                            </li>
-                            <li className="nav-item">
+                           { loggedIn && <li className="nav-item">
                                 <a className='nav-link active align-item-center' aria-current="page" href="/new-transaction">Transaction</a>
-                            </li>
+                            </li>}
                         </ul>
                         <div className="d-flex align-self-center me-3">
                             <span className="align-self-center p1"><i className="bi-person-circle text-white"></i></span>
