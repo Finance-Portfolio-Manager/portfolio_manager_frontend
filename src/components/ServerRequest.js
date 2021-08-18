@@ -61,8 +61,8 @@ export function PingApiPortfoliosUserId(id){
 }
 
 export function PingApiChart(symbol){
-    return axios.get(process.env.REACT_APP_API_URL + "/charts/" + symbol)
-        .then((response) => response.data);
+    return axios.get(process.env.REACT_APP_API_URL + "/charts/" + symbol).then((response) => response.data);
+        // .catch(error => console.log(error));
 }
 
 export function PingApiTransactions(json, jwt){
