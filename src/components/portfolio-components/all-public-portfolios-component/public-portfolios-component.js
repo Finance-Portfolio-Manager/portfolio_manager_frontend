@@ -12,5 +12,5 @@ export default function PublicPortfolios(props){
                                     console.log("promise: "+JSON.stringify(portfoliosResponse.data))})
         }, []);
 
-    return <PublicPortfoliosView portfolioList={portfolioList}/>
+    return <PublicPortfoliosView isFavorites={false} portfolioList={portfolioList}/>
 }

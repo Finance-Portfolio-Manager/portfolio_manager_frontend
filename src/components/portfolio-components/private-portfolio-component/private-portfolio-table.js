@@ -37,7 +37,11 @@ export default function PrivatePortfolioTable(props){
                         
                         {tableRows.map((tableRow) => {
                             console.log(`tableRow: ${JSON.stringify(tableRow)}`);
-                            return (<tr>
+                            return (
+                            <tr onClick={() => {
+                                props.onOpenChart();
+                                props.setChartSymbol(tableRow.symbol);
+                            }}>
                                 <td>{tableRow.symbol}</td>
                                 <td>{tableRow.quantity}</td>
                                 <td>{tableRow.avgBuyPrice}</td>

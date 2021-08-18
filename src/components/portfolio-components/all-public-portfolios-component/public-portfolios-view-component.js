@@ -12,7 +12,7 @@ export default function PublicPortfoliosView(props){
             
             <div className="container" style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
                 <div className="row">
-                    <h2>Public Portfolios</h2>
+                    {props.isFavorites ? <h2>Favorite Portfolios</h2> : <h2>Public Portfolios</h2>}
 
                     <div className="row py-3" style={{width: "70rem", borderStyle: "solid"}}>
                         
