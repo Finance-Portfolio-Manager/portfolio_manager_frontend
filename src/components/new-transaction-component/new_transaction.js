@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 import { withRouter } from "react-router-dom";
+import { PingApiTransactions } from "../ServerRequest";
 import NewTransactionForm from "./new_transaction_form";
 
 
@@ -52,8 +53,8 @@ export default function NewTransaction(props){
             let submitTransaction = transaction;
             submitTransaction = {...submitTransaction, transactionQuantity:(submitTransaction.transactionQuantity * -1)};
             //setTransaction({...transaction, transactionQuantity:(transaction.transactionQuantity * -1)});
-            axios.post(process.env.REACT_APP_API_URL + "/transactions", submitTransaction, {headers: {'Authorization': jwtToken, 'Content-Type': 'application/json'}})
-            .then(response=>{
+            // axios.post(process.env.REACT_APP_API_URL + "/transactions", submitTransaction, {headers: {'Authorization': jwtToken, 'Content-Type': 'application/json'}})
+            PingApiTransactions(submitTransaction, jwtToken).then(response=>{
                 console.log(response);
                 props.onCloseTransactionForm();
             })

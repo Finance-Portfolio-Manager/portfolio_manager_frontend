@@ -2,6 +2,7 @@ import GenericChart from "./generic-chart";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import {initialSeriesData, convertSeriesData} from "./chart-util.js";
+import { PingApiChart } from "../ServerRequest";
 
 function ChartComponent(props) {
 
@@ -11,13 +12,13 @@ function ChartComponent(props) {
     });
 
     useEffect(()=>{
-        axios.get(process.env.REACT_APP_API_URL + "/charts/" + props.symbol)
-        .then(response => {
-            console.log(response.data)
+        // axios.get(process.env.REACT_APP_API_URL + "/charts/" + props.symbol)
+        PingApiChart(props.symbol).then(response => {
+            console.log(response)
             // put logic for multiple time frames here
             setState({
-                symbolName: response.data["Meta Data"]["2. Symbol"],
-                seriesData: convertSeriesData(response.data["Time Series (Daily)"])
+                symbolName: response["Meta Data"]["2. Symbol"],
+                seriesData: convertSeriesData(response["Time Series (Daily)"])
             });
         })
     },[]);
