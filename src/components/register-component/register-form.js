@@ -8,7 +8,7 @@ export default function RegisterForm(props) {
             <div className="App__container global__gradient-background--absolute">
                 <Form className="form__style global__blur-effect global__dropshadow global__zoom">
                     <div className="aroundLogo">
-                        <img className="logo" alt="" src={logo} />
+                        <img className="logo" alt="" src='images/logo-white.svg'/>
                     </div>
 
                     <div className="form-inner">

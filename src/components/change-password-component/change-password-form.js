@@ -8,7 +8,7 @@ export default function ChangePasswordForm(props){
         <div data-testid="login-form" className='App__container text-white'>
             <Form className="form__style global__blur-effect global__dropshadow global__zoom">
                 <div className="aroundLogo">
-                    <img className="logo" src={logo} alt="revature logo"/>
+                    <img className="logo" src='images/logo-white.svg' alt="revature logo"/>
                 </div>
                 <div className="form-inner">
                     <h4 className='form-header'>APEX Stocks</h4>
