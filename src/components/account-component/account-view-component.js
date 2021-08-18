@@ -3,14 +3,11 @@ import { Button, CardGroup, Col} from "react-bootstrap";
 import PrivatePortfolioDetails from "../portfolio-components/private-portfolio-component/private-portfolio-details";
 import PrivatePortfolioView from "../portfolio-components/private-portfolio-component/private-portfolio-view";
 import { useState } from "react";
-<<<<<<< HEAD
 // import PortfolioCard from "../portfolio-component/portfolio-card-component";
 import Navigation from "../navigation/navigation";
-=======
 import { OmitProps } from "antd/lib/transfer/ListBody";
 import { Modal } from "react-bootstrap";
 import CreatePortfolio from "../portfolio-components/create-new-portfolio/create-portfolio";
->>>>>>> team1
 //TODO: will be importing functions not yet defined
 
 //TODO: This will take in a list of portfolios as props and render them
