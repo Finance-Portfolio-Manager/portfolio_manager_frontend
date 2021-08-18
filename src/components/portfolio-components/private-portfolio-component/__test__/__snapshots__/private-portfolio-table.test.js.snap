@@ -2,7 +2,7 @@
 
 exports[`matches snapshot 1`] = `
 <div
-  className="wrapper fadeInDown folioContent"
+  className="wrapper fadeInDown folioContent mx-3"
   id="portfolio"
 >
   <div
@@ -19,13 +19,13 @@ exports[`matches snapshot 1`] = `
     />
   </div>
   <div
-    className="table-responsive"
+    className="table-responsive secondary-text"
   >
     <div
       className="table-responsive"
     >
       <table
-        className="table borderless table-hover table"
+        className="table borderless table-hover secondary-text table"
         id="stocks-view"
       >
         <thead>
@@ -62,54 +62,25 @@ exports[`matches snapshot 1`] = `
         >
           <tr>
             <td>
-              Amazon
+              TSLA
             </td>
+            <td />
+            <td />
             <td>
-              10
+              5
             </td>
-            <td>
-              3300
-            </td>
-            <td>
-              3400
-            </td>
-            <td>
-              8
-            </td>
+            <td />
           </tr>
           <tr>
             <td>
-              Tesla
+              GME
             </td>
+            <td />
+            <td />
             <td>
-              15
+              100
             </td>
-            <td>
-              700
-            </td>
-            <td>
-              715
-            </td>
-            <td>
-              2
-            </td>
-          </tr>
-          <tr>
-            <td>
-              AMC
-            </td>
-            <td>
-              20
-            </td>
-            <td>
-              10
-            </td>
-            <td>
-              33
-            </td>
-            <td>
-              230
-            </td>
+            <td />
           </tr>
         </tbody>
       </table>
@@ -119,7 +90,7 @@ exports[`matches snapshot 1`] = `
       disabled={false}
       type="button"
     >
-      Go to card
+      Hide Details
     </button>
   </div>
 </div>

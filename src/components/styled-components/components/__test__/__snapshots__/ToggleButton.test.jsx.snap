@@ -2,9 +2,9 @@
 
 exports[`matches snapshot 1`] = `
 <button
-  className="sc-bdnxRM ceAwFl float"
+  className="dropdown-item"
   onClick={[Function]}
 >
-  CHANGE THEME
+  Change Theme
 </button>
 `;

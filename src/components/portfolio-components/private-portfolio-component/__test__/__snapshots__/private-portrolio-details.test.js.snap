@@ -1,0 +1,147 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+Array [
+  <div
+    className="row"
+  >
+    <h3>
+      Portfolio 1
+    </h3>
+  </div>,
+  <div
+    className="row"
+  >
+    <div
+      className="folioContent col-md-3"
+    >
+      <div>
+        <canvas
+          data-testid="canvas"
+          height={150}
+          onClick={[Function]}
+          role="img"
+          width={300}
+        />
+      </div>
+    </div>
+    <div
+      className="folioContent col"
+    >
+      <div
+        className="wrapper fadeInDown folioContent mx-3"
+        id="portfolio"
+      >
+        <div
+          id="portfolio-values"
+        >
+          <h4
+            id="portfolio-total"
+          />
+          <div
+            id="portfolio-change"
+          />
+          <div
+            id="dollar-change"
+          />
+        </div>
+        <div
+          className="table-responsive secondary-text"
+        >
+          <div
+            className="table-responsive"
+          >
+            <table
+              className="table borderless table-hover secondary-text table"
+              id="stocks-view"
+            >
+              <thead>
+                <tr>
+                  <th
+                    scope="col"
+                  >
+                    Stock
+                  </th>
+                  <th
+                    scope="col"
+                  >
+                    Quantity
+                  </th>
+                  <th
+                    scope="col"
+                  >
+                    Average Buy Price
+                  </th>
+                  <th
+                    scope="col"
+                  >
+                    Current Price
+                  </th>
+                  <th
+                    scope="col"
+                  >
+                    P/L
+                  </th>
+                </tr>
+              </thead>
+              <tbody
+                id="stocks-body"
+              >
+                <tr>
+                  <td />
+                  <td />
+                  <td />
+                  <td />
+                  <td />
+                </tr>
+                <tr>
+                  <td />
+                  <td />
+                  <td />
+                  <td />
+                  <td />
+                </tr>
+                <tr>
+                  <td />
+                  <td />
+                  <td />
+                  <td />
+                  <td />
+                </tr>
+                <tr>
+                  <td />
+                  <td />
+                  <td />
+                  <td />
+                  <td />
+                </tr>
+                <tr>
+                  <td />
+                  <td />
+                  <td />
+                  <td />
+                  <td />
+                </tr>
+                <tr>
+                  <td />
+                  <td />
+                  <td />
+                  <td />
+                  <td />
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <button
+            className="btn btn-primary"
+            disabled={false}
+            type="button"
+          >
+            Hide Details
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>,
+]
+`;

@@ -5,7 +5,7 @@ exports[`matches snapshot 1`] = `
   className="container"
 >
   <p
-    className="d-flex flex-column w-50 captainProfile justify-content-center mx-auto lead fw-bolder text-white"
+    className="d-flex flex-column w-50 meetTeam justify-content-center mx-auto lead fw-bolder text-white primary-text"
     id="meet"
   >
     Meet Our Team
@@ -14,7 +14,7 @@ exports[`matches snapshot 1`] = `
     className="text-white"
   />
   <section
-    id="profiles"
+    id="profiles "
   >
     <div
       className="card border-0 d-flex flex-column captainProfile justify-content-center mx-auto my-4"
@@ -22,7 +22,7 @@ exports[`matches snapshot 1`] = `
     >
       <div>
         <a
-          className="text-decoration-none text-white"
+          className="text-decoration-none text-white "
           href="https://www.linkedin.com/in/carolynhrehm/"
           target="_blank"
         >
@@ -36,7 +36,9 @@ exports[`matches snapshot 1`] = `
       <div
         className="card-body"
       >
-        <p>
+        <p
+          className="primary-text"
+        >
           Carolyn Rehm
         </p>
       </div>

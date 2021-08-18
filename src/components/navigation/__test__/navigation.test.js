@@ -30,8 +30,13 @@ afterEach(() => {
   container = null;
 });
 
+// test("matches snapshot", ()=>{
+//   const tree = renderer.create(<Navigation></Navigation>).toJSON();
+//   expect(tree).toMatchSnapshot();
+// })
+
 test("matches snapshot", ()=>{
-  const tree = renderer.create(<Navigation></Navigation>).toJSON();
+  const tree = renderer.create(<Navigation loggedIn={true}></Navigation>).toJSON();
   expect(tree).toMatchSnapshot();
 })
 
@@ -47,75 +52,93 @@ describe("Nav bar rendering", ()=>{
   let component = shallow(<Navigation></Navigation>);
 
   test("renders a title", ()=>{
-    expect(component.find("a").first().text()).toContain('Team Name');
+    expect(component.find("a").first().text()).toContain('Home');
   })
 
-  test("renders two dropdown menus", ()=>{
-    expect(component.find("NavDropDown").length).toBe(2);
+  test("renders a dropdown menus", ()=>{
+    expect(component.find("NavDropDown").length).toBe(1);
   })
 
-  test("renders Home", ()=>{
-    expect(component.find("a").at(1).text()).toContain('Home');
+  test("renders My Portfolio", ()=>{
+    expect(component.find("a").at(1).text()).toContain('My Portfolio');
   })
 
-  test("renders Your Accounts", ()=>{
-    expect(component.find("a").at(2).text()).toContain('Your Accounts');
+  test("renders Public portfolio", ()=>{
+    expect(component.find("a").at(2).text()).toContain('Public portfolio');
   })
 
-  test("renders Favorite", ()=>{
-    expect(component.find("a").at(3).text()).toContain('Favorite');
-  })
-
-  test("renders Public Portfolio", ()=>{
-    expect(component.find("a").at(4).text()).toContain('Public portfolio');
+  test("renders Favorite portfolio", ()=>{
+    expect(component.find("a").at(3).text()).toContain('Favorite portfolio');
   })
 
   test("renders About Us", ()=>{
-    expect(component.find("a").at(5).text()).toContain('About Us');
+    expect(component.find("a").at(4).text()).toContain('About Us');
   })
 
-  test("renders Pie Chart", ()=>{
-    expect(component.find("a").at(6).text()).toContain('Pie Chart');
-  })
-
-  test("renders Stock Prices", ()=>{
-    expect(component.find("a").at(7).text()).toContain('Stock Prices');
-  })
-
-  test("renders Stock Graph", ()=>{
-    expect(component.find("a").at(8).text()).toContain('Stock Graph');
+  test("renders Transaction", ()=>{
+    expect(component.find("a").at(5).text()).toContain('Transaction');
   })
 
   test("renders Account", ()=>{
-    expect(component.find("a").at(9).text()).toContain('Account');
+    expect(component.find("a").at(6).text()).toContain('Account');
   })
 
   test("renders Log in", ()=>{
-    expect(component.find("a").at(10).text()).toContain('Log in');
+    expect(component.find("a").at(7).text()).toContain('Log in');
   })
 
   test("renders Sign up", ()=>{
-    expect(component.find("a").at(11).text()).toContain('Sign up');
+    expect(component.find("a").last().text()).toContain('Sign up');
   })
 
-  test("renders Log Out", ()=>{
-    expect(component.find("a").last().text()).toContain('Log Out');
-  })
+  // test("renders Account", ()=>{
+  //   expect(component.find("a").at(9).text()).toContain('Account');
+  // })
+
+  // test("renders Log in", ()=>{
+  //   expect(component.find("a").at(10).text()).toContain('Log in');
+  // })
+
+  // test("renders Sign up", ()=>{
+  //   expect(component.find("a").at(11).text()).toContain('Sign up');
+  // })
+
+  // test("renders Log Out", ()=>{
+  //   expect(component.find("a").last().text()).toContain('Log Out');
+  // })
 })
 
 describe("navigation response to actions", ()=>{
+  beforeEach(() => {
+    window.sessionStorage.clear();
+    jest.restoreAllMocks();
+  });
+
   test("dropdown menus don't crash when clicked", ()=>{
     const component = shallow(<Navigation></Navigation>).find("NavDropDown");
-    expect(component.length).toBe(2);
+    expect(component.length).toBe(1);
 
     let clickEvent1 = () =>{
       component.first().simulate('click');
     }
-    let clickEvent2 = () =>{
-      component.at(1).simulate('click');
-    }
+    // let clickEvent2 = () =>{
+    //   component.at(1).simulate('click');
+    // }
 
     expect(clickEvent1).not.toThrow();
-    expect(clickEvent2).not.toThrow();
+    // expect(clickEvent2).not.toThrow();
   })
+
+  test("logOut function", ()=>{
+    // session storage still not covered
+    window.sessionStorage.setItem('Authorization', "token" );
+    const component = mount(<Navigation loggedIn={ true }></Navigation>)
+    const logout = component.find("a").last();
+    const logoutAction = ()=>{
+      logout.simulate("click");
+    }
+    expect(logoutAction).toThrow();
+  })
+
+  // test("hover over ")
 })

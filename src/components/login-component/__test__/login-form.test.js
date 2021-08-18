@@ -34,7 +34,7 @@ test("matches snapshot", ()=>{
 })
 
 test("Renders title", ()=>{
-    expect(wrapper.find("h4").text()).toContain("Portfolio Manager");
+    expect(wrapper.find("h4").text()).toContain("APEX Stocks");
 })
 
 test("Click submit button", ()=>{

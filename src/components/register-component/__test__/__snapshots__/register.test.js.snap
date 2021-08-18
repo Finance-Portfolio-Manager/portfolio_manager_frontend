@@ -2,10 +2,10 @@
 
 exports[`matches snapshot 1`] = `
 <div
-  className="App"
+  className="App__container global__gradient-background--absolute"
 >
   <form
-    className=""
+    className="form__style global__blur-effect global__dropshadow global__zoom"
   >
     <div
       className="aroundLogo"
@@ -13,16 +13,20 @@ exports[`matches snapshot 1`] = `
       <img
         alt=""
         className="logo"
-        src="revlogo.jpg"
+        src="revlogo.png"
       />
     </div>
     <div
       className="form-inner"
     >
-      <h4>
-        Portfolio Manager
+      <h4
+        className="form-header primary-text"
+      >
+        APEX Stocks
       </h4>
-      <h6>
+      <h6
+        className="form-header primary-text"
+      >
         <em>
           Account Registration
         </em>
@@ -102,7 +106,7 @@ exports[`matches snapshot 1`] = `
         />
       </div>
       <button
-        className="submitButton mt-2"
+        className="submitButton mt-2 global__button-effect"
         onClick={[Function]}
         type="submit"
       >

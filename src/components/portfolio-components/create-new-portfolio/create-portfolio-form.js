@@ -15,7 +15,7 @@ export default function CreatePortfolio(props){
                         onChange={props.onChange}/>
                     <Form.Check type="checkbox" label="Public" name="isPublic" checked={props.isPublic} onChange={props.onChange}/>
                 </Form.Group>
-                <Button variant="primary" type="submit"> Submit </Button>            
+                <Button variant="primary" type="submit" onClick={props.onSubmit}> Submit </Button>            
         </Form>
     )
 }

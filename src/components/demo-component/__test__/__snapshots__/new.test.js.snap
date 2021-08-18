@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  className="container-fluid "
+>
+  <div
+    class="carousel slide"
+    data-bs-ride="carousel"
+    id="carouselExampleControls"
+  >
+    <div
+      className="carousel-inner"
+    />
+    <button
+      className="carousel-control-prev"
+      data-bs-slide="prev"
+      data-bs-target="#carouselExampleControls"
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+        className="carousel-control-prev-icon"
+      />
+      <span
+        className="visually-hidden"
+      >
+        Previous
+      </span>
+    </button>
+    <button
+      className="carousel-control-next"
+      data-bs-slide="next"
+      data-bs-target="#carouselExampleControls"
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+        className="carousel-control-next-icon"
+      />
+      <span
+        className="visually-hidden"
+      >
+        Next
+      </span>
+    </button>
+  </div>
+</div>
+`;

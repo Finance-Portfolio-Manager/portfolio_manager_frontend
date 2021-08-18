@@ -2,194 +2,309 @@
 
 exports[`matches snapshot 1`] = `
 <div
-  style={
-    Object {
-      "backgroundColor": "#B9B9BA",
-    }
-  }
+  className="secondary-color"
 >
-  <h2
+  <div
+    className="h2"
     id="account-header"
   >
     <span
+      className="m-5 secondary-text"
       id="header-span"
     >
-      Username
+      test_user
     </span>
-  </h2>
+  </div>
   <div
-    className="row"
+    className="container"
+    style={
+      Object {
+        "alignItems": "center",
+        "display": "flex",
+        "justifyContent": "center",
+      }
+    }
   >
     <div
-      className="col-md-2 col-6"
+      className="row"
     >
-      <img
-        className="rounded"
-        src="exampleimg.svg"
-      />
-    </div>
-    <div
-      className="col"
-    >
+      <h2>
+        Your Portfolios
+      </h2>
       <div
-        className="center card"
+        className="row py-3"
         style={
           Object {
-            "border": "2px solid #F26925",
-            "width": "50rem",
+            "borderStyle": "solid",
           }
         }
       >
-        <img
-          className="card-img-top"
-        />
         <div
-          className="card-body"
+          className="col-sm-4"
         >
           <div
-            className="card-title h5"
+            className="card"
           >
-            Portfolio 1
+            <div
+              className="card-body"
+            >
+              <div
+                className="card-title h5"
+                tag="h4"
+              >
+                Portfolio 1
+              </div>
+              <p
+                className="card-text"
+              >
+                <div>
+                  <p>
+                    $50125
+                  </p>
+                  <div>
+                    <canvas
+                      data-testid="canvas"
+                      height={150}
+                      onClick={[Function]}
+                      role="img"
+                      width={300}
+                    />
+                  </div>
+                </div>
+              </p>
+              <button
+                className="btn btn-primary"
+                disabled={false}
+                onClick={[Function]}
+                type="button"
+              >
+                Details
+              </button>
+            </div>
           </div>
-          <p
-            className="card-text"
+        </div>
+        <div
+          className="col-sm-4"
+        >
+          <div
+            className="card"
           >
-            Current value: 
-            1000
-             %change placeholder
-          </p>
-          <button
-            className="btn btn-primary"
-            disabled={false}
-            onClick={[Function]}
-            type="button"
+            <div
+              className="card-body"
+            >
+              <div
+                className="card-title h5"
+                tag="h4"
+              >
+                Portfolio 2
+              </div>
+              <p
+                className="card-text"
+              >
+                <div>
+                  <p>
+                    $50125
+                  </p>
+                  <div>
+                    <canvas
+                      data-testid="canvas"
+                      height={150}
+                      onClick={[Function]}
+                      role="img"
+                      width={300}
+                    />
+                  </div>
+                </div>
+              </p>
+              <button
+                className="btn btn-primary"
+                disabled={false}
+                onClick={[Function]}
+                type="button"
+              >
+                Details
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          className="col-sm-4"
+        >
+          <div
+            className="card"
           >
-            Details
-          </button>
+            <div
+              className="card-body"
+            >
+              <div
+                className="card-title h5"
+                tag="h4"
+              >
+                Portfolio 3
+              </div>
+              <p
+                className="card-text"
+              >
+                <div>
+                  <p>
+                    $50125
+                  </p>
+                  <div>
+                    <canvas
+                      data-testid="canvas"
+                      height={150}
+                      onClick={[Function]}
+                      role="img"
+                      width={300}
+                    />
+                  </div>
+                </div>
+              </p>
+              <button
+                className="btn btn-primary"
+                disabled={false}
+                onClick={[Function]}
+                type="button"
+              >
+                Details
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          className="col-sm-4"
+        >
+          <div
+            className="card"
+          >
+            <div
+              className="card-body"
+            >
+              <div
+                className="card-title h5"
+                tag="h4"
+              >
+                Portfolio 4
+              </div>
+              <p
+                className="card-text"
+              >
+                <div>
+                  <p>
+                    $50125
+                  </p>
+                  <div>
+                    <canvas
+                      data-testid="canvas"
+                      height={150}
+                      onClick={[Function]}
+                      role="img"
+                      width={300}
+                    />
+                  </div>
+                </div>
+              </p>
+              <button
+                className="btn btn-primary"
+                disabled={false}
+                onClick={[Function]}
+                type="button"
+              >
+                Details
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          className="col-sm-4"
+        >
+          <div
+            className="card"
+          >
+            <div
+              className="card-body"
+            >
+              <div
+                className="card-title h5"
+                tag="h4"
+              >
+                Portfolio 5
+              </div>
+              <p
+                className="card-text"
+              >
+                <div>
+                  <p>
+                    $50125
+                  </p>
+                  <div>
+                    <canvas
+                      data-testid="canvas"
+                      height={150}
+                      onClick={[Function]}
+                      role="img"
+                      width={300}
+                    />
+                  </div>
+                </div>
+              </p>
+              <button
+                className="btn btn-primary"
+                disabled={false}
+                onClick={[Function]}
+                type="button"
+              >
+                Details
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          className="col-sm-4"
+        >
+          <div
+            className="card"
+          >
+            <div
+              className="card-body"
+            >
+              <div
+                className="card-title h5"
+                tag="h4"
+              >
+                Portfolio 6
+              </div>
+              <p
+                className="card-text"
+              >
+                <div>
+                  <p>
+                    $50125
+                  </p>
+                  <div>
+                    <canvas
+                      data-testid="canvas"
+                      height={150}
+                      onClick={[Function]}
+                      role="img"
+                      width={300}
+                    />
+                  </div>
+                </div>
+              </p>
+              <button
+                className="btn btn-primary"
+                disabled={false}
+                onClick={[Function]}
+                type="button"
+              >
+                Details
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <div
-      className="col-md-2"
-    />
   </div>
-   
-  <br />
-  <div
-    className="row"
-  >
-    <div
-      className="col-md-2 col-6"
-    >
-      <img
-        className="rounded"
-        src="exampleimg.svg"
-      />
-    </div>
-    <div
-      className="col"
-    >
-      <div
-        className="center card"
-        style={
-          Object {
-            "border": "2px solid #F26925",
-            "width": "50rem",
-          }
-        }
-      >
-        <img
-          className="card-img-top"
-        />
-        <div
-          className="card-body"
-        >
-          <div
-            className="card-title h5"
-          >
-            Portfolio 2
-          </div>
-          <p
-            className="card-text"
-          >
-            Current value: 
-            145641
-             %change placeholder
-          </p>
-          <button
-            className="btn btn-primary"
-            disabled={false}
-            onClick={[Function]}
-            type="button"
-          >
-            Details
-          </button>
-        </div>
-      </div>
-    </div>
-    <div
-      className="col-md-2"
-    />
-  </div>
-   
-  <br />
-  <div
-    className="row"
-  >
-    <div
-      className="col-md-2 col-6"
-    >
-      <img
-        className="rounded"
-        src="exampleimg.svg"
-      />
-    </div>
-    <div
-      className="col"
-    >
-      <div
-        className="center card"
-        style={
-          Object {
-            "border": "2px solid #F26925",
-            "width": "50rem",
-          }
-        }
-      >
-        <img
-          className="card-img-top"
-        />
-        <div
-          className="card-body"
-        >
-          <div
-            className="card-title h5"
-          >
-            Portfolio 3
-          </div>
-          <p
-            className="card-text"
-          >
-            Current value: 
-            1840
-             %change placeholder
-          </p>
-          <button
-            className="btn btn-primary"
-            disabled={false}
-            onClick={[Function]}
-            type="button"
-          >
-            Details
-          </button>
-        </div>
-      </div>
-    </div>
-    <div
-      className="col-md-2"
-    />
-  </div>
-   
-  <br />
 </div>
 `;

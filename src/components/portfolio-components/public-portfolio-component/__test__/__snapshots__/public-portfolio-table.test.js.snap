@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  className="wrapper fadeInDown folioContent"
+  id="folioContent"
+>
+  <div
+    className="table-responsive"
+  >
+    <div
+      className="table-responsive"
+    >
+      <table
+        className="table borderless table-hover table"
+        id="stocks-view"
+      >
+        <thead>
+          <tr>
+            <th
+              scope="col"
+            >
+              Stock
+            </th>
+            <th
+              scope="col"
+            >
+              Current Price
+            </th>
+          </tr>
+        </thead>
+        <tbody
+          id="stocks-body"
+        >
+          <tr>
+            <td>
+              TSLA
+            </td>
+            <td>
+              5
+            </td>
+          </tr>
+          <tr>
+            <td>
+              GME
+            </td>
+            <td>
+              100
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <button
+      className="btn btn-primary"
+      disabled={false}
+      onClick={[MockFunction]}
+      type="button"
+    >
+      Hide Details
+    </button>
+  </div>
+</div>
+`;

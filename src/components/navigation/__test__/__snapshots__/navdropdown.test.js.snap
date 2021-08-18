@@ -33,15 +33,7 @@ exports[`matches snapshot 2`] = `
   </div>
   <div
     className="undefined p-0 m-0 rounded-0 dropdown-menu show"
-    style={
-      Object {
-        "left": "0",
-        "opacity": "0",
-        "pointerEvents": "none",
-        "position": "absolute",
-        "top": "0",
-      }
-    }
+    style={Object {}}
     x-placement="bottom-start"
   />
 </div>

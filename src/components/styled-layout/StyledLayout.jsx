@@ -5,7 +5,7 @@ This is a DEMO for design team, more functionality tbd
 */
 import React from "react";
 // import './layout.css'
-import "antd/dist/antd.css";
+// import "antd/dist/antd.css";
 // import "./index.css";
 import { Layout, Breadcrumb} from "antd";
 import { Content, Footer, Header } from "antd/lib/layout/layout";

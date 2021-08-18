@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  style={
+    Object {
+      "backgroundColor": "#B9B9BA",
+    }
+  }
+>
+  <div
+    className="container"
+    style={
+      Object {
+        "alignItems": "center",
+        "display": "flex",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <div
+      className="row"
+    >
+      <h2>
+        Public Portfolios
+      </h2>
+      <div
+        className="row py-3"
+        style={
+          Object {
+            "borderStyle": "solid",
+            "width": "70rem",
+          }
+        }
+      />
+    </div>
+  </div>
+</div>
+`;

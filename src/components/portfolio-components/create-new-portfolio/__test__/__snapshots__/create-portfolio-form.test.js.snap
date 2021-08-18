@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<form
+  className=""
+>
+  <div>
+    <label
+      className="form-label"
+    >
+      Portfolio Name
+    </label>
+    <input
+      className="form-control"
+      name="name"
+    />
+    <div
+      className="form-check"
+    >
+      <input
+        className="form-check-input"
+        disabled={false}
+        name="isPublic"
+        type="checkbox"
+      />
+      <label
+        className="form-check-label"
+        title=""
+      >
+        Public
+      </label>
+    </div>
+  </div>
+  <button
+    className="btn btn-primary"
+    disabled={false}
+    type="submit"
+  >
+     Submit 
+  </button>
+</form>
+`;

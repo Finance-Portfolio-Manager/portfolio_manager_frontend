@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import PortfolioCard from './../portfolio-card-component';
+import PrivatePortfolioCard from '../private-portfolio-card';
 
 import { render, cleanup } from '@testing-library/react';
 import "@testing-library/jest-dom/extend-expect";
@@ -14,11 +14,11 @@ import Adapter from 'enzyme-adapter-react-16';
 
 configure({ adapter: new Adapter() });
 
-const portfolio = { name: "Trent", value: 100, id: 5};
-const wrapper = shallow(<PortfolioCard portfolio={ portfolio }></PortfolioCard>);
+const portfolio = { name: "Trent", value: 100, id: 5, stocks: [{ symbol: "TSLA", quantity: 5, currentPrice: 100 }]};
+const wrapper = shallow(<PrivatePortfolioCard portfolio={ portfolio }></PrivatePortfolioCard>);
 
 test("matches snapshot", ()=>{
-    const tree = renderer.create(<PortfolioCard portfolio={ portfolio }></PortfolioCard>).toJSON();
+    const tree = renderer.create(<PrivatePortfolioCard portfolio={ portfolio }></PrivatePortfolioCard>).toJSON();
     expect(tree).toMatchSnapshot();
 })
 
@@ -26,9 +26,9 @@ test("Details button renders", ()=>{
     expect(wrapper.find("Button").text()).toContain("Details");
 })
 
-test("image renders", ()=>{
-    expect(wrapper.find("CardImg").length).toBe(1);
-})
+// test("image renders", ()=>{
+//     expect(wrapper.find("CardImg").length).toBe(1);
+// })
 
 test("card body renders", ()=>{
     expect(wrapper.find("CardBody").length).toBe(1);

@@ -95,54 +95,54 @@ export default function PrivatePortfolio(props){
     //     setPortfolio(records);    
     // },[]);
 
-    function fetchAllStocks(symbols){
-        var link = "http://portfoliomanager-env.eba-49pyjjuv.us-east-2.elasticbeanstalk.com/api/all?symbol=";
-        for (let i = 0; i < symbols.length; i++){
-            link += symbols[i] + ",";
-        }
-        return fetch(link, {
-            method: 'get',
-            headers: new Headers({
-                'Content-Type':'application/json'
-            }),
-        }).then((response) => { 
-            return response.json().then((data) => {
-                return data;
-            }).catch((error) => {
-                console.log(error);
-            }) 
-        });
-    }
+    // function fetchAllStocks(symbols){
+    //     var link = "http://portfoliomanager-env.eba-49pyjjuv.us-east-2.elasticbeanstalk.com/api/all?symbol=";
+    //     for (let i = 0; i < symbols.length; i++){
+    //         link += symbols[i] + ",";
+    //     }
+    //     return fetch(link, {
+    //         method: 'get',
+    //         headers: new Headers({
+    //             'Content-Type':'application/json'
+    //         }),
+    //     }).then((response) => { 
+    //         return response.json().then((data) => {
+    //             return data;
+    //         }).catch((error) => {
+    //             console.log(error);
+    //         }) 
+    //     });
+    // }
     
-    function getUserFromToken(token){
-        return fetch("http://portfoliomanager-env.eba-49pyjjuv.us-east-2.elasticbeanstalk.com/username?token=" + token, {
-            method: 'get',
-            headers: new Headers({
-                'Content-Type':'application/json'
-            }),
-        }).then((response) => { 
-            return response.json().then((data) => {
-                return data;
-            }).catch((error) => {
-                console.log(error);
-            }) 
-        });
-    }
+    // function getUserFromToken(token){
+    //     return fetch("http://portfoliomanager-env.eba-49pyjjuv.us-east-2.elasticbeanstalk.com/username?token=" + token, {
+    //         method: 'get',
+    //         headers: new Headers({
+    //             'Content-Type':'application/json'
+    //         }),
+    //     }).then((response) => { 
+    //         return response.json().then((data) => {
+    //             return data;
+    //         }).catch((error) => {
+    //             console.log(error);
+    //         }) 
+    //     });
+    // }
     
-    function getAllTransactions(userId){
-        return fetch("http://portfoliomanager-env.eba-49pyjjuv.us-east-2.elasticbeanstalk.com/transactions?userId=" + userId, {
-            method: 'get',
-            headers: new Headers({
-                'Content-Type':'application/json'
-            })
-        }).then((response) => { 
-            return response.json().then((data) => {
-                return data;
-            }).catch((error) => {
-                console.log(error);
-            }) 
-        });
-    }
+    // function getAllTransactions(userId){
+    //     return fetch("http://portfoliomanager-env.eba-49pyjjuv.us-east-2.elasticbeanstalk.com/transactions?userId=" + userId, {
+    //         method: 'get',
+    //         headers: new Headers({
+    //             'Content-Type':'application/json'
+    //         })
+    //     }).then((response) => { 
+    //         return response.json().then((data) => {
+    //             return data;
+    //         }).catch((error) => {
+    //             console.log(error);
+    //         }) 
+    //     });
+    // }
 
     //TODO: This is a dummy array of objects that will be retrieved from the server when that functionality exists
     let stock1 = {stockName:"Amazon", stockQuantity:10, stockAveragePrice:3300, stockCurrentPrice:3400, stockChange:8};

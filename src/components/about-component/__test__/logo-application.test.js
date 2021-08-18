@@ -20,10 +20,10 @@ test("matches snapshot", ()=>{
     expect(tree).toMatchSnapshot();
 })
 
-test("image renders", ()=>{
-    expect(wrapper.find("CardImg").length).toBe(1);
+test("logo renders", ()=>{
+    expect(wrapper.find("Logo").length).toBe(1);
 })
 
 test("Card text renders", ()=>{
-    expect(wrapper.find("CardText").text()).toContain("Application Name");
+    expect(wrapper.find("CardText").text()).toContain("APEX STOCKS");
 })

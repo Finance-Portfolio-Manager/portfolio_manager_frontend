@@ -7,7 +7,7 @@ function ChangePassword(props){
 
     let URL = process.env.REACT_APP_API_URL;
 
-    //let URL = "http://localhost:8080";
+    // let URL = "http://localhost:8080";
 
     const [email, setEmail] = useState("");
     const [credentials, setCredentials] = useState("");
@@ -73,10 +73,10 @@ function ChangePassword(props){
     function validateInput(email, code, password, confirmPassword){
         
         console.log("checking input");
-        // console.log("email: " + email);
-        // console.log("code: " + code);
-        // console.log("password: " + password);
-        // console.log("confirmPassword: " + confirmPassword);
+        console.log("email: " + email);
+        console.log("code: " + code);
+        console.log("password: " + password);
+        console.log("confirmPassword: " + confirmPassword);
         
         // Forbid any empty values
         if((email ===undefined || code ===undefined ||password ===undefined ||confirmPassword ===undefined)){

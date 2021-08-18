@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  className="col-sm-4"
+>
+  <div
+    className="card"
+  >
+    <div
+      className="card-body"
+    >
+      <div
+        className="card-title h5"
+        tag="h4"
+      >
+        Trent
+      </div>
+      <p
+        className="card-text"
+      >
+        <div>
+          <p>
+            $100
+          </p>
+          <div>
+            <canvas
+              data-testid="canvas"
+              height={150}
+              onClick={[Function]}
+              role="img"
+              width={300}
+            />
+          </div>
+        </div>
+      </p>
+      <button
+        className="btn btn-primary"
+        disabled={false}
+        type="button"
+      >
+        Details
+      </button>
+    </div>
+  </div>
+</div>
+`;
