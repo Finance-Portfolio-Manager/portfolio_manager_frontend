@@ -5,10 +5,10 @@ export default function AboutCard(){
         <Card id="about-card" className="title border-0" data-testid="todo-1" className='primary-text'>
             <Card.Body>
                 <Card.Title id="aboutTitle">About</Card.Title>
-                <Card.Text id="aboutPart">Apex Stocks was designed to be a central location for users to track their stock positions. 
-                    Allows users to enter their stock purchases and sales, which will be reflected in our portfolio, showing stock 
-                    specific and overall gains and losses. Leverages Yahoo Finance API to produce real-time stock details. 
-                    Ensured application security by leveraging JSON Web Tokens and partial integration of Spring Security.</Card.Text>
+                <Card.Text id="aboutPart">With Apex Stocks, users can track their investments over time in one central location. 
+                Users may create one or more portfolios to visualize their profit and loss across all their investments. 
+                With our favorite's feature, users can measure gains and losses against other investors to get a feel for how 
+                others are navigating the markets. Sign up and give it a try today!</Card.Text>
             </Card.Body>
         </Card>
     );
