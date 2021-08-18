@@ -3,7 +3,7 @@ import { Form, Button } from "react-bootstrap"
 import { Label, Check } from "reactstrap"
 import Account from "../../account-component/account-component"
 
-export default function CreatePortfolio(props){
+export default function CreatePortfolioForm(props){
     return(
             <Form onSubmit={props.onSubmit}>
                 <Form.Group>

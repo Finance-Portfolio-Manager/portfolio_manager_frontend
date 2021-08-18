@@ -1,16 +1,21 @@
 import React from "react";
-import { Button, CardGroup } from "react-bootstrap";
+import { Button, CardGroup, Col} from "react-bootstrap";
 import PrivatePortfolioDetails from "../portfolio-components/private-portfolio-component/private-portfolio-details";
 import PrivatePortfolioView from "../portfolio-components/private-portfolio-component/private-portfolio-view";
 import { useState } from "react";
-import NewPortfolio from "../portfolio-components/create-new-portfolio/create-portfolio";
 import { OmitProps } from "antd/lib/transfer/ListBody";
+import { Modal } from "react-bootstrap";
+import CreatePortfolio from "../portfolio-components/create-new-portfolio/create-portfolio";
 //TODO: will be importing functions not yet defined
 
 //TODO: This will take in a list of portfolios as props and render them
 export default function AccountView(props){
 
     let [displayPortfolio, setDisplayPortfolio] = useState(null);
+    let [showNewPortfolioForm, setShowNewPortfolioForm] = useState(false);
+
+    let handleClosePortfolioForm = () => setShowNewPortfolioForm(false);
+    let handleOpenPortfolioForm = () => setShowNewPortfolioForm(true);
 
     let assignDisplayPortfolio = (portfolio) => {
         setDisplayPortfolio(portfolio);
@@ -20,8 +25,6 @@ export default function AccountView(props){
         setDisplayPortfolio(null);
     }
  
-
-    //TODO: The styling gets messed up when you switch from a portfolio card to a portfolio table.
     return (
   
         <div className="secondary-color">
@@ -32,7 +35,23 @@ export default function AccountView(props){
             
             <div className="container" style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
                 <div className="row">
-                    <NewPortfolio user={props.user}></NewPortfolio>
+                    <Modal 
+                        show={showNewPortfolioForm} 
+                        onHide={handleClosePortfolioForm}
+                        size="lg">
+                        <Modal.Header closeButton>
+                        <Modal.Title>New Portfolio</Modal.Title>
+                        </Modal.Header>
+                        <Modal.Body>
+                            <CreatePortfolio 
+                                user={props.user} 
+                                onClosePortfolioForm={handleClosePortfolioForm}
+                                portfolioArray={props.portfolioArray}/>
+                        </Modal.Body>
+                    </Modal>
+                    <Col>
+                    <Button primary onClick={handleOpenPortfolioForm}>Create a new Portfolio</Button>
+                    </Col>
                     {props.portfolioArray.length > 0 ?
                         <h2>Your Portfolios</h2>
                         :

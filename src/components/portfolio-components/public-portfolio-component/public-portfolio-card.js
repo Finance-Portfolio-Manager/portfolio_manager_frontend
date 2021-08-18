@@ -17,6 +17,7 @@ export default function PublicPortfolioCard(props){
                         </div>
                     </Card.Text>
                     <Button variant="primary" onClick={props.toggleShowDetails}>Details</Button>
+                    <Button variant="primary" onClick={props.addToFavorites}>Add to Favorites</Button>
                 </Card.Body>
             </Card>
         </Col>

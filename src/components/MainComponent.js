@@ -9,7 +9,6 @@ import ScrollingStripContainer from './scrolling-strip-component/scrolling-strip
 import Account from './account-component/account-component';
 import Register from './register-component/register-component';
 import Login from './login-component/login';
-// import Favorites from './portfolio-components/favorites-portfolio-component'
 import { ThemeProvider } from "styled-components";
 import { LandingPage } from './styled-components/home-page/LandingPage';
 import GlobalStyle from "./styled-components/styles/GlobalStyles";
@@ -20,7 +19,6 @@ import NewTransaction from './new-transaction-component/new_transaction';
 import Chart from './portfolio-chart-component/portfolio-chart';
 import GenericChart from './chart-component/generic-chart';
 import PublicPortfolios from './portfolio-components/all-public-portfolios-component/public-portfolios-component';
-import Favorites from './portfolio-components/favorites-portfolio-component/favorites-view'
 import CreatePortfolio from './portfolio-components/create-new-portfolio/create-portfolio-form';
 import FavoritePortfolios from './portfolio-components/all-favorites-portfolios-component/favorite-porftolios-component';
 
@@ -53,7 +51,7 @@ export default function Main() {
                         <Route exact path="/generic-chart" component={GenericChart} />
                         <Route exact path="/new-transaction" component={NewTransaction} />
                         <Route exact path="/create-portfolio" component={CreatePortfolio} />
-                        <Route exact path="/favorite" component={FavoritePortfolios} />
+                        <Route exact path="/favorites" component={FavoritePortfolios} />
                     </Switch>
                 </ThemeProvider>
                 <Footer />
