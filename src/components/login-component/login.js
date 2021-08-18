@@ -27,7 +27,7 @@ function Login(props){
             password:`${credentials.password}`
         };
         console.log(JSON.stringify(loginInfo));
-        axios.post("http://apexstocks.xyz/services/login", JSON.stringify(loginInfo), {headers:{'Content-Type': 'application/json'}})
+        axios.post("http://localhost:8082/login", JSON.stringify(loginInfo), {headers:{'Content-Type': 'application/json'}})
             .then(response=>{
                 if(sessionStorage.getItem("Authorization")){
                     sessionStorage.removeItem("Authorization");

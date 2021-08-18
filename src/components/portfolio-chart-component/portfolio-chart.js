@@ -13,7 +13,7 @@ function PortfolioChart(props){
     useEffect(()=>{
 
         //THIS IS FOR 7 DAY TIME PERIOD, CONFIG FOR CHART TIME FRAME NEEDS WORK
-        axios.get(process.env.REACT_APP_API_URL+`/balances/daily/${props.portfolioID}`, {
+        axios.get(process.env.REACT_APP_API_URL+`/balances/daily/${props.portfolioId}`, {
             headers:
             {'Authorization':sessionStorage.getItem("Authorization")}
         })

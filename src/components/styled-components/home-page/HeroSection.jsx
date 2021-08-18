@@ -6,7 +6,7 @@ Hero section component styles the main page
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./HeroSection.css";
-import GitHubButton from "react-github-btn";
+// import GitHubButton from "react-github-btn";
 
 function HeroSection({
   topLine,
@@ -46,7 +46,7 @@ function HeroSection({
                       </Link>
                     );
                   })}</div>
-                <GitHubButton
+                {/* <GitHubButton
                   href="https://github.com/Finance-Portfolio-Manager/portfolio_manager_frontend"
                   data-size="large"
                   data-show-count="true"
@@ -54,7 +54,7 @@ function HeroSection({
                   className='hero__github-button'
                 >
                   Star
-                </GitHubButton>
+                </GitHubButton> */}
 
 
                 {/* <Link to="/">
