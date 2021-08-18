@@ -49,7 +49,7 @@ export default function NewTransaction(props){
             quantityOwned = stockOwned.quantity;
         }
 
-       if(transaction.transactionQuantity < quantityOwned){
+       if(transaction.transactionQuantity <= quantityOwned){
             let submitTransaction = transaction;
             submitTransaction = {...submitTransaction, transactionQuantity:(submitTransaction.transactionQuantity * -1)};
             //setTransaction({...transaction, transactionQuantity:(transaction.transactionQuantity * -1)});
@@ -61,6 +61,7 @@ export default function NewTransaction(props){
             })
             .catch(err=>console.error(err));
        } else{
+           console.log("You tried to sell stocks you didn't have")
            props.onCloseTransactionForm();
        }
     }
