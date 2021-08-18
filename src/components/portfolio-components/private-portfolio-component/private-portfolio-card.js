@@ -1,8 +1,16 @@
 import {Col, Card, Button} from 'react-bootstrap';
 import DoughnutChart from '../doughnut-chart-component/doughnut-chart';
-
+import NewTransaction from '../../new-transaction-component/new_transaction';
 
 export default function PrivatePortfolioCard(props){
+
+    // function addTransaction(){
+    //     return(
+    //         <div class="container">
+    //             <NewTransaction portfolio={props.portoflio}/>
+    //         </div>
+    //     )
+    // }
 
     return(
     <Col sm="4">
@@ -17,6 +25,8 @@ export default function PrivatePortfolioCard(props){
                     </div>
                 </Card.Text>
                 <Button variant="primary" className='global__button-effect' onClick={props.setDisplayPortfolio}>Details</Button>
+                {/* <Button variant="primary" style={{margin:"5px"}} onClick={props.setDisplayPortfolio}>Details</Button> */}
+                <Button variant="primary" style={{margin:"5px"}} onClick={props.onOpenTransactionForm} >Add Transaction</Button>
             </Card.Body>
         </Card>
     </Col>

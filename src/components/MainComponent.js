@@ -8,7 +8,6 @@ import ScrollingStripContainer from './scrolling-strip-component/scrolling-strip
 import Account from './account-component/account-component';
 import Register from './register-component/register';
 import Login from './login-component/login';
-// import Favorites from './portfolio-components/favorites-portfolio-component'
 import { ThemeProvider } from "styled-components";
 import { LandingPage } from './styled-components/home-page/LandingPage';
 import GlobalStyle from "./styled-components/styles/GlobalStyles";
@@ -22,6 +21,8 @@ import GenericChart from './chart-component/generic-chart';
 import PublicPortfolios from './portfolio-components/all-public-portfolios-component/public-portfolios-component';
 import Favorites from './portfolio-components/favorites-portfolio-component/favorites-view';
 import ChangePassword from './change-password-component/change-password';
+import CreatePortfolio from './portfolio-components/create-new-portfolio/create-portfolio-form';
+import FavoritePortfolios from './portfolio-components/all-favorites-portfolios-component/favorite-porftolios-component';
 
 export default function Main() {
     const [theme, themeToggler] = useAllThemes();
@@ -54,6 +55,8 @@ export default function Main() {
                         <Route exact path="/news" component={NewsPage} />
                         <Route exact path="/password" component={ChangePassword} />
                         {/* <Route exact path="/favorites" component={Favorites} /> */}
+                        <Route exact path="/create-portfolio" component={CreatePortfolio} />
+                        <Route exact path="/favorites" component={FavoritePortfolios} />
                     </Switch>
                 </ThemeProvider>
                 </div>

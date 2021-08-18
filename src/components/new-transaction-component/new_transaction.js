@@ -6,65 +6,67 @@ import NewTransactionForm from "./new_transaction_form";
 
 export default function NewTransaction(props){
 
+    // const testPortfolio = {
+    //     portfolioId: 1,
+    //     portfolioName: "Test Portfolio 1",
+    //     isPublic: true,
+    //     user_id: 1
+    // }
+
     const [transaction, setTransaction] = useState({"portfolio": props.portfolio});
 
-/*
-    {
-        "ticker": "BRUH",
-        "shareAmount": 2,
-        "sharePrice": 2,
-        "note": 1,
-        "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0UUwiLCJleHAiOjE2Mjg3MjY3NTYsImlhdCI6MTYyODY5MDc1Nn0.cKtFiY4y4tWmt4buBbsaHXv_OIGiu5vrhqUWCYVyuM8MuP6MdhgWBel-jysBQ0yklL1sBdkxfCRrLv1vk6rA2A",
-        "isBuy": true
-    }
-*/
-    // transaction.ticker = "BRUH";
-    // transaction.shareAmount = 1;
-    // transaction.sharePrice = 1;
-    // transaction.note = "1";
-    // transaction.token = "";
-    // transaction.isBuy = true;
-
     const handleChange = (e)=>{
-        const {name, value} = e.target;
+        let {name, value} = e.target;
+        if (name=="dateTime"){
+            value = value+"T00:00:00"
+        }
         let newTransaction = {...transaction, [name]:value};
-
         console.log(newTransaction);
         setTransaction(newTransaction);
     }
 
+
     const createNewTransaction = (e)=>{
         let jwtToken = sessionStorage.getItem("Authorization");
-        // transaction.isBuy = true;
         e.preventDefault();
-        // axios.post("http://23.22.140.95:8082/transactions/new", transaction, {headers: {'Content-Type': 'application/json'}})
-        axios.post(process.env.REACT_APP_API_URL + "/transactions/", transaction, {headers: {'Authorization': jwtToken, 'Content-Type': 'application/json'}})
+        axios.post(process.env.REACT_APP_API_URL + "/transactions", transaction, {headers: {'Authorization': jwtToken, 'Content-Type': 'application/json'}})
             .then(response=>{
                 console.log(response);
+                props.onCloseTransactionForm();
             })
             .catch(err=>console.error(err));
     }
 
-    // const getNewTransaction = (e)=>{
-    //     e.preventDefault();
-    //     axios.post("http://23.22.140.95:8082/transactions?userId=1", transaction, {headers: {'Authorization': "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0UUwiLCJleHAiOjE2Mjg3MjY3NTYsImlhdCI6MTYyODY5MDc1Nn0.cKtFiY4y4tWmt4buBbsaHXv_OIGiu5vrhqUWCYVyuM8MuP6MdhgWBel-jysBQ0yklL1sBdkxfCRrLv1vk6rA2A"}})
-    //         .then(response=>{
-    //             console.log(response);
-    //         })
-    //         .catch(err=>console.error(err));
-    // }
+    const submitSellTransaction = (e) =>{
+        let jwtToken = sessionStorage.getItem("Authorization");
+        e.preventDefault();
 
-    // const buyConfirm = (e)=>{
-    //     if (e.target.name == "Sell"){
-    //         transaction.isBuy = false;
-    //     }
-    //     else {
-    //         transaction.isBuy = true;
-    //     }
-    //     console.log(e.target.name);
-    // }
+        let stockOwned = props.portfolio.stocks.filter(stock=>stock.symbol == transaction.stockSymbol).pop();
+
+        let quantityOwned = 0;
+        if(stockOwned){
+            quantityOwned = stockOwned.quantity;
+        }
+
+       if(transaction.transactionQuantity < quantityOwned){
+            let submitTransaction = transaction;
+            submitTransaction = {...submitTransaction, transactionQuantity:(submitTransaction.transactionQuantity * -1)};
+            //setTransaction({...transaction, transactionQuantity:(transaction.transactionQuantity * -1)});
+            axios.post(process.env.REACT_APP_API_URL + "/transactions", submitTransaction, {headers: {'Authorization': jwtToken, 'Content-Type': 'application/json'}})
+            .then(response=>{
+                console.log(response);
+                props.onCloseTransactionForm();
+            })
+            .catch(err=>console.error(err));
+       } else{
+           props.onCloseTransactionForm();
+       }
+    }
 
 
-    // return <NewTransactionForm handleChange={handleChange} buyConfirm={buyConfirm} submitConfirm={createNewTransaction} getTransaction={getNewTransaction}></NewTransactionForm>;
-    return <NewTransactionForm handleChange={handleChange} submitConfirm={createNewTransaction}></NewTransactionForm>;
+    return <NewTransactionForm 
+        handleChange={handleChange} 
+        submitBuy={createNewTransaction}
+        submitSell={submitSellTransaction}
+        />;
 }
