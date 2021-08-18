@@ -1,7 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Form } from "react-bootstrap";
 // import './login.css';
-import logo from "./revlogo.png";
+import logo from '../images/logo-white.svg';
 
 export default function LoginForm(props) {
   return (

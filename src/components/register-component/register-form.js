@@ -1,14 +1,14 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Form } from "react-bootstrap";
 import "./register.css";
-import logo from "./revlogo.png";
+import logo from "../images/logo-white.svg";
 
 export default function RegisterForm(props) {
     return (
             <div className="App__container global__gradient-background--absolute">
                 <Form className="form__style global__blur-effect global__dropshadow global__zoom">
                     <div className="aroundLogo">
-                        <img className="logo" alt="" src={logo} />
+                        <img className="logo" alt="" src={logo}/>
                     </div>
 
                     <div className="form-inner">
