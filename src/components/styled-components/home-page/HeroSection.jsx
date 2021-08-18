@@ -57,7 +57,7 @@ function HeroSection({
                     );
                   })}</div>
 
-                {/* <GitHubButton
+                <GitHubButton
                   href="https://github.com/Finance-Portfolio-Manager/portfolio_manager_frontend"
                   data-size="large"
                   data-show-count="true"
@@ -65,7 +65,7 @@ function HeroSection({
                   className='hero__github-button'
                 >
                   Star
-                </GitHubButton> */}
+                </GitHubButton>
 
 
                 {/* <Link to="/">
