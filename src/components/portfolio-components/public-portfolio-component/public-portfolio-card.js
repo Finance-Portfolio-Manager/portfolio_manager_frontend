@@ -17,7 +17,17 @@ export default function PublicPortfolioCard(props){
                         </div>
                     </Card.Text>
                     <Button variant="primary" className='global__button-effect' onClick={props.toggleShowDetails}>Details</Button>
-                    <Button variant="primary" style={{margin:"5px"}} onClick={props.addToFavorites}>Add to Favorites</Button>
+                    
+                    {props.isFavorites ? (
+                    <></>
+                    )
+                    :(
+                    <Button 
+                        variant="primary" 
+                        style={{margin:"5px"}} 
+                        onClick={props.addToFavorites}>Add to Favorites</Button>
+                    )}
+                    
                 </Card.Body>
             </Card>
         </Col>

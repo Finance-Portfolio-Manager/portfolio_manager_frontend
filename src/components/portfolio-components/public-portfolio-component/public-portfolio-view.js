@@ -48,7 +48,8 @@ export default function PublicPortfolioView(props){
                 user={props.username} 
                 addToFavorites={addToFavorites} 
                 portfolio={props.portfolio} 
-                toggleShowDetails={toggleShowDetails} />
+                toggleShowDetails={toggleShowDetails}
+                isFavorites={props.isFavorites} />
         }
         </>
     )
