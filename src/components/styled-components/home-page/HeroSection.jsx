@@ -67,9 +67,7 @@ function HeroSection({
                 </GitHubButton>
 
 
-                {/* <Link to="/">
-                    <Button className='global__button-effect'>{buttonLabel}</Button>
-                </Link> */}
+          
               </div>
             </div>
             <div className="col">
