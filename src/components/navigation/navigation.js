@@ -5,7 +5,7 @@ import ToggleButton from '../styled-components/components/ToggleButton';
 import { useDispatch } from 'react-redux';
 import {setLoggedOut} from '../login-component/loginslice';
 
-export default function Navigation({ theme, toggleTheme }) {
+export default function Navigation(props) {
     const [dropdownShowpPortfolio, setDropDrownShowPortfolio] = useState(false);
     const dispatch = useDispatch();
 
@@ -62,7 +62,7 @@ export default function Navigation({ theme, toggleTheme }) {
                                     <li><a className="dropdown-item" href="/register">Sign up</a></li>
                                     <li><a className="dropdown-item" onClick={logOut}>Log Out</a></li>
                                     <li><a className="dropdown-item" href="/password">Change Password</a></li>
-                                    <li><ToggleButton theme={theme} toggleTheme={toggleTheme} /></li>
+                                    <li><ToggleButton theme={props.theme} toggleTheme={props.toggleTheme} /></li>
 
                                 </ul>
                             </div>

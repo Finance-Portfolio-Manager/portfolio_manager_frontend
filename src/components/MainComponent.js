@@ -26,7 +26,7 @@ import { useSelector } from 'react-redux';
 export default function Main() {
     const [theme, themeToggler] = useAllThemes();
     const isLoggedIn = useSelector(state => {
-        return state.loggedIn.value;
+        return state.loggedIn.value || sessionStorage.getItem("Authorization");
     }
     );
     const themeMode = themeSwitch(theme)
@@ -40,7 +40,7 @@ export default function Main() {
             <div className="container-fluid flex-column p-0 secondary-color default-container primary-text">
                 <ThemeProvider theme={themeMode} >
                     <GlobalStyle />
-                    {isLoggedIn && <Navigation heme={theme} toggleTheme={themeToggler}/>}
+                    {isLoggedIn && <Navigation theme={theme} toggleTheme={themeToggler}/>}
                     <ScrollingStripContainer />
                     <Switch>
                         <Route exact path="/portfolios" component={() => <Home users={users} />} />
