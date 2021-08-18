@@ -1,6 +1,6 @@
-import axios from "axios";
 import { useState } from "react";
 import { withRouter } from "react-router-dom";
+import { PingApiLogin } from "../ServerRequest";
 import LoginForm from "./login-form";
 
 function Login(props){
@@ -26,17 +26,15 @@ function Login(props){
             username:`${credentials.username}`,
             password:`${credentials.password}`
         };
-        // console.log(JSON.stringify(loginInfo));
-        axios.post(process.env.REACT_APP_API_URL+"/login", JSON.stringify(loginInfo), {headers:{'Content-Type': 'application/json'}})
+        console.log(JSON.stringify(loginInfo));
+        PingApiLogin(JSON.stringify(loginInfo))
             .then(response=>{
                 if(sessionStorage.getItem("Authorization")){
                     sessionStorage.removeItem("Authorization");
                 }
-                // console.log(response.data.jwt);
-                sessionStorage.setItem("Authorization", response.data.jwt);
-                props.history.push("/account"); //to account
-                // props.history.push("/"); to portfolio?
-                // window.location.href="/";
+                sessionStorage.setItem("Authorization", response.jwt);
+                props.history.push("/account"); 
+                props.setLoggedIn(true);
             })
             .catch(function (error) {
                 if(error && !error.response) {

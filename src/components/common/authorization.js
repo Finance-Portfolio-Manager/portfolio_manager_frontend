@@ -24,5 +24,5 @@ export default function Authorization(props){
         loggedIn = true;
     }
 
-    return loggedIn ? props.children : <Redirect to="/login"></Redirect>;
+    return loggedIn ? props.children.Authorization : <Redirect to="/login"></Redirect>;
 }
