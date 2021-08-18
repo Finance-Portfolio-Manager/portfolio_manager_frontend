@@ -9,6 +9,7 @@ import "./HeroSection.css";
 import GitHubButton from "react-github-btn";
 import { useState } from "react";
 import { useEffect } from "react";
+import GitHubButton from "react-github-btn";
 
 function HeroSection({
   topLine,
@@ -56,6 +57,7 @@ function HeroSection({
                       </Link>
                     );
                   })}</div>
+
                 <GitHubButton
                   href="https://github.com/Finance-Portfolio-Manager/portfolio_manager_frontend"
                   data-size="large"
@@ -67,9 +69,10 @@ function HeroSection({
                 </GitHubButton>
 
 
-                {/* <Link to="/">
+                <Link to="/">
                     <Button className='global__button-effect'>{buttonLabel}</Button>
-                </Link> */}
+                </Link>
+
               </div>
             </div>
             <div className="col">
