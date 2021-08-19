@@ -1,71 +1,47 @@
-# Getting Started with Create React App
+![test](https://i.imgur.com/bJmwANo.png)
+# Apex Stocks
+#### Reston 2106 Batch
+Apex Stocks is created with the intention of providing a persistent, remote, location where users can track their investment 
+positions. Users are able to persist their stock purchases and sales, see a graph visualization of their current portfolio balance,
+and see stock-specific gains and losses. The backend is built to leverage AlphaVantage and Yahoo Finance to produce real-time
+stock details. This ensures that users will see up-to-date valuations on their current positions. Users can also provide a valid
+email address and receive daily updates on their portfolio performance, as well as receive alerts if prices fluctuate intensely.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#### Visit the website: [apexstocks.xyz](apexstocks.xyz)
 
-## Available Scripts
+> ### Profile Interactions
+> * **Sign Up** - Create an account on portfolio manager!
+> * **Log In** - Log in to an existing account
+> * **Change Password** - Change password with an email verification service
 
-In the project directory, you can run:
+> ### Transactions
+> * **CREATE** - build your portfolios by creating transactions
+> * **BUY/SELL** - indicate whether transaction was a buy or sell
+> * **WHAT-IF** - mitigate some risk by using a virtual portfolio
 
-### `npm start`
+>## How to use
+>### Create an account
+>Enter your information on the register page to create an account
+>### Create a portfolio
+>Create a portfolio to handle a group of holdings
+>### Add transactions
+>Enter the stock, number of shares, price you paid(or would have liked to have paid), and a note if you'd like
+>### View your portfolios
+>Your portfolios can handle groups of holdings. You can see your top holdings for each portfolio and add or delete portfolios.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+>## Deployment
+>* The deployed front-end and backend leverage a compose file which runs the full-stack application. An Nginx reverse proxy 
+>routes requests to the same global address on port 80 to the backend and the frontend. 
+>* Read more: [Docker Compose ReadMe](https://github.com/Finance-Portfolio-Manager/Compose)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## To-Do
 
-### `npm test`
+The following things would have been nice to add, given time:
+* Search algorithm for stock tickers
+* Add functionality for cryptocurrencies
+* Create an account / sign in with Google or Facebook
+* Password hashing and salting
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## License
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
->>>>>>> 11acd4329ce7d0a4137827a8c6298d34842a2c84
+###### Contributors: Aaron Parker, Apurv Patel, Carlos Galvan, Cody Anderson, Conor Scalf, Curtis Greene-Morgan, David Garcia, Elvis Lee, Fuming Zhao, Greg Mccoy, Kalvin Miller, Marc Hartley, Melanie Duah, Nick Bilotta, Quinton Liang, Rensy T Aikara, Trent Greenman, Wyatt Goettsch
